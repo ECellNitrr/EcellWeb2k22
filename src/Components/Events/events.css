@@ -1,0 +1,285 @@
+.events{
+    background: #7b4397 !important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(20deg, #dc2430, #7b4397) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(20deg, #dc2430, #7b4397) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+
+
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.event{
+  flex: 1 0 25%;
+  margin: 15px;
+}
+
+.event-name{
+  padding: 10px;
+  color:#7D4293 ;
+}
+
+
+
+.event-pic{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,0);
+  border: 5px solid white;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image-text{
+  text-align: center;
+
+}
+
+.event-detail-link{
+  color: white;
+  padding: 8px;
+  border: 2px solid white;
+  font-weight: 800;
+}
+
+.event-detail-link:hover{
+  background: white;
+  color:#7D4293;
+  
+}
+
+.image-div{
+  margin: 50px;
+}
+
+.header6{
+  text-align: center;
+  margin-bottom: 0px;
+  color: white;
+  background: black;
+  border: 1px dotted black;
+  border-radius: 20px 0;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: 1px;
+  box-shadow: 0px 5px 50px 0px #6c44fc, 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media(max-width:450px){
+  .header6{
+    width: 200px;
+    font-size: 25px;
+  }
+}
+
+
+
+
+.event_detail{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 200px;
+  font-size:20px;
+}
+
+.event-item1{
+  flex: 1 0 25%;
+  display:flex;
+  justify-content: flex-end;
+}
+
+.event-item2{
+  flex: 1 0 60%;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.event-detail-pic{
+  border: 5px solid white;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media(max-width:450px){
+  .event-detail-pic{
+    max-width: 280px;
+    max-height: 280px;
+  }
+}
+
+
+.event-detail-name{
+  width: 300px;
+  text-align: center;
+}
+
+.e-name{
+  color: #7C4295;
+  background: white;
+  font-weight: 800;
+  padding: 10px;
+  border: 1px dotted black;
+}
+
+.event-content{
+  color: white;
+}
+
+.event-venue,.event-time,.event-email{
+  font-weight: 800;
+}
+
+.event-details{
+  word-spacing: 5px;
+  font-weight: 600;
+}
+
+.event-email{
+  color: black;
+}
+
+.e-email{
+  color: white;
+}
+
+.e-email:hover{
+  color: black;
+}
+
+@media(max-width:1180px){
+  .event-item1,.event-item2{
+    margin: 50px;
+  }
+
+  .event-item1{
+    justify-content: center;
+  }
+
+  .event-detail-name{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .event-venue,.event-time,.event-email{
+    text-align: center;
+  }
+
+  @media(max-width:450px){
+    .event-email{
+      font-size: 15px;
+    }
+  }
+
+  .event-details{
+    text-align:justify;
+    font-weight: 600;
+  }
+}
+
+@media(max-width:1060px){
+  .event-item2{
+    margin: 28px;
+  }
+}
+
+@media(max-width:800px){
+  .event-details{
+    font-size: 16px;
+  }
+}
+
+@media(max-width:350px){
+  .e-name{
+    font-size: 16px;
+  }
+
+  .event-detail-name{
+    width: 200px;
+  }
+}
+
+@media(max-width:450px){
+  .event-item1{
+    margin: 15px;
+  }
+}
+
+
+@media(max-width:500px){
+  .loading-gif{
+    padding-top: 200px !important;
+  }
+}
+
+.register-btn{
+  background: black !important;
+  font-weight: 800;
+  color: white !important;
+  position: relative;
+  font-size: 20px;
+}
+
+.unregister-btn{
+  background: black !important;
+  font-weight: 800;
+  color: white !important;
+  position: relative;
+  font-size: 20px;
+}
+
+.unregister-btn:hover{
+  background: #801E0E !important;
+  color: white;
+}
+
+.register-btn:hover{
+  background: green !important;
+  color: white;
+}
+
+.register-btn-success{
+ background: green;
+ color: white;
+ font-weight: 800;
+ font-size: 15px;
+}
+
+.register-btn-success:disabled{
+  background: green;
+}
+
+.button-div{
+  position: relative;
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.button-div button{
+  flex: 1 0 300px;
+}
+
+@media(max-width:350px){
+  .button-div button{
+    flex: 1 0 270px;
+  }
+}
+
+@media(max-width:1180px){
+  .registered{
+    text-align: center;
+  }
+}
