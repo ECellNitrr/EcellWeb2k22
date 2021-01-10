@@ -132,7 +132,7 @@ export default class indiv_startups extends Component {
         })
 
         let no_logo = require('../../../assets/no-logo.svg')
-        let no_vacancies = require('../../../assets/no-vacancies.gif')
+        // let no_vacancies = require('../../../assets/no-vacancies.gif')
 
 
 

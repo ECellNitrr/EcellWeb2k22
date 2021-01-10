@@ -24,7 +24,7 @@ class Sponsors extends Component{
                 <div className="container-fluid ctn12" style={{maxWidth:"1600px"}}>
                     
                         <div className="individual_heads">
-                            <div><img className="hc_image shadow-lg p-3 mb-5 bg-white rounded" height="320" width="320" alt="Rajshree Gavel" src={require('../../assets/rajshree.jpeg')}></img></div>
+                            <div><img className="hc_image shadow-lg p-3 mb-5 bg-white rounded" height="320" width="320" alt="Rajshree Gavel" src={"https://ecell.nitrr.ac.in/media/static/uploads/team/1W0A5269_-_Rajshree_Gavel_opt_Vg0g4EX.jpg"}></img></div>
                             <h3 className="spons_hc_name">Rajshree Gavel</h3>
                             <p className="center"><a className="spons_phone" href="tel:+91 8889830313">+91 8889830313</a></p>
                             <p className="center"><a className="spons_email" href="mailto:rajshreegavel111@gmail.com">rajshreegavel111@gmail.com</a></p>
@@ -33,7 +33,7 @@ class Sponsors extends Component{
                         </div>
     
                         <div className="individual_heads">
-                            <div><img className="hc_image shadow-lg p-3 mb-5 bg-white rounded" height="320" width="320" alt="Mohith Khatri" src={require('../../assets/mohit.jpg')}></img></div>
+                            <div><img className="hc_image shadow-lg p-3 mb-5 bg-white rounded" height="320" width="320" alt="Mohith Khatri" src={"https://ecell.nitrr.ac.in/media/static/uploads/team/pic1_-_Mohith_Khatri_opt.jpg"}></img></div>
                             <h3 className="spons_hc_name">Mohith Khatri</h3>
                             <p className="center"><a className="spons_phone" href="tel:+91 7580800939">+91 7580800939</a></p>
                             <p className="center"><a className="spons_email" href="mailto:mohithkhatri100@gmail.com">mohithkhatri100@gmail.com</a></p>
@@ -42,7 +42,7 @@ class Sponsors extends Component{
                         </div>
     
                         <div className="individual_heads">
-                            <div><img className="hc_image shadow-lg p-3 mb-5 bg-white rounded" height="320" width="320" alt="Yashwi Shah" src={require('../../assets/yashwi.jpeg')}></img></div>
+                            <div><img className="hc_image shadow-lg p-3 mb-5 bg-white rounded" height="320" width="320" alt="Yashwi Shah" src={"https://ecell.nitrr.ac.in/media/static/uploads/team/IMG_20190516_212357_680_-_Yashwi_Shah_opt.jpg"}></img></div>
                             <h3 className="spons_hc_name">Yashwi Shah</h3>
                             <p className="center"><a className="spons_phone" href="tel:+91 7898556656">+91 7898556656</a></p>
                             <p className="center"><a className="spons_email" href="mailto:iamyashwi@gmail.com">iamyashwi@gmail.com</a></p>
@@ -50,7 +50,7 @@ class Sponsors extends Component{
                         </div>
 
                         <div className="individual_heads">
-                            <div><img className="hc_image shadow-lg p-3 mb-5 bg-white rounded" height="320" width="320" alt="Aayush Shrivastav" src={require('../../assets/aayush.jpeg')}></img></div>
+                            <div><img className="hc_image shadow-lg p-3 mb-5 bg-white rounded" height="320" width="320" alt="Aayush Shrivastav" src={"https://ecell.nitrr.ac.in/media/static/uploads/team/WhatsApp_Image_2019-07-31_at_9.13.17_PM.jpeg"}></img></div>
                             <h3 className="spons_hc_name">Aayush Shrivastav</h3>
                             <p className="center"><a className="spons_phone" href="tel:+91 7999291359">+91 7999291359</a></p>
                             <p className="center"><a className="spons_email" href="mailto:aayush879@gmail.com">aayush879@gmail.com</a></p>

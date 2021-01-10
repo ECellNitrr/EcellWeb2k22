@@ -1,4 +1,4 @@
-import banner from '../../../assets/banner.png';
+// import banner from '../../../assets/banner.png';
 import React, { Component } from 'react'
 import './intro.css'
 
