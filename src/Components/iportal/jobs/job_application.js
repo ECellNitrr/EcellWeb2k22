@@ -4,7 +4,7 @@ import faxios, { baseURL } from '../.././../axios'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import * as actions from '../../../actions/authActions'
-import Wysiwyg from '../../common/wysiwyg'
+// import Wysiwyg from '../../common/wysiwyg'
 
 
 class job_application extends Component {
@@ -151,7 +151,7 @@ class job_application extends Component {
                     {this.state.uploading ?
                         <span>
                             {this.state.progress ? <Fragment>
-                                <div class="progress md-progress" style="height: 20px">
+                                <div class="progress md-progress" style={{height: "20px"}}>
                                     <div class="progress-bar" role="progressbar" style={{ width: `${this.state.progress}%`, height: "20px" }} aria-valuemin="0" aria-valuemax="100">{this.state.progress}%</div>
                                 </div>
                             </Fragment> : null}

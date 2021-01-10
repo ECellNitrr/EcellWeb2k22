@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Parser from 'html-react-parser'
-import faxios, { baseURL } from '../../../axios'
+// import Parser from 'html-react-parser'
+import faxios from '../../../axios'
 import './dashboard.scss'
 
 import PropTypes from 'prop-types'

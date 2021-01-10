@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import faxios from '../../axios';
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import './startup.css';
 import Navbar from '../Navbar/navbar';
 import Footer from '../Footer/footer';
 import Loader from '../api_loader/api_loader'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Hero from '../../assets/startup.svg'
 
 import PropTypes from 'prop-types'
@@ -29,7 +29,7 @@ class Startup extends Component {
     faxios().get('/events/inauguration/').then(d => {
       let data = d.data
 
-      let iportal = data.find(event => event.name == 'iportal')
+      let iportal = data.find(event => event.name === 'iportal')
 
       if (iportal) {
         this.props.history.push('/')

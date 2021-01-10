@@ -58,25 +58,25 @@ class logout extends Component {
     }
 
     render() {
-        const apply_for_ca =
-            <div>
-                <hr />
-                <button onClick={this._request_approval} className="btn text-white btn-success login-button">Apply for CA</button>
-                <hr />
-            </div>
+        // const apply_for_ca =
+        //     <div>
+        //         <hr />
+        //         <button onClick={this._request_approval} className="btn text-white btn-success login-button">Apply for CA</button>
+        //         <hr />
+        //     </div>
 
-        const applied_for_ca =
-            <div>
-                <hr />
-                <button disabled className="btn btn-warning login-button">Applied for CA</button>
-                <hr />
-            </div>
+        // const applied_for_ca =
+        //     <div>
+        //         <hr />
+        //         <button disabled className="btn btn-warning login-button">Applied for CA</button>
+        //         <hr />
+        //     </div>
 
         const phone_no_verified = this.props.auth.verified ? null : <span onClick={this._verify_otp} id='phnoverified_btn'>click to verify email id</span>
 
         let button_to_show = null
 
-        if (this.props.auth.user_type == 'CDC') {
+        if (this.props.auth.user_type === 'CDC') {
             button_to_show =
                 <div>
                     <hr />

@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import Pagination from "react-js-pagination";
-import Parser from 'html-react-parser'
+// import Parser from 'html-react-parser'
 
-import faxios, { baseURL } from '../../../axios'
+import faxios from '../../../axios'
 import './dashboard.scss'
 import {withRouter} from 'react-router-dom';
 import {compose} from 'redux'

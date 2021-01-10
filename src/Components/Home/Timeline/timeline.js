@@ -31,7 +31,7 @@ class Timeline extends React.Component {
     slidePrev = () => this.setState({ currentIndex: this.state.currentIndex - 1 });
 
     active = (i,item) => {
-      if(this.state.currentIndex == i)
+      if(this.state.currentIndex === i)
       {
         return <p style={{cursor:"pointer"}} className="btn btn-lg btn-green">{item}</p>
       }
@@ -53,7 +53,7 @@ class Timeline extends React.Component {
     </div>
 
     renderGallery() {
-      const { currentIndex, texts } = this.state;
+      const { currentIndex } = this.state;
 
       return (<AliceCarousel
         dotsDisabled={true}
