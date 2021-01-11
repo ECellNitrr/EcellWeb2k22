@@ -39,45 +39,45 @@ const Error404 = lazy(()=>import('./Components/err404'))
 class App extends Component {
   render() {
     return (
-      <Suspense fallback={<PageLoader className="page-loader"/>}>
-        <BrowserRouter>
-          <div className="App">
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/internship' exact component={() => <Redirect to='/startups' />} />
-              <Route path='/speakers' component={Speakers} />
-              <Route path="/sponsors/sponsors_heads" component={Spons_hc}/>
-              <Route path="/sponsors/yearwise" component={Yearwise_spons}/>
-              <Route path='/sponsors/:year' component={Sponsors} />
-              <Route path='/sponsors' component={() => <Redirect to='/sponsors/2019' />} />
-              <Route path='/events/:id' component={EventDetail} />
-              <Route path='/events' component={Events} />
-              <Route path='/investors' component={Investors} />
-              <Route path='/startups/:year/:id' component={StartupDetail} />
-              <Route path='/startups' component={Startups} />
-              <Route path='/mentors' component={Mentors} />
-              <Route path='/gallery/:name' component={GalleryImgs} />
-              <Route path='/gallery' component={Gallery} />
-              <Route path='/register' component={Register} />
-              <Route path='/caportal_info' component={CaPortalInfo} />
-              <Route path='/caportal' component={CaPortal} />
-              <Route path='/team/yearwise' component={Yearwise_team}/>
-              <Route path='/team/:year' component={Team} /> 
-              <Route path='/team' component={() => <Redirect to='/team/2019' />} />
-              <Route path='/terms' component={Terms} />
-              <Route path='/policy' component={Policy} />
-
-              <Route path='/internship/jobs' component={IportalJobs} />
-              <Route path='/internship/startup/register' component={RegisterStartup} />
-              <Route path='/internship/startup/' component={Dash} />
-              <Route path='/internship/submit_idea/' component={submitIdea} />
-              <Route path='/internship/idea/' component={IportalStartup} />
-              <Route path='/' component={Error404}/>
-
-            </Switch>
-          </div>
-        </BrowserRouter>
-      </Suspense>
+      <BrowserRouter>
+        <Suspense fallback={<PageLoader className="page-loader"/>}>
+            <div className="App">
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route path='/internship' exact component={() => <Redirect to='/startups' />} />
+                <Route path='/speakers' component={Speakers} />
+                <Route path="/sponsors/sponsors_heads" component={Spons_hc}/>
+                <Route path="/sponsors/yearwise" component={Yearwise_spons}/>
+                <Route path='/sponsors/:year' component={Sponsors} />
+                <Route path='/sponsors' component={() => <Redirect to='/sponsors/2019' />} />
+                <Route path='/events/:id' component={EventDetail} />
+                <Route path='/events' component={Events} />
+                <Route path='/investors' component={Investors} />
+                <Route path='/startups/:year/:id' component={StartupDetail} />
+                <Route path='/startups' component={Startups} />
+                <Route path='/mentors' component={Mentors} />
+                <Route path='/gallery/:name' component={GalleryImgs} />
+                <Route path='/gallery' component={Gallery} />
+                <Route path='/register' component={Register} />
+                <Route path='/caportal_info' component={CaPortalInfo} />
+                <Route path='/caportal' component={CaPortal} />
+                <Route path='/team/yearwise' component={Yearwise_team}/>
+                <Route path='/team/:year' component={Team} /> 
+                <Route path='/team' component={() => <Redirect to='/team/2020' />} />
+                <Route path='/terms' component={Terms} />
+                <Route path='/policy' component={Policy} />
+      
+                <Route path='/internship/jobs' component={IportalJobs} />
+                <Route path='/internship/startup/register' component={RegisterStartup} />
+                <Route path='/internship/startup/' component={Dash} />
+                <Route path='/internship/submit_idea/' component={submitIdea} />
+                <Route path='/internship/idea/' component={IportalStartup} />
+                <Route path='/' component={Error404}/>
+      
+              </Switch>
+            </div>
+        </Suspense>
+      </BrowserRouter>
     );
   }
 }
