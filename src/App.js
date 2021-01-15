@@ -34,6 +34,9 @@ const Dash  = lazy(()=>import('./Components/iportal/startup/startup'))
 const Error404 = lazy(()=>import('./Components/err404'))
 
 
+const HomePage = lazy(()=>import('./Components/HomePage/HomePage.jsx'))
+
+
 
 
 class App extends Component {
@@ -46,6 +49,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route path='/internship' exact component={() => <Redirect to='/startups' />} />
               <Route path='/speakers' component={Speakers} />
+              <Route path='/homepage' component={HomePage} />
               <Route path="/sponsors/sponsors_heads" component={Spons_hc}/>
               <Route path="/sponsors/yearwise" component={Yearwise_spons}/>
               <Route path='/sponsors/:year' component={Sponsors} />

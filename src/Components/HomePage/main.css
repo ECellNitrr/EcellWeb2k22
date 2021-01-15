@@ -1,0 +1,26 @@
+.s1 {
+  background-color: bisque;
+  height: 100vh;
+}
+.s2 {
+  background-color: bisque;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+}
+.s3 {
+  background-color: darkgoldenrod;
+  height: 100vh;
+}
+
+#next {
+  margin-top: 45px;
+}
+#next:hover {
+  background-color: bisque !important;
+  transition: 1s;
+}
