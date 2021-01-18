@@ -4,6 +4,7 @@ import './speakers.css';
 import Loader from '../api_loader/api_loader'
 import Navbar from '../Navbar/navbar';
 import Footer from '../Footer/footer';
+import { baseURL } from '../../axios'
 
 class speaker extends Component {
 
@@ -15,7 +16,7 @@ class speaker extends Component {
 
   componentDidMount() {
     faxios().get('/speakers/full_list/').then(res => {
-        console.log(res)
+        // console.log(res)
         let data = res.data
         this.setState({
           speakers: data,
@@ -27,14 +28,13 @@ class speaker extends Component {
 
   render() {
     const speakers = this.state.speakers.sort((a,b)=>b.year-a.year)
-
     let speakers_html = speakers.map(speaker =>
       <div className="wrapper" key={speaker.name}>
 
         <div className="profile-card js-profile-card">
 
           <div className="profile-card__img">
-            <img src={speaker.profile_pic} alt={speaker.name}></img>
+            <img src={baseURL+speaker.profile_pic} alt={speaker.name}></img>
           </div>
 
           <div className="profile-card__cnt js-profile-cnt">
