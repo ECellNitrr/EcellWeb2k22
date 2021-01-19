@@ -35,7 +35,7 @@ const Error404 = lazy(()=>import('./Components/err404'))
 
 
 const HomePage = lazy(()=>import('./Components/HomePage/HomePage.jsx'))
-const LatestGallery = lazy(()=>import('./Components/Gallery/LatestGallery.jsx'))
+
 
 
 
