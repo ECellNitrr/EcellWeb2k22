@@ -3,7 +3,7 @@
   height: 100vh;
 }
 .s2 {
-  background-color: bisque;
+  background-color: blueviolet;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -19,8 +19,16 @@
 
 #next {
   margin-top: 45px;
+  border-color: #fff;
+  color: #fff;
 }
 #next:hover {
-  background-color: bisque !important;
+  background-color: #fff !important;
   transition: 1s;
+  color: #000;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #fff !important;
 }

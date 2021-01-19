@@ -9,7 +9,9 @@ const Sidebar = () => {
           <img src={Logo} width="55px" height="55px" className="img-fluid" id="logo"/>
       </div>
       <div className="rightBox">
-          <button id="cred" className="btn btn-outline-primary">Login/Signup</button>
+          <button id="login" className="btn">Login</button>
+          <button id="signup" className="btn btn-outline-primary">Sign Up</button>
+          
       </div>
   </header>
   <div id="nav-container">
@@ -33,7 +35,12 @@ const Sidebar = () => {
         <li><a href="#0">CAPortal</a></li>
         <li><a href="#0">Register</a></li>
         <li><a href="#0">Blogs</a></li>
-        {/* <li class="small"><a href="#0">Facebook</a><a href="#0">Instagram</a></li> */}
+        <div className="socialside">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
       </ul>
     </div>
   </div>

@@ -11,30 +11,44 @@ header .rightBox {
   float: right;
   margin-right: 95px;
   margin-top: 8px;
+  display: flex;
+  align-items: center;
 }
-#cred {
-  padding: 10px;
+#signup {
+  padding: 8px;
   box-shadow: none;
+  margin-top: 8px;
+  border-radius: 30px;
+  width: 80px;
+  color: #fff;
+  border-color: #fff;
+}
+#login {
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  margin-top: 8px;
 }
 .leftBox {
   float: left;
 }
 #logo {
   padding: 0;
-  margin-left: 40px;
+  margin-left: 30px;
   margin-top: 8px;
 }
 #centerLogo {
   width: 200px;
   height: 200px;
 }
+
 .page {
   width: 100%;
   height: 100vh;
-  background-image: url('../../assets/home.jpg');
+  background-image: url('../../assets/ecellbg.png');
   background-size: cover;
   background-position: center;
-  font-family: 'Encode Sans Condensed', sans-serif;
+  background-repeat: no-repeat;
   font-weight: 600;
   letter-spacing: 0.03em;
   color: #212121;
@@ -48,6 +62,39 @@ header .rightBox {
 #esummit:hover i {
   color: #000;
   transition: 1s;
+}
+
+/* social links */
+.social {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 70px;
+  left: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.social > a:hover {
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+.social i {
+  padding: 5px;
+}
+.socialside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 40px;
+}
+.socialside i {
+  padding: 0 10px 0 10px;
 }
 
 header {
@@ -64,21 +111,28 @@ main .content {
   padding: 70px 20px 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
+  z-index: 5;
 }
 
 .content h1 {
-  font-size: 70px;
+  font-size: 5vw;
   color: white;
   letter-spacing: 0px;
+  text-shadow: 3px 3px 3px #333;
+  text-transform: uppercase;
 }
 
 .content h2 {
-  color: darkcyan;
-  text-shadow: 3px #333;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 3px 3px 3px #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2vw;
+  margin-top: 15px;
 }
 
 main h2 span {
@@ -101,6 +155,7 @@ main small {
   height: 100vh;
   width: 100%;
   pointer-events: none;
+  z-index: 100000;
 }
 #nav-container .bg {
   position: absolute;
@@ -122,6 +177,7 @@ main small {
 }
 
 .button {
+  /*sidebar button*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -181,6 +237,7 @@ main small {
   will-change: transform;
   contain: paint;
   color: #aaa;
+  z-index: 1;
 }
 
 #nav-content ul {
@@ -204,7 +261,7 @@ main small {
   margin-top: auto;
 }
 
-.small {
+/* .small {
   display: flex;
   align-self: center;
 }
@@ -216,7 +273,7 @@ main small {
 }
 .small a + a {
   margin-left: 15px;
-}
+} */
 
 #nav-container:focus-within #nav-content {
   transform: none;
@@ -252,4 +309,81 @@ h4 {
 ul {
   padding: 0;
   list-style: none;
+}
+
+/* mobile display */
+@media only screen and (max-width: 600px) {
+  header .rightBox {
+    float: right;
+    margin-right: 95px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  #signup {
+    padding: 8px;
+    box-shadow: none;
+    margin-top: 8px;
+    border-radius: 30px;
+    width: 80px;
+    color: #fff;
+    border-color: #fff;
+  }
+  #login {
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    margin-top: 8px;
+  }
+
+  #logo {
+    padding: 0;
+    margin-left: 10px;
+    margin-top: 8px;
+  }
+  #centerLogo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+  }
+
+  main .content {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .content h1 {
+    font-size: 10vw;
+    color: white;
+    letter-spacing: 0px;
+    text-shadow: 3px 3px 3px #333;
+    text-align: center;
+  }
+
+  .content h2 {
+    color: khaki;
+    font-size: 6vw;
+    text-shadow: 3px 3px 3px #333;
+    padding-bottom: 10px;
+  }
+  .button {
+    margin-right: 15px;
+  }
+  .social {
+    left: 10px;
+    font-size: 25px;
+    bottom: 150px;
+  }
+  .socialside {
+    font-size: 15px;
+    margin-top: 10px;
+  }
 }
