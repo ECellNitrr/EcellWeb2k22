@@ -8,7 +8,7 @@ export let baseURL ="https://ecell.nitrr.ac.in";
 
     
 if (process.env.NODE_ENV === 'production') {
-    baseURL = "https://ecell.nitrr.ac.in"
+    baseURL = ""
 }
 
 
