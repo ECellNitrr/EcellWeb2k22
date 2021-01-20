@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import faxios, { baseURL } from '../../../axios'
-import UploadLogo from './upload_logo'
+import faxios from '../../../axios'
+// import UploadLogo from './upload_logo'
 import './dashboard.scss'
 
 import {professions} from '../../constants'
@@ -495,10 +495,10 @@ class submitIdea extends Component {
                             <label><label className="font-weight-bold">Idea in a Nutshell</label>&nbsp;&nbsp;<i>(Chars allowed: &nbsp;{idea_size_text})</i></label>
                             <input id="idea" type="text" onChange={(e) => this.setState({max_chars: e.target.value})} ref={ele => this.idea = ele} className="form-control" />
                             {/* {error_html['idea']} */}
-                            {this.state.err_num.indexOf(0)!=-1 && this.state.validate==false && this.idea.value.length===0 ?<Fragment>
+                            {this.state.err_num.indexOf(0)!==-1 && this.state.validate===false && this.idea.value.length===0 ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required with maximum 30 characters</div>
                             </Fragment>:null}
-                            {this.state.err_num.indexOf(1)!=-1 && this.state.validate==false && this.idea.value.length>30 ?<Fragment>
+                            {this.state.err_num.indexOf(1)!==-1 && this.state.validate===false && this.idea.value.length>30 ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required with maximum 30 characters</div>
                             </Fragment>:null}
     
@@ -507,7 +507,7 @@ class submitIdea extends Component {
                             <label className="font-weight-bold">Describe Your Idea</label>
                             {/* {error_html['description']} */}
                             <Wysiwyg onRef={ref => this.description = ref} />
-                            {this.state.err_num.indexOf(2)!=-1 && this.state.validate==false && !this.description.check_input()?<Fragment>
+                            {this.state.err_num.indexOf(2)!==-1 && this.state.validate===false && !this.description.check_input()?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                         </div>
@@ -516,7 +516,7 @@ class submitIdea extends Component {
                             <label className="font-weight-bold">Innovation in this idea?</label>
                             {/* {error_html['innovation']} */}
                             <Wysiwyg onRef={ref => this.innovation = ref} />
-                            {this.state.err_num.indexOf(3)!=-1 && this.state.validate==false && !this.innovation.check_input()?<Fragment>
+                            {this.state.err_num.indexOf(3)!==-1 && this.state.validate===false && !this.innovation.check_input()?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                         </div>
@@ -526,14 +526,14 @@ class submitIdea extends Component {
                             <input type="text" ref={ele => this.ep = ele} className="form-control" />
                             {/* {error_html['ep']} */}
 
-                            {this.state.err_num.indexOf(4)!=-1 && this.state.validate==false && this.ep.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(4)!==-1 && this.state.validate===false && this.ep.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                         </div>
                         <div className="form-group">
                             <label className="font-weight-bold">Beneficiaries</label>
                             <input type="text" ref={ele => this.benef = ele} required className="form-control" />
-                            {this.state.err_num.indexOf(5)!=-1 && this.state.validate==false && this.benef.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(5)!==-1 && this.state.validate===false && this.benef.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['benef']} */}
@@ -545,7 +545,7 @@ class submitIdea extends Component {
                                 {sector_options}
                             </select>
 
-                            {this.state.err_num.indexOf(6)!=-1 && this.state.validate==false && this.sector.value==="Select"?<Fragment>
+                            {this.state.err_num.indexOf(6)!==-1 && this.state.validate===false && this.sector.value==="Select"?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['sector']} */}
@@ -556,7 +556,7 @@ class submitIdea extends Component {
                             <div className="form-group">
                                 <label className="font-weight-bold">Mentor Name</label>
                                 <input type="text" ref={ele => this.mn = ele} required maxLength="40" className="form-control" />
-                                {this.state.err_num.indexOf(7)!=-1 && this.state.validate==false && this.mn.value.length===0?<Fragment>
+                                {this.state.err_num.indexOf(7)!==-1 && this.state.validate===false && this.mn.value.length===0?<Fragment>
                                     <div className="font-weight-bold text-danger">This field is required</div>
                                 </Fragment>:null}
                                 {/* {error_html['mn']} */}
@@ -564,7 +564,7 @@ class submitIdea extends Component {
                             <div className="form-group">
                                 <label className="font-weight-bold">Designation of Mentor</label>
                                 <input type="text" ref={ele => this.dg = ele} required maxLength="40" className="form-control" />
-                                {this.state.err_num.indexOf(8)!=-1 && this.state.validate==false && this.dg.value.length===0?<Fragment>
+                                {this.state.err_num.indexOf(8)!==-1 && this.state.validate===false && this.dg.value.length===0?<Fragment>
                                     <div className="font-weight-bold text-danger">This field is required</div>
                                 </Fragment>:null}
                                 {/* {error_html['dg']} */}
@@ -575,7 +575,7 @@ class submitIdea extends Component {
                                     <option value="Select">Select</option>
                                     {education_options_course}
                                 </select>
-                                {this.state.err_num.indexOf(13)!=-1 && this.state.validate==false && this.course.value==="Select"?<Fragment>
+                                {this.state.err_num.indexOf(13)!==-1 && this.state.validate===false && this.course.value==="Select"?<Fragment>
                                     <div className="font-weight-bold text-danger">This field is required</div>
                                 </Fragment>:null}
                             </div>
@@ -585,7 +585,7 @@ class submitIdea extends Component {
                                     <option value="Select">Select</option>
                                     {education_options_branch}
                                 </select>
-                                {this.state.err_num.indexOf(14)!=-1 && this.state.validate==false && this.branch.value==="Select"?<Fragment>
+                                {this.state.err_num.indexOf(14)!==-1 && this.state.validate===false && this.branch.value==="Select"?<Fragment>
                                     <div className="font-weight-bold text-danger">This field is required</div>
                                 </Fragment>:null}
                             </div>
@@ -595,7 +595,7 @@ class submitIdea extends Component {
                                     <option value="Select">Select</option>
                                     {education_options_semester}
                                 </select>
-                                {this.state.err_num.indexOf(15)!=-1 && this.state.validate==false && this.semester.value==="Select"?<Fragment>
+                                {this.state.err_num.indexOf(15)!==-1 && this.state.validate===false && this.semester.value==="Select"?<Fragment>
                                     <div className="font-weight-bold text-danger">This field is required</div>
                                 </Fragment>:null}
                             </div>
@@ -619,11 +619,11 @@ class submitIdea extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Email</label>
                             <input type="mail" ref={ele => this.email = ele} required className="form-control" />
-                            {this.state.err_num.indexOf(11)!=-1 && this.state.validate==false && this.email.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(11)!==-1 && this.state.validate===false && this.email.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
 
-                            {this.state.err_num.indexOf(12)!=-1 && this.state.validate==false && this.email.value.length!==0 &&this.state.email_check?<Fragment>
+                            {this.state.err_num.indexOf(12)!==-1 && this.state.validate===false && this.email.value.length!==0 &&this.state.email_check?<Fragment>
                                 <div className="font-weight-bold text-danger">Email provided is invalid</div>
                             </Fragment>:null}
                             {/* {error_html['email']} */}
@@ -632,10 +632,10 @@ class submitIdea extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Contact</label>
                             <input type="text" ref={ele => this.contact = ele} required className="form-control" />
-                            {this.state.err_num.indexOf(9)!=-1 && this.state.validate==false && this.contact.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(9)!==-1 && this.state.validate===false && this.contact.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
-                            {this.state.err_num.indexOf(10)!=-1 && this.state.validate==false && this.contact.value.length!==0 && this.state.contact_check?<Fragment>
+                            {this.state.err_num.indexOf(10)!==-1 && this.state.validate===false && this.contact.value.length!==0 && this.state.contact_check?<Fragment>
                                 <div className="font-weight-bold text-danger">Contact is invalid</div>
                             </Fragment>:null}
                             {/* {error_html['contact']} */}
@@ -645,7 +645,7 @@ class submitIdea extends Component {
                         {/* <button onClick={this._upload_application} disabled={this.state.uploading || this.state.success} type="submit" className="btn font-weight-bold my-4 btn-primary">{this.state.uploading ? <i className="fa fa-spinner fa-spin"></i> : 'Submit'}</button> */}
                             
                             <div>
-                            {this.state.validate==false?<Fragment><i className="font-weight-bold text-danger">(Some fields are empty or invalid, recheck and try again)</i></Fragment>:null}
+                            {this.state.validate===false?<Fragment><i className="font-weight-bold text-danger">(Some fields are empty or invalid, recheck and try again)</i></Fragment>:null}
                             </div>
                             <button disabled={this.state.requesting || this.state.success} onClick={this._register_idea} className="btn font-weight-bold btn-primary">{this.state.requesting ? <i className="fa fa-spinner fa-spin"></i> : 'submit'}</button>
                             <button onClick={this._reset_form} className="btn font-weight-bold btn-danger">reset</button>

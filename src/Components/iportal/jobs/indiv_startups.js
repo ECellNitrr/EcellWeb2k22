@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import faxios from '../../../axios'
 import {Link} from 'react-router-dom'
-import Navbar from '../navbar_iportal/navbar_ip'
-import Footer from '../../Footer/footer'
+// import Navbar from '../navbar_iportal/navbar_ip'
+// import Footer from '../../Footer/footer'
 import './jobs.css'
 import { format_date } from '../../constants'
 import {education_status} from '../../constants'
@@ -145,7 +145,7 @@ export default class indiv_startups extends Component {
                         <div className="row">
 
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 d-flex" style={{justifyContent:"center"}}>
-                                <img style={{maxWidth:"300px",maxWidth:"300px",objectFit:"contain"}} className="img-fluid" src={startup.logo ? startup.logo : no_logo}></img>
+                                <img style={{maxWidth:"300px",objectFit:"contain"}} className="img-fluid" src={startup.logo ? startup.logo : no_logo}></img>
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 d-flex" style={{alignItems:"center",padding:"0px"}} >
                                 <div>
@@ -249,7 +249,7 @@ export default class indiv_startups extends Component {
                         </div>
                     </div> */}
 
-                    {startup.can_hire_interns!=true && this.state.jobs.length===0 ?null:<Fragment>
+                    {startup.can_hire_interns!==true && this.state.jobs.length===0 ?null:<Fragment>
                         
                         <hr class="my-4 rgba-white-light"/>
                     <div style={{marginBottom:"-30px",marginTop:"50px"}}>

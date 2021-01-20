@@ -105,8 +105,8 @@ _dis_approve_intern = (user) => {
     }
 
 render() {
-const correct = <div className="text-success"><i className="fa fa-check"></i></div>
-const wrong = <div className="text-danger"><i className="fa fa-times"></i></div>
+// const correct = <div className="text-success"><i className="fa fa-check"></i></div>
+// const wrong = <div className="text-danger"><i className="fa fa-times"></i></div>
 
 const startup_html = this.state.startups.map((user, i) =>
 <tr key={i}>
