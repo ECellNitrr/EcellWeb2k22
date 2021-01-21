@@ -5,10 +5,7 @@
 .s2 {
   background-color: blueviolet;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
+  
   color: #000;
   text-align: center;
 }
@@ -31,4 +28,9 @@
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background: #fff !important;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
 }

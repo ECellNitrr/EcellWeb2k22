@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 * {
   outline: none;
@@ -7,10 +7,17 @@
 strong {
   font-weight: 600;
 }
+header {
+  padding-top: 0px;
+  
+  position: fixed;
+  
+  z-index: 1;
+}
 header .rightBox {
   float: right;
-  margin-right: 95px;
-  margin-top: 8px;
+  margin-right: 105px;
+  margin-top: 23px;
   display: flex;
   align-items: center;
 }
@@ -35,11 +42,9 @@ header .rightBox {
 #logo {
   padding: 0;
   margin-left: 30px;
-  margin-top: 8px;
-}
-#centerLogo {
-  width: 200px;
-  height: 200px;
+  margin-top: 15px;
+  width: 95px;
+  height: 95px;
 }
 
 .page {
@@ -49,12 +54,13 @@ header .rightBox {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-weight: 600;
   letter-spacing: 0.03em;
   color: #212121;
+
 }
 
-#esummit {
+
+/* #esummit {
   font-size: 21px;
   margin-top: 25px;
 }
@@ -62,7 +68,7 @@ header .rightBox {
 #esummit:hover i {
   color: #000;
   transition: 1s;
-}
+} */
 
 /* social links */
 .social {
@@ -102,9 +108,7 @@ header {
   width: 100%;
   height: 70px;
   background: transparent;
-  color: #000;
-
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
 }
 
 main .content {
@@ -115,20 +119,20 @@ main .content {
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
-  z-index: 5;
+  z-index: 100000;
 }
 
 .content h1 {
-  font-size: 5vw;
+  font-size: 4vw;
   color: white;
-  letter-spacing: 0px;
+  letter-spacing: 3px;
   text-shadow: 3px 3px 3px #333;
   text-transform: uppercase;
 }
 
 .content h2 {
   color: #fff;
-  font-weight: 300;
+  font-weight: lighter;
   text-shadow: 3px 3px 3px #333;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2vw;
@@ -192,6 +196,7 @@ main small {
   cursor: pointer;
   pointer-events: auto;
   margin-right: 45px;
+  margin-top: 15px;
   touch-action: manipulation;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   float: right;
@@ -341,12 +346,10 @@ ul {
     padding: 0;
     margin-left: 10px;
     margin-top: 8px;
+    width: 65px;
+    height: 65px;
   }
-  #centerLogo {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 30px;
-  }
+
 
   main .content {
     margin-left: 5px;
@@ -376,6 +379,7 @@ ul {
   }
   .button {
     margin-right: 15px;
+    margin-top: 8px;
   }
   .social {
     left: 10px;
