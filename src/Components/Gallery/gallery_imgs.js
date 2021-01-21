@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import faxios from '../../axios';
+import axios from '../../axios';
 import Navbar from '../Navbar/navbar';
 import Footer from '../Footer/footer';
 import ImageGallery from 'react-image-gallery';
@@ -22,7 +22,7 @@ export default class gallery_imgs extends Component {
         this.setState({
             year_name:year_gallery
         })
-        faxios().get('/gallery/list/').then(res=>{
+        axios().get('/gallery/list/').then(res=>{
             let year_pics= res.data.gallery;
             let curent_year_pic= year_pics[year_gallery];
             console.log(curent_year_pic);

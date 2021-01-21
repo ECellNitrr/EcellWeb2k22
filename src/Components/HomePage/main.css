@@ -1,0 +1,36 @@
+.s1 {
+  background-color: bisque;
+  height: 100vh;
+}
+.s2 {
+  background-color: blueviolet;
+  height: 100vh;
+  
+  color: #000;
+  text-align: center;
+}
+.s3 {
+  background-color: darkgoldenrod;
+  height: 100vh;
+}
+
+#next {
+  margin-top: 45px;
+  border-color: #fff;
+  color: #fff;
+}
+#next:hover {
+  background-color: #fff !important;
+  transition: 1s;
+  color: #000;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #fff !important;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+}

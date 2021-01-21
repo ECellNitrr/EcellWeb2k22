@@ -34,6 +34,10 @@ const Dash  = lazy(()=>import('./Components/iportal/startup/startup'))
 const Error404 = lazy(()=>import('./Components/err404'))
 
 
+const HomePage = lazy(()=>import('./Components/HomePage/HomePage.jsx'))
+
+
+
 
 
 class App extends Component {
@@ -43,7 +47,7 @@ class App extends Component {
         <Suspense fallback={<PageLoader className="page-loader"/>}>
             <div className="App">
               <Switch>
-                <Route exact path='/' component={Home} />
+                <Route exact path='/' component={HomePage} />
                 <Route path='/internship' exact component={() => <Redirect to='/startups' />} />
                 <Route path='/speakers' component={Speakers} />
                 <Route path="/sponsors/sponsors_heads" component={Spons_hc}/>
