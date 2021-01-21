@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './form.css'
 import faxios from '../../../axios'
 import BtnLoader from '../../Form/loader'
-
+import { Link } from 'react-router-dom';
 export default class form extends Component {
 
     state={
@@ -116,6 +116,42 @@ export default class form extends Component {
         })
     }
 
+    contactUs(errrmsg, scsmsg) {
+        return (
+            <>
+            <h4 style={{ fontWeight: "600", marginBottom: "80px" }} >Leave a Message</h4>
+            {this.state.err ? errrmsg:null}
+            {this.state.success ? scsmsg:null}
+            <form>
+                <div><input ref={ele=>this.your_name = ele} type="text" name="Name" id="visitor-name" placeholder="Your Name"></input></div>
+                <div><input ref={ele=>this.email = ele} id="visitor-email" type="email" placeholder="Your Email"></input></div>
+                <div><textarea ref={ele=>this.message = ele} id="message" rows="5" placeholder="Your message"></textarea></div>
+                <div><button onClick={this._submit} className="submit" type="submit">{this.state.loader ? <BtnLoader/>:"SUBMIT"}</button></div>
+            </form>
+            </>
+        )
+    }
+
+    footerSection() {
+        return (
+            <>
+                <h4 style={{ fontWeight: "600", marginBottom: "30px" }} >Leaders Beyond Borders</h4>
+                <p style={{ padding: "2rem 4rem", fontSize: "1.3rem"}}>E-Cell, NIT Raipur is established to motivate and educate people about entrepreneurship and serve as a meeting ground for corporate and young budding entrepreneurs from distinguished institutions.</p>
+                <div style={{ padding: "5px", fontWeight: "800"}}>
+                    <h5>+91 80949 66697</h5>
+                    <h5>+91 88395 79796</h5>
+                </div>
+                <div style={{ padding: "5px", marginBottom: "30px", fontWeight: "800"}}>
+                    <Link to='/terms'>Terms and Conditions</Link><br></br>
+                    <Link to="/policy">Privacy Policy</Link>
+                </div>
+                <div>
+                    <h5 style={{ fontWeight: "600", marginBottom: "30px" }} >Follow us Online On</h5>
+                </div>
+            </>
+        )
+    }
+
     render() {
 
         const errrmsg = <div className="my-3 text-danger font-weight-bold text-center">{this.state.errmsg}</div>
@@ -123,8 +159,12 @@ export default class form extends Component {
 
         return (                
                 <div className="container-fluid ctn-6">
+                    <div className="contact-heading">
+                    <h1>Contact Us</h1>
+                    <div className="heading-line mx-auto"></div>
+                    </div>
                     <div className="row">
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+                        {/* <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
                             <div className="embed-responsive embed-responsive-16by9">
                                 <iframe 
                                     loading='lazy' 
@@ -137,20 +177,12 @@ export default class form extends Component {
                                     ></iframe>
                             </div>                          
                             
+                        </div> */}
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6" style={{ textAlign: "center", padding: "10px"}}>
+                            {this.contactUs(errrmsg, scsmsg)}
                         </div>
-
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5" style={{ textAlign: "center" }}>
-                            <h2 style={{ fontWeight: "800", borderBottom: "5px solid", borderRadius: "20px", marginBottom: "15px", marginTop: "30px", paddingBottom: "15px" }} >Contact Us</h2>
-                            <h6 style={{ fontWeight: "600", marginBottom: "15px" }} >Leave a Message</h6>
-                            {this.state.err ? errrmsg:null}
-                            {this.state.success ? scsmsg:null}
-                            <form>
-                                <div><input ref={ele=>this.your_name = ele} type="text" name="Name" id="visitor-name" placeholder="Your Name"></input></div>
-                                <div><input ref={ele=>this.email = ele} id="visitor-email" type="email" placeholder="Your Email"></input></div>
-                                <div><textarea ref={ele=>this.message = ele} id="message" rows="5" placeholder="Your message"></textarea></div>
-                                <div><button onClick={this._submit} className="submit" type="submit">{this.state.loader ? <BtnLoader/>:"SUBMIT"}</button></div>
-                            </form>
-
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6" style={{ textAlign: "center", padding: "10px" }}>
+                            {this.footerSection()}
                         </div>
                     </div>
                 </div>

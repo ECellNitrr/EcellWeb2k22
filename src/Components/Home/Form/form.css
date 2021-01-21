@@ -15,6 +15,7 @@
   input{
     margin: 5px;
     width: 90%;
+    border-radius: 5px;
     padding: 8px;
     font-weight: 600;
     color: black;
@@ -43,3 +44,15 @@
     border: none;
   }
   
+  .contact-heading{
+    text-align: center;
+    font-weight: 500;
+  }
+  .heading-line{
+    background: black;
+    padding: 3px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+  }
