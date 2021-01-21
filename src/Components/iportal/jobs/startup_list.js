@@ -3,7 +3,7 @@ import faxios from '../../../axios'
 import './jobs.css'
 import Pagination from "react-js-pagination";
 import { Link } from 'react-router-dom'
-import {format_date} from '../../constants'
+// import {format_date} from '../../constants'
 
 export default class startup_list extends Component {
 
@@ -157,7 +157,7 @@ export default class startup_list extends Component {
             )
             })
 
-        if(this.state.startups.length==0 && this.state.loading == false){
+        if(this.state.startups.length===0 && this.state.loading === false){
             startup_html = <h1 className="text-center my-5">
                 Great startups and ideas coming soon...
             </h1>

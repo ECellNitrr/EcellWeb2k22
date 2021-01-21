@@ -1,5 +1,5 @@
 import React, { Component ,Fragment} from 'react'
-import faxios, { baseURL } from '../../../axios'
+import faxios from '../../../axios'
 import UploadLogo from './upload_logo'
 import './dashboard.scss'
 
@@ -348,7 +348,7 @@ class RegisterStartup extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Name</label>
                             <input type="text" ref={ele => this.name = ele} className="form-control" />
-                            {this.state.err_num.indexOf(0)!=-1 && this.state.validate==false && this.name.value.length===0 ?<Fragment>
+                            {this.state.err_num.indexOf(0)!==-1 && this.state.validate===false && this.name.value.length===0 ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['name']} */}
@@ -356,11 +356,11 @@ class RegisterStartup extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Email</label>
                             <input type="email" ref={ele => this.email = ele} className="form-control" />
-                            {this.state.err_num.indexOf(11)!=-1 && this.state.validate==false && this.email.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(11)!==-1 && this.state.validate===false && this.email.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
 
-                            {this.state.err_num.indexOf(12)!=-1 && this.state.validate==false && this.email.value.length!==0 &&this.state.email_check?<Fragment>
+                            {this.state.err_num.indexOf(12)!==-1 && this.state.validate===false && this.email.value.length!==0 &&this.state.email_check?<Fragment>
                                 <div className="font-weight-bold text-danger">Email provided is invalid</div>
                             </Fragment>:null}
                             {/* {error_html['email']} */}
@@ -370,17 +370,17 @@ class RegisterStartup extends Component {
                             <input type="text" ref={ele => this.contact = ele} className="form-control" />
                             {/* {error_html['contact']} */}
 
-                            {this.state.err_num.indexOf(9)!=-1 && this.state.validate==false && this.contact.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(9)!==-1 && this.state.validate===false && this.contact.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
-                            {this.state.err_num.indexOf(10)!=-1 && this.state.validate==false && this.contact.value.length!==0 && this.state.contact_check?<Fragment>
+                            {this.state.err_num.indexOf(10)!==-1 && this.state.validate===false && this.contact.value.length!==0 && this.state.contact_check?<Fragment>
                                 <div className="font-weight-bold text-danger">Contact is invalid</div>
                             </Fragment>:null}
                         </div>
                         <div className="form-group">
                             <label className="font-weight-bold">Brief</label>
                             <input type="text" ref={ele => this.brief = ele} className="form-control" />
-                            {this.state.err_num.indexOf(1)!=-1 && this.state.validate==false && this.brief.value.length===0 ?<Fragment>
+                            {this.state.err_num.indexOf(1)!==-1 && this.state.validate===false && this.brief.value.length===0 ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['brief']} */}
@@ -389,7 +389,7 @@ class RegisterStartup extends Component {
                             <label className="font-weight-bold">Description</label>
                             {/* {error_html['description']} */}
                             <Wysiwyg onRef={ref => this.description = ref} />
-                            {this.state.err_num.indexOf(2)!=-1 && this.state.validate==false && this.description.get_value().length===8?<Fragment>
+                            {this.state.err_num.indexOf(2)!==-1 && this.state.validate===false && this.description.get_value().length===8?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                         </div>
@@ -399,7 +399,7 @@ class RegisterStartup extends Component {
                                 {sector_options}
                             </select>
 
-                            {this.state.err_num.indexOf(6)!=-1 && this.state.validate==false && this.sector.value===""?<Fragment>
+                            {this.state.err_num.indexOf(6)!==-1 && this.state.validate===false && this.sector.value===""?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['sector']} */}
@@ -407,7 +407,7 @@ class RegisterStartup extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Address line 1</label>
                             <input type="text" ref={ele => this.address1 = ele} className="form-control" />
-                            {this.state.err_num.indexOf(3)!=-1 && this.state.validate==false && this.address1.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(3)!==-1 && this.state.validate===false && this.address1.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['address1']} */}
@@ -420,7 +420,7 @@ class RegisterStartup extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">District</label>
                             <input type="text" ref={ele => this.district = ele} className="form-control" />
-                            {this.state.err_num.indexOf(4)!=-1 && this.state.validate==false && this.district.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(4)!==-1 && this.state.validate===false && this.district.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['district']} */}
@@ -428,7 +428,7 @@ class RegisterStartup extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">State</label>
                             <input type="text" ref={ele => this.lstate = ele} className="form-control" />
-                            {this.state.err_num.indexOf(15)!=-1 && this.state.validate==false && this.lstate.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(15)!==-1 && this.state.validate===false && this.lstate.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['district']} */}
@@ -437,14 +437,14 @@ class RegisterStartup extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Country</label>
                             <input type="text" ref={ele => this.country = ele} className="form-control" />
-                            {this.state.err_num.indexOf(16)!=-1 && this.state.validate==false && this.country.value.length===0?<Fragment>
+                            {this.state.err_num.indexOf(16)!==-1 && this.state.validate===false && this.country.value.length===0?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['country']} */}
                         </div>
 
                         <div className="text-center">
-                            {this.state.validate==false?<div><i className="font-weight-bold text-danger">(Some fields are empty or invalid, recheck and try again)</i></div>:null}
+                            {this.state.validate===false?<div><i className="font-weight-bold text-danger">(Some fields are empty or invalid, recheck and try again)</i></div>:null}
                             <button disabled={this.state.requesting || this.state.success} onClick={this._register_startup} className="btn font-weight-bold btn-primary">{this.state.requesting ? <i className="fa fa-spinner fa-spin"></i> : 'submit'}</button>
                             <button onClick={this._reset_form} className="btn font-weight-bold btn-danger">reset</button>
                         </div>

@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react'
 import faxios from '../../../axios'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import {format_date} from '../../constants'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { application_status } from '../../constants'
+// import { application_status } from '../../constants'
 
 class applications_list extends Component {
     static propTypes = {
