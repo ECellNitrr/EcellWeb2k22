@@ -6,7 +6,7 @@ import { Fade, Flip, Slide } from 'react-reveal';
 
 import './main.css';
 import './style.css';
-import scrollIcon from '../../assets/scroll.svg';
+import scrollDown from '../../assets/scroll-down.png';
 
 const HomePage = () => (
   <div>
@@ -35,18 +35,11 @@ const HomePage = () => (
                       <h2>Leaders Beyond Borders</h2>
                     </Fade>
 
-                    <Slide top>
-                      <button
-                        id="next"
-                        className="btn btn-outline-primary"
-                        onClick={() => fullpageApi.moveSectionDown()}
-                      >
-                        <i
-                          style={{ fontSize: '21px' }}
-                          class="fas fa-arrow-down"
-                        ></i>
-                      </button>
-                    </Slide>
+                    <img
+                      src={scrollDown}
+                      onClick={() => fullpageApi.moveSectionDown()}
+                      id="scroll"
+                    />
                   </div>
                 </main>
                 {/* social links */}
