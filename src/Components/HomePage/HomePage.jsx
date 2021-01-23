@@ -7,7 +7,7 @@ import { Fade, Flip, Slide } from 'react-reveal';
 import './main.css';
 import './style.css';
 import scrollIcon from '../../assets/scroll.svg';
-
+import Form from '../Home/Form/form'
 const HomePage = () => (
   <div>
     <Sidebar />
@@ -81,6 +81,9 @@ const HomePage = () => (
                   Move top
                 </button>
               </div>
+            </div>
+            <div className="section s5">
+              <Form />
             </div>
           </ReactFullpage.Wrapper>
         );

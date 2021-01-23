@@ -119,13 +119,13 @@ export default class form extends Component {
     contactUs(errrmsg, scsmsg) {
         return (
             <>
-            <h4 style={{ fontWeight: "600", marginBottom: "80px" }} >Leave a Message</h4>
+            <h4 className="sub-head">Leave a Message</h4>
             {this.state.err ? errrmsg:null}
             {this.state.success ? scsmsg:null}
             <form>
                 <div><input ref={ele=>this.your_name = ele} type="text" name="Name" id="visitor-name" placeholder="Your Name"></input></div>
                 <div><input ref={ele=>this.email = ele} id="visitor-email" type="email" placeholder="Your Email"></input></div>
-                <div><textarea ref={ele=>this.message = ele} id="message" rows="5" placeholder="Your message"></textarea></div>
+                <div><textarea ref={ele=>this.message = ele} id="message" rows="3" placeholder="Your message"></textarea></div>
                 <div><button onClick={this._submit} className="submit" type="submit">{this.state.loader ? <BtnLoader/>:"SUBMIT"}</button></div>
             </form>
             </>
@@ -135,18 +135,22 @@ export default class form extends Component {
     footerSection() {
         return (
             <>
-                <h4 style={{ fontWeight: "600", marginBottom: "30px" }} >Leaders Beyond Borders</h4>
-                <p style={{ padding: "2rem 4rem", fontSize: "1.3rem"}}>E-Cell, NIT Raipur is established to motivate and educate people about entrepreneurship and serve as a meeting ground for corporate and young budding entrepreneurs from distinguished institutions.</p>
-                <div style={{ padding: "5px", fontWeight: "800"}}>
-                    <h5>+91 80949 66697</h5>
-                    <h5>+91 88395 79796</h5>
+                <h4 className="sub-head">Leaders Beyond Borders</h4>
+                <p className="summary">E-Cell, NIT Raipur is established to motivate and educate people about entrepreneurship and serve as a meeting ground for corporate and young budding entrepreneurs from distinguished institutions.</p>
+                <div className="mobile-number">
+                    <h6>+91 80949 66697</h6>
+                    <h6>+91 88395 79796</h6>
                 </div>
-                <div style={{ padding: "5px", marginBottom: "30px", fontWeight: "800"}}>
+                <div className="legal">
                     <Link to='/terms'>Terms and Conditions</Link><br></br>
                     <Link to="/policy">Privacy Policy</Link>
                 </div>
-                <div>
-                    <h5 style={{ fontWeight: "600", marginBottom: "30px" }} >Follow us Online On</h5>
+                <div className="social-icons">
+                    <h5>Follow us Online On</h5>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-instagram"></i>
                 </div>
             </>
         )
@@ -178,7 +182,7 @@ export default class form extends Component {
                             </div>                          
                             
                         </div> */}
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6" style={{ textAlign: "center", padding: "10px"}}>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6" style={{ textAlign: "center", padding: "0 30px"}}>
                             {this.contactUs(errrmsg, scsmsg)}
                         </div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6" style={{ textAlign: "center", padding: "10px" }}>

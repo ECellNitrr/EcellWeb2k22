@@ -13,7 +13,10 @@
   background-color: darkgoldenrod;
   height: 100vh;
 }
-
+.s5{
+  background-color: #000037;
+  height: 100vh;
+}
 #next {
   margin-top: 45px;
   border-color: #fff;
