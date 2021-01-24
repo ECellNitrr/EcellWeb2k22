@@ -85,7 +85,8 @@
       border-right: 3px solid white;
     }
     input{
-      margin: 5px;
+      margin: 10px;
+      padding: 10px;
     }
     .contact-heading h1{
       font-size: 3rem;
@@ -102,10 +103,6 @@
       font-size: 1.3rem;
       margin: 10px;
       padding: 20px;
-    }
-    input{
-      margin: 5px;
-      padding: 8px;
     }
     .fab{
       font-size: 2rem;
