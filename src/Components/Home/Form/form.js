@@ -147,10 +147,10 @@ export default class form extends Component {
                 </div>
                 <div className="social-icons">
                     <h5>Follow us Online On</h5>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-instagram"></i>
+                    <a href="https://www.facebook.com/ecellnitrr/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/channel/UCrlm4gpLnIaA3pKSXbB99Yw" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://in.linkedin.com/company/entrepreneurship-cell-nit-raipur" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/ecell.nitraipur/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </>
         )
@@ -165,7 +165,9 @@ export default class form extends Component {
                 <div className="container-fluid ctn-6">
                     <div className="contact-heading">
                     <h1>Contact Us</h1>
-                    <div className="heading-line mx-auto"></div>
+                    <div className="mx-auto" style={{ width: "200px" }}>
+                        <div className="heading-line"></div>
+                    </div>
                     </div>
                     <div className="row">
                         {/* <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
