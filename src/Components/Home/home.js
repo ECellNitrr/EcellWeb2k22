@@ -8,7 +8,7 @@ import Spons from "../Home/SponsHome/sponsors-home";
 // import SpeakersHome from "../Home/SpeakerHome/speaker-home";
 import Form from "../Home/Form/form";
 import Footer from "../Footer/footer";
-import Inauguration from './inauguration'
+// import Inauguration from './inauguration'
 import Timeline from '../Home/Timeline/timeline';
 
 

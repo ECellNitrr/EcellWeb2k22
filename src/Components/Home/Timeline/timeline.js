@@ -31,7 +31,7 @@ class Timeline extends React.Component {
     slidePrev = () => this.setState({ currentIndex: this.state.currentIndex - 1 });
 
     active = (i,item) => {
-      if(this.state.currentIndex == i)
+      if(this.state.currentIndex === i)
       {
         return <p style={{cursor:"pointer"}} className="btn btn-lg btn-green">{item}</p>
       }
@@ -53,7 +53,7 @@ class Timeline extends React.Component {
     </div>
 
     renderGallery() {
-      const { currentIndex, texts } = this.state;
+      const { currentIndex } = this.state;
 
       return (<AliceCarousel
         dotsDisabled={true}
@@ -65,6 +65,7 @@ class Timeline extends React.Component {
         onSlideChanged={this.onSlideChanged}
       >
       <iframe src='https://www.youtube.com/embed/ExvQjqodVfg'
+        loading='lazy' 
         frameborder='0'
         allow='autoplay; encrypted-media'
         allowfullscreen
@@ -75,6 +76,7 @@ class Timeline extends React.Component {
         className="vid"
 />
 <iframe src='https://www.youtube.com/embed/wmHhRVO9nDU' 
+        loading='lazy' 
         frameborder='0'
         allow='autoplay; encrypted-media'
         allowfullscreen
@@ -85,6 +87,7 @@ class Timeline extends React.Component {
         className="vid"
 />
 <iframe src='https://www.youtube.com/embed/QcN-2VPvPzc' 
+        loading='lazy' 
         frameborder='0'
         allow='autoplay; encrypted-media'
         allowfullscreen
