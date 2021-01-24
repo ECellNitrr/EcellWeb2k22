@@ -184,10 +184,10 @@ export default class form extends Component {
                             </div>                          
                             
                         </div> */}
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6" style={{ textAlign: "center", padding: "0 30px"}}>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 form-section" style={{ textAlign: "center", padding: "0 30px"}}>
                             {this.contactUs(errrmsg, scsmsg)}
                         </div>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6" style={{ textAlign: "center", padding: "10px" }}>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 info-section" style={{ textAlign: "center", padding: "10px" }}>
                             {this.footerSection()}
                         </div>
                     </div>
