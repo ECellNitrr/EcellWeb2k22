@@ -7,7 +7,7 @@ import { Fade, Flip, Slide } from 'react-reveal';
 import './main.css';
 import './style.css';
 import scrollIcon from '../../assets/scroll.svg';
-
+import About from "../Home/About/about"
 const HomePage = () => (
   <div>
     <Sidebar />
@@ -17,7 +17,7 @@ const HomePage = () => (
       navigationPosition="right"
       navigationTooltips={[
         'You are on main page',
-        'You are on timeline page',
+        'About Us',
         'You are no where',
       ]}
       showActiveTooltip={false}
@@ -69,7 +69,7 @@ const HomePage = () => (
             </div>
 
             <div className="section s2">
-              <p>Next Section...</p>
+              <About />
             </div>
             <div className="section s2 s3">
               <div>
