@@ -1,6 +1,6 @@
 .ctn-6{
     max-width: 1500px;
-    margin-top: 50px;
+    margin-top: 40px;
     color: white;
     padding: "0px 10px";
   }
@@ -61,14 +61,14 @@
     width: 150px;
     border-radius: 10px;
     margin-left: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   .contact-heading h1{
     font-size: 2rem;
   }
   .sub-head{
     font-size: 1.2rem;
-    margin: 10px;
+    margin: 5px;
   }
   .summary{
     font-size: 0.8rem;
@@ -76,7 +76,17 @@
   .social-icons{
     margin: 5px;
   }
-  @media(min-width:992px){
+  .mobile-number h6{
+    font-size: 0.8rem;
+  }
+  .legal{
+    font-size: 0.7rem;
+  }
+  .social-icons h5{
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  @media(min-width:768px){
     .ctn{
       margin-top: 100px;
       padding: 30px;
