@@ -1,0 +1,307 @@
+.mainCtn{
+    max-width:  1500px;
+    padding-top: 45px; 
+    padding-bottom: 80px;
+    height: 100%
+}
+.ctnCols{
+    display: flex;
+    justify-content:center;
+}
+.ctnCol{
+    flex-grow: 1;
+}
+.contCol{
+    height: 100%;
+}
+
+.tab-cover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-wrapper{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab_header-wrapper-cover{
+    width: 100%;
+}
+
+.tab_header-wrapper{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;     
+   /* padding:5vw 10vw; */
+   position: relative;
+   z-index: 10;
+   flex-grow: 1;
+   padding: 0px 10vw;
+}  
+
+.tab-header-cover{
+}
+
+.tab-header{
+    font-size: 2vw;
+    color:white;
+    font-weight: 600;
+}
+
+.active-border{
+    border: 2px;
+}
+
+.tab_content-wrapper{
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    align-items: center;
+}  
+
+.tab-content{   
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition-duration: 1000ms;
+}
+
+.tab-content-active{
+    opacity: 1;
+}
+
+.tab-row{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 5;
+}
+
+.tab-main-row{
+    display: flex;
+    flex-grow: 1;
+}
+
+.tl-data{
+    flex-grow: 1;
+    padding: 0px 5vw;
+    justify-content: end;
+    align-items: flex-start;
+}
+
+.tl-year{
+
+}
+
+.tl-header_wrapper{
+    padding: 30px 10px;
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tl-header{
+
+}
+
+.tl-header_border{
+    height: 6px;
+    width: 150px;
+    background-color: white;
+    margin-left: 80px;
+    border-radius: 360px;
+}
+
+.tl-year .tl-header_border{
+    width: 75px;
+    margin-left: 50px;
+}
+
+.active-border .tab-header{
+    display: flex;
+}
+
+.active-border .tl-header_border{
+    height: 0.35vw;
+    width: 4vw;
+    margin-left: 1.5vw;
+}
+
+.tab_header-controller{
+    display: none;
+}
+
+.tl-details{
+    flex-wrap: wrap;
+    display: flex;
+    font-size: 17.5px;
+}
+
+.plant-wrapper{
+    align-items:center;
+    justify-content: flex-end;
+    /* padding: 20vh 0; */
+}
+
+.plant-img{
+    width: 50%;
+}
+
+.tab-col{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .mainCtn{
+        padding-top: 60px;
+    }
+
+    .tl-header_wrapper{
+        padding: 15px 20px;
+        font-size: 27.5px;
+    }
+
+    .tl-header_border{
+        width: 85px;
+        margin-left: 35px;
+        height: 2.5px;
+    }
+
+    .tl-year .tl-header_border{
+        width: 45px;
+        margin-left: 20px;
+    }
+
+    .tl-details{
+        padding: 0px 15px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .mainCtn{
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    .tl-header_wrapper{
+        padding: 15px 20px;
+        font-size: 25px;
+    }
+
+    .tl-header_border{
+        width: 85px;
+        margin-left: 35px;
+        height: 2px;
+    }
+
+    .tl-year .tl-header_border{
+        width: 45px;
+        margin-left: 20px;
+    }
+
+    .tl-details{
+        padding: 0px 15px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mainCtn{
+        padding-top: 45px;
+        padding-bottom: 0px;
+    }
+
+    .tab-content{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .tab_header-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .tab-header-cover .tab-header{
+        display: none;
+    }
+
+    .active-border .tab-header{
+        display: flex;
+        font-size: 20px;
+    }
+
+    .active-border .tl-header_border{
+        width: 45px;
+        margin-left: 15px;
+    }
+
+    .tab-col{
+        width: 100%;
+    }
+
+    .plant-wrapper{
+        height: 50vw;
+    }
+
+    .tab_header-wrapper-cover{    
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tl-data{
+        flex-grow: 1;
+        justify-content: start;
+    }
+
+    .tl-header_wrapper{
+        padding: 15px 20px;
+        font-size: 22.5px;
+    }
+
+    .tl-header_border{
+        width: 85px;
+        margin-left: 35px;
+        height: 2.5px;
+    }
+
+    .tl-year .tl-header_border{
+        width: 45px;
+        margin-left: 20px;
+        height: 2.5px;
+    }
+
+    .tl-year{
+        display: none;
+    }
+    
+    .active-border .tl-header_border{
+        height: 2.5px;
+    }
+
+    .tab_header-controller{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-grow: 1;
+        color: white;
+    }
+
+    .tl-details{
+        padding: 15px 15px;
+        font-size: 12.5px;
+    }
+}
