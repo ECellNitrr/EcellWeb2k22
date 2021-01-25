@@ -1,7 +1,7 @@
 .ctn-2{
   padding: 0px 30px;
   font-size: 1rem;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .about-heading h1{
   text-align: center;
@@ -21,12 +21,14 @@
 }
 .text-5{
   font-size: 0.9rem;
+  line-height: 1.3rem;
 }
 .fb-img{
   max-width: 60%;
+  margin: 15px;
 }
 
-@media(min-width: 992px){
+@media(min-width: 768px){
   .ctn-2{
     margin-top: 100px;
   }
@@ -45,12 +47,16 @@
     margin-bottom: 50px;
   }
   .text-5{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .head-line{
     margin: 0;
   }
   .heading-line{
     width: 120px;
+  }
+  .fb-img{
+    max-width: 80%;
   }
 }
