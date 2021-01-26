@@ -53,18 +53,18 @@
   .contact-heading{
     text-align: center;
     font-weight: 500;
-    font-size: 2rem;
+
   }
   .heading-line{
     background: white;
-    padding: 3px;
+    padding: 2px;
     width: 150px;
     border-radius: 10px;
     margin-left: 50px;
     margin-bottom: 10px;
   }
   .contact-heading h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .sub-head{
     font-size: 1.2rem;

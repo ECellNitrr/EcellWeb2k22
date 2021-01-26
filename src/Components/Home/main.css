@@ -22,15 +22,10 @@
 }
 
 .s4 {
-  background-color: #000080;
-  height: 100vh;
-  
-  color: #fff;
-  text-align: center;
-}
-.s5{
   background-color: #000037;
   height: 100vh;
+  color: #fff;
+  text-align: center;
 }
 #next {
   margin-top: 45px;

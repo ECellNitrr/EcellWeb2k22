@@ -6,7 +6,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 // components
 import Sidebar from './Sidebar/Sidebar';
 import Timeline from './Timeline/timeline';
-
+import Contact from './Contact/contact'
 // animation
 import { Fade } from 'react-reveal';
 
@@ -83,13 +83,7 @@ const Home = () => (
             </div>
 
             <div className="section s4">
-                <h3>Contact us</h3>
-                <button
-                  className="btn btn-secondary"
-                  onClick={() => fullpageApi.moveTo(1, 0)}
-                >
-                  Move top
-                </button>
+              <Contact />
             </div>
           </ReactFullpage.Wrapper>
         );
