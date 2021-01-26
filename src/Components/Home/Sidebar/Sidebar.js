@@ -10,11 +10,11 @@ const Sidebar = () => {
           <img src={Logo} className="img-fluid" id="logo" />
         </div>
         <div className="rightBox">
-          <button id="login" className="btn">
+          {/* <button id="login" className="btn">
             Login
-          </button>
-          <button id="signup" className="btn btn-outline-primary">
-            Sign Up
+          </button> */}
+          <button id="signup" className="btn btn-outline-default">
+            Login/Sign Up
           </button>
         </div>
       </header>
