@@ -164,7 +164,7 @@
 
 @media only screen and (max-width: 1000px) {
     .mainCtn{
-        padding-top: 60px;
+        padding-top: 80px;
     }
 
     .tl-header_wrapper{
@@ -191,7 +191,7 @@
 
 @media only screen and (max-width: 800px) {
     .mainCtn{
-        padding-top: 60px;
+        padding-top: 80px;
         padding-bottom: 120px;
     }
 
@@ -219,7 +219,7 @@
 
 @media only screen and (max-width: 600px) {
     .mainCtn{
-        padding-top: 45px;
+        padding-top: 60px;
         padding-bottom: 0px;
     }
 
@@ -253,7 +253,7 @@
     }
 
     .plant-wrapper{
-        height: 50vw;
+        height: 45vw;
     }
 
     .tab_header-wrapper-cover{    
@@ -303,5 +303,9 @@
     .tl-details{
         padding: 15px 15px;
         font-size: 12.5px;
+    }
+
+    .plant-img{
+        width: 45%;
     }
 }
