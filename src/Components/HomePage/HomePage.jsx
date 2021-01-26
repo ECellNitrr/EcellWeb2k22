@@ -7,7 +7,7 @@ import { Fade, Flip, Slide } from 'react-reveal';
 import './main.css';
 import './style.css';
 import scrollIcon from '../../assets/scroll.svg';
-
+import Vission from '../Home/Vision/vision'
 const HomePage = () => (
   <div>
     <Sidebar />
@@ -18,7 +18,7 @@ const HomePage = () => (
       navigationTooltips={[
         'You are on main page',
         'You are on timeline page',
-        'You are no where',
+        'Our Vission',
       ]}
       showActiveTooltip={false}
       loopBottom={true}
@@ -72,15 +72,7 @@ const HomePage = () => (
               <p>Next Section...</p>
             </div>
             <div className="section s2 s3">
-              <div>
-                <h3>Section 3</h3>
-                <button
-                  className="btn btn-secondary"
-                  onClick={() => fullpageApi.moveTo(1, 0)}
-                >
-                  Move top
-                </button>
-              </div>
+              <Vission />
             </div>
           </ReactFullpage.Wrapper>
         );
