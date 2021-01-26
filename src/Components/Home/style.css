@@ -316,25 +316,28 @@ ul {
   header .rightBox {
     float: right;
     margin-right: 95px;
-    margin-top: 8px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
   }
 
   #signup {
-    padding: 8px;
+    padding: 5px;
     box-shadow: none;
     margin-top: 8px;
-    border-radius: 30px;
+    border-radius: 10px;
     width: 80px;
     color: #fff;
     border-color: #fff;
+    margin-left: 10px;
   }
   #login {
     color: #fff;
     border: none;
     box-shadow: none;
     margin-top: 8px;
+ 
+    padding: 5px;
   }
 
   #logo {
