@@ -6,7 +6,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 // components
 import Sidebar from './Sidebar/Sidebar';
 import Timeline from './Timeline/timeline';
-
+import Vission from './Vision/vision'
 // animation
 import { Fade } from 'react-reveal';
 
@@ -75,7 +75,7 @@ const Home = () => (
             </div>
 
             <div className="section s2">
-              <h3>Our Vision</h3>
+              <Vission />
             </div>
 
             <div className="section s3">
