@@ -17,7 +17,7 @@ header {
 header .rightBox {
   float: right;
   margin-right: 105px;
-  margin-top: 23px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
 }
@@ -50,7 +50,7 @@ header .rightBox {
 .page {
   width: 100%;
   height: 100vh;
-  background-image: url('../../assets/ecellbg.png');
+  background-image: url('../../../assets/ecellbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -59,17 +59,23 @@ header .rightBox {
 
 }
 
-
-/* #esummit {
-  font-size: 21px;
-  margin-top: 25px;
+#scroll {
+  width: 40px;
+  height: 55px;
+  position: absolute;
+  top: 85%;
+  cursor: pointer;
+  animation: move 1s infinite alternate;
 }
 
-#esummit:hover i {
-  color: #000;
-  transition: 1s;
-} */
-
+@keyframes move {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
 /* social links */
 .social {
   display: flex;
@@ -78,10 +84,11 @@ header .rightBox {
   font-size: 30px;
   color: #fff;
   position: absolute;
-  bottom: 70px;
+  bottom: 50px;
   left: 30px;
   align-items: center;
   justify-content: center;
+
 }
 .social > a:hover {
   color: rgb(0, 0, 0);
@@ -90,6 +97,7 @@ header .rightBox {
 
 .social i {
   padding: 5px;
+  z-index: 1;
 }
 .socialside {
   display: flex;
@@ -112,7 +120,7 @@ header {
 }
 
 main .content {
-  padding: 70px 20px 0;
+  padding: 10px 20px 0;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -255,30 +263,19 @@ main small {
   padding: 10px 5px;
   display: block;
   text-transform: uppercase;
-  transition: color 0.1s;
+  transition: color 0.3s;
 }
 
 #nav-content li a:hover {
   color: #bf7497;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 #nav-content li:not(.small) + .small {
   margin-top: auto;
 }
 
-/* .small {
-  display: flex;
-  align-self: center;
-}
-
-.small a {
-  font-size: 12px;
-  font-weight: 400;
-  color: #888;
-}
-.small a + a {
-  margin-left: 15px;
-} */
 
 #nav-container:focus-within #nav-content {
   transform: none;
@@ -320,26 +317,29 @@ ul {
 @media only screen and (max-width: 600px) {
   header .rightBox {
     float: right;
-    margin-right: 95px;
-    margin-top: 8px;
+    margin-right: 50px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
   }
 
   #signup {
-    padding: 8px;
+    padding: 5px;
     box-shadow: none;
     margin-top: 8px;
-    border-radius: 30px;
+    border-radius: 10px;
     width: 80px;
     color: #fff;
     border-color: #fff;
+    margin-left: 10px;
   }
   #login {
     color: #fff;
     border: none;
     box-shadow: none;
     margin-top: 8px;
+ 
+    padding: 5px;
   }
 
   #logo {
@@ -352,8 +352,8 @@ ul {
 
 
   main .content {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -364,16 +364,18 @@ ul {
   }
 
   .content h1 {
-    font-size: 10vw;
+    font-size: 30px;
     color: white;
     letter-spacing: 0px;
     text-shadow: 3px 3px 3px #333;
     text-align: center;
+    margin-left: 5px;
   }
 
   .content h2 {
-    color: khaki;
-    font-size: 6vw;
+    color: #fff;
+    font-size: 23px;
+    text-align: center;
     text-shadow: 3px 3px 3px #333;
     padding-bottom: 10px;
   }
@@ -384,7 +386,7 @@ ul {
   .social {
     left: 10px;
     font-size: 25px;
-    bottom: 150px;
+    bottom: 10%;
   }
   .socialside {
     font-size: 15px;
