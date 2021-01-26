@@ -7,6 +7,7 @@ import { Fade, Flip, Slide } from 'react-reveal';
 import './main.css';
 import './style.css';
 import scrollIcon from '../../assets/scroll.svg';
+import Timeline from './Timeline/timeline';
 
 const HomePage = () => (
   <div>
@@ -69,7 +70,7 @@ const HomePage = () => (
             </div>
 
             <div className="section s2">
-              <p>Next Section...</p>
+              <Timeline />
             </div>
             <div className="section s2 s3">
               <div>
