@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { user_type } from '../constants'
 
 import PropTypes from 'prop-types'

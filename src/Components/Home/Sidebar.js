@@ -62,12 +62,6 @@ const Sidebar = () => {
             <li>
               <a href="#0">Blogs</a>
             </li>
-            <div className="socialside">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-youtube"></i>
-              <i class="fab fa-linkedin"></i>
-              <i class="fab fa-instagram"></i>
-            </div>
           </ul>
         </div>
       </div>

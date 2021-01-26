@@ -44,8 +44,8 @@ const Error404 = lazy(() => import('./Components/err404'));
 class App extends Component {
   render() {
     return (
-      <Suspense fallback={<PageLoader className="page-loader" />}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Suspense fallback={<PageLoader className="page-loader" />}>
           <div className="App">
             <Switch>
               <Route exact path="/" component={Home} />
@@ -55,7 +55,6 @@ class App extends Component {
                 component={() => <Redirect to="/startups" />}
               />
               <Route path="/speakers" component={Speakers} />
-
               <Route path="/sponsors/sponsors_heads" component={Spons_hc} />
               <Route path="/sponsors/yearwise" component={Yearwise_spons} />
               <Route path="/sponsors/:year" component={Sponsors} />
@@ -78,7 +77,7 @@ class App extends Component {
               <Route path="/team/:year" component={Team} />
               <Route
                 path="/team"
-                component={() => <Redirect to="/team/2019" />}
+                component={() => <Redirect to="/team/2020" />}
               />
               <Route path="/terms" component={Terms} />
               <Route path="/policy" component={Policy} />
@@ -94,8 +93,8 @@ class App extends Component {
               <Route path="/" component={Error404} />
             </Switch>
           </div>
-        </BrowserRouter>
-      </Suspense>
+        </Suspense>
+      </BrowserRouter>
     );
   }
 }

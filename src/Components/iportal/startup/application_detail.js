@@ -59,7 +59,7 @@ export default class application_detail extends Component {
                 </div>
 
                 <div className="text-center">
-                    <a href={application.resume} target='_blank' className="btn my-3 btn-danger font-weight-bold">Resume</a>
+                    <a href={application.resume} rel="noopener noreferrer" target='_blank' className="btn my-3 btn-danger font-weight-bold">Resume</a>
                 </div>
 
                 <div className="my-3">

@@ -1,13 +1,13 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import {NavLink, Link, withRouter} from 'react-router-dom'
-import faxios, { baseURL } from '../../../axios'
+import faxios from '../../../axios'
 import Modal from '../../Form/modal'
 import { user_type } from '../../constants'
 import {compose} from 'redux'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import * as actions from '../../../actions/authActions'
-import { sign } from 'crypto';
+// import { sign } from 'crypto';
 
 import './navbar.scss'
 
@@ -86,7 +86,7 @@ class navbar extends Component {
                         </ul>
                         <ul className="navbar-nav nav-flex-icons">
                             <li className="nav-item">
-                                <button className="iplogout" data-toggle="modal" data-target="#ipLogout" style={{background:"#EA4763",border:"none"}} className="nav-link ip-links mx-3" href="#">{this.props.auth.first_name} {this.props.auth.last_name}</button>
+                                <button data-toggle="modal" data-target="#ipLogout" style={{background:"#EA4763",border:"none"}} className="nav-link ip-links mx-3" href="#">{this.props.auth.first_name} {this.props.auth.last_name}</button>
                             </li>
 
                             <li className="nav-item">

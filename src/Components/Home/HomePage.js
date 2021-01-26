@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../../assets/logo-white.png';
 import Sidebar from './Sidebar';
 import ReactFullpage from '@fullpage/react-fullpage';
-import { Fade, Flip, Slide } from 'react-reveal';
+import { Fade } from 'react-reveal';
 
 import './main.css';
 import './style.css';
