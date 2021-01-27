@@ -119,13 +119,13 @@ export default class contact extends Component {
     contactUs(errrmsg, scsmsg) {
         return (
             <>
-            <h4 className="sub-head">Leave a Message</h4>
+            <div className="sub-head">Leave a Message</div>
             {this.state.err ? errrmsg:null}
             {this.state.success ? scsmsg:null}
             <form>
                 <div><input ref={ele=>this.your_name = ele} type="text" name="Name" id="visitor-name" placeholder="Your Name"></input></div>
                 <div><input ref={ele=>this.email = ele} id="visitor-email" type="email" placeholder="Your Email"></input></div>
-                <div><textarea ref={ele=>this.message = ele} id="message" rows="3" placeholder="Your message"></textarea></div>
+                <div><textarea ref={ele=>this.message = ele} id="message" placeholder="Your message"></textarea></div>
                 <div><button onClick={this._submit} className="submit" type="submit">{this.state.loader ? <BtnLoader/>:"SUBMIT"}</button></div>
             </form>
             </>
@@ -135,18 +135,18 @@ export default class contact extends Component {
     footerSection() {
         return (
             <>
-                <h4 className="sub-head">Leaders Beyond Borders</h4>
+                <div className="sub-head">Leaders Beyond Borders</div>
                 <p className="summary">E-Cell, NIT Raipur is established to motivate and educate people about entrepreneurship and serve as a meeting ground for corporate and young budding entrepreneurs from distinguished institutions.</p>
                 <div className="mobile-number">
-                    <h6>+91 80949 66697</h6>
-                    <h6>+91 88395 79796</h6>
+                    +91 80949 66697<br/>
+                    +91 88395 79796
                 </div>
                 <div className="legal">
                     <Link to='/terms'>Terms and Conditions</Link><br></br>
                     <Link to="/policy">Privacy Policy</Link>
                 </div>
                 <div className="social-icons">
-                    <h5>Follow us Online On</h5>
+                    <div>Follow us Online On</div>
                     <a href="https://www.facebook.com/ecellnitrr/" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://www.youtube.com/channel/UCrlm4gpLnIaA3pKSXbB99Yw" target="_blank"><i class="fab fa-youtube"></i></a>
                     <a href="https://in.linkedin.com/company/entrepreneurship-cell-nit-raipur" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -164,16 +164,16 @@ export default class contact extends Component {
         return (                
                 <div className="container-fluid ctn-6">
                     <div className="contact-heading">
-                    <h1>Contact Us</h1>
-                    <div className="mx-auto" style={{ width: "200px" }}>
+                        Contact Us
+                    <div>
                         <div className="heading-line"></div>
                     </div>
                     </div>
                     <div className="row">
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 form-section" style={{ textAlign: "center", padding: "0 30px"}}>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 form-section" style={{ textAlign: "center"}}>
                             {this.contactUs(errrmsg, scsmsg)}
                         </div>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 info-section" style={{ textAlign: "center", padding: "5px" }}>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 info-section" style={{ textAlign: "center"}}>
                             {this.footerSection()}
                         </div>
                     </div>

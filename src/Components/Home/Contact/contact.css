@@ -1,23 +1,41 @@
 .ctn-6{
-    max-width: 1500px;
-    margin-top: 40px;
-    color: white;
-    padding: "0px 10px";
+  max-width:  1500px;
+  padding-top: 45px; 
+  padding-bottom: 80px;
+  height: 100%;
   }
-  .map{
-    border: 15px solid skyblue;
-    outline: 2px dashed white;
-    outline-offset: -8px;
+  .info-section{
+    border-left: 2px solid white;
+  }
+  .contact-heading{
+    padding: 30px 10px;
+    font-size: 35px;
+    font-weight: 400;
+    color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
-  
+  .heading-line{
+    height: 2px;
+    width: 150px;
+    background-color: white;
+    margin-left: 80px;
+    border-radius: 360px;
+  }
+  .sub-head{
+    font-size: 30px;
+    font-weight: 300;
+    padding: 20px;
+  }
+  .row{
+    margin: 10vh;
+  }
   input{
-    margin: 2px;
+    margin: 7.5px;
     width: 90%;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     font-weight: 500;
     color: white;
     border: 3px solid white;
@@ -25,106 +43,188 @@
   }
   
   textarea{
-    margin: 2px;
+    margin: 7.5px;
     width: 90%;
+    border-radius: 5px;
     padding: 8px;
     font-weight: 600;
     color: white;
     border: 3px solid white;
     background-color:  #000037;
-  }
-
-  .fab{
-    font-size: 1.5rem;
-    margin: 5px;
-  }
-  
+    height: 150px;
+  }  
   .submit{
     margin: 2px 5px;
-    padding: 5px 10px;
+    padding: 15px 30px;
     color: white;
     background: maroon;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 20px;
     border: none;
     border-radius: 5px;
   }
-  
-  .contact-heading{
-    text-align: center;
-    font-weight: 500;
-
-  }
-  .heading-line{
-    background: white;
-    padding: 2px;
-    width: 150px;
-    border-radius: 10px;
-    margin-left: 50px;
-    margin-bottom: 10px;
-  }
-  .contact-heading h1{
-    font-size: 1.5rem;
-  }
-  .sub-head{
-    font-size: 1.2rem;
-    margin: 5px;
-  }
   .summary{
-    font-size: 0.8rem;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
   }
-  .social-icons{
-    margin: 5px;
-  }
-  .mobile-number h6{
-    font-size: 0.8rem;
+  .mobile-number{
+    padding: 10px;
+    font-size: 20px;
   }
   .legal{
-    font-size: 0.7rem;
+    font-size: 17.5px;
+    padding: 15px;
   }
-  .social-icons h5{
-    font-size: 0.9rem;
+  .social-icons{
+    font-size: 15px;
     margin: 0;
   }
-  @media(min-width:768px){
-    .ctn{
-      margin-top: 100px;
-      padding: 30px;
+  .fab{
+    font-size: 30px;
+    margin: 10px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .ctn-6{
+      padding-top: 100px;
     }
-    .form-section{
-      border-right: 3px solid white;
-    }
-    input{
-      margin: 10px;
-      padding: 10px;
-    }
-    .contact-heading h1{
-      font-size: 3rem;
-    }
-    .heading-line{
-      margin-bottom: 100px;
-      margin-left: 100px;
-    }
-    .sub-head{
-      font-size: 2rem;
-      margin: 20px;
-    }
-    .summary{
-      font-size: 1.3rem;
-      margin: 10px;
+    .info-section{
+      border: none;
       padding: 20px;
     }
-    .fab{
-      font-size: 2rem;
+    .contact-heading{
+      padding: 15px 20px;
+      font-size: 27.5px;
+    }
+    .heading-line{
+      width: 85px;
+      margin-left: 35px;
+      height: 2.5px;
+    }
+    .sub-head{
+      font-size: 22.5px;
+      padding: 7.5px;
+    }
+    .row{
+      margin: 5vh;
+    }
+    input{
+      margin: 5px;
+      width: 80%;
+      padding: 7.5px;
     }
     textarea{
       margin: 5px;
+      width: 80%;
+      padding: 7.5px;
+      height: 100px;
     }
     .submit{
-      padding: 15px;
-      font-size: 1rem;
+      margin: 1px 3px;
+      padding: 10px 20px;
+      font-size: 15px;
+    }
+    .summary{
+      font-size: 17.5px;
+      text-align: center;
+      padding: 10px;
     }
     .mobile-number{
-      margin-bottom: 20px;
+      padding: 5px;
+      font-size: 17.5px;
+    }
+    .legal {
+      font-size: 15px;
+      padding: 10px;
+    }
+    .social-icons {
+      font-size: 12.5px;
+      margin: 0;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .ctn-6{
+      padding-top: 80px;
+    }
+    .info-section{
+      border: none;
+    }
+    .contact-heading{
+      padding: 15px 20px;
+      font-size: 25px;
+    }
+    .heading-line{
+      width: 85px;
+      margin-left: 35px;
+      height: 2px;
+    }
+    .sub-head{
+      font-size: 20px;
+      padding: 5px;
+    }
+    .row{
+      margin: 2.5vh;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .info-section{
+      border: none;
+      padding: 10px;
+    }
+    .contact-heading{
+      padding: 10px 20px;
+      font-size: 22.5px;
+    }
+    .heading-line{
+      width: 85px;
+      margin-left: 35px;
+      height: 2.5px;
+    }
+    .sub-head{
+      font-size: 17.5px;
+      padding: 5px;
+    }
+    .row{
+      margin: 0.5vh;
+    }
+    input{
+      margin: 3px;
+      width: 80%;
+      padding: 2.5px;
+      border: 2px solid white;
+    }
+    textarea{
+      margin: 3px;
+      width: 80%;
+      padding: 2.5px;
+      height: 80px;
+      border: 2px solid white;
+    }
+    .submit {
+      margin: 0;
+      padding: 5px 10px;
+      font-size: 10px;
+    }
+    .summary {
+      font-size: 10px;
+      padding: 5px;
+    }
+    .mobile-number {
+      padding: 2px;
+      font-size: 12.5px;
+    }
+    .legal {
+      font-size: 10px;
+      padding: 7.5px;
+    }
+    .social-icons {
+      font-size: 10px;
+      margin: 0;
+    }
+    .fab{
+      font-size: 20px;
+      margin: 7.5px;
     }
   }
