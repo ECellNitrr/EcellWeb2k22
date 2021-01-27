@@ -8,7 +8,7 @@
         <div className="vision">
          <div className="container-fluid ctn-3">
             <div className="vission-heading">
-                <h1>Our Vision</h1>
+                Our Vision
                 <div className="head-line">
                     <div className="heading-line"></div>
                 </div>
