@@ -6,7 +6,9 @@ import ReactFullpage from '@fullpage/react-fullpage';
 // components
 import Sidebar from './Sidebar/Sidebar';
 import Timeline from './Timeline/timeline';
+
 import Contact from './Contact/contact'
+import About from './About/about';
 // animation
 import { Fade } from 'react-reveal';
 
@@ -22,9 +24,11 @@ const Home = () => (
       navigation={true}
       navigationPosition="right"
       navigationTooltips={[
-        'You are on main page',
-        'You are on timeline page',
-        'You are no where',
+        'Ecell NIT Raipur',
+        'About Us',
+        'Our Vission',
+        'Timeline',
+        'Contact Us'
       ]}
       showActiveTooltip={false}
       loopBottom={true}
@@ -71,7 +75,7 @@ const Home = () => (
             </div>
 
             <div className="section s1">
-              <h3>About Us</h3>
+              <About />
             </div>
 
             <div className="section s2">
