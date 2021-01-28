@@ -8,6 +8,11 @@ import Sidebar from './Sidebar/Sidebar';
 import Modal from './Modal/Modal';
 import Timeline from './Timeline/timeline';
 
+import Vission from './Vision/vision';
+
+import Contact from './Contact/contact';
+import About from './About/about';
+
 // animation
 import { Fade } from 'react-reveal';
 
@@ -16,15 +21,6 @@ import './main.css';
 import scrollDown from '../../assets/scroll-down.png';
 
 const Home = () => {
-  const [showing, setShowing] = useState(false);
-
-  const openModalHandler = () => {
-    setShowing(true);
-  };
-
-  const closeModalHandler = () => {
-    setShowing(false);
-  };
   useEffect(() => {
     if (window.localStorage) {
       if (!localStorage.getItem('firstLoad')) {
@@ -35,7 +31,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Sidebar />
 
       <ReactFullpage
@@ -104,27 +100,11 @@ const Home = () => {
               </div>
 
               <div className="section s1">
-                <h3>About Us</h3>
-                {showing ? (
-                  <div onClick={closeModalHandler} className="back-drop"></div>
-                ) : null}
-
-                <button className="open-modal-btn" onClick={openModalHandler}>
-                  Open Modal
-                </button>
-
-                <Modal
-                  className="modal"
-                  show={showing}
-                  close={closeModalHandler}
-                >
-                  Maybe aircrafts fly very high because they don't want to be
-                  seen in plane sight?
-                </Modal>
+                <About />
               </div>
 
               <div className="section s2">
-                <h3>Our Vision</h3>
+                <Vission />
               </div>
 
               <div className="section s3">
@@ -132,19 +112,13 @@ const Home = () => {
               </div>
 
               <div className="section s4">
-                <h3>Contact us</h3>
-                <button
-                  className="btn btn-secondary"
-                  onClick={() => fullpageApi.moveTo(1, 0)}
-                >
-                  Move top
-                </button>
+                <Contact />
               </div>
             </ReactFullpage.Wrapper>
           );
         }}
       />
-    </div>
+    </>
   );
 };
 

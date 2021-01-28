@@ -1,58 +1,77 @@
 .ctn-3{
-
-    margin-top: 100px;
-    background: #292826; 
-    max-width: 1600px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
+  max-width:  1500px;
+  padding-top: 45px; 
+  padding-bottom: 80px;
+  height: 100%;
   }
-  
-  .heading-5{
-    margin: 30px;
-    font-weight: 800;
-    color: white
+  .vission-heading{
+    padding: 30px 10px;
+    font-size: 35px;
+    font-weight: 400;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heading-line{
+    height: 2px;
+    width: 150px;
+    background-color: white;
+    margin-left: 80px;
+    border-radius: 360px;
   }
   
   .text-6{
-    margin: 15px;
-    line-height: 30px;
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
+    margin: 20px;
+    text-align: justify;
+    font-size: 25px;
   }
   
   .running-man{
-    width: 450px;
-    height: 450px;
+    max-width: 80%;
   }
-  
-  @media(max-width:576){
+  @media only screen and (max-width: 1000px) {
+    .vission-heading{
+      padding: 15px 20px;
+      font-size: 27.5px;
+    }
+    .heading-line{
+      width: 85px;
+      margin-left: 35px;
+      height: 2.5px;
+    }
+    .text-6{
+      margin: 10px;
+      text-align: justify;
+      font-size: 20px;
+    }
     .running-man{
-      width: 350px;
-      height: 350px;
+      max-width: 70%;
     }
   }
-  
-  .run{
-    text-align: center;
-  }
-  
-  .col3{
-    -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
-    background: #F9D342;
-  }
-  
-  @media(max-width:991px){
-    .col3{
-      -webkit-clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
-      clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
-     
+  @media only screen and (max-width: 800px) {
+    .vission-heading{
+      padding: 15px 20px;
+      font-size: 25px;
     }
-  
-    .ctn-3{
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
-  
+    .heading-line{
+      width: 85px;
+      margin-left: 35px;
+      height: 2px;
+    }
+    .text-6{
+      margin: 10px;
+      text-align: justify;
+      font-size: 20px;
+    }
+    .running-man{
+      max-width: 60%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .text-6 {
+      margin: 10px;
+      text-align: justify;
+      font-size: 15px;
     }
   }
