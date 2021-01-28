@@ -1,8 +1,8 @@
 .s1 {
-  background-color: #FA5F46;
+  background-color: #010103;
   height: 100vh;
 
-  color: #000;
+  color: white;
   text-align: center;
 }
 
@@ -14,15 +14,20 @@
 }
 .s3 {
   background-color: #000129;
+
+/*   background-color: rgb(7, 0, 41);
+  height: 100vh;
+  color: #000;
+  text-align: center; */
+
 }
 
 .s4 {
-  background-color: #000080;
+  background-color: #000037;
   height: 100vh;
   color: #fff;
   text-align: center;
 }
-
 #next {
   margin-top: 45px;
   border-color: #fff;
