@@ -42,13 +42,10 @@
    padding: 0px 10vw;
 }  
 
-.tab-header-cover{
-}
-
 .tab-header{
+    cursor: pointer;
     font-size: 2vw;
     color:white;
-    font-weight: 600;
 }
 
 .active-border{
@@ -95,25 +92,25 @@
     align-items: flex-start;
 }
 
-.tl-year{
+/* .tl-year{
 
-}
+} */
 
 .tl-header_wrapper{
     padding: 30px 10px;
     font-size: 35px;
-    font-weight: 600;
+    font-weight: 400;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.tl-header{
 
-}
+/* .tl-header{ */
+/* } */
 
 .tl-header_border{
-    height: 6px;
+    height: 2px;
     width: 150px;
     background-color: white;
     margin-left: 80px;
@@ -130,7 +127,7 @@
 }
 
 .active-border .tl-header_border{
-    height: 0.35vw;
+    height: 0.15vw;
     width: 4vw;
     margin-left: 1.5vw;
 }
@@ -164,7 +161,7 @@
 
 @media only screen and (max-width: 1000px) {
     .mainCtn{
-        padding-top: 60px;
+        padding-top: 80px;
     }
 
     .tl-header_wrapper{
@@ -191,7 +188,7 @@
 
 @media only screen and (max-width: 800px) {
     .mainCtn{
-        padding-top: 60px;
+        padding-top: 80px;
         padding-bottom: 120px;
     }
 
@@ -219,7 +216,7 @@
 
 @media only screen and (max-width: 600px) {
     .mainCtn{
-        padding-top: 45px;
+        padding-top: 60px;
         padding-bottom: 0px;
     }
 
@@ -253,7 +250,7 @@
     }
 
     .plant-wrapper{
-        height: 50vw;
+        height: 45vw;
     }
 
     .tab_header-wrapper-cover{    
@@ -303,5 +300,9 @@
     .tl-details{
         padding: 15px 15px;
         font-size: 12.5px;
+    }
+
+    .plant-img{
+        width: 45%;
     }
 }
