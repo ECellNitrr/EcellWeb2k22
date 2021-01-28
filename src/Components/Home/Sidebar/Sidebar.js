@@ -1,21 +1,68 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../../../assets/logo-white.png';
 import './style.css';
 
-const Sidebar = () => {
+import Form from '../../Form/form';
+import OtpModal from '../../Form/otp';
+import LogoutModal from '../../Form/logout';
+import ForgetPass from '../../Form/forgetpass';
+import ChangePass from '../../Form/changepass';
+import CheckOtp from '../../Form/checkotp';
+
+import { NavLink, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import * as actions from '../../../actions/authActions';
+
+const Sidebar = (props) => {
+  const [details, setDetails] = useState({
+    active: false,
+    forgetmail: '',
+    forgetOTP: '',
+  });
+
+  const { active, forgetmail, forgetOTP } = details;
+
+  const setForgetMail = (mail) => {
+    setDetails({ forgetmail: mail });
+  };
+
+  const setForgetOTP = (otp) => {
+    setDetails({ forgetOTP: otp });
+  };
+
+  const loggedout = (
+    <button
+      id="signup"
+      className="btn btn-outline-default"
+      data-toggle="modal"
+      data-target="#loginRegModal"
+    >
+      Login/Sign Up
+    </button>
+  );
+
+  const loggedin = (
+    <button
+      id="signup"
+      className="btn btn-outline-default"
+      data-toggle="modal"
+      data-target="#logoutModal"
+    >
+      {props.auth.first_name.toUpperCase()} {props.auth.last_name.toUpperCase()}
+    </button>
+  );
+
   return (
     <div>
       <header>
         <div className="leftBox">
           <img src={Logo} className="img-fluid" id="logo" />
         </div>
+
+        {/* logged-in/logged-out part */}
         <div className="rightBox">
-          <button id="login" className="btn">
-            Login
-          </button>
-          <button id="signup" className="btn btn-outline-primary">
-            Sign Up
-          </button>
+          {props.auth.loggedin ? loggedin : loggedout}
         </div>
       </header>
       <div id="nav-container">
@@ -28,40 +75,40 @@ const Sidebar = () => {
         <div id="nav-content" tabindex="0">
           <ul>
             <li>
-              <a href="#0">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#0">Events</a>
+              <NavLink to="/events">Events</NavLink>
             </li>
             <li>
-              <a href="#0">Teams</a>
+              <NavLink to="/team">Team</NavLink>
             </li>
             <li>
-              <a href="#0">Gallery</a>
+              <NavLink to="/gallery">Gallery</NavLink>
             </li>
             <li>
-              <a href="#0">Sponsors</a>
+              <NavLink to="/sponsors">Sponsors</NavLink>
             </li>
             <li>
-              <a href="#0">Speakers</a>
+              <NavLink to="/speakers">Speakers</NavLink>
             </li>
             <li>
-              <a href="#0">Investers</a>
+              <NavLink to="/investors">Investors</NavLink>
             </li>
             <li>
-              <a href="#0">Startups</a>
+              <NavLink to="/startups">Startups</NavLink>
             </li>
             <li>
-              <a href="#0">Mentors</a>
+              <NavLink to="/mentors">Mentors</NavLink>
             </li>
             <li>
-              <a href="#0">CAPortal</a>
+              <NavLink to="/caportal_info">CaPortal</NavLink>
             </li>
             <li>
-              <a href="#0">Register</a>
+              <NavLink to="/register">Register</NavLink>
             </li>
             <li>
-              <a href="#0">Blogs</a>
+              <a href="https://medium.com/e-cell-nit-raipur">Blogs</a>
             </li>
           </ul>
         </div>
@@ -70,4 +117,6 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+const mapStateToProps = (state) => state;
+
+export default connect(mapStateToProps, actions)(Sidebar);
