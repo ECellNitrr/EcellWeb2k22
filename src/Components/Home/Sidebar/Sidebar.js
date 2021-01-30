@@ -13,7 +13,7 @@ import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../../actions/authActions';
-
+import AuthModal from './AuthModal'
 const Sidebar = (props) => {
   const [details, setDetails] = useState({
     active: false,
@@ -23,6 +23,11 @@ const Sidebar = (props) => {
 
   const { active, forgetmail, forgetOTP } = details;
 
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const closeModal = () => setModalOpen(false);
+  const openModal =  () => setModalOpen(true);
+
   const setForgetMail = (mail) => {
     setDetails({ forgetmail: mail });
   };
@@ -30,13 +35,14 @@ const Sidebar = (props) => {
   const setForgetOTP = (otp) => {
     setDetails({ forgetOTP: otp });
   };
-
+  console.log(modalOpen);
   const loggedout = (
     <button
       id="signup"
       className="btn btn-outline-default"
       data-toggle="modal"
       data-target="#loginRegModal"
+      onClick={openModal}
     >
       Login/Sign Up
     </button>
@@ -48,23 +54,23 @@ const Sidebar = (props) => {
       className="btn btn-outline-default"
       data-toggle="modal"
       data-target="#logoutModal"
+      onClick={openModal}
     >
       {props.auth.first_name.toUpperCase()} {props.auth.last_name.toUpperCase()}
     </button>
   );
-
   return (
     <div>
       <header>
         <div className="leftBox">
           <img src={Logo} className="img-fluid" id="logo" />
         </div>
-
         {/* logged-in/logged-out part */}
         <div className="rightBox">
           {props.auth.loggedin ? loggedin : loggedout}
         </div>
       </header>
+      <AuthModal modalOpen={modalOpen} closeModal={closeModal}/>
       <div id="nav-container">
         <div class="bg"></div>
         <div class="button" tabindex="0">
