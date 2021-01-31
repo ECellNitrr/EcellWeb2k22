@@ -19,7 +19,6 @@
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
-
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {
@@ -43,9 +42,10 @@
   }
 }
 
-h1 {
+.ls-heading {
   font-weight: bold;
   margin: 0;
+  font-size: 35px;
 }
 
 p {
@@ -117,7 +117,7 @@ span {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
-  width: 768px;
+  width: 800px;
   max-width: 100%;
   min-height: 480px;
 }
@@ -230,4 +230,98 @@ span {
 
 .container.right-panel-active .overlay-right {
   transform: translateX(20%);
+}
+
+.mob-button{
+  display: none;
+}
+.mob-text{
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  .ls-heading{
+    font-size: 25px;
+  }
+  .mob-button{
+    display: none;
+  }
+  .mob-text{
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container{
+    width: 600px;
+    min-height: 400px;
+  }
+  .ls-heading{
+    font-size: 20px;
+  }
+  .mob-button{
+    display: none;
+  }
+  .mob-text{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ls-modal{
+    padding-top: 80px;
+  }
+  .container{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 375px;
+    max-width: 90%;
+    min-height: 500px;
+  }
+  .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+  .sign-in-container {
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 2;
+  }
+  .overlay-container{
+    display: none;
+  }
+  .container.right-panel-active .sign-up-container{
+    transform: none;
+    width: 100%;
+  }
+  .container.container.right-panel-active .sign-in-container{
+    transform: none;
+    width: 100%;
+  }
+  .container.right-panel-active .overlay-container{
+    transform: none;
+  }
+  .container.right-panel-active .overlay{
+    transform: none;
+  }
+  .container.right-panel-active .overlay-left{
+    transform: none;
+  }
+  .mob-button{
+    display: block;
+    margin: 5px;
+  }
+  .mob-text{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
 }
