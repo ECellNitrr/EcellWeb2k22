@@ -2,62 +2,48 @@ import React, { useState } from 'react'
 import './authModal.css'
 const AuthModal = ({ closeModal, modalOpen }) => {
     const showHideClassName = modalOpen ? "display-block" : "display-none"
-    const [login, setlogin] = useState(false)
+    const [login, setlogin] = useState(true)
+    const  rightPanelActive = login ? 'right-panel-active' : '';
     const SignUpModal = () => {
         return (
             <>
-                <div className='ls-modal-header'>
-                    SignUp
-                    <div>
-                        <div className="modal-heading-line"></div>
+                <div class={`container ${rightPanelActive}`} id="container">
+                    <div class="form-container sign-up-container">
+                        <form className="ls-form" action="#">
+                            <h1>Create Account</h1>
+                            <span>or use your email for registration</span>
+                            <input className="auth-input" type="text" placeholder="Name" />
+                            <input className="auth-input" type="email" placeholder="Email" />
+                            <input className="auth-input" type="password" placeholder="Password" />
+                            <button>Sign Up</button>
+                        </form>
                     </div>
-                </div>
-                <div class="modal-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="first-name" aria-describedby="first-name" placeholder="First Name" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="last-name" aria-describedby="last-name" placeholder="Last Name" />
-                        </div>
-                        <div class="form-group">
-                            <input type="phone" class="form-control" id="telephone" aria-describedby="telephone" placeholder="Telephone" />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter email" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="password" placeholder="Password" />
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button class="btn btn-primary" onClick={(e) => { e.preventDefault(); setlogin(true) }}>Login</button>
-                    </form>
-                </div>
-            </>
-        )
-    }
-    const LoginModal = () => {
-        return (
-            <>
-                <div className='ls-modal-header'>
-                    Login
-                    <div>
-                        <div className="modal-heading-line"></div>
+                    <div class="form-container sign-in-container">
+                        <form className="ls-form" action="#">
+                            <h1>Sign in</h1>
+                            <span>or use your account</span>
+                            <input className="auth-input" type="email" placeholder="Email" />
+                            <input className="auth-input" type="password" placeholder="Password" />
+                            <a href="#">Forgot your password?</a>
+                            <button>Sign In</button>
+                        </form>
                     </div>
-                </div>
-                <div class="modal-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="Email Address">Email address</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter email" />
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <h1>Welcome Back!</h1>
+                                <p>
+                                    To keep connected with us please login with your personal info
+                                    </p>
+                                <button onClick={(e) => {e.preventDefault(); setlogin(false)}} class="ghost" id="signIn">Sign In</button>
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <h1>Hello, Friend!</h1>
+                                <p>Enter your personal details and start journey with us</p>
+                                <button onClick={(e) => {e.preventDefault(); setlogin(true)}} class="ghost" id="signUp">Sign Up</button>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="Password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password" />
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button class="btn btn-primary" onClick={(e) => { e.preventDefault(); setlogin(false) }}>SignUp</button>
-                    </form>
+                    </div>
                 </div>
             </>
         )
@@ -65,7 +51,7 @@ const AuthModal = ({ closeModal, modalOpen }) => {
     return (
         <div className={`ls-modal ${showHideClassName}`}>
             <div className="ls-modal-content">
-                {login ? LoginModal() : SignUpModal()}
+                {SignUpModal()}
             </div>
         </div>
     )
