@@ -60,14 +60,14 @@ span {
   font-size: 12px;
 }
 
-a {
+.ls-fpassword {
   color: #333;
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
 }
 
-button {
+.ls-button {
   border-radius: 20px;
   border: 1px solid #ff4b2b;
   background-color: #ff4b2b;
@@ -80,15 +80,15 @@ button {
   transition: transform 80ms ease-in;
 }
 
-button:active {
+.ls-button:active {
   transform: scale(0.95);
 }
 
-button:focus {
+.ls-button:focus {
   outline: none;
 }
 
-button.ghost {
+.ghost {
   background-color: transparent;
   border-color: #ffffff;
 }
