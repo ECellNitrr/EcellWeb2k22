@@ -69,8 +69,8 @@ span {
 
 .ls-button {
   border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
+  border: 1px solid  #FF0000;
+  background-color:  #FF0000;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -110,6 +110,7 @@ span {
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+  color: black;
 }
 .ls-modal-content{
   width: 800px;
@@ -186,9 +187,9 @@ span {
 }
 
 .overlay {
-  background: #ff416c;
-  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: #FF0000;
+  background: -webkit-linear-gradient(to right top, #57469b, #983299, #d0007e, #f50050, #ff0000);
+  background: linear-gradient(to right top, #57469b, #983299, #d0007e, #f50050, #ff0000);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -248,6 +249,8 @@ span {
   position: fixed;
   float: right;
   margin: 10px;
+  color: white;
+  opacity: 1;
 }
 @media only screen and (max-width: 1000px) {
   .ls-heading{
@@ -344,5 +347,6 @@ span {
   .close{
     margin-left: 25px;
     margin-top: 10px;
+    color: black
   }
 }
