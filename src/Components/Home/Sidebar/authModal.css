@@ -19,29 +19,6 @@
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
 .ls-heading {
   font-weight: bold;
   margin: 0;
@@ -125,7 +102,7 @@ span {
   overflow: hidden;
   width: 800px;
   max-width: 100%;
-  min-height: 480px;
+  min-height: 500px;
 }
 .form-container {
   position: absolute;
@@ -249,8 +226,14 @@ span {
   position: fixed;
   float: right;
   margin: 10px;
-  color: white;
+  color: black;
   opacity: 1;
+}
+.forgot-pass-form-container{
+  width: 100%;
+}
+.back-button{
+  margin-top: 20px;
 }
 @media only screen and (max-width: 1000px) {
   .ls-heading{
@@ -269,7 +252,7 @@ span {
   }
   .container{
     width: 600px;
-    min-height: 400px;
+    min-height: 450px;
   }
   .ls-heading{
     font-size: 20px;
@@ -284,7 +267,7 @@ span {
 
 @media only screen and (max-width: 600px) {
   .ls-modal{
-    padding-top: 80px;
+    padding-top: 50px;
   }
   .ls-modal-content{
     width: 375px;
@@ -297,7 +280,7 @@ span {
     overflow: hidden;
     width: 375px;
     max-width: 90%;
-    min-height: 500px;
+    min-height: 550px;
   }
   .form-container {
     position: absolute;
@@ -318,13 +301,21 @@ span {
   .overlay-container{
     display: none;
   }
+  /*Make all the animations none*/
+  .ls-button:active {
+    transform: none;
+  }
   .container.right-panel-active .sign-up-container{
     transform: none;
     width: 100%;
+    animation: none;
   }
   .container.container.right-panel-active .sign-in-container{
     transform: none;
     width: 100%;
+  }
+  .overlay {
+    transform: none;
   }
   .container.right-panel-active .overlay-container{
     transform: none;
@@ -341,7 +332,7 @@ span {
   }
   .mob-text{
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 5px;
   }
   .close{
