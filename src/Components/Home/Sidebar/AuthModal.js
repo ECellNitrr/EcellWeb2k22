@@ -162,6 +162,7 @@ const AuthModal = ({ closeModal, modalOpen }) => {
           onClick={() => {
             closeModal();
             setlogin(false);
+            setForgotPassword(false);
           }}
         ></i>
         {!forgotPassword ? SignUpModal() : ForgotPasswordModal()}
