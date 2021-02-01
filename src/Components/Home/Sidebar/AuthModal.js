@@ -138,12 +138,13 @@ const AuthModal = ({ closeModal, modalOpen }) => {
             placeholder="OTP"
           />
           <button
-            className="ls-button"
+            className="ls-button back-button"
           >
             Submit
           </button>
+          <span className="sub-text">Success or fail message</span>
           <button
-            className="ls-button back-button"
+            className="ls-button"
             onClick={(e) => {e.preventDefault(); setForgotPassword(false)}}
           >
             Sign In
