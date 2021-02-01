@@ -111,6 +111,11 @@ span {
   margin: 8px 0;
   width: 100%;
 }
+.ls-modal-content{
+  width: 800px;
+  max-width: 100%;
+  margin: auto;
+}
 .container {
   background-color: #ffffff;
   border-radius: 10px;
@@ -238,6 +243,12 @@ span {
 .mob-text{
   display: none;
 }
+.close{
+  z-index: 2000;
+  position: fixed;
+  float: right;
+  margin: 10px;
+}
 @media only screen and (max-width: 1000px) {
   .ls-heading{
     font-size: 25px;
@@ -250,6 +261,9 @@ span {
   }
 }
 @media only screen and (max-width: 800px) {
+  .ls-modal-content{
+    width: 600px;
+  }
   .container{
     width: 600px;
     min-height: 400px;
@@ -268,6 +282,9 @@ span {
 @media only screen and (max-width: 600px) {
   .ls-modal{
     padding-top: 80px;
+  }
+  .ls-modal-content{
+    width: 375px;
   }
   .container{
     background-color: #ffffff;
@@ -323,5 +340,9 @@ span {
     display: block;
     margin-top: 30px;
     margin-bottom: 5px;
+  }
+  .close{
+    margin-left: 25px;
+    margin-top: 10px;
   }
 }

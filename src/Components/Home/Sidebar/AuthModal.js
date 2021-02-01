@@ -55,6 +55,7 @@ const AuthModal = ({ closeModal, modalOpen }) => {
     return (
         <div className={`ls-modal ${showHideClassName}`}>
             <div className="ls-modal-content">
+            <i class="far fa-times-circle close" onClick={() => closeModal()}></i>
                 {SignUpModal()}
             </div>
         </div>

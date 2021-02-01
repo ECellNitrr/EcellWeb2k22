@@ -35,7 +35,15 @@ const Sidebar = (props) => {
   const setForgetOTP = (otp) => {
     setDetails({ forgetOTP: otp });
   };
-  console.log(modalOpen);
+
+  useEffect(() => {
+    document.onclick = (args) => {
+      if (args.target.id === 'dialog-target') {
+        console.log('called')
+      }
+    }
+  }, [])
+
   const loggedout = (
     <button
       id="signup"
@@ -70,7 +78,9 @@ const Sidebar = (props) => {
           {props.auth.loggedin ? loggedin : loggedout}
         </div>
       </header>
-      <AuthModal modalOpen={modalOpen} closeModal={closeModal}/>
+      <div id="dialog-target">
+        <AuthModal modalOpen={modalOpen} closeModal={closeModal}/>
+      </div>
       <div id="nav-container">
         <div class="bg"></div>
         <div class="button" tabindex="0">
