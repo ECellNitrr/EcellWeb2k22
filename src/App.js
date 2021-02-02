@@ -9,7 +9,7 @@ const Home = lazy(() => import('./Components/Home/home'));
 const Team = lazy(() => import('./Components/Team/Team'));
 
 const Investors = lazy(() => import('./Components/Investors/investors'));
-const Speakers = lazy(() => import('./Components/Speakers/speakers'));
+const Speakers = lazy(() => import('./Components/Speakers/Speakers.jsx'));
 const Sponsors = lazy(() => import('./Components/Sponsors/sponsors'));
 const Events = lazy(() => import('./Components/Events/events'));
 const EventDetail = lazy(() => import('./Components/Events/event_detail'));

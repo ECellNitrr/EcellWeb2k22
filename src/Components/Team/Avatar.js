@@ -38,17 +38,17 @@ const Avatar = ({ data }) => {
           </div>
           <div className="social_icons">
             {profile_url && (
-              <a href={profile_url}>
+              <a target="_blank" href={profile_url}>
                 <i className="fa fa-link"></i>
               </a>
             )}
             {facebook && (
-              <a href={facebook}>
+              <a target="_blank" href={facebook}>
                 <i className="fab fa-facebook"></i>
               </a>
             )}
             {linkedin && (
-              <a href={linkedin}>
+              <a target="_blank" href={linkedin}>
                 <i className="fab fa-linkedin"></i>
               </a>
             )}

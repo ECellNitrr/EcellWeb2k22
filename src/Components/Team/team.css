@@ -223,7 +223,7 @@
   }
 } */
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .teamPage .heading {
     color: #edebf5;
     font-size: 28px;
@@ -236,7 +236,16 @@
   .manager_container_ {
     grid-template-columns: repeat(2, 1fr);
   }
-} */
+  .teamPage .heading::after {
+    height: 2px;
+    display: block;
+    width: 130px;
+    position: absolute;
+    left: 50%;
+    background-color: #fff;
+    content: '';
+  }
+}
 
 @media only screen and (max-width: 480px) {
   .photo_container_ {
