@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <>
-      <Sidebar />
+      <Sidebar position="fixed" />
 
       <ReactFullpage
         scrollingSpeed={1000}

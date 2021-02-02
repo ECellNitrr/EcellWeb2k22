@@ -7,19 +7,16 @@
 strong {
   font-weight: 600;
 }
-header {
-  padding-top: 0px;
-  
-  position: fixed;
-  
-  z-index: 1;
-}
-header .rightBox {
+
+.rightBox {
   float: right;
   margin-right: 105px;
   margin-top: 20px;
-  display: flex;
-  align-items: center;
+
+  /* position: absolute;
+  top: 20px;
+  z-index: 1;
+  right: 105px; */
 }
 #signup {
   padding: 8px;
@@ -27,13 +24,13 @@ header .rightBox {
   margin-top: 10px;
   border-radius: 30px;
   width: 125px;
-  color: #EDEBF5 !important;
-  border-color: #EDEBF5 !important; 
+  color: #edebf5 !important;
+  border-color: #edebf5 !important;
   transition: 0.3s;
   font-weight: bold;
 }
 .rightBox #signup:hover {
-  background-color: #EDEBF5 !important;
+  background-color: #edebf5 !important;
   color: #333 !important;
   transition: 0.3s;
 }
@@ -63,7 +60,6 @@ header .rightBox {
   background-repeat: no-repeat;
   letter-spacing: 0.03em;
   color: #212121;
-
 }
 
 #scroll {
@@ -95,7 +91,6 @@ header .rightBox {
   left: 30px;
   align-items: center;
   justify-content: center;
-
 }
 .social > a:hover {
   color: rgb(0, 0, 0);
@@ -119,11 +114,12 @@ header .rightBox {
 }
 
 header {
-  position: fixed;
+  /* position: fixed; */
+  z-index: 1;
   width: 100%;
   height: 70px;
   background: transparent;
-  
+  /* border: 1px solid black; */
 }
 
 main .content {
@@ -158,7 +154,6 @@ main h2 span {
   color: #bf7497;
 }
 
-
 #nav-container {
   position: fixed;
   height: 100vh;
@@ -175,7 +170,6 @@ main h2 span {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
-  
 }
 /* #nav-container:focus-within .bg {
   visibility: visible;
@@ -188,6 +182,16 @@ main h2 span {
 .button {
   /*sidebar button*/
   position: relative;
+  margin-right: 45px;
+  margin-top: 15px;
+
+  /* changed */
+  /* position: absolute;
+  margin-right: 45px;
+  right: 0;
+   */
+  /* changed */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -200,8 +204,7 @@ main h2 span {
   width: 30px;
   cursor: pointer;
   pointer-events: auto;
-  margin-right: 45px;
-  margin-top: 15px;
+
   touch-action: manipulation;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   float: right;
@@ -239,7 +242,7 @@ main h2 span {
   top: 0;
   right: 0;
   height: calc(100% - 70px);
-  background: #EDEBF5;
+  background: #edebf5;
   pointer-events: auto;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   transform: translateX(100%);
@@ -276,7 +279,6 @@ main h2 span {
 #nav-content li:not(.small) + .small {
   margin-top: auto;
 }
-
 
 #nav-container:focus-within #nav-content {
   transform: none;
@@ -316,7 +318,7 @@ ul {
 
 /* mobile display */
 @media only screen and (max-width: 600px) {
-  header .rightBox {
+  .rightBox {
     float: right;
     margin-right: 50px;
     margin-top: 20px;
@@ -339,7 +341,7 @@ ul {
     border: none;
     box-shadow: none;
     margin-top: 8px;
- 
+
     padding: 5px;
   }
 
@@ -350,7 +352,6 @@ ul {
     width: 65px;
     height: 65px;
   }
-
 
   main .content {
     margin-left: 20px;

@@ -53,9 +53,11 @@ const Sidebar = (props) => {
     </button>
   );
 
+  // to set navbar fixed or static
+
   return (
     <div>
-      <header>
+      <header style={{ position: props.position }}>
         <div className="leftBox">
           <img src={Logo} className="img-fluid" id="logo" />
         </div>
@@ -65,12 +67,13 @@ const Sidebar = (props) => {
           {props.auth.loggedin ? loggedin : loggedout}
         </div>
       </header>
+
       <div id="nav-container">
-        <div class="bg"></div>
-        <div class="button" tabindex="0">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+        <div className="bg"></div>
+        <div className="button" tabindex="0">
+          <span className="icon-bar"></span>
+          <span className="icon-bar"></span>
+          <span className="icon-bar"></span>
         </div>
         <div id="nav-content" tabindex="0">
           <ul>
