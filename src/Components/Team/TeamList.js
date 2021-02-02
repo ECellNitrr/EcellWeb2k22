@@ -6,7 +6,6 @@ import Sidebar from '../Home/Sidebar/Sidebar';
 import Footer from '../Footer/footer';
 
 import './team.css';
-import Avatar from './Avatar';
 
 const TeamList = () => {
   const axios = faxios();

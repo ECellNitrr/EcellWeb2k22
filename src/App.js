@@ -6,7 +6,7 @@ import PageLoader from './Components/api_loader/page_loader';
 const Home = lazy(() => import('./Components/Home/home'));
 
 /* under work */
-const Team = lazy(() => import('./Components/Team/TeamWork'));
+const Team = lazy(() => import('./Components/Team/Team'));
 
 const Investors = lazy(() => import('./Components/Investors/investors'));
 const Speakers = lazy(() => import('./Components/Speakers/speakers'));
@@ -24,7 +24,7 @@ const CaPortalInfo = lazy(() =>
 );
 const CaPortal = lazy(() => import('./Components/ca_portal/ca_portal'));
 // const Team = lazy(() => import('./Components/Team/team'));
-const Yearwise_team = lazy(() => import('./Components/Team/TeamList'));
+const Yearwise_team = lazy(() => import('./Components/Team/TeamList.js'));
 const Yearwise_spons = lazy(() =>
   import('./Components/Sponsors/yearwise_sponsors')
 );

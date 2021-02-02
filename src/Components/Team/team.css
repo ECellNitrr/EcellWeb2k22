@@ -206,6 +206,9 @@
   background-color: #000;
   padding: 10px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  font-family: 'Poppins';
+  font-size: 23px;
 }
 
 /* @media only screen and (max-width: 1200px) {
