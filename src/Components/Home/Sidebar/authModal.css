@@ -236,6 +236,12 @@ span {
 .back-button{
   margin-bottom: 20px;
 }
+.error-text{
+  color: #FF0000;
+}
+.network-error{
+  width: 100%;
+}
 @media only screen and (max-width: 1000px) {
   .ls-heading{
     font-size: 25px;
