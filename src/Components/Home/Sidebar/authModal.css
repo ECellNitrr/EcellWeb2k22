@@ -228,6 +228,7 @@ span {
   margin: 10px;
   color: black;
   opacity: 1;
+  cursor: pointer;
 }
 .forgot-pass-form-container{
   width: 100%;
