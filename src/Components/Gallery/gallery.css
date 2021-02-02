@@ -121,6 +121,7 @@
   max-width: 15vw;
   text-align: left;
   width: 85px;
+  cursor: pointer;
 }
 
 .modal-inactive{
