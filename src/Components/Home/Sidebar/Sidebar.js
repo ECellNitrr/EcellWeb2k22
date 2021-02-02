@@ -1,18 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Logo from '../../../assets/logo-white.png';
 import './style.css';
 
-import Form from '../../Form/form';
-import OtpModal from '../../Form/otp';
-import LogoutModal from '../../Form/logout';
-import ForgetPass from '../../Form/forgetpass';
-import ChangePass from '../../Form/changepass';
-import CheckOtp from '../../Form/checkotp';
-
 import { NavLink, Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import * as actions from '../../../actions/authActions';
 
 const Sidebar = (props) => {
   // to set navbar fixed or static
@@ -84,6 +74,4 @@ const Sidebar = (props) => {
   );
 };
 
-const mapStateToProps = (state) => state;
-
-export default connect(mapStateToProps, actions)(Sidebar);
+export default Sidebar;
