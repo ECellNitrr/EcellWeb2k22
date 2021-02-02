@@ -15,44 +15,6 @@ import { connect } from 'react-redux';
 import * as actions from '../../../actions/authActions';
 
 const Sidebar = (props) => {
-  const [details, setDetails] = useState({
-    active: false,
-    forgetmail: '',
-    forgetOTP: '',
-  });
-
-  const { active, forgetmail, forgetOTP } = details;
-
-  const setForgetMail = (mail) => {
-    setDetails({ forgetmail: mail });
-  };
-
-  const setForgetOTP = (otp) => {
-    setDetails({ forgetOTP: otp });
-  };
-
-  const loggedout = (
-    <button
-      id="signup"
-      className="btn btn-outline-default"
-      data-toggle="modal"
-      data-target="#loginRegModal"
-    >
-      Login/Sign Up
-    </button>
-  );
-
-  const loggedin = (
-    <button
-      id="signup"
-      className="btn btn-outline-default"
-      data-toggle="modal"
-      data-target="#logoutModal"
-    >
-      {props.auth.first_name.toUpperCase()} {props.auth.last_name.toUpperCase()}
-    </button>
-  );
-
   // to set navbar fixed or static
 
   return (
@@ -64,7 +26,9 @@ const Sidebar = (props) => {
 
         {/* logged-in/logged-out part */}
         <div className="rightBox">
-          {props.auth.loggedin ? loggedin : loggedout}
+          <button id="signup" className="btn btn-outline-default">
+            Login/Sign Up
+          </button>
         </div>
       </header>
 
