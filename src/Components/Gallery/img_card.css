@@ -1,0 +1,135 @@
+.img-card_wrapper{  
+    /* height: 16vw; */
+    /* width: 12vw;  */
+    width: 17.5vw;
+    margin: 40px 20px;
+    border-radius: 2.5px;
+}
+
+.card-shadow{
+    border: 2px solid #c8c8c8;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+.dummy-img-card_wrapper{
+    height: 1.5vw;
+}
+
+.img-card_wrapper img{
+    /* height: 100%; */
+    width: 100%;
+    object-fit: cover;       
+    border-radius: 2.5px;
+}
+
+@media(max-width:1400px){
+    .img-card_wrapper{
+        /* height: 24vw; */
+        /* width: 18vw; */
+        width: 22.5vw;
+    }
+
+    .dummy-img-card_wrapper{
+        height: 2vw;
+    }
+}
+
+@media(max-width:1100px){
+    .img-card_wrapper{
+        /* height: 32vw; */
+        /* width: 24vw; */
+        width: 35vw;
+    }
+
+    .dummy-img-card_wrapper{
+        height: 1vw;
+    }
+}
+
+@media(max-width:700px){
+    .img-card_wrapper{
+        /* height: 48vw; */
+        /* width: 36vw; */
+        width: 67.5vw;
+        margin: 30px 15px;
+    }
+
+    .dummy-img-card_wrapper{
+        height: 1vw;
+    }
+}
+
+@media(max-width:300px){
+    .img-card_wrapper{
+        /* height: 80vw; */
+        width: 60vw;
+        margin: 10px 12.5px;
+    }
+
+    .dummy-img-card_wrapper{
+        height: 1vw;
+    }
+}
+/* .img-card_wrapper{  
+    height: 280px;
+    width: 210px;       
+    margin: 20px 25px;
+    border-radius: 2.5px;
+}
+
+.dummy-img-card_wrapper{
+    height: 40px;
+}
+
+.img-card_wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;       
+    border-radius: 2.5px;
+}
+
+@media(max-width:800px){
+    .img-card_wrapper{
+        height: 240px;
+        width: 180px;
+    }
+    
+    .dummy-img-card_wrapper{
+        height: 25px;
+    }
+}
+
+@media(max-width:700px){
+    .img-card_wrapper{
+        height: 48vw;
+        width: 36vw;
+        margin: 10px 10px;
+    }
+    
+    .dummy-img-card_wrapper{
+        height: 25px;
+    }
+}
+
+@media(max-width:350px){
+    .img-card_wrapper{
+        height: 160px;
+        width: 120px;
+        margin: 10px 10px;
+    }
+    
+    .dummy-img-card_wrapper{
+        height: 15px;
+    }
+}
+
+@media(max-width:300px){
+    .img-card_wrapper{
+        height: 90vw;
+        width: 67.5vw;
+        margin: 20px 0px;
+    }
+    
+    .dummy-img-card_wrapper{
+        height: 20px;
+    }
+} */
