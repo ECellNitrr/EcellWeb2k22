@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
-.button {
-  position: absolute;
-  top: -70px;
+/* .button {
+  position: sticky;
+  top: 0px;
   right: 0 !important;
-}
+} */
+/* 
 #nav-content {
   padding: 20px;
   width: 90%;
@@ -22,7 +23,8 @@
   contain: paint;
   color: #333;
   z-index: 1;
-}
+} */
+
 .speakerContainer {
   background-color: darkblue;
   height: 100%;
@@ -35,6 +37,9 @@
   left: 45%;
   background-color: #fff;
   content: '';
+}
+.s {
+  padding-top: 50px;
 }
 /* card */
 .speakers {
@@ -125,3 +130,13 @@
   overflow-y: hidden;
   overflow-x: hidden;
 } */
+
+@media only screen and (max-width: 768px) {
+  .s {
+    padding-top: 60px;
+  }
+  .sidebarTop {
+    position: sticky;
+    top: 0;
+  }
+}

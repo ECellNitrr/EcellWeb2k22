@@ -5,11 +5,10 @@ import PageLoader from './Components/api_loader/page_loader';
 
 const Home = lazy(() => import('./Components/Home/home'));
 
-/* under work */
-const Team = lazy(() => import('./Components/Team/Team'));
+const Team = lazy(() => import('./Components/Team/team.js'));
 
 const Investors = lazy(() => import('./Components/Investors/investors'));
-const Speakers = lazy(() => import('./Components/Speakers/Speakers.jsx'));
+const Speakers = lazy(() => import('./Components/Speakers/speakers.js'));
 const Sponsors = lazy(() => import('./Components/Sponsors/sponsors'));
 const Events = lazy(() => import('./Components/Events/events'));
 const EventDetail = lazy(() => import('./Components/Events/event_detail'));
@@ -23,7 +22,6 @@ const CaPortalInfo = lazy(() =>
   import('./Components/ca_portal_intro/caportal')
 );
 const CaPortal = lazy(() => import('./Components/ca_portal/ca_portal'));
-// const Team = lazy(() => import('./Components/Team/team'));
 const Yearwise_team = lazy(() => import('./Components/Team/TeamList.js'));
 const Yearwise_spons = lazy(() =>
   import('./Components/Sponsors/yearwise_sponsors')

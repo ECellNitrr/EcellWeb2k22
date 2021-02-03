@@ -2,7 +2,7 @@
   background-color: darkblue;
   height: 100%;
 }
-.button {
+/* .button {
   position: absolute;
   top: -70px;
   right: 0 !important;
@@ -24,9 +24,9 @@
   contain: paint;
   color: #333;
   z-index: 1;
-}
+} */
 .teamPage {
-  margin-top: 50px;
+  padding-top: 100px;
   color: #fff;
   display: flex;
   flex-direction: column;

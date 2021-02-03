@@ -6,7 +6,7 @@ import './footer.css';
 const footer = () => {
   return (
     <div className="footer">
-      <div className=" container">
+      <div className="footercontainer">
         <div className="row">
           <div className="box-1 box col-sm-4">
             <h3>Quick Links</h3>
@@ -65,9 +65,7 @@ const footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-center bottom">
-        Made With <i class="fas fa-heart"></i> By Team E-Cell NITRR
-      </p>
+      <p className="text-center bottom">Designed By Team E-Cell NITRR</p>
     </div>
   );
 };
