@@ -51,6 +51,8 @@ const AuthModal = ({ closeModal, modalOpen }) => {
   //Main Container
   const AuthModalContainer = () => {
     return (
+      <div className="ls-modal-content">
+        {CloseButton()}
       <div class={`container ${rightPanelActive}`} id="container">
         <div class="form-container sign-up-container">
           <SignUp setlogin={setlogin} />
@@ -62,12 +64,15 @@ const AuthModal = ({ closeModal, modalOpen }) => {
           <OverLay />
         </div>
       </div>
+      </div>
     );
   };
   //Forgot Password Modal
   const ForgotPasswordModal = () => {
     return (
-      <div class="container" id="container">
+      <div className="fp-ls-modal-content">
+        {CloseButton()}
+      <div class="forgot-container" id="container">
         <div class="form-container forgot-pass-form-container">
           <form className="ls-form" action="#">
             <div className="ls-heading">Forgot Your Password</div>
@@ -89,20 +94,24 @@ const AuthModal = ({ closeModal, modalOpen }) => {
           </form>
         </div>
       </div>
+      </div>
     );
   };
+
+  const CloseButton = () => (
+    <i
+    class="far fa-times-circle close"
+    onClick={() => {
+      closeModal();
+      setlogin(false);
+      setForgotPassword(false);
+    }}
+  ></i>
+  )
 
   return (
     <div className={`ls-modal ${showHideClassName}`}>
       <div className="ls-modal-content">
-        <i
-          class="far fa-times-circle close"
-          onClick={() => {
-            closeModal();
-            setlogin(false);
-            setForgotPassword(false);
-          }}
-        ></i>
         {!forgotPassword ? AuthModalContainer() : ForgotPasswordModal()}
       </div>
     </div>

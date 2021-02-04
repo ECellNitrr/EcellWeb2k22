@@ -229,6 +229,22 @@ span {
   color: black;
   opacity: 1;
 }
+.fp-ls-modal-content{
+  width: 400px;
+  max-width: 100%;
+  margin: auto;
+}
+.forgot-container{
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+  min-height: 468px;
+  margin: auto
+}
 .forgot-pass-form-container{
   width: 100%;
 }
@@ -239,6 +255,7 @@ span {
   .ls-heading{
     font-size: 25px;
   }
+
   .mob-button{
     display: none;
   }
@@ -253,6 +270,9 @@ span {
   .container{
     width: 600px;
     min-height: 450px;
+  }
+  .fp-ls-modal-content{
+    width: 350px;
   }
   .ls-heading{
     font-size: 20px;
@@ -271,6 +291,9 @@ span {
   }
   .ls-modal-content{
     width: 375px;
+  }
+  .fp-ls-modal-content{
+    width: 300px;
   }
   .container{
     background-color: #ffffff;
