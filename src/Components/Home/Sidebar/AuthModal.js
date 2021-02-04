@@ -111,9 +111,7 @@ const AuthModal = ({ closeModal, modalOpen }) => {
 
   return (
     <div className={`ls-modal ${showHideClassName}`}>
-      <div className="ls-modal-content">
         {!forgotPassword ? AuthModalContainer() : ForgotPasswordModal()}
-      </div>
     </div>
   );
 };

@@ -18,6 +18,7 @@
   overflow: none;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  animation-name: animatetop;
 }
 .ls-heading {
   font-weight: bold;
@@ -93,6 +94,8 @@ span {
   width: 800px;
   max-width: 100%;
   margin: auto;
+  animation-name: animatetop;
+  animation-duration: 0.6s
 }
 .container {
   background-color: #ffffff;
@@ -233,6 +236,8 @@ span {
   width: 400px;
   max-width: 100%;
   margin: auto;
+  animation-name: animatetop;
+  animation-duration: 0.6s
 }
 .forgot-container{
   background-color: #ffffff;
@@ -250,6 +255,10 @@ span {
 }
 .back-button{
   margin-bottom: 20px;
+}
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
 @media only screen and (max-width: 1000px) {
   .ls-heading{
