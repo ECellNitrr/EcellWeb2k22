@@ -18,7 +18,6 @@
   overflow: none;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  animation-name: animatetop;
 }
 .ls-heading {
   font-weight: bold;
@@ -94,10 +93,8 @@ span {
   width: 800px;
   max-width: 100%;
   margin: auto;
-  animation-name: animatetop;
-  animation-duration: 0.6s
 }
-.container {
+.ls-container {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -127,11 +124,11 @@ span {
   z-index: 1;
 }
 
-.container.right-panel-active .sign-in-container {
+.ls-container.right-panel-active .sign-in-container {
   transform: translateX(100%);
 }
 
-.container.right-panel-active .sign-up-container {
+.ls-container.right-panel-active .sign-up-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
@@ -162,7 +159,7 @@ span {
   z-index: 100;
 }
 
-.container.right-panel-active .overlay-container {
+.ls-container.right-panel-active .overlay-container {
   transform: translateX(-100%);
 }
 
@@ -182,7 +179,7 @@ span {
   transition: transform 0.6s ease-in-out;
 }
 
-.container.right-panel-active .overlay {
+.ls-container.right-panel-active .overlay {
   transform: translateX(50%);
 }
 
@@ -205,7 +202,7 @@ span {
   transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left {
+.ls-container.right-panel-active .overlay-left {
   transform: translateX(0);
 }
 
@@ -214,7 +211,7 @@ span {
   transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+.ls-container.right-panel-active .overlay-right {
   transform: translateX(20%);
 }
 
@@ -232,39 +229,16 @@ span {
   color: black;
   opacity: 1;
 }
-.fp-ls-modal-content{
-  width: 400px;
-  max-width: 100%;
-  margin: auto;
-  animation-name: animatetop;
-  animation-duration: 0.6s
-}
-.forgot-container{
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  position: relative;
-  overflow: hidden;
-  width: 400px;
-  max-width: 100%;
-  min-height: 468px;
-  margin: auto
-}
 .forgot-pass-form-container{
   width: 100%;
 }
 .back-button{
   margin-bottom: 20px;
 }
-@keyframes animatetop {
-  from {top: -300px; opacity: 0}
-  to {top: 0; opacity: 1}
-}
 @media only screen and (max-width: 1000px) {
   .ls-heading{
     font-size: 25px;
   }
-
   .mob-button{
     display: none;
   }
@@ -276,12 +250,9 @@ span {
   .ls-modal-content{
     width: 600px;
   }
-  .container{
+  .ls-container{
     width: 600px;
     min-height: 450px;
-  }
-  .fp-ls-modal-content{
-    width: 350px;
   }
   .ls-heading{
     font-size: 20px;
@@ -301,10 +272,7 @@ span {
   .ls-modal-content{
     width: 375px;
   }
-  .fp-ls-modal-content{
-    width: 300px;
-  }
-  .container{
+  .ls-container{
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -338,12 +306,12 @@ span {
   .ls-button:active {
     transition: none;
   }
-  .container.right-panel-active .sign-up-container{
+  .ls-container.right-panel-active .sign-up-container{
     transform: none;
     width: 100%;
     animation: none;
   }
-  .container.container.right-panel-active .sign-in-container{
+  .ls-container.right-panel-active .sign-in-container{
     width: 100%;
   }
   .mob-button{
