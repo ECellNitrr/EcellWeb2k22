@@ -39,9 +39,11 @@ const Home = () => {
         navigation={true}
         navigationPosition="right"
         navigationTooltips={[
-          'You are on main page',
-          'You are on timeline page',
-          'You are no where',
+          'Ecell NIT Raipur',
+          'About Us',
+          'Our Vission',
+          'Timeline',
+          'Contact Us'
         ]}
         showActiveTooltip={false}
         loopBottom={true}
