@@ -7,7 +7,17 @@ class SponsorsTabs extends Component {
         this.onClick1 = this.onClick1.bind(this);
         this.onClick2 = this.onClick2.bind(this);
         this.onClick3 = this.onClick3.bind(this);
+
+        this.ref1 = React.createRef();
+        this.ref2 = React.createRef();
+        this.ref3 = React.createRef();
+
+        this.intervalIds = [
+            null, null, null
+        ];
     }
+
+    intervalIds;
 
     onClick1() {
         this.setState({
@@ -28,6 +38,36 @@ class SponsorsTabs extends Component {
     state = {
         activeTabId: 0
     };
+
+    startScroll() {
+        let contRef;
+        switch (this.state.activeTabId) {
+            case 0: contRef = this.ref1;
+                break;
+            case 1: contRef = this.ref2;
+                break;
+            default: contRef = this.ref3;
+                break;
+        }
+        if ((contRef.current != null) && (contRef.current != undefined)) {
+            contRef.current.scrollLeft = 0;
+            let intvl = this.intervalIds[this.state.activeTabId];
+            if (intvl != null) {
+                clearInterval(intvl);
+            }
+
+            intvl = setInterval(() => {
+                if ((contRef.current != null) && (contRef.current != undefined)) {
+                    let oldScrollVal = contRef.current.scrollLeft;
+                    contRef.current.scrollLeft += 1.25;
+                    if (oldScrollVal == contRef.current.scrollLeft) {
+                        contRef.current.scrollLeft = 0;
+                    }
+                }
+            }, 5);
+            this.intervalIds[this.state.activeTabId] = intvl;
+        }
+    }
 
     render() {
 
@@ -149,6 +189,7 @@ class SponsorsTabs extends Component {
         ];
 
         tabHeaderClasses[this.state.activeTabId] = tabHeaderClasses[this.state.activeTabId] + " active-tab-header";
+        this.startScroll();
 
         return (
             <div className="spons-tabs_wrapper">
@@ -178,17 +219,17 @@ class SponsorsTabs extends Component {
                 <div className="spons-tab-contents-ctn">
                     <div className="spons-tab-contents-cover">
                         <div className={tabClass}>
-                            <div className="spons-tab-content_cover">
+                            <div ref={this.ref1} className="spons-tab-content_cover">
                                 <div className="spons-tab-content">
                                     {platinumSponsHTML}
                                 </div>
                             </div>
-                            <div className="spons-tab-content_cover">
+                            <div ref={this.ref2} className="spons-tab-content_cover">
                                 <div className="spons-tab-content">
                                     {goldSponsHTML}
                                 </div>
                             </div>
-                            <div className="spons-tab-content_cover">
+                            <div ref={this.ref3} className="spons-tab-content_cover">
                                 <div className="spons-tab-content">
                                     {partnerSponsHTML}
                                 </div>
