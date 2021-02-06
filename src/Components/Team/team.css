@@ -165,9 +165,9 @@
 .manager_container_ {
   display: flex;
   flex-direction: row;
-
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-
   margin-left: 60px;
   margin-right: 50px;
 }
@@ -261,5 +261,14 @@
   .manager_item {
     padding: 15px;
     width: 275px;
+  }
+  .teamLink {
+    border: 1px solid #fff;
+    padding: 8px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-top: 20px;
   }
 }

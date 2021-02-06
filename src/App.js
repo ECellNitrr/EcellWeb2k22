@@ -2,6 +2,7 @@ import React, { Component, lazy, Suspense } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import PageLoader from './Components/api_loader/page_loader';
+import Sidebar from './Components/Home/Sidebar/Sidebar';
 
 const Home = lazy(() => import('./Components/Home/home'));
 
