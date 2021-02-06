@@ -2,7 +2,9 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-'on':
+env:
+  CI: false
+"on":
   push:
     branches:
       - master
@@ -14,8 +16,8 @@ jobs:
       - run: npm i && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ECELL_WEBSITE_2524D }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_ECELL_WEBSITE_2524D }}"
           channelId: live
           projectId: ecell-website-2524d
         env:
