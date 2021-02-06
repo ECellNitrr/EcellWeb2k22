@@ -6,6 +6,7 @@ import Footer from "../Footer/footer";
 import HeaderLinks from "./header_links";
 import Loader from '../api_loader/api_loader';
 import Sidebar from "../Home/Sidebar/Sidebar";
+import SponsorsTabs from "./sponsors_tabs";
 // import { createCoverageSummary } from "istanbul-lib-coverage";
 
 class Sponsors extends Component {
@@ -69,35 +70,50 @@ class Sponsors extends Component {
             </div>
         });
 
+        let titleSpons = sponsors["Title"];
+        let titleSponsHTML = [];
+        if (titleSpons != undefined) {
+            titleSpons.forEach(tSpon => {
+                titleSponsHTML.push(<div key={tSpon.id}>
 
+                    <div className="col m-1" key={tSpon.id}>
+                        <div className="cont">
+                            <div className="front shadow-lg p-3 mb-5 bg-white rounded">
+                                <img
+                                    alt={tSpon.name}
+                                    className="spons-Image"
+                                    src={tSpon.pic_url}
+                                />
+                            </div>
+                            <div className="back shadow-lg p-3 mb-5 bg-white rounded">
+                                <div className="inner">
+                                    <h6 style={{ fontWeight: "800" }}>
+                                        {tSpon.name}
+                                    </h6>
+                                    <p className="ph-no">{tSpon.contact}</p>
+                                    <p>{tSpon.details}</p>
+                                    <p>
+                                        <a className="web" href={tSpon.website}>
+                                            Website
+                                    </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>);
+            });
+
+            titleSponsHTML = (<div className="my-5">
+                <div style={{ marginBottom: "20px" }} className="team-year sponsType-header">Title Sponsors</div>
+                <div className="ctn9">{titleSponsHTML}</div>
+            </div>);
+        }
 
         return (
-            // <div className="sponsors">
-            //     <Sidebar />
-            //     <div
-            //         className="container-fluid "
-            //         style={{ maxWidth: "1500px", paddingTop: "0px" }}
-            //     >
-
-            //         {this.state.loading ? (
-            //             <Loader style={{ margin: "0px auto" }} />
-            //         ) : (
-            //                 <div>
-            //                     <div className="header1">SPONSORS {this.state.year}</div>
-            //                     <HeaderLinks />
-            //                     {sponsors_html}
-            //                     <HeaderLinks />
-
-            //                 </div>
-            //             )}
-
-            //     </div>
-            //     <Footer />
-            // </div>
-
             <div className="whole-spons">
                 <Sidebar></Sidebar>
-                <div className="container-fluid mainCtn">
+                <div className="mainCtn">
                     {this.state.loading ? (
                         <Loader style={{ margin: "0px auto" }} />
                     ) : (
@@ -109,7 +125,9 @@ class Sponsors extends Component {
                                     <div className="spons-header_border header-withYear_border"></div>
                                 </div>
                                 <HeaderLinks />
-                                { sponsors_html}
+                                {/* { sponsors_html} */}
+                                {titleSponsHTML}
+                                <SponsorsTabs sponsData={sponsors} />
                                 <HeaderLinks />
                             </div>
                         )}
