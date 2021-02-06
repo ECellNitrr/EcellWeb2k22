@@ -13,21 +13,22 @@
 
 .spons-type-head_wrapper{
     font-size: 30px;
+    padding: 20px 25px;
 }
 
-.platinum-head_border{
-    width: 150px;
-    margin-left: 80px;
+.active-tab-header .platinum-head_border{
+    width: 130px;
+    margin-left: 75px;
     height: 2px;
 }
 
-.gold-head_border{
+.active-tab-header .gold-head_border{
     width: 75px;
     margin-left: 70px;
     height: 2px;
 }
 
-.partner-head_border{
+.active-tab-header .partner-head_border{
     width: 110px;
     margin-left: 70px;
     height: 2px;
@@ -52,16 +53,16 @@
     display: flex;
     flex-direction: row;
     width: 270vw;
-    left: -90vw;
     position: relative;
+    transition-duration: 0.25s;
 }
 
 .spons-tab-content_cover{
     height: 350px;
     width: 90vw;
     color: white;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    justify-items: center;
     flex-direction: row;
     overflow-x: scroll;
     align-items: flex-start;
@@ -71,4 +72,55 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+}
+
+.spons-tab1{
+    left: -0vw;
+}
+.spons-tab2{
+    left: -90vw;
+}
+.spons-tab3{
+    left: -180vw;
+}   
+
+@media(max-width:600px){
+    .spons-type-head_wrapper{
+        font-size: 22.5px;
+        padding: 10px 12.5px;
+    }
+
+    .active-tab-header .platinum-head_border{
+        width: 85px;
+        margin-left: 40px;
+        height: 1.5px;
+    }
+
+    .active-tab-header .gold-head_border{
+        width: 40px;
+        margin-left: 35px;
+        height: 1.5px;
+    }
+
+    .active-tab-header .partner-head_border{
+        width: 70px;
+        margin-left: 40px;
+        height: 1.5px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }

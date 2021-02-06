@@ -2,7 +2,35 @@ import React, { Component } from "react";
 import './sponsors_tabs.css';
 
 class SponsorsTabs extends Component {
+    constructor(props) {
+        super(props);
+        this.onClick1 = this.onClick1.bind(this);
+        this.onClick2 = this.onClick2.bind(this);
+        this.onClick3 = this.onClick3.bind(this);
+    }
+
+    onClick1() {
+        this.setState({
+            activeTabId: 0
+        });
+    }
+    onClick2() {
+        this.setState({
+            activeTabId: 1
+        });
+    }
+    onClick3() {
+        this.setState({
+            activeTabId: 2
+        });
+    }
+
+    state = {
+        activeTabId: 0
+    };
+
     render() {
+
         let platinumSpons = this.props.sponsData["Platinum"];
         let platinumSponsHTML = [];
         if (platinumSpons != undefined) {
@@ -107,24 +135,39 @@ class SponsorsTabs extends Component {
             });
         }
 
+        let classes = [
+            "spons-tab1",
+            "spons-tab2",
+            "spons-tab3"
+        ];
+        let tabClass = "spons-tab-content_wrapper " + classes[this.state.activeTabId];
+
+        let tabHeaderClasses = [
+            "spons-header_wrapper platinum-head_wrapper spons-type-head_wrapper",
+            "spons-header_wrapper gold-head_wrapper spons-type-head_wrapper",
+            "spons-header_wrapper partner-head_wrapper spons-type-head_wrapper"
+        ];
+
+        tabHeaderClasses[this.state.activeTabId] = tabHeaderClasses[this.state.activeTabId] + " active-tab-header";
+
         return (
             <div className="spons-tabs_wrapper">
                 <div className="spons-tab-header_wrapper">
-                    <div className="spons-header_wrapper platinum-head_wrapper spons-type-head_wrapper">
+                    <div onClick={this.onClick1} className={tabHeaderClasses[0]}>
                         <div className="spons-header platinum-head">
                             Platinum
                         </div>
                         <div className="spons-header_border platinum-head_border"></div>
                     </div>
 
-                    <div className="spons-header_wrapper gold-head_wrapper spons-type-head_wrapper">
+                    <div onClick={this.onClick2} className={tabHeaderClasses[1]}>
                         <div className="spons-header gold-head">
                             Gold
                         </div>
                         <div className="spons-header_border gold-head_border"></div>
                     </div>
 
-                    <div className="spons-header_wrapper partner-head_wrapper spons-type-head_wrapper">
+                    <div onClick={this.onClick3} className={tabHeaderClasses[2]}>
                         <div className="spons-header partner-head">
                             Partner
                         </div>
@@ -134,7 +177,7 @@ class SponsorsTabs extends Component {
                 </div>
                 <div className="spons-tab-contents-ctn">
                     <div className="spons-tab-contents-cover">
-                        <div className="spons-tab-content_wrapper">
+                        <div className={tabClass}>
                             <div className="spons-tab-content_cover">
                                 <div className="spons-tab-content">
                                     {platinumSponsHTML}
