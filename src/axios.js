@@ -7,9 +7,9 @@ export let baseURL ="https://ecell.nitrr.ac.in";
 // export let baseURL ="http://8a22a572.ngrok.io";
 
     
-if (process.env.NODE_ENV === 'production') {
-    baseURL = ""
-}
+// if (process.env.NODE_ENV === 'production') {
+//     baseURL = ""
+// }
 
 
 export default () => {
