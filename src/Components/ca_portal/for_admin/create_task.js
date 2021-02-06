@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import faxios from '../../../axios'
 
 import PropTypes from 'prop-types'

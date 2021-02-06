@@ -295,7 +295,7 @@ class new_opening extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Work Profile Name</label>
                             <input type="text" ref={ele => this.name = ele} className="form-control" />
-                            {this.state.err_num.indexOf(0)!=-1 && this.state.validate==false && this.name.value.length===0 ?<Fragment>
+                            {this.state.err_num.indexOf(0)!==-1 && this.state.validate===false && this.name.value.length===0 ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['name']} */}
@@ -305,7 +305,7 @@ class new_opening extends Component {
                         <label><label className="font-weight-bold">Brief</label>&nbsp;&nbsp;<i>(Chars allowed: &nbsp;{idea_size_text})</i></label>
                             
                             <input onChange={(e) => this.setState({max_chars: e.target.value})} type="text" ref={ele => this.brief = ele} className="form-control" />
-                            {this.state.err_num.indexOf(1)!=-1 && this.state.validate==false && this.brief.value.length===0 ?<Fragment>
+                            {this.state.err_num.indexOf(1)!==-1 && this.state.validate===false && this.brief.value.length===0 ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['name']} */}
@@ -314,7 +314,7 @@ class new_opening extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Stipend</label>
                             <input type="text" ref={ele => this.stipend = ele} className="form-control" />
-                            {this.state.err_num.indexOf(2)!=-1 && this.state.validate==false && this.stipend.value.length===0 ?<Fragment>
+                            {this.state.err_num.indexOf(2)!==-1 && this.state.validate===false && this.stipend.value.length===0 ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['stipend']} */}
@@ -322,7 +322,7 @@ class new_opening extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Location</label>
                             <input type="email" ref={ele => this.location = ele} className="form-control" />
-                            {this.state.err_num.indexOf(3)!=-1 && this.state.validate==false && this.location.value.length===0 ?<Fragment>
+                            {this.state.err_num.indexOf(3)!==-1 && this.state.validate===false && this.location.value.length===0 ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['location']} */}
@@ -330,7 +330,7 @@ class new_opening extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Apply by</label>
                             <Datetime isValidDate={ valid } value={this.state.apply_by} onChange={e => this.setState({ apply_by: e })} />
-                            {this.state.err_num.indexOf(4)!=-1 && this.state.validate==false && this.state.apply_by===null ?<Fragment>
+                            {this.state.err_num.indexOf(4)!==-1 && this.state.validate===false && this.state.apply_by===null ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['apply_by']} */}
@@ -338,7 +338,7 @@ class new_opening extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Start Date</label>
                             <Datetime isValidDate={ valid } value={this.state.start_date} onChange={e => this.setState({ start_date: e })} />
-                            {this.state.err_num.indexOf(5)!=-1 && this.state.validate==false && this.state.start_date===null ?<Fragment>
+                            {this.state.err_num.indexOf(5)!==-1 && this.state.validate===false && this.state.start_date===null ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                             {/* {error_html['state_date']} */}
@@ -346,7 +346,7 @@ class new_opening extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">No of Openings</label>
                             <input type="number" ref={ele => this.no_of_opening = ele} className="form-control" />
-                            {this.state.err_num.indexOf(6)!=-1 && this.state.validate==false && (this.no_of_opening.value<=0 || this.no_of_opening.value===null) ?<Fragment>
+                            {this.state.err_num.indexOf(6)!==-1 && this.state.validate===false && (this.no_of_opening.value<=0 || this.no_of_opening.value===null) ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required with valid input</div>
                             </Fragment>:null}
                             {/* {error_html['no_of_opening']} */}
@@ -355,7 +355,7 @@ class new_opening extends Component {
                             <label className="font-weight-bold">Duration</label>
                             <input type="text" ref={ele => this.duration = ele} className="form-control" />
                             {/* {error_html['duration']} */}
-                            {this.state.err_num.indexOf(7)!=-1 && this.state.validate==false && this.duration.value.length===0 ?<Fragment>
+                            {this.state.err_num.indexOf(7)!==-1 && this.state.validate===false && this.duration.value.length===0 ?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                         </div>
@@ -376,7 +376,7 @@ class new_opening extends Component {
                             <label className="font-weight-bold">About the job</label>
                             {/* {error_html['about_the_job']} */}
                             <Wysiwyg onRef={ref => this.about_the_job = ref} />
-                            {this.state.err_num.indexOf(8)!=-1 && this.state.validate==false && !this.about_the_job.check_input()?<Fragment>
+                            {this.state.err_num.indexOf(8)!==-1 && this.state.validate===false && !this.about_the_job.check_input()?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                         </div>
@@ -384,7 +384,7 @@ class new_opening extends Component {
                             <label className="font-weight-bold">Skills required</label>
                             {/* {error_html['skills_required']} */}
                             <Wysiwyg onRef={ref => this.skills_required = ref} />
-                            {this.state.err_num.indexOf(9)!=-1 && this.state.validate==false && !this.skills_required.check_input()?<Fragment>
+                            {this.state.err_num.indexOf(9)!==-1 && this.state.validate===false && !this.skills_required.check_input()?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                         </div>
@@ -392,7 +392,7 @@ class new_opening extends Component {
                             <label className="font-weight-bold">Who can apply</label>
                             {/* {error_html['who_can_apply']} */}
                             <Wysiwyg onRef={ref => this.who_can_apply = ref} />
-                            {this.state.err_num.indexOf(10)!=-1 && this.state.validate==false && !this.who_can_apply.check_input()?<Fragment>
+                            {this.state.err_num.indexOf(10)!==-1 && this.state.validate===false && !this.who_can_apply.check_input()?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                         </div>
@@ -400,14 +400,14 @@ class new_opening extends Component {
                             <label className="font-weight-bold">Perks</label>
                             {/* {error_html['perks']} */}
                             <Wysiwyg onRef={ref => this.perks = ref} />
-                            {this.state.err_num.indexOf(11)!=-1 && this.state.validate==false && !this.perks.check_input()?<Fragment>
+                            {this.state.err_num.indexOf(11)!==-1 && this.state.validate===false && !this.perks.check_input()?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
                         </div>
 
 
                         <div className="text-center">
-                            <div>{this.state.validate==false?<i className="font-weight-bold text-danger">(Some fields are empty or invalid, recheck and try agin)</i>:null}</div>
+                            <div>{this.state.validate===false?<i className="font-weight-bold text-danger">(Some fields are empty or invalid, recheck and try agin)</i>:null}</div>
                             <button disabled={this.state.requesting} onClick={this._new_opening} className="btn btn-primary font-weight-bold">{this.state.requesting ? <i className="fa fa-spinner fa-spin"></i> : 'submit'}</button>
                         </div>
                     </form>

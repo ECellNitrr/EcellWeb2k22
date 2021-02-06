@@ -1,67 +1,195 @@
 import React, { Component } from "react";
-import faxios from '../../axios';
+import axios from '../../axios';
 import Navbar from '../Navbar/navbar';
 import Footer from '../Footer/footer';
 import ImageGallery from 'react-image-gallery';
 import "../../../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 import './gallery.css';
 import Loader from '../api_loader/api_loader'
+import Sidebar from "../Home/Sidebar/Sidebar";
+import ImgCard from "./img_card";
+import DummyImgCard from "./dummy_img_card";
 
 
-export default class gallery_imgs extends Component {
+class gallery_imgs extends Component {
     state = {
-        pic:[],
-        photos:[],
-        year_name:"",
-        success:false,
-        loading:true
+        pic: [],
+        photos: [],
+        year_name: "",
+        success: false,
+        loading: true,
+        nofColumns: 0,
+        isModalActive: false,
+        imgIndex: 0
     }
 
-    componentDidMount(){
-        let year_gallery= this.props.match.params.name;
-        this.setState({
-            year_name:year_gallery
-        })
-        faxios().get('/gallery/list/').then(res=>{
-            let year_pics= res.data.gallery;
-            let curent_year_pic= year_pics[year_gallery];
-            console.log(curent_year_pic);
+    constructor(props) {
+        super(props);
+        this.onImgClick = this.onImgClick.bind(this);
+        this.onCloseModal = this.onCloseModal.bind(this);
+    }
 
-        curent_year_pic.forEach(ele => {
+    getNoofCols() {
+        let nofCols = 0;
+        // if (window.innerWidth <= 300) {
+        //     nofCols = 1;
+        // }
+        // else if (window.innerWidth <= 700) {
+        //     nofCols = 2;
+        // }
+        // else if (window.innerWidth <= 1100) {
+        //     nofCols = 3;
+        // }
+        // else if (window.innerWidth <= 1400) {
+        //     nofCols = 4;
+        // }
+        // else {
+        //     nofCols = 5;
+        // }
+        // return nofCols;
+        // if (window.innerWidth <= 300) {
+        //     nofCols = 1;
+        // }
+        // else
+        if (window.innerWidth <= 700) {
+            nofCols = 1;
+        }
+        else if (window.innerWidth <= 1100) {
+            nofCols = 2;
+        }
+        else if (window.innerWidth <= 1400) {
+            nofCols = 3;
+        }
+        else {
+            nofCols = 4;
+        }
+        return nofCols;
+    }
+
+    componentDidMount() {
+        let year_gallery = this.props.match.params.name;
+        this.setState({
+            year_name: year_gallery
+        })
+        axios().get('/gallery/list/').then(res => {
+            let year_pics = res.data.gallery;
+            let curent_year_pic = year_pics[year_gallery];
+            // console.log(curent_year_pic);
+
+            curent_year_pic.forEach(ele => {
                 this.state.photos.push({
-                    thumbnail:ele.small,
-                    original:ele.big
+                    thumbnail: ele.small,
+                    original: ele.big
                 })
             });
+            console.log(this.state.photos);
+            let nofCols = this.getNoofCols();
 
             this.setState({
-                success:true,
-                loading:false
+                success: true,
+                loading: false,
+                nofColumns: nofCols
             })
-        
-            if(this.state.success){
-                document.querySelector('.image-gallery-play-button').click();
-                document.querySelector('.image-gallery-play-button').click();
-                
+
+            // if (this.state.success) {
+            //     // document.querySelector('.image-gallery-play-button').click();
+            //     // document.querySelector('.image-gallery-play-button').click();
+
+            // }
+        });
+
+        window.addEventListener('resize', () => {
+            let nofCols = this.getNoofCols();
+            // console.log(window.innerWidth);
+            if (this.state.nofColumns != nofCols) {
+                // console.log(window.innerWidth + " " + nofCols);
+                this.setState({
+                    nofColumns: nofCols
+                });
             }
-        })
+        });
+    }
+
+    onImgClick(imgIndex) {
+        this.setState({
+            imgIndex: imgIndex,
+            isModalActive: true
+        });
+    }
+
+    onCloseModal() {
+        this.setState({
+            isModalActive: false
+        });
     }
 
     render() {
-        
+        let imgCardsHtml = [];
+        if (this.state.nofColumns > 0) {
+            let imgCols = [];
+            let nofCols = this.state.nofColumns;
+            for (let i = 0; i < nofCols; i++) {
+                let tmpImgCol = [];
+                if (i % 2 == 1) {
+                    tmpImgCol.push(
+                        <DummyImgCard />
+                    );
+                }
+                imgCols.push(tmpImgCol);
+            }
+
+            for (let i = 0; i < this.state.photos.length; i++) {
+                imgCols[i % nofCols].push(<ImgCard imgIndex={i} onClick={this.onImgClick} imgSrc={this.state.photos[i].original}></ImgCard>);
+            }
+
+            for (let i = 0; i < nofCols; i++) {
+                let imgCol = <div>
+                    {imgCols[i]}
+                </div>
+                imgCardsHtml.push(imgCol);
+            }
+        }
+
         return (
             <div className="whole-gallery">
-                <Navbar/>
-                
-                <div style={{paddingTop:"200px"}}>
-                    <div className="position11 shadow p-3 mb-5 bg-white rounded">Gallery of {this.state.year_name}</div>
-                    <div className="gallery container-fluid ctn20 shadow p-3 mb-5 bg-white rounded" style={{maxWidth:"1300px"}}>
-                    {this.state.loading?(<Loader/>):<ImageGallery className="shadow-lg p-3 mb-5 bg-white rounded" items={this.state.photos} />}
+                <Sidebar />
 
+                {/* <div style={{ paddingTop: "200px" }}>
+                    <div className="gallery container-fluid ctn20 shadow p-3 mb-5 bg-white rounded" style={{ maxWidth: "1300px" }}>
+                        {this.state.loading ? (<Loader />) : <ImageGallery className="shadow-lg p-3 mb-5 bg-white rounded" items={this.state.photos} />}
+
+                    </div>
+                </div> */}
+
+                <div className="team-img">
+                    <div className="team-img_wrapper">
+                        <div className="gal-header_wrapper">
+                            <div className="gal-header">
+                                Gallery of {this.state.year_name}
+                            </div>
+                            <div className="gal-header_border"></div>
+                        </div>
+                    </div>
                 </div>
+
+                <div className="img-cards_wrapper">
+                    <div className="img-cards">
+                        {imgCardsHtml}
+                    </div>
                 </div>
-                <Footer/>
+
+                {this.state.isModalActive ? (<div className="img-modal modal-active">
+                    <div className="img-modal-controllers">
+                        <div className="img-modal-btn" onClick={this.onCloseModal}>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <img src={this.state.photos[this.state.imgIndex].original}></img>
+                </div>) : (<div className="img-modal modal-inactive"></div>)}
+                <Footer />
             </div>
         )
     }
 }
+
+export default gallery_imgs;

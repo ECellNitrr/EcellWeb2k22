@@ -1,7 +1,7 @@
 .whole-gallery{
-        background: #7b4397 !important;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(20deg, #dc2430, #7b4397) !important;  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(20deg, #dc2430, #7b4397) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #00012D !important;  /* fallback for old browsers */
+        /* background: -webkit-linear-gradient(20deg, #dc2430, #7b4397) !important;  /* Chrome 10-25, Safari 5.1-6 */
+        /* background: linear-gradient(20deg, #dc2430, #7b4397) !important; W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         
 }
 
@@ -34,7 +34,102 @@
     margin-left: auto;
   }
 
-  @media(max-width:465px){
+.team-img{
+  height:100vh;
+  width: 100vw;
+  background-image: url('/static/media/ecellbg.66d2a429.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.team-img_wrapper{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.gal-header_border{
+  height: 3.5px;
+  width: 475px;
+  background-color: white;
+  margin-left: 100px;
+  border-radius: 360px;
+}
+
+.gal-header_wrapper{
+  top: 40vh;
+  position: relative;
+  padding: 30px 10px;
+  font-size: 45px;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-cards_wrapper{
+  top: -35vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.img-cards{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img-modal{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 200000;
+  background-color: rgba(0, 0, 0, 0.75);
+  top: 0;
+}
+
+.modal-active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-active img{
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+}
+
+.modal-active .img-modal-controllers{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: right;
+}
+
+.modal-active .img-modal-btn{
+  color: white;
+  font-size: 40px;
+  min-width: 10vw;
+  max-width: 15vw;
+  text-align: left;
+  width: 85px;
+  cursor: pointer;
+}
+
+.modal-inactive{
+  display: none;
+  overflow: hidden;
+}
+
+@media(max-width:465px){
       .header66{
           font-size: 28px;
           width: 200px;
@@ -87,4 +182,73 @@
       width: 270px;
     }
   }
+
+@media(max-width:1000px){
+  .team-img{
+    height: 75vh;
+  }
+
+  .img-cards_wrapper{
+    top: -12.5vh;
+  }
+
+  .gal-header_wrapper{
+      top: 47.5vh;
+      padding: 15px 20px;
+      font-size: 35px;
+  }
+
+  .gal-header_border{
+    width: 370px;
+    margin-left: 50px;
+    height: 3px;
+  }
+}
+ 
+@media(max-width:800px){
+  .team-img{
+    height: 70vh;
+  }
+
+  .gal-header_wrapper{
+    top: 45vh;
+    padding: 15px 20px;
+    font-size: 27.5px;
+  }
+
+  .img-cards_wrapper{
+    top: -10vh;
+  }
+
+  .gal-header_border{
+    width: 300px;
+    margin-left: 40px;
+    height: 2px;
+  }
+}
+
+@media(max-width:600px){
+  .team-img{
+    height: 85vw;
+  }
   
+  .gal-header_wrapper{
+    top: 45vw;
+    padding: 15px 20px;
+    font-size: 20px;
+  }
+
+  .img-cards_wrapper{
+    top: -15vw;
+  }
+
+  .gal-header_border{
+    width: 215px;
+    margin-left: 30px;
+    height: 2px;
+  }
+  
+  .img-cards{
+    width: 80%;
+  }
+}
