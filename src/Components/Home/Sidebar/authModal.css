@@ -18,6 +18,7 @@
   overflow: none;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  animation-name: animatetop;
 }
 .ls-heading {
   font-weight: bold;
@@ -93,6 +94,8 @@ span {
   width: 800px;
   max-width: 100%;
   margin: auto;
+  animation-name: animatetop;
+  animation-duration: 0.6s
 }
 .container {
   background-color: #ffffff;
@@ -230,6 +233,24 @@ span {
   opacity: 1;
   cursor: pointer;
 }
+.fp-ls-modal-content{
+  width: 400px;
+  max-width: 100%;
+  margin: auto;
+  animation-name: animatetop;
+  animation-duration: 0.6s
+}
+.forgot-container{
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+  min-height: 468px;
+  margin: auto
+}
 .forgot-pass-form-container{
   width: 100%;
 }
@@ -242,10 +263,15 @@ span {
 .network-error{
   width: 100%;
 }
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
 @media only screen and (max-width: 1000px) {
   .ls-heading{
     font-size: 25px;
   }
+
   .mob-button{
     display: none;
   }
@@ -260,6 +286,9 @@ span {
   .container{
     width: 600px;
     min-height: 450px;
+  }
+  .fp-ls-modal-content{
+    width: 350px;
   }
   .ls-heading{
     font-size: 20px;
@@ -278,6 +307,9 @@ span {
   }
   .ls-modal-content{
     width: 375px;
+  }
+  .fp-ls-modal-content{
+    width: 300px;
   }
   .container{
     background-color: #ffffff;
