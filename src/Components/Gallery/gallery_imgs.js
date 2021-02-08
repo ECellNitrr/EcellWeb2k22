@@ -163,11 +163,11 @@ class gallery_imgs extends Component {
 
                 <div className="team-img">
                     <div className="team-img_wrapper">
-                        <div className="gal-header_wrapper">
-                            <div className="gal-header">
+                        <div className="gal-header_wrapper  gal-yearwise-header_wrapper">
+                            <div className="gal-header  gal-yearwise-header">
                                 Gallery of {this.state.year_name}
                             </div>
-                            <div className="gal-header_border"></div>
+                            <div className="gal-header_border  gal-yearwise-header_border"></div>
                         </div>
                     </div>
                 </div>
