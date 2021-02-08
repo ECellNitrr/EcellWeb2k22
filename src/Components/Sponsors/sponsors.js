@@ -105,7 +105,12 @@ class Sponsors extends Component {
             });
 
             titleSponsHTML = (<div className="my-5">
-                <div style={{ marginBottom: "20px" }} className="team-year sponsType-header">Title Sponsors</div>
+                <div className="spons-header_wrapper spons-type-head_wrapper titleSponsors-head_wrapper">
+                    <div className="spons-header titleSponsors-head spons-type-head">
+                        Title Sponsors
+                    </div>
+                    <div className="spons-header_border titleSponsors-head_border"></div>
+                </div>
                 <div className="ctn9">{titleSponsHTML}</div>
             </div>);
         }
