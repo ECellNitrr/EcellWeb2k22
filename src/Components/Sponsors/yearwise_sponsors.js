@@ -5,6 +5,7 @@ import Navbar from '../Navbar/navbar';
 import Footer from '../Footer/footer';
 import faxios from '../../axios';
 import Loader from '../api_loader/api_loader'
+import Sidebar from '../Home/Sidebar/Sidebar';
 // import { reverse } from 'dns';
 
 
@@ -40,12 +41,21 @@ class Sponsors extends Component {
         })
 
         return (
-            <div className="sponsors">
-                <Navbar />
+            <div className="whole-spons">
+                <Sidebar />
+                <div className="container-fluid mainCtn">
+                    {/* <div className="header1">OUR SPONSORS</div> */}
+                    <div className="spons-header_wrapper our-sponsors_wrapper">
+                        <div className="spons-header our-sponsors">
+                            Our Sponsors
+                        </div>
+                        <div className="spons-header_border our-sponsors_border"></div>
+                    </div>
 
-                <div className="header1">OUR SPONSORS</div>
-                <div className="container-fluid ctn11" style={{ marginTop: "-90px" }}>
-                    <div>
+                    {/* <div className="container-fluid ctn11" style={{ marginTop: "-90px" }}>
+                        
+                    </div> */}
+                    <div className="spons-year-list">
                         {this.state.loading ? (<Loader />) : (spons_year_html)}
                     </div>
                 </div>

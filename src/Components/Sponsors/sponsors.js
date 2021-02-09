@@ -5,6 +5,8 @@ import Navbar from "../Navbar/navbar";
 import Footer from "../Footer/footer";
 import HeaderLinks from "./header_links";
 import Loader from '../api_loader/api_loader';
+import Sidebar from "../Home/Sidebar/Sidebar";
+import SponsorsTabs from "./sponsors_tabs";
 // import { createCoverageSummary } from "istanbul-lib-coverage";
 
 class Sponsors extends Component {
@@ -24,7 +26,7 @@ class Sponsors extends Component {
             this.setState({
                 sponsors: data,
                 loading: false,
-                year:year
+                year: year
             })
         })
     }
@@ -32,72 +34,103 @@ class Sponsors extends Component {
     render() {
         const sponsors = this.state.sponsors
         let sponsors_html = Object.keys(sponsors).map(category => {
-            const sponsors_list =  sponsors[category].map(sponsor =>
+            const sponsors_list = sponsors[category].map(sponsor =>
                 <div key={sponsor.id}>
 
-                <div className="col m-1" key={sponsor.id}>
-                    <div className="cont">
-                        <div className="front shadow-lg p-3 mb-5 bg-white rounded">
-                        <img
-                                alt={sponsor.name}
-                                className="spons-Image"
-                                src={sponsor.pic_url}
-                            />
-                        </div>
-                        <div className="back shadow-lg p-3 mb-5 bg-white rounded">
-                            <div className="inner">
-                                <h6 style={{ fontWeight: "800" }}>
-                                    {sponsor.name}
-                                </h6>
-                                <p className="ph-no">{sponsor.contact}</p>
-                                <p>{sponsor.details}</p>
-                                <p>
-                                    <a className="web" href={sponsor.website}>
-                                        Website
+                    <div className="col m-1" key={sponsor.id}>
+                        <div className="cont">
+                            <div className="front shadow-lg p-3 mb-5 bg-white rounded">
+                                <img
+                                    alt={sponsor.name}
+                                    className="spons-Image"
+                                    src={sponsor.pic_url}
+                                />
+                            </div>
+                            <div className="back shadow-lg p-3 mb-5 bg-white rounded">
+                                <div className="inner">
+                                    <h6 style={{ fontWeight: "800" }}>
+                                        {sponsor.name}
+                                    </h6>
+                                    <p className="ph-no">{sponsor.contact}</p>
+                                    <p>{sponsor.details}</p>
+                                    <p>
+                                        <a className="web" href={sponsor.website}>
+                                            Website
                                     </a>
-                                </p>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             )
             return <div className="my-5">
-                    <div style={{marginBottom:"20px"}} className="team-year">{category}&nbsp; Sponsors</div>
-                    <div className="ctn9">{sponsors_list}</div>
-                    </div>
+                <div style={{ marginBottom: "20px" }} className="team-year sponsType-header">{category}&nbsp; Sponsors</div>
+                <div className="ctn9">{sponsors_list}</div>
+            </div>
         });
-        
-        
-        
+
+        let titleSpons = sponsors["Title"];
+        let titleSponsHTML = [];
+        if (titleSpons != undefined) {
+            titleSpons.forEach(tSpon => {
+                titleSponsHTML.push(<div key={tSpon.id}>
+
+                    <div className="col m-1" key={tSpon.id}>
+                        <div className="cont">
+                            <div className="front shadow-lg p-3 mb-5 bg-white rounded">
+                                <img
+                                    alt={tSpon.name}
+                                    className="spons-Image"
+                                    src={tSpon.pic_url}
+                                />
+                            </div>
+                            <div className="back shadow-lg p-3 mb-5 bg-white rounded">
+                                <div className="inner">
+                                    <h6 style={{ fontWeight: "800" }}>
+                                        {tSpon.name}
+                                    </h6>
+                                    <p className="ph-no">{tSpon.contact}</p>
+                                    <p>{tSpon.details}</p>
+                                    <p>
+                                        <a className="web" href={tSpon.website}>
+                                            Website
+                                    </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>);
+            });
+
+            titleSponsHTML = (<div className="my-5">
+                <div style={{ marginBottom: "20px" }} className="team-year sponsType-header">Title Sponsors</div>
+                <div className="ctn9">{titleSponsHTML}</div>
+            </div>);
+        }
+
         return (
-            <div className="sponsors">
-                <Navbar />
-                <div className="header1">SPONSORS {this.state.year}</div>
-                <div
-                    className="container-fluid"
-                    style={{ maxWidth: "1200px", paddingTop: "300px" }}
-                >
-                    <HeaderLinks />
-                </div>
-
-
-                <div
-                    className="container-fluid "
-                    style={{ maxWidth: "1500px", paddingTop: "0px" }}
-                >
+            <div className="whole-spons">
+                <Sidebar></Sidebar>
+                <div className="mainCtn">
                     {this.state.loading ? (
-                        <Loader style={{ margin: "50px auto" }} />
+                        <Loader style={{ margin: "0px auto" }} />
                     ) : (
-                            sponsors_html
+                            <div className="sponsCtn">
+                                <div className="spons-header_wrapper header-withYear_wrapper">
+                                    <div className="spons-header header-withYear">
+                                        Sponsors {this.state.year}
+                                    </div>
+                                    <div className="spons-header_border header-withYear_border"></div>
+                                </div>
+                                <HeaderLinks />
+                                {/* { sponsors_html} */}
+                                {titleSponsHTML}
+                                <SponsorsTabs sponsData={sponsors} />
+                                <HeaderLinks />
+                            </div>
                         )}
-                </div>
-
-                <div
-                    className="container-fluid"
-                    style={{ maxWidth: "1200px", paddingTop: "50px" }}
-                >
-                    <HeaderLinks />
                 </div>
                 <Footer />
             </div>

@@ -1,80 +1,50 @@
-import React, { Component } from 'react';
-import faxios from '../../axios'
-import './investors.css';
-import Loader from '../api_loader/api_loader'
-import Navbar from '../Navbar/navbar';
+import React, { useState, useEffect } from 'react';
+import Sidebar from '../Home/Sidebar/Sidebar';
 import Footer from '../Footer/footer';
+import Loader from '../api_loader/api_loader';
 
-class investors extends Component {
+import faxios from '../../axios';
 
-  
-  state = {
+import './investors.css';
+import InvestorCard from './InvestorCard';
+
+const Investors = () => {
+  const axios = faxios();
+  const [state, setState] = useState({
     investors: [],
-    loading: true
-  }
+    loading: false,
+  });
 
-  componentDidMount() {
-      faxios().get(`/investors/`).then(res => {
-        console.log(res)
-        let data = res.data
-        this.setState({
-          investors: data,
-          loading:false
-        })
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get('/investors/');
+      setState({
+        investors: data.sort((a, b) => b.year - a.year),
+        loading: false,
+      });
+    };
+    fetchData();
+  }, []);
 
-      })
-  }
-
-  render() {
-    const investors = this.state.investors.sort((a,b)=>b.year-a.year)
-
-    let investors_html = investors.map(investor =>
-      <div className="wrapper" key={investor.name}>
-
-        <div className="profile-card js-profile-card">
-
-          <div className="profile-card__img">
-            <img src={investor.profile_pic} alt={investor.name}></img>
+  const { investors, loading } = state;
+  return (
+    <div className="speakerContainer">
+      <Sidebar />
+      <div className="s">
+        <h1 className="text-center text-white">Investors</h1>
+        {!loading ? (
+          <div className="speakers">
+            {investors.map((el) => (
+              <InvestorCard key={el.id} investors={el} />
+            ))}
           </div>
-
-          <div className="profile-card__cnt js-profile-cnt">
-            <div className="profile-card__name">{investor.name}</div>
-            <div className="profile-card__txt"><strong>{investor.company}</strong></div>
-            <div className="profile-card__year">INVESTOR {investor.year}</div>
-
-            <div className="profile-card-loc">
-              <span className="profile-card-loc__txt">
-                {investor.description}
-              </span>
-            </div>
-
-            <div className="profile-card-ctr">
-              <a href={investor.social_media} rel="noopener noreferrer" target="_blank" ><button className="profile-card__button button--orange">Follow</button></a>
-            </div>
-          </div>
-
-        </div>
-
+        ) : (
+          <Loader />
+        )}
       </div>
+      <Footer />
+    </div>
+  );
+};
 
-    )
-
-    if(this.state.investors.length===0){
-      investors_html = <h1 className="my-5 text-center text-white">Comming soon ...</h1>
-    }
-
-
-    return (
-      <div className="speaker">
-        <Navbar />
-        <div className="header1">Investors</div>
-        <div className="container-fluid ctn7" style={{ maxWidth: "1500px" }}>
-          {this.state.loading ? (<div style={{marginTop:"20%"}}><Loader/></div>):investors_html}
-        </div>
-        <Footer />
-      </div>
-    )
-  }
-}
-
-export default investors;
+export default Investors;
