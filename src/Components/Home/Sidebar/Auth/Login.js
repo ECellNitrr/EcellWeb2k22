@@ -73,7 +73,7 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
           ...data,
           loggedin: true,
         });
-        
+
         //@TODO
         //Not verified email OTP fill
 
@@ -112,6 +112,7 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
       )}
       <div className="ls-heading">Sign in</div>
       <span className="sub-text">or use your account</span>
+      <div className="error-text">{formError && formError}</div>
       <input
         className="auth-input"
         type="email"
@@ -120,7 +121,6 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
         value={email}
         onChange={(e) => onChange(e)}
       />
-      <div className="error-text">{formError && formError}</div>
       <input
         className="auth-input"
         type="password"
@@ -130,7 +130,6 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
         value={password}
         onChange={(e) => onChange(e)}
       />
-      <div className="error-text">{formError && formError}</div>
       <a
         onClick={(e) => {
           e.preventDefault();
