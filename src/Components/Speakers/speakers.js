@@ -1,76 +1,50 @@
-import React, { Component } from 'react';
-import faxios from '../../axios'
-import './speakers.css';
-import Loader from '../api_loader/api_loader'
-import Navbar from '../Navbar/navbar';
+import React, { useState, useEffect } from 'react';
+import Sidebar from '../Home/Sidebar/Sidebar';
 import Footer from '../Footer/footer';
-import { baseURL } from '../../axios'
+import Loader from '../api_loader/api_loader';
 
-class speaker extends Component {
+import faxios from '../../axios';
 
-  
-  state = {
+import './speakers.css';
+import SpeakerCard from './SpeakerCard';
+
+const Speakers = () => {
+  const axios = faxios();
+  const [state, setState] = useState({
     speakers: [],
-    loading: true
-  }
+    loading: false,
+  });
 
-  componentDidMount() {
-    faxios().get('/speakers/full_list/').then(res => {
-        // console.log(res)
-        let data = res.data
-        this.setState({
-          speakers: data,
-          loading:false
-        })
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get('/speakers/full_list/');
+      setState({
+        speakers: data.sort((a, b) => b.year - a.year),
+        loading: false,
+      });
+    };
+    fetchData();
+  }, []);
 
-      })
-  }
-
-  render() {
-    const speakers = this.state.speakers.sort((a,b)=>b.year-a.year)
-    let speakers_html = speakers.map(speaker =>
-      <div className="wrapper" key={speaker.name}>
-
-        <div className="profile-card js-profile-card">
-
-          <div className="profile-card__img">
-            <img src={baseURL+speaker.profile_pic} alt={speaker.name}></img>
+  const { speakers, loading } = state;
+  return (
+    <div className="speakerContainer">
+      <Sidebar />
+      <div className="s">
+        <h1 className="text-center text-white">Speakers</h1>
+        {!loading ? (
+          <div className="speakers">
+            {speakers.map((el) => (
+              <SpeakerCard key={el.id} speakers={el} />
+            ))}
           </div>
-
-          <div className="profile-card__cnt js-profile-cnt">
-            <div className="profile-card__name">{speaker.name}</div>
-            <div className="profile-card__txt"><strong>{speaker.company}</strong></div>
-            <div className="profile-card__year">SPEAKER {speaker.year}</div>
-
-            <div className="profile-card-loc">
-              <span className="profile-card-loc__txt">
-                {speaker.description}
-              </span>
-            </div>
-
-            <div className="profile-card-ctr">
-              <a href={speaker.social_media} target="_blank" rel="noopener noreferrer"><button className="profile-card__button button--orange">Follow</button></a>
-            </div>
-          </div>
-
-        </div>
-
+        ) : (
+          <Loader />
+        )}
       </div>
+      <Footer />
+    </div>
+  );
+};
 
-    )
-
-
-    return (
-      <div className="speaker">
-        <Navbar />
-        <div className="header1">SPEAKERS</div>
-        <div className="container-fluid ctn7" style={{ maxWidth: "1500px" }}>
-          {this.state.loading ? (<div style={{marginTop:"20%"}}><Loader/></div>):speakers_html}
-        </div>
-        <Footer />
-      </div>
-    )
-  }
-}
-
-export default speaker;
+export default Speakers;
