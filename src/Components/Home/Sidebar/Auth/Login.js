@@ -100,13 +100,13 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
             loading: false,
             error: false,
           });
-        }, 3000);
+        }, 5000);
       });
   };
   return (
     <form className="ls-form" onSubmit={(e) => onSubmit(e)}>
       {!loading && error && (
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-danger network-error" role="alert">
           {error}
         </div>
       )}

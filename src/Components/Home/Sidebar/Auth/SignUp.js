@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import faxios from "../../../../axios";
+import { updateUser } from "../../../../actions/authActions";
 
 const SignUp = ({ setlogin }) => {
   //Create State for the component
@@ -24,6 +27,8 @@ const SignUp = ({ setlogin }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    //Client Data validation
     if (email.length < 1) {
       setFormError("Email is required");
     }
@@ -73,16 +78,73 @@ const SignUp = ({ setlogin }) => {
       return;
     }
 
+    signUpUser(formData);
+  };
+
+  const signUpUser = ({ fname, lname, email, contact, password }) => {
+    setFormState({
+      ...formState,
+      loading: true,
+    });
+    faxios()
+      .post("/users/register/", {
+        first_name: fname,
+        last_name: lname,
+        email,
+        contact,
+        password,
+      })
+      .then((response) => {
+        const data = response.data;
+        console.log(data);
+
+        updateUser({
+          ...data,
+          loggedin: true,
+        });
+        setFormState({
+          ...formState,
+          loading: false,
+        });
+        setFormData({
+          email: "",
+          password: "",
+          lname: "",
+          fname: "",
+          contact: "",
+        });
+      })
+      .catch((err) => {
+        let errmsgArray = [];
+        const errors = err.response.data;
+        for (let error in errors){
+          errmsgArray.push(errors[error])
+        }
+        setFormState({
+          ...formState,
+          loading: false,
+          error: errmsgArray[0],
+        });
+        setTimeout(() => {
+          setFormState({
+            ...formState,
+            loading: false,
+            error: false,
+          });
+        }, 5000);
+      });
   };
 
   return (
     <form className="ls-form" onSubmit={(e) => onSubmit(e)}>
-      <div class="alert alert-danger" role="alert">
-        {"Network Error"}
-      </div>
+      {!loading && error && (
+        <div class="alert alert-danger network-error" role="alert">
+          {error}
+        </div>
+      )}
       <div className="ls-heading">Create Account</div>
       <span className="sub-text">or use your email for registration</span>
-      <div className="error-text">{"Some Error occured"}</div>
+      <div className="error-text">{formError && formError}</div>
       <input
         className="auth-input"
         type="text"
@@ -140,4 +202,6 @@ const SignUp = ({ setlogin }) => {
   );
 };
 
-export default SignUp;
+const mapStateToProps = (state) => state;
+
+export default connect(mapStateToProps, { updateUser })(SignUp);
