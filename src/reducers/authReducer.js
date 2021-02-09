@@ -1,3 +1,5 @@
+import { UPDATE_USER } from '../actions/authActions'
+
 const initialState = {
     loggedin: false,
     first_name: '',
@@ -7,7 +9,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch(action.type){
-        case 'update_user': {
+        case UPDATE_USER: {
             return {
                 ...state,
                 ...action.payload

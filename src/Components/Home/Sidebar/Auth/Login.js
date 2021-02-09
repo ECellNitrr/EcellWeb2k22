@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { updateUser } from "../../../../actions/authActions";
+import faxios from "../../../../axios";
 
-const Login = ({ setlogin, setForgotPassword }) => {
+const Login = ({ setlogin, setForgotPassword, updateUser }) => {
+  //Create State for the component
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
   const [formError, setFormError] = useState("");
+  const [formState, setFormState] = useState({
+    error: false,
+    loading: false,
+  });
 
+  //Destructure state
   const { email, password } = formData;
+  const { error, loading } = formState;
 
+  //Onchange function
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
+  //Submit Handler
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -36,17 +46,67 @@ const Login = ({ setlogin, setForgotPassword }) => {
       return;
     }
 
-    if (this.password.value.length < 8) {
+    if (password.length < 8) {
       setFormError("Password should have minimum 8 characters");
       return;
     }
-  };
 
+    loginUser(email, password);
+  };
+  //The Login function
+  const loginUser = (email, password) => {
+    setFormState({
+      ...formState,
+      loading: true,
+    });
+    //Login reuest
+    faxios()
+      .post("/users/login/", {
+        email,
+        password,
+      })
+      .then((response) => {
+        let data = response.data;
+        console.log(data);
+        //Update user in state
+        updateUser({
+          ...data,
+          loggedin: true,
+        });
+        setFormState({
+          ...formState,
+          loading: false,
+        });
+        //@TODO
+        //Not Implement yet
+        // this.close_btn.click();
+        // if (!data.verified) {
+        //   document.querySelector("#otpModal_toggle").click();
+        // }
+      })
+      .catch((err) => {
+        console.log(err)
+        setFormState({
+          ...formState,
+          loading: false,
+          error: "Please Provide Valid Credentials",
+        });
+        setTimeout(() => {
+          setFormState({
+            ...formState,
+            loading: false,
+            error: false,
+          });
+        }, 3000)
+      });
+  };
   return (
     <form className="ls-form" onSubmit={(e) => onSubmit(e)}>
-      <div class="alert alert-danger" role="alert">
-        This is a danger alert—check it out!
-      </div>
+      {!loading && error && (
+        <div class="alert alert-danger" role="alert">
+          {error}
+        </div>
+      )}
       <div className="ls-heading">Sign in</div>
       <span className="sub-text">or use your account</span>
       <input
@@ -92,4 +152,6 @@ const Login = ({ setlogin, setForgotPassword }) => {
   );
 };
 
-export default Login;
+const mapStateToProps = (state) => state;
+
+export default connect(mapStateToProps, { updateUser })(Login);
