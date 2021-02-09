@@ -53,6 +53,7 @@ const Team = ({ match }) => {
       const {
         data: { data },
       } = await axios.get(`/team/list/${year}/`);
+      console.log(data);
       setState({ data, loading: false });
     };
     fetchData();
@@ -161,8 +162,8 @@ const Team = ({ match }) => {
                 </div>
               </div>
             ) : (
-              ''
-            )}
+                ''
+              )}
 
             {/* Head Coordinators */}
             <div className="add_margin">
@@ -309,8 +310,8 @@ const Team = ({ match }) => {
             )}
           </div>
         ) : (
-          <Loader />
-        )}
+            <Loader />
+          )}
       </div>
       <Footer />
     </div>
