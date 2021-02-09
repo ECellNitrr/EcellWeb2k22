@@ -44,7 +44,7 @@ const Logout = (props) => {
       <hr />
       <div>
         <p className="sure-text">Are you sure you want to logout?</p>
-        <button className="ls-button" onClick={(e) => props.logout()}>Logout</button>
+        <button className="ls-button" onClick={(e) => {props.logout(); props.closeModal();}}>Logout</button>
       </div>
     </div>
   );

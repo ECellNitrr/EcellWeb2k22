@@ -115,7 +115,7 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
       {CloseButton()}
       <div class="forgot-container" id="container">
         <div className="logout-container">
-          <Logout />
+          <Logout closeModal={closeModal}/>
         </div>
       </div>
     </div>
