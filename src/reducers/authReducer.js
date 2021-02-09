@@ -1,4 +1,4 @@
-import { UPDATE_USER } from '../actions/authActions'
+import { UPDATE_USER, LOGOUT } from '../actions/authActions'
 
 const initialState = {
     loggedin: false,
@@ -13,6 +13,11 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 ...action.payload
+            }
+        }
+        case LOGOUT: {
+            return {
+                ...initialState,
             }
         }
         default: 

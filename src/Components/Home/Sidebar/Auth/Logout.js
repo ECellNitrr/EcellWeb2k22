@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "redux";
 import { user_type } from "../../../constants";
+import { logout } from '../../../../actions/authActions'
+
 const Logout = (props) => {
-  console.log(props);
   const go_to_portal = (e) => {
     props.history.push("/caportal");
   };
@@ -43,7 +44,7 @@ const Logout = (props) => {
       <hr />
       <div>
         <p className="sure-text">Are you sure you want to logout?</p>
-        <button className="ls-button">Logout</button>
+        <button className="ls-button" onClick={(e) => props.logout()}>Logout</button>
       </div>
     </div>
   );
@@ -53,4 +54,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default compose(connect(mapStateToProps), withRouter)(Logout);
+export default compose(connect(mapStateToProps, { logout }), withRouter)(Logout);
