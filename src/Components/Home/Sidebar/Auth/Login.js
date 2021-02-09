@@ -73,19 +73,22 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
           ...data,
           loggedin: true,
         });
+        
+        //@TODO
+        //Not verified email OTP fill
+
+        //Bring back to default state
         setFormState({
           ...formState,
           loading: false,
         });
-        //@TODO
-        //Not Implement yet
-        // this.close_btn.click();
-        // if (!data.verified) {
-        //   document.querySelector("#otpModal_toggle").click();
-        // }
+        setFormData({
+          email: "",
+          password: "",
+        });
       })
       .catch((err) => {
-        console.log(err)
+        console.log(err);
         setFormState({
           ...formState,
           loading: false,
@@ -97,7 +100,7 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
             loading: false,
             error: false,
           });
-        }, 3000)
+        }, 3000);
       });
   };
   return (
