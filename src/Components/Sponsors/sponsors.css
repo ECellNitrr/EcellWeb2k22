@@ -1,24 +1,10 @@
 /*css of this page and the sponsors-home are same, so most of the css is there in the sponsors-home section of home page*/
-.mainCtn{
-    max-width:  1500px;
-    padding-top: 25px; 
-    padding-bottom: 80px;
-    height: 100%
-}
-
-.whole-spons{
-    background: #00012D !important;
-}
 
 .sponsors{
-    background: #00012D !important;
-}
-
-.spons-year-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: #7b4397 !important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(20deg, #dc2430, #7b4397) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(20deg, #dc2430, #7b4397) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
 .ctn9{
@@ -36,6 +22,9 @@
     flex-wrap: wrap;
     justify-content:center;
 }
+
+
+
 
 .ctn15{
     display: flex;
@@ -72,60 +61,6 @@
     width: 400px;
     margin-right: auto;
     margin-left: auto;
-}
-
-.spons-header_wrapper{
-    position: relative;
-    padding: 0px 10px;
-    font-size: 45px;
-    font-weight: 400;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.header-withYear_wrapper{
-    padding: 45px 0px;
-    font-size: 35px;
-}
-.our-sponsors_wrapper{
-    padding: 45px 0px;
-    font-size: 35px;
-}
-.spons-headCos_wrapper{
-    padding: 45px 0px;
-    font-size: 35px;
-}
-
-.spons-header_border{
-    height: 3.5px;
-    background-color: white;
-    border-radius: 360px;
-}
-.header-withYear_border{
-    width: 225px;
-    margin-left: 100px;
-    height: 2px;
-}
-.our-sponsors_border{
-    width: 215px;
-    margin-left: 100px;
-    height: 2px;
-}
-.spons-headCos_border{
-    width: 525px;
-    margin-left: 110px;
-    height: 2px;
-}
-
-.sponsType-header{
-    font-size: 30px;
-    font-weight: 400;
-}
-
-.spons-card_col{
-    height: 260px;
-    margin: 0px 15px;
 }
 
 @media(max-width:420px){
@@ -203,111 +138,3 @@
     color: black;
 }
 
-@media(max-width:1000px){
-    .mainCtn{
-        padding-top: 25px;
-    }
-
-    .header-withYear_wrapper{
-        padding: 45px 0px;
-        font-size: 35px;
-    }
-    .our-sponsors_wrapper{
-        padding: 45px 0px;
-        font-size: 35px;
-    }
-    .spons-headCos_wrapper{
-        padding: 45px 0px;
-        font-size: 35px;
-    }
-    
-    .header-withYear_border{
-        width: 225px;
-        margin-left: 110px;
-        height: 2px;
-    }
-    .our-sponsors_border{
-        width: 215px;
-        margin-left: 110px;
-        height: 2px;
-    }
-    .spons-headCos_border{
-        width: 525px;
-        margin-left: 120px;
-        height: 2px;
-    }
-}
-   
-@media(max-width:800px){
-    .mainCtn{
-        padding-top: 60px;
-    }
-
-    .header-withYear_wrapper{
-        padding: 45px 0px;
-        font-size: 27.5px;
-    }
-    .our-sponsors_wrapper{
-        padding: 45px 0px;
-        font-size: 27.5px;
-    }
-    .spons-headCos_wrapper{
-        padding: 45px 0px;
-        font-size: 27.5px;
-    }
-    
-    .header-withYear_border{
-        width: 175px;
-        margin-left: 90px;
-        height: 1.75px
-    }
-    .our-sponsors_border{
-        width: 160px;
-        margin-left: 90px;
-        height: 1.75px
-    }
-    .spons-headCos_border{
-        width: 400px;
-        margin-left: 90px;
-        height: 1.75px;
-    }
-}
-  
-@media(max-width:600px){ 
-    .mainCtn{
-        padding-top: 80px;
-    }
-
-    .header-withYear_wrapper{
-        padding: 25px 0px;
-        font-size: 22.5px;
-    }
-    .our-sponsors_wrapper{
-        padding: 25px 0px;
-        font-size: 22.5px;
-    }
-    .spons-headCos_wrapper{
-        padding: 25px 0px;
-        font-size: 22.5px;
-    }
-
-    .header-withYear_border{
-        width: 133px;
-        margin-left: 60px;
-        height: 1.5px;
-    }
-    .our-sponsors_border{
-        width: 125px;
-        margin-left: 60px;
-        height: 1.5px;
-    }
-    .spons-headCos_border{
-        width: 340px;
-        margin-left: 75px;
-        height: 1.5px;
-    }
-
-    .sponsType-header{
-        font-size: 22.5px;
-    }
-}
