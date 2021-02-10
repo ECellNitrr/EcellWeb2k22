@@ -152,6 +152,7 @@
     columns: 3;
     column-gap: 50px; */
   top: 100px;
+
   position: relative;
   display: flex;
   justify-content: center;
@@ -183,7 +184,9 @@
   align-items: center;
   flex-direction: column;
 }
-
+.footer {
+  margin-top: 130px;
+}
 .teamLink {
   border: 1px solid #fff;
   padding: 10px;
@@ -225,7 +228,7 @@
   } */
 
 @media only screen and (max-width: 768px) {
-  .teamPage .heading {
+  .heading {
     color: #edebf5;
     font-size: 28px;
     width: 100%;
@@ -237,10 +240,10 @@
   .manager_container_ {
     grid-template-columns: repeat(2, 1fr);
   }
-  .teamPage .heading::after {
+  .heading::after {
     height: 2px;
     display: block;
-    width: 130px;
+    width: 70px;
     position: absolute;
     left: 50%;
     background-color: #fff;
