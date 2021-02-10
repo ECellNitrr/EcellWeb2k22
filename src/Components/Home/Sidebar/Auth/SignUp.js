@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import faxios from "../../../../axios";
 import { updateUser } from "../../../../actions/authActions";
 
-const SignUp = ({ setlogin }) => {
+const SignUp = ({ setlogin, updateUser }) => {
   //Create State for the component
   const [formData, setFormData] = useState({
     fname: "",
@@ -94,14 +94,7 @@ const SignUp = ({ setlogin }) => {
         contact,
         password,
       })
-      .then((response) => {
-        const data = response.data;
-        console.log(data);
-
-        updateUser({
-          ...data,
-          loggedin: true,
-        });
+      .then((res) => {
         setFormState({
           ...formState,
           loading: false,
@@ -113,12 +106,39 @@ const SignUp = ({ setlogin }) => {
           fname: "",
           contact: "",
         });
+
+        //Login the user
+        faxios()
+          .post("/users/login/", {
+            email,
+            password,
+          })
+          .then((response) => {
+            const data = response.data;
+            updateUser({
+              ...data,
+            });
+          })
+          .catch((err) => {
+            setFormState({
+              ...formState,
+              loading: false,
+              error: "Some error occured while logging you in please try later",
+            });
+            setTimeout(() => {
+              setFormState({
+                ...formState,
+                loading: false,
+                error: false,
+              });
+            }, 5000);
+          });
       })
       .catch((err) => {
         let errmsgArray = [];
         const errors = err.response.data;
-        for (let error in errors){
-          errmsgArray.push(errors[error])
+        for (let error in errors) {
+          errmsgArray.push(errors[error]);
         }
         setFormState({
           ...formState,
