@@ -5,12 +5,13 @@ import './events.css';
 import Navbar from '../Navbar/navbar';
 import Footer from '../Footer/footer';
 import Loader from '../api_loader/api_loader'
+import Sidebar from '../Home/Sidebar/Sidebar';
 
 class events extends Component {
   axios = faxios()
   state = {
     events: [],
-    loading:true
+    loading: true
   }
 
   componentDidMount() {
@@ -18,7 +19,7 @@ class events extends Component {
       .then(d => {
         const events = d.data.data
         console.log({ events })
-        this.setState({ events,loading:false })
+        this.setState({ events, loading: false })
       })
   }
 
@@ -40,19 +41,29 @@ class events extends Component {
 
     )
 
+    if (this.state.loading) {
+      return (<Loader />);
+    }
+    else {
 
-    return (
-      <div className='events'>
-        <Navbar />
-        <div className="container-fluid ctn16">
-          <h2 className="header6">Our Events</h2>
-          <div className="list">
-            {this.state.loading?(<Loader/>):(events)}
+      return (
+        <div className='events'>
+          <Sidebar></Sidebar>
+          <div className="container-fluid mainCtn">
+            <div className="events-header_wrapper">
+              <div className="events-header">
+                Our Events
+            </div>
+              <div className="events-header_border"></div>
+            </div>
+            <div className="list">
+              {events}
+            </div>
           </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    )
+      )
+    }
   }
 }
 

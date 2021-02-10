@@ -105,36 +105,42 @@ class Sponsors extends Component {
             });
 
             titleSponsHTML = (<div className="my-5">
-                <div style={{ marginBottom: "20px" }} className="team-year sponsType-header">Title Sponsors</div>
+                <div className="spons-header_wrapper spons-type-head_wrapper titleSponsors-head_wrapper">
+                    <div className="spons-header titleSponsors-head spons-type-head">
+                        Title Sponsors
+                    </div>
+                    <div className="spons-header_border titleSponsors-head_border"></div>
+                </div>
                 <div className="ctn9">{titleSponsHTML}</div>
             </div>);
         }
 
-        return (
-            <div className="whole-spons">
-                <Sidebar></Sidebar>
-                <div className="mainCtn">
-                    {this.state.loading ? (
-                        <Loader style={{ margin: "0px auto" }} />
-                    ) : (
-                            <div className="sponsCtn">
-                                <div className="spons-header_wrapper header-withYear_wrapper">
-                                    <div className="spons-header header-withYear">
-                                        Sponsors {this.state.year}
-                                    </div>
-                                    <div className="spons-header_border header-withYear_border"></div>
+        if (this.state.loading) {
+            return (<Loader />);
+        }
+        else {
+            return (
+                <div className="whole-spons">
+                    <Sidebar></Sidebar>
+                    <div className="mainCtn">
+                        <div className="sponsCtn">
+                            <div className="spons-header_wrapper header-withYear_wrapper">
+                                <div className="spons-header header-withYear">
+                                    Sponsors {this.state.year}
                                 </div>
-                                <HeaderLinks />
-                                {/* { sponsors_html} */}
-                                {titleSponsHTML}
-                                <SponsorsTabs sponsData={sponsors} />
-                                <HeaderLinks />
+                                <div className="spons-header_border header-withYear_border"></div>
                             </div>
-                        )}
+                            <HeaderLinks />
+                            {/* { sponsors_html} */}
+                            {titleSponsHTML}
+                            <SponsorsTabs sponsData={sponsors} />
+                            <HeaderLinks />
+                        </div>
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
-            </div>
-        );
+            );
+        }
     }
 }
 

@@ -27,24 +27,25 @@ const Speakers = () => {
   }, []);
 
   const { speakers, loading } = state;
-  return (
-    <div className="speakerContainer">
-      <Sidebar />
-      <div className="s">
-        <h1 className="text-center text-white">Speakers</h1>
-        {!loading ? (
+  if (loading) {
+    return (<Loader />);
+  }
+  else {
+    return (
+      <div className="speakerContainer">
+        <Sidebar />
+        <div className="s">
+          <h1 className="text-center text-white">Speakers</h1>
           <div className="speakers">
             {speakers.map((el) => (
               <SpeakerCard key={el.id} speakers={el} />
             ))}
           </div>
-        ) : (
-          <Loader />
-        )}
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  }
 };
 
 export default Speakers;
