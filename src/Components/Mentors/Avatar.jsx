@@ -10,7 +10,7 @@ const Avatar = ({ data }) => {
           <img src={profile_pic_url} className="img-fluid" />
           <div className="details">
             <h5>{name}</h5>
-            <h6>{description}</h6>
+            <h6>{detail}</h6>
           </div>
         </div>
       </div>
