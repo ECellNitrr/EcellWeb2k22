@@ -1,81 +1,118 @@
-.f-links a{
-    color: white;
-    font-weight:800;
-    transition: 0.5s;
-    font-size: 20px;
+.footercontainer {
+  background-color: none !important;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.footer {
+  background-color: #000;
+  border-top: 3px solid rgba(221, 221, 221, 0.432);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ddd;
+  line-height: 1.7em;
+  font-size: 23px;
+  text-align: center;
+}
+.box-1 h3 {
+  padding-bottom: 10px;
+}
+.box-2 img {
+  width: 70px;
+  height: 70px;
+}
+.box-2 h2 {
+  padding-top: 10px;
+  font-size: 25px;
+}
+.box-2 p {
+  font-size: 15px;
+  color: rgb(151, 151, 151);
+}
+.box-3 {
+  justify-content: space-between;
+}
+.box-3 h2 {
+  font-size: 28px;
+}
+.box-3 .social_links a {
+  font-size: 30px;
+  padding-left: 12px;
+}
+
+.box-3 .social_links a:hover {
+  color: #600876;
+}
+.policy {
+  font-size: 16px;
+  color: rgb(138, 138, 138);
+}
+.bottom {
+  padding-top: 30px;
+  margin-bottom: -10px;
+  color: rgb(102, 102, 102);
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    background-color: #000;
+    border-top: 3px solid rgba(221, 221, 221, 0.432);
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
-  
-  .f-links{
-    margin:10px;
-    transition: 1s;
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ddd;
+    line-height: 1.3em;
+    padding-bottom: 10px;
+    text-align: center;
   }
-  
-  .f-links a:hover{
-    text-decoration: none;
-    color: #0A0908;
-    background: #fff;
-    padding: 5px;
-    font-weight: 800;
-    border-radius: 0 15px;
-  }
-  
-  .fab{
-    margin: 2px 8px 8px 2px ;
-    color: white;
-  }
-  
-  .fa-facebook-square:hover{
-    color:#3b5998;
-    text-decoration: none;
-    
-  }
-  
-  .fa-instagram:hover{
-    color: #fb3958;
-    text-decoration: none;
-  }
-  
-  .fa-twitter-square:hover{
-    color: #1da1f2;
-    text-decoration: none;
-  }
-  
-  .fa-linkedin:hover{
-    color:  #0077B5;
-    text-decoration: none;
-  }
-  
-  .site{
-    color: white;
-    font-weight: 600;
-  }
-  
-  .site:hover{
-    text-decoration: none;
-    color: black;
-    background: white;
-    padding: 5px;
-    border-radius: 0 5px 0 5px;
-  }
-  
-  @media(max-width:991px){
-    .col5{
-      display: none;
-    }
-  }
-  
-  @media(max-width:767px){
-    .col6{
-      display: none;
-    }
-  }
-  
-  .arr{
+  .box-1 {
     display: none;
   }
-
-  @media(max-width:767px){
-    .arr{
-      display: block;
-    }
+  .box-2 img {
+    width: 45px;
+    height: 45px;
   }
+  .box-2 h2 {
+    padding-top: 10px;
+    font-size: 25px;
+  }
+  .box-2 p {
+    font-size: 15px;
+    color: rgb(151, 151, 151);
+  }
+
+  .box-3 h2 {
+    font-size: 23px;
+  }
+  .box-3 .social_links {
+    margin-top: 20px;
+  }
+  .box-3 .social_links a {
+    font-size: 30px;
+    padding-left: 12px;
+  }
+
+  .box-3 .social_links a:hover {
+    color: #600876;
+  }
+  .policy {
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(138, 138, 138);
+  }
+  .bottom {
+    padding-top: 20px;
+    margin-bottom: -10px;
+    color: rgb(102, 102, 102);
+  }
+}
