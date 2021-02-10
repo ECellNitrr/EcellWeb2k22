@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./authModal.css";
 import Login from "./Auth/Login";
 import SignUp from "./Auth/SignUp";
-
-const AuthModal = ({ closeModal, modalOpen }) => {
+import { connect } from "react-redux";
+import Logout from './Auth/Logout';
+const AuthModal = ({ closeModal, modalOpen, auth }) => {
   //State
   const [login, setlogin] = useState(false);
   const [forgotPassword, setForgotPassword] = useState(false);
@@ -53,17 +54,17 @@ const AuthModal = ({ closeModal, modalOpen }) => {
     return (
       <div className="ls-modal-content">
         {CloseButton()}
-      <div class={`container ${rightPanelActive}`} id="container">
-        <div class="form-container sign-up-container">
-          <SignUp setlogin={setlogin} />
+        <div class={`container ${rightPanelActive}`} id="container">
+          <div class="form-container sign-up-container">
+            <SignUp setlogin={setlogin} />
+          </div>
+          <div class="form-container sign-in-container">
+            <Login setlogin={setlogin} setForgotPassword={setForgotPassword} />
+          </div>
+          <div class="overlay-container">
+            <OverLay />
+          </div>
         </div>
-        <div class="form-container sign-in-container">
-          <Login setlogin={setlogin} setForgotPassword={setForgotPassword} />
-        </div>
-        <div class="overlay-container">
-          <OverLay />
-        </div>
-      </div>
       </div>
     );
   };
@@ -72,48 +73,67 @@ const AuthModal = ({ closeModal, modalOpen }) => {
     return (
       <div className="fp-ls-modal-content">
         {CloseButton()}
-      <div class="forgot-container" id="container">
-        <div class="form-container forgot-pass-form-container">
-          <form className="ls-form" action="#">
-            <div className="ls-heading">Forgot Your Password</div>
-            <span className="sub-text">Enter your email</span>
-            <input className="auth-input" type="email" placeholder="Email" />
-            <button className="ls-button">Get OTP</button>
-            <input className="auth-input" type="text" placeholder="OTP" />
-            <button className="ls-button back-button">Submit</button>
-            <span className="sub-text">Success or fail message</span>
-            <button
-              className="ls-button"
-              onClick={(e) => {
-                e.preventDefault();
-                setForgotPassword(false);
-              }}
-            >
-              Sign In
-            </button>
-          </form>
+        <div class="forgot-container" id="container">
+          <div class="form-container forgot-pass-form-container">
+            <form className="ls-form" action="#">
+              <div className="ls-heading">Forgot Your Password</div>
+              <span className="sub-text">Enter your email</span>
+              <input className="auth-input" type="email" placeholder="Email" />
+              <button className="ls-button">Get OTP</button>
+              <input className="auth-input" type="text" placeholder="OTP" />
+              <button className="ls-button back-button">Submit</button>
+              <span className="sub-text">Success or fail message</span>
+              <button
+                className="ls-button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setForgotPassword(false);
+                }}
+              >
+                Sign In
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
       </div>
     );
   };
 
   const CloseButton = () => (
     <i
-    class="far fa-times-circle close"
-    onClick={() => {
-      closeModal();
-      setlogin(false);
-      setForgotPassword(false);
-    }}
-  ></i>
-  )
+      class="far fa-times-circle close"
+      onClick={() => {
+        closeModal();
+        setlogin(false);
+        setForgotPassword(false);
+      }}
+    ></i>
+  );
+
+  const LoggedInModal = () => (
+    <div className="logout-ls-modal-content">
+      {CloseButton()}
+      <div class="forgot-container" id="container">
+        <div className="logout-container">
+          <Logout closeModal={closeModal}/>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div className={`ls-modal ${showHideClassName}`}>
-        {!forgotPassword ? AuthModalContainer() : ForgotPasswordModal()}
+      {auth.loggedin
+        ? LoggedInModal()
+        : !forgotPassword
+        ? AuthModalContainer()
+        : ForgotPasswordModal()}
     </div>
   );
 };
 
-export default AuthModal;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps)(AuthModal);
