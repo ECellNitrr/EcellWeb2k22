@@ -13,7 +13,7 @@ import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../../actions/authActions';
-import AuthModal from './AuthModal';
+import AuthModal from './AuthModal'
 const Sidebar = (props) => {
   const [details, setDetails] = useState({
     active: false,
@@ -23,10 +23,10 @@ const Sidebar = (props) => {
 
   const { active, forgetmail, forgetOTP } = details;
 
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false)
 
   const closeModal = () => setModalOpen(false);
-  const openModal = () => setModalOpen(true);
+  const openModal =  () => setModalOpen(true);
 
   const setForgetMail = (mail) => {
     setDetails({ forgetmail: mail });
@@ -39,10 +39,10 @@ const Sidebar = (props) => {
   useEffect(() => {
     document.onclick = (args) => {
       if (args.target.id === 'dialog-target') {
-        console.log('called');
+        console.log('called')
       }
-    };
-  }, []);
+    }
+  }, [])
 
   const loggedout = (
     <button
@@ -68,7 +68,7 @@ const Sidebar = (props) => {
     </button>
   );
   return (
-    <div className="sidebarTop">
+    <div>
       <header>
         <div className="leftBox">
           <img src={Logo} className="img-fluid" id="logo" />
@@ -79,7 +79,7 @@ const Sidebar = (props) => {
         </div>
       </header>
       <div id="dialog-target">
-        <AuthModal modalOpen={modalOpen} closeModal={closeModal} />
+        <AuthModal modalOpen={modalOpen} closeModal={closeModal}/>
       </div>
       <div id="nav-container">
         <div class="bg"></div>

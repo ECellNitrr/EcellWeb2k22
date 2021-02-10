@@ -9,9 +9,9 @@ strong {
 }
 header {
   padding-top: 0px;
-
+  
   position: fixed;
-
+  
   z-index: 1;
 }
 header .rightBox {
@@ -27,13 +27,13 @@ header .rightBox {
   margin-top: 10px;
   border-radius: 30px;
   width: 125px;
-  color: #edebf5 !important;
-  border-color: #edebf5 !important;
+  color: #EDEBF5 !important;
+  border-color: #EDEBF5 !important; 
   transition: 0.3s;
   font-weight: bold;
 }
 .rightBox #signup:hover {
-  background-color: #edebf5 !important;
+  background-color: #EDEBF5 !important;
   color: #333 !important;
   transition: 0.3s;
 }
@@ -63,6 +63,7 @@ header .rightBox {
   background-repeat: no-repeat;
   letter-spacing: 0.03em;
   color: #212121;
+
 }
 
 #scroll {
@@ -94,6 +95,7 @@ header .rightBox {
   left: 30px;
   align-items: center;
   justify-content: center;
+
 }
 .social > a:hover {
   color: rgb(0, 0, 0);
@@ -121,6 +123,7 @@ header {
   width: 100%;
   height: 70px;
   background: transparent;
+  
 }
 
 main .content {
@@ -131,6 +134,7 @@ main .content {
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
+  z-index: 100000;
 }
 
 .content h1 {
@@ -154,12 +158,13 @@ main h2 span {
   color: #bf7497;
 }
 
+
 #nav-container {
   position: fixed;
   height: 100vh;
   width: 100%;
   pointer-events: none;
-  z-index: 100000 !important;
+  z-index: 100000;
 }
 #nav-container .bg {
   position: absolute;
@@ -170,7 +175,7 @@ main h2 span {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
-  z-index: 100000 !important;
+  
 }
 /* #nav-container:focus-within .bg {
   visibility: visible;
@@ -234,7 +239,7 @@ main h2 span {
   top: 0;
   right: 0;
   height: calc(100% - 70px);
-  background: #edebf5;
+  background: #EDEBF5;
   pointer-events: auto;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   transform: translateX(100%);
@@ -271,6 +276,7 @@ main h2 span {
 #nav-content li:not(.small) + .small {
   margin-top: auto;
 }
+
 
 #nav-container:focus-within #nav-content {
   transform: none;
@@ -333,7 +339,7 @@ ul {
     border: none;
     box-shadow: none;
     margin-top: 8px;
-
+ 
     padding: 5px;
   }
 
@@ -344,6 +350,7 @@ ul {
     width: 65px;
     height: 65px;
   }
+
 
   main .content {
     margin-left: 20px;
