@@ -41,24 +41,29 @@ class events extends Component {
 
     )
 
+    if (this.state.loading) {
+      return (<Loader />);
+    }
+    else {
 
-    return (
-      <div className='events'>
-        <Sidebar></Sidebar>
-        <div className="container-fluid mainCtn">
-          <div className="events-header_wrapper">
-            <div className="events-header">
-              Our Events
-                            </div>
-            <div className="events-header_border"></div>
+      return (
+        <div className='events'>
+          <Sidebar></Sidebar>
+          <div className="container-fluid mainCtn">
+            <div className="events-header_wrapper">
+              <div className="events-header">
+                Our Events
+            </div>
+              <div className="events-header_border"></div>
+            </div>
+            <div className="list">
+              {events}
+            </div>
           </div>
-          <div className="list">
-            {this.state.loading ? (<Loader />) : (events)}
-          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    )
+      )
+    }
   }
 }
 

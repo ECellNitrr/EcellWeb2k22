@@ -27,24 +27,25 @@ const Investors = () => {
   }, []);
 
   const { investors, loading } = state;
-  return (
-    <div className="speakerContainer">
-      <Sidebar />
-      <div className="s">
-        <h1 className="text-center text-white">Investors</h1>
-        {!loading ? (
+  if (loading) {
+    return (<Loader />);
+  }
+  else {
+    return (
+      <div className="speakerContainer">
+        <Sidebar />
+        <div className="s">
+          <h1 className="text-center text-white">Investors</h1>
           <div className="speakers">
             {investors.map((el) => (
               <InvestorCard key={el.id} investors={el} />
             ))}
           </div>
-        ) : (
-          <Loader />
-        )}
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  }
 };
 
 export default Investors;

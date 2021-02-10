@@ -301,6 +301,10 @@
 
 
 @media(max-width:1000px){
+  .event_detail{
+    padding-top: 115px;
+  }
+
   .mainCtn{
     padding-top: 70px;
   }
@@ -318,6 +322,10 @@
 }
  
 @media(max-width:800px){
+  .event_detail{
+    padding-top: 115px;
+  }
+
   .mainCtn{
     padding-top: 90px;
   }
@@ -335,6 +343,9 @@
 }
 
 @media(max-width:600px){
+  .event_detail{
+    padding-top: 115px;
+  }
   
   .events-header_wrapper{
     padding: 15px 20px;

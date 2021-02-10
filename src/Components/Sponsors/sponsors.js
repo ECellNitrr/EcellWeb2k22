@@ -115,31 +115,32 @@ class Sponsors extends Component {
             </div>);
         }
 
-        return (
-            <div className="whole-spons">
-                <Sidebar></Sidebar>
-                <div className="mainCtn">
-                    {this.state.loading ? (
-                        <Loader style={{ margin: "0px auto" }} />
-                    ) : (
-                            <div className="sponsCtn">
-                                <div className="spons-header_wrapper header-withYear_wrapper">
-                                    <div className="spons-header header-withYear">
-                                        Sponsors {this.state.year}
-                                    </div>
-                                    <div className="spons-header_border header-withYear_border"></div>
+        if (this.state.loading) {
+            return (<Loader />);
+        }
+        else {
+            return (
+                <div className="whole-spons">
+                    <Sidebar></Sidebar>
+                    <div className="mainCtn">
+                        <div className="sponsCtn">
+                            <div className="spons-header_wrapper header-withYear_wrapper">
+                                <div className="spons-header header-withYear">
+                                    Sponsors {this.state.year}
                                 </div>
-                                <HeaderLinks />
-                                {/* { sponsors_html} */}
-                                {titleSponsHTML}
-                                <SponsorsTabs sponsData={sponsors} />
-                                <HeaderLinks />
+                                <div className="spons-header_border header-withYear_border"></div>
                             </div>
-                        )}
+                            <HeaderLinks />
+                            {/* { sponsors_html} */}
+                            {titleSponsHTML}
+                            <SponsorsTabs sponsData={sponsors} />
+                            <HeaderLinks />
+                        </div>
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
-            </div>
-        );
+            );
+        }
     }
 }
 
