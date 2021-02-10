@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Modal from './modal';
-import Login from './login';
-import Signup from './signup';
+// import Modal from './modal';
+// import Login from './login';
+// import Signup from './signup';
 import './form.scss';
 
 export default class form extends Component {
   render() {
-    return (
+  return (
       <React.Fragment>
-        <Modal id="loginRegModal">
+        {/* <Modal id="loginRegModal">
           <ul
             className="nav nav-tabs md-tabs tabs-2 light-blue darken-3"
             role="tablist"
@@ -41,8 +41,8 @@ export default class form extends Component {
             <Login />
             <Signup />
           </div>
-        </Modal>
+        </Modal> */}
       </React.Fragment>
-    );
+     );
   }
 }
