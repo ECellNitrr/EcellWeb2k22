@@ -67,7 +67,6 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
       })
       .then((response) => {
         let data = response.data;
-        console.log(data);
         //Update user in state
         updateUser({
           ...data,
@@ -88,7 +87,6 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
         });
       })
       .catch((err) => {
-        console.log(err);
         setFormState({
           ...formState,
           loading: false,
