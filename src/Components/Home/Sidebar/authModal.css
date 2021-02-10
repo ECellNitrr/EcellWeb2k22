@@ -105,7 +105,7 @@ span {
   overflow: hidden;
   width: 800px;
   max-width: 100%;
-  min-height: 500px;
+  min-height: 550px;
 }
 .form-container {
   position: absolute;
@@ -126,7 +126,12 @@ span {
   opacity: 0;
   z-index: 1;
 }
-
+.logout-container {
+  text-align: center;
+  margin: 50px 20px 10px;
+  padding: 5px;
+  font-size: 20px;
+}
 .container.right-panel-active .sign-in-container {
   transform: translateX(100%);
 }
@@ -231,14 +236,16 @@ span {
   margin: 10px;
   color: black;
   opacity: 1;
+  cursor: pointer;
 }
-.fp-ls-modal-content{
+.fp-ls-modal-content, .logout-ls-modal-content{
   width: 400px;
   max-width: 100%;
   margin: auto;
   animation-name: animatetop;
   animation-duration: 0.6s
 }
+
 .forgot-container{
   background-color: #ffffff;
   border-radius: 10px;
@@ -256,6 +263,28 @@ span {
 .back-button{
   margin-bottom: 20px;
 }
+.error-text{
+  color: #FF0000;
+}
+.network-error{
+  width: 100%;
+}
+
+.logout-container {
+  text-align: center;
+  margin: 50px 20px 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.basic-details {
+  margin: 15px;
+}
+
+.sure-text{
+  font-size: 20px;
+}
+
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
@@ -278,10 +307,13 @@ span {
   }
   .container{
     width: 600px;
-    min-height: 450px;
+    min-height: 600px;
   }
   .fp-ls-modal-content{
     width: 350px;
+  }
+  .logout-ls-modal-content{
+    width: 360px;
   }
   .ls-heading{
     font-size: 20px;
@@ -291,6 +323,9 @@ span {
   }
   .mob-text{
     display: none;
+  }
+  .logout-container{
+    margin: 50px 5px;
   }
 }
 
@@ -312,7 +347,7 @@ span {
     overflow: hidden;
     width: 375px;
     max-width: 90%;
-    min-height: 550px;
+    min-height: 620px;
   }
   .form-container {
     transition: none;

@@ -13,8 +13,14 @@
 
 .spons-type-head_wrapper{
     font-size: 30px;
-    padding: 20px 25px;
+    padding: 30px 25px;
     cursor: pointer;
+}
+
+.titleSponsors-head_border{
+    width: 180px;
+    margin-left: 100px;
+    height: 2px;       
 }
 
 .active-tab-header .platinum-head_border{
@@ -89,6 +95,12 @@
     .spons-type-head_wrapper{
         font-size: 22.5px;
         padding: 10px 12.5px;
+    }
+
+    .titleSponsors-head_border{
+        width: 150px;
+        margin-left: 60px;
+        height: 2px;       
     }
 
     .active-tab-header .platinum-head_border{
