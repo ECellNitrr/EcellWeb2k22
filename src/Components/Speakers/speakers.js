@@ -17,7 +17,8 @@ const Speakers = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get('/speakers/full_list/');
+      const data = await axios.get('/speakers/full_list/');
+      console.log(data);
       setState({
         speakers: data.sort((a, b) => b.year - a.year),
         loading: false,
