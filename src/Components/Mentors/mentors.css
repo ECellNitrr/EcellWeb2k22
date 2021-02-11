@@ -141,7 +141,9 @@
   justify-content: center;
   flex-direction: column;
 }
-
+.footer {
+  margin-top: 100px;
+}
 /* people */
 .add_margin {
   margin-top: 40px;
