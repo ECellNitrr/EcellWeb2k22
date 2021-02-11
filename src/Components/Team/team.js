@@ -53,6 +53,7 @@ const Team = ({ match }) => {
       const {
         data: { data },
       } = await axios.get(`/team/list/${year}/`);
+      console.log(data);
       setState({ data, loading: false });
     };
     fetchData();
@@ -119,17 +120,20 @@ const Team = ({ match }) => {
 
   addPeople();
 
-  return (
-    <div className="teamcontainer">
-      <Sidebar />
-      <div className="teamPage">
-        <h1 className="text-center heading">
-          Team of {year}-{year - 2000 + 1}
-        </h1>
-        <Link className="teamLink" to="/team/yearwise">
-          <i className="fa fa-arrow-left mr-1"></i>Previous Year Teams
-        </Link>
-        {!state.loading ? (
+  if (state.loading) {
+    return (<Loader />);
+  }
+  else {
+    return (
+      <div className="teamcontainer">
+        <Sidebar />
+        <div className="teamPage">
+          <h1 className="text-center heading">
+            Team of {year}-{year - 2000 + 1}
+          </h1>
+          <Link className="teamLink" to="/team/yearwise">
+            <i className="fa fa-arrow-left mr-1"></i>Previous Year Teams
+          </Link>
           <div className="people">
             {year === '2020' && (
               <>
@@ -161,8 +165,8 @@ const Team = ({ match }) => {
                 </div>
               </div>
             ) : (
-              ''
-            )}
+                ''
+              )}
 
             {/* Head Coordinators */}
             <div className="add_margin">
@@ -182,7 +186,7 @@ const Team = ({ match }) => {
                 <div className="add_margin">
                   <h2 className="text-center">
                     Public Relation and Marketing Managers
-                  </h2>
+                    </h2>
                   <div className="manager_container_ mt-3">
                     {pr.managers.map((el) => (
                       <div>
@@ -232,7 +236,7 @@ const Team = ({ match }) => {
                 <div className="add_margin">
                   <h2 className="text-center">
                     Sponsorship and Brand Management Managers
-                  </h2>
+                    </h2>
                   <div className="manager_container_ mt-3">
                     {spons.managers.map((el) => (
                       <div>
@@ -246,7 +250,7 @@ const Team = ({ match }) => {
                 <div className="add_margin">
                   <h2 className="text-center">
                     Public Relation and Marketing Executives
-                  </h2>
+                    </h2>
                   <div className="manager_container_ mt-3">
                     {pr.executives.map((el) => (
                       <div>
@@ -296,7 +300,7 @@ const Team = ({ match }) => {
                 <div className="add_margin">
                   <h2 className="text-center">
                     Sponsorship and Brand Management Executives
-                  </h2>
+                    </h2>
                   <div className="manager_container_ mt-3">
                     {spons.executives.map((el) => (
                       <div>
@@ -308,13 +312,11 @@ const Team = ({ match }) => {
               </>
             )}
           </div>
-        ) : (
-          <Loader />
-        )}
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  }
 };
 
 export default Team;

@@ -18,6 +18,7 @@
   overflow: none;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  animation-name: animatetop;
 }
 .ls-heading {
   font-weight: bold;
@@ -93,6 +94,8 @@ span {
   width: 800px;
   max-width: 100%;
   margin: auto;
+  animation-name: animatetop;
+  animation-duration: 0.6s
 }
 .container {
   background-color: #ffffff;
@@ -102,7 +105,7 @@ span {
   overflow: hidden;
   width: 800px;
   max-width: 100%;
-  min-height: 500px;
+  min-height: 550px;
 }
 .form-container {
   position: absolute;
@@ -123,7 +126,12 @@ span {
   opacity: 0;
   z-index: 1;
 }
-
+.logout-container {
+  text-align: center;
+  margin: 50px 20px 10px;
+  padding: 5px;
+  font-size: 20px;
+}
 .container.right-panel-active .sign-in-container {
   transform: translateX(100%);
 }
@@ -228,6 +236,26 @@ span {
   margin: 10px;
   color: black;
   opacity: 1;
+  cursor: pointer;
+}
+.fp-ls-modal-content, .logout-ls-modal-content{
+  width: 400px;
+  max-width: 100%;
+  margin: auto;
+  animation-name: animatetop;
+  animation-duration: 0.6s
+}
+
+.forgot-container{
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+  min-height: 468px;
+  margin: auto
 }
 .forgot-pass-form-container{
   width: 100%;
@@ -235,10 +263,37 @@ span {
 .back-button{
   margin-bottom: 20px;
 }
+.error-text{
+  color: #FF0000;
+}
+.network-error{
+  width: 100%;
+}
+
+.logout-container {
+  text-align: center;
+  margin: 50px 20px 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.basic-details {
+  margin: 15px;
+}
+
+.sure-text{
+  font-size: 20px;
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
 @media only screen and (max-width: 1000px) {
   .ls-heading{
     font-size: 25px;
   }
+
   .mob-button{
     display: none;
   }
@@ -252,7 +307,13 @@ span {
   }
   .container{
     width: 600px;
-    min-height: 450px;
+    min-height: 600px;
+  }
+  .fp-ls-modal-content{
+    width: 350px;
+  }
+  .logout-ls-modal-content{
+    width: 360px;
   }
   .ls-heading{
     font-size: 20px;
@@ -263,6 +324,9 @@ span {
   .mob-text{
     display: none;
   }
+  .logout-container{
+    margin: 50px 5px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -272,6 +336,9 @@ span {
   .ls-modal-content{
     width: 375px;
   }
+  .fp-ls-modal-content{
+    width: 300px;
+  }
   .container{
     background-color: #ffffff;
     border-radius: 10px;
@@ -280,7 +347,7 @@ span {
     overflow: hidden;
     width: 375px;
     max-width: 90%;
-    min-height: 550px;
+    min-height: 620px;
   }
   .form-container {
     transition: none;

@@ -150,45 +150,44 @@ class gallery_imgs extends Component {
             }
         }
 
-        return (
-            <div className="whole-gallery">
-                <Sidebar />
+        if (this.state.loading) {
+            return (<Loader />);
+        }
+        else {
 
-                {/* <div style={{ paddingTop: "200px" }}>
-                    <div className="gallery container-fluid ctn20 shadow p-3 mb-5 bg-white rounded" style={{ maxWidth: "1300px" }}>
-                        {this.state.loading ? (<Loader />) : <ImageGallery className="shadow-lg p-3 mb-5 bg-white rounded" items={this.state.photos} />}
+            return (
+                <div className="whole-gallery">
+                    <Sidebar />
 
-                    </div>
-                </div> */}
-
-                <div className="team-img">
-                    <div className="team-img_wrapper">
-                        <div className="gal-header_wrapper">
-                            <div className="gal-header">
-                                Gallery of {this.state.year_name}
+                    <div className="team-img">
+                        <div className="team-img_wrapper">
+                            <div className="gal-header_wrapper  gal-yearwise-header_wrapper">
+                                <div className="gal-header  gal-yearwise-header">
+                                    Gallery of {this.state.year_name}
+                                </div>
+                                <div className="gal-header_border  gal-yearwise-header_border"></div>
                             </div>
-                            <div className="gal-header_border"></div>
                         </div>
                     </div>
-                </div>
 
-                <div className="img-cards_wrapper">
-                    <div className="img-cards">
-                        {imgCardsHtml}
-                    </div>
-                </div>
-
-                {this.state.isModalActive ? (<div className="img-modal modal-active">
-                    <div className="img-modal-controllers">
-                        <div className="img-modal-btn" onClick={this.onCloseModal}>
-                            <i class="fas fa-times"></i>
+                    <div className="img-cards_wrapper">
+                        <div className="img-cards">
+                            {imgCardsHtml}
                         </div>
                     </div>
-                    <img src={this.state.photos[this.state.imgIndex].original}></img>
-                </div>) : (<div className="img-modal modal-inactive"></div>)}
-                <Footer />
-            </div>
-        )
+
+                    {this.state.isModalActive ? (<div className="img-modal modal-active">
+                        <div className="img-modal-controllers">
+                            <div className="img-modal-btn" onClick={this.onCloseModal}>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <img src={this.state.photos[this.state.imgIndex].original}></img>
+                    </div>) : (<div className="img-modal modal-inactive"></div>)}
+                    <Footer />
+                </div>
+            )
+        }
     }
 }
 

@@ -1,3 +1,9 @@
+.mainCtn{
+  padding-top: 75px; 
+  padding-bottom: 80px;
+  height: 100%
+}
+
 .whole-gallery{
         background: #00012D !important;  /* fallback for old browsers */
         /* background: -webkit-linear-gradient(20deg, #dc2430, #7b4397) !important;  /* Chrome 10-25, Safari 5.1-6 */
@@ -53,22 +59,29 @@
 
 .gal-header_border{
   height: 3.5px;
-  width: 475px;
+  width: 130px;
   background-color: white;
-  margin-left: 100px;
+  margin-left: 60px;
   border-radius: 360px;
 }
 
+.gal-yearwise-header_border{
+  width: 475px;
+}
+
 .gal-header_wrapper{
-  top: 40vh;
   position: relative;
   padding: 30px 10px;
   font-size: 45px;
-  font-weight: 400;
+  font-weight: 500;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.gal-yearwise-header_wrapper{
+  top: 40vh;
 }
 
 .img-cards_wrapper{
@@ -193,15 +206,20 @@
   }
 
   .gal-header_wrapper{
-      top: 47.5vh;
       padding: 15px 20px;
       font-size: 35px;
   }
+  .gal-yearwise-header_wrapper{
+    top: 47.5vh;
+  }
 
   .gal-header_border{
-    width: 370px;
+    width: 105px;
     margin-left: 50px;
     height: 3px;
+  }
+  .gal-yearwise-header_border{
+    width: 370px;
   }
 }
  
@@ -211,9 +229,11 @@
   }
 
   .gal-header_wrapper{
-    top: 45vh;
     padding: 15px 20px;
     font-size: 27.5px;
+  }
+  .gal-yearwise-header_wrapper{
+    top: 45vh;
   }
 
   .img-cards_wrapper{
@@ -221,9 +241,12 @@
   }
 
   .gal-header_border{
-    width: 300px;
+    width: 85px;
     margin-left: 40px;
     height: 2px;
+  }
+  .gal-yearwise-header_border{
+    width: 300px;
   }
 }
 
@@ -233,9 +256,11 @@
   }
   
   .gal-header_wrapper{
-    top: 45vw;
     padding: 15px 20px;
     font-size: 20px;
+  }
+  .gal-yearwise-header_wrapper{
+    top: 45vw;
   }
 
   .img-cards_wrapper{
@@ -243,9 +268,12 @@
   }
 
   .gal-header_border{
-    width: 215px;
+    width: 65px;
     margin-left: 30px;
     height: 2px;
+  }
+  .gal-yearwise-header_border{
+    width: 215px;
   }
   
   .img-cards{
