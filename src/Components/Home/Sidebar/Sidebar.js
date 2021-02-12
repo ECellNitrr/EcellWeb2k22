@@ -13,7 +13,7 @@ import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../../actions/authActions';
-import AuthModal from './AuthModal';
+import AuthModal from '../../Form/AuthModal';
 const Sidebar = (props) => {
   const [details, setDetails] = useState({
     active: false,

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { updateUser } from "../../../../actions/authActions";
-import faxios from "../../../../axios";
+import { updateUser } from "../../../actions/authActions";
+import faxios from "../../../axios";
 
 const Login = ({ setlogin, setForgotPassword, updateUser }) => {
   //Create State for the component
