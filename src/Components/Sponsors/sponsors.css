@@ -48,6 +48,9 @@
     font-weight: 800;
     background: white;
     margin: 10px;
+}
+
+.btn-fontSize{
     font-size: 20px;
 }
 
@@ -176,7 +179,7 @@
 }
 
 .spons_phone:hover{
-    color: black;
+    color: grey;
 }
 
 .center{
@@ -199,7 +202,7 @@
 }
 
 .spons_email:hover{
-    color: black;
+    color: grey;
 }
 
 @media(max-width:1000px){
