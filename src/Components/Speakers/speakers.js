@@ -28,9 +28,8 @@ const Speakers = () => {
 
   const { speakers, loading } = state;
   if (loading) {
-    return (<Loader />);
-  }
-  else {
+    return <Loader />;
+  } else {
     return (
       <div className="speakerContainer">
         <Sidebar />
