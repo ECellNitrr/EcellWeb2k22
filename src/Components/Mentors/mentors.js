@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import faxios from '../../axios';
 import './mentors.css';
 import Sidebar from '../Home/Sidebar/Sidebar';
@@ -6,35 +6,69 @@ import Footer from '../Footer/footer';
 import Loader from '../api_loader/api_loader';
 import Avatar from './Avatar';
 
-const Mentors = () => {
-  const axios = faxios();
-  const [state, setState] = useState({
-    mentorsData: [],
+class mentors extends Component {
+  axios = faxios();
+  state = {
+    mentors: {},
     loading: true,
-  });
+  };
 
-  const x = [];
-
-  useEffect(() => {
-    for (let i = 2017; i <= 2019; i++) {
-      axios.get(`/mentors/list/${i}/`).then((res) => {
+  componentDidMount() {
+    for (let i = 2016; i <= 2020; i++) {
+      this.axios.get(`/mentors/list/${i}/`).then((res) => {
+        console.log(res);
         let data = res.data.data;
         if (data.length > 0) {
-          x.push(...data);
+          this.setState({
+            loading: false,
+            mentors: {
+              ...this.state.mentors,
+              [i]: data,
+            },
+          });
         }
       });
     }
-  }, []);
+  }
 
-  const { mentorsData, loading } = state;
-  const mentors = [];
-  x ? x.map((el) => console.log(el)) : console.log('getting');
-  return (
-    <div className="mentors">
-      <Sidebar />
-      <h2 className="text-center text-danger">Hello</h2>
-    </div>
-  );
-};
+  render() {
+    console.log(this.state.mentors);
+    let mentors_html = [];
 
-export default Mentors;
+    for (const year in this.state.mentors) {
+      let mentors = this.state.mentors[year];
+      mentors = mentors.map((mentor) => (
+        <div className="av_box" key={mentor.id}>
+          <Avatar data={mentor} />
+        </div>
+      ));
+
+      const yearwise_html = (
+        <div className="photo_container_" key={year}>
+          {mentors}
+        </div>
+      );
+      mentors_html.push(yearwise_html);
+    }
+
+    return (
+      <div className="mentors">
+        <Sidebar />
+        <h1 className="text-center heading">Mentors</h1>
+        <div>
+          {this.state.loading ? (
+            <div style={{ marginTop: '20%' }}>
+              <Loader />
+            </div>
+          ) : (
+            mentors_html
+          )}
+        </div>
+
+        <Footer />
+      </div>
+    );
+  }
+}
+
+export default mentors;

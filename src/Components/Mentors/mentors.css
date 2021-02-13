@@ -1,5 +1,5 @@
 .mentors {
-  background-color: #00012D !important;
+  background-color: #00012d !important;
   height: 100%;
 }
 /* .button {
@@ -33,18 +33,17 @@
   align-items: center;
   justify-content: center;
 }
-.teamPage .heading {
+.heading {
   color: #edebf5;
-
   position: absolute;
   top: 25px;
   left: 50%;
   transform: translateX(-50%);
 }
-.teamPage .heading::after {
+.heading::after {
   height: 2px;
   display: block;
-  width: 200px;
+  width: 130px;
   position: absolute;
   left: 50%;
   background-color: #fff;
@@ -142,7 +141,9 @@
   justify-content: center;
   flex-direction: column;
 }
-
+.footer {
+  margin-top: 100px;
+}
 /* people */
 .add_margin {
   margin-top: 40px;
@@ -152,6 +153,8 @@
   /* margin: 20px auto;
     columns: 3;
     column-gap: 50px; */
+  top: 100px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
