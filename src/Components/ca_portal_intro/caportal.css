@@ -1,10 +1,30 @@
 .caportal{
-    padding-top: 180px;
-    background: #2F2F28;
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+  background: #00012D !important;  /* fallback for old browsers */
+  color: white;
 }
-
+.mainCtn {
+  padding: 100px 100px;
+}
+.cap-header_wrapper{
+  position: relative;
+  padding: 30px 10px;
+  font-size: 45px;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cap-header_border{
+  height: 3.5px;
+  width: 130px;
+  background-color: white;
+  margin-left: 60px;
+  border-radius: 360px;
+}
+.click-to-button{
+  text-align: center;
+}
 @media(max-width:960px){
   .caportal{
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
@@ -129,6 +149,7 @@
 
 .individual-tabs{
   /* flex: 1 0 30%; */
+  color: white;
   margin: 0 20px;
 }
 
