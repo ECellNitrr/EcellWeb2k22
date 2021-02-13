@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./caportal.css";
-import Navbar from '../Navbar/navbar';
+import SideBar from '../Home/Sidebar/Sidebar'
 import Footer from "../Footer/footer";
 import About from "./aboutca";
 import Faq from "./faqs";
@@ -15,7 +15,7 @@ class caportal extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
+                <SideBar/>
                 <div className="caportal">
                     <div>
                         <img

@@ -123,9 +123,6 @@ const Sidebar = (props) => {
               <NavLink to="/caportal_info">CaPortal</NavLink>
             </li>
             <li>
-              <NavLink to="/register">Register</NavLink>
-            </li>
-            <li>
               <a href="https://medium.com/e-cell-nit-raipur">Blogs</a>
             </li>
           </ul>
