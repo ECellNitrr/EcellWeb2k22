@@ -131,8 +131,8 @@ class Startup extends Component {
             <div className="startup-header">Startup Portal</div>
             <div className="startup-header_border"></div>
           </div>
+          {startup_landing_page}
         </div>
-        {startup_landing_page}
         <Footer />
       </div>
     );

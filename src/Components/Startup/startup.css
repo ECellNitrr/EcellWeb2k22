@@ -176,7 +176,15 @@
   .startup-item1,.startup-item2{
     margin: 50px;
   }
-
+  .startup-header_wrapper{
+    padding: 15px 20px;
+    font-size: 35px;
+}
+  .startup-header_border{
+    width: 105px;
+    margin-left: 50px;
+    height: 3px;
+  }
   .startup-item1{
     justify-content: center;
   }
@@ -205,6 +213,15 @@
 @media(max-width:800px){
   .startup-details{
     font-size: 16px;
+  }
+  .startup-header_wrapper{
+    padding: 15px 20px;
+    font-size: 27.5px;
+}
+  .startup-header_border{
+    width: 85px;
+    margin-left: 40px;
+    height: 2px;
   }
 }
 
