@@ -2,8 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "redux";
-import { user_type } from "../../../constants";
-import { logout } from '../../../../actions/authActions'
+import { user_type } from "../../constants";
+import { logout } from '../../../actions/authActions'
 
 const Logout = (props) => {
   const go_to_portal = (e) => {

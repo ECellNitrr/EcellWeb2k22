@@ -13,7 +13,7 @@ import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../../actions/authActions';
-import AuthModal from './AuthModal';
+import AuthModal from '../../Form/AuthModal';
 const Sidebar = (props) => {
   const [details, setDetails] = useState({
     active: false,
@@ -121,9 +121,6 @@ const Sidebar = (props) => {
             </li>
             <li>
               <NavLink to="/caportal_info">CaPortal</NavLink>
-            </li>
-            <li>
-              <NavLink to="/register">Register</NavLink>
             </li>
             <li>
               <a href="https://medium.com/e-cell-nit-raipur">Blogs</a>
