@@ -1,6 +1,8 @@
 .ctn-2{
-  padding: 0px 30px;
-  margin-top: 40px;
+  max-width: 1500px;
+  padding-top: 45px;
+  padding-bottom: 80px;
+  height: 100%;
 }
 .about-heading{
   padding: 30px 10px;
@@ -93,6 +95,7 @@
   }
   .sub-head{
     font-size: 20px;
+    text-align: center;
   }
   .text-section{
     padding-top: 10px;
@@ -102,7 +105,7 @@
     line-height: 20px;
   }
   .about-image{
-    padding: 5px;
+    margin: 15px 0;
   }
   .fb-img {
     max-width: 70%;
