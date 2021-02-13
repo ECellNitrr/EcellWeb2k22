@@ -1,11 +1,29 @@
 .startups{
-    background: #7b4397 !important;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(20deg, #dc2430, #7b4397) !important;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(20deg, #dc2430, #7f479b) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #00012D !important;  /* fallback for old browsers */
 }
 
-
-
+.mainCtn{
+  padding-top: 75px; 
+  padding-bottom: 80px;
+  height: 100%
+}
+.startup-header_wrapper{
+  position: relative;
+  padding: 30px 10px;
+  font-size: 45px;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.startup-header_border{
+  height: 3.5px;
+  width: 130px;
+  background-color: white;
+  margin-left: 60px;
+  border-radius: 360px;
+}
 .list{
   display: flex;
   flex-wrap: wrap;

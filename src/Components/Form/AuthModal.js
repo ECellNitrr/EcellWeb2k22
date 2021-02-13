@@ -54,7 +54,7 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
     return (
       <div className="ls-modal-content">
         {CloseButton()}
-        <div class={`container ${rightPanelActive}`} id="container">
+        <div class={`ls-container ${rightPanelActive}`} id="container">
           <div class="form-container sign-up-container">
             <SignUp setlogin={setlogin} />
           </div>
