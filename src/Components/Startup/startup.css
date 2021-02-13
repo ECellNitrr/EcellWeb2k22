@@ -3,9 +3,8 @@
 }
 
 .mainCtn{
-  padding-top: 75px; 
-  padding-bottom: 80px;
-  height: 100%
+  padding: 100px 100px;
+  height: 100%;
 }
 .startup-header_wrapper{
   position: relative;
@@ -43,7 +42,9 @@
   color:#7D4293 ;
 }
 
-
+.hero{
+  max-width: 100%;
+}
 
 .startup-pic{
   position: relative;
@@ -272,8 +273,4 @@
   font-size:18px !important;
   color:black;
   font-style:bold;
-}
-
-.hero{
-  object-fit: contain;
 }

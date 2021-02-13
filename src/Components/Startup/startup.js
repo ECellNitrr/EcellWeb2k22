@@ -76,47 +76,44 @@ class Startup extends Component {
     }
   };
 
+  ButtonToLinkStartup = () => (
+    <button
+      style={{ width: "250px", fontSize: "15px" }}
+      className="btn font-weight-bold bg-white round"
+      disabled={this.state.loading}
+      onClick={this._to_startup}
+    >
+      For Startups/Ideas
+      {this.state.loading ? (
+        <i className="fa fa-spinner fa-spin mx-2 d-inline-block"></i>
+      ) : null}
+    </button>
+  );
+
+  ButtonToLinkInterns = () => (
+    <button
+      style={{ width: "250px", fontSize: "15px" }}
+      className="btn font-weight-bold bg-white round"
+      onClick={this._to_jobs}
+    >
+      For Interns
+    </button>
+  );
+
   render() {
     let startup_landing_page = (
-        <div className="row">
-          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <img className="hero img-fluid" src={Hero} alt="hero"></img>
-          </div>
-
-          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex ">
-            <div className="register shadow-lg p-3 mb-5 rounded">
-              <div className="head1 ">
-                <span className="font-weight-bold">
-                  Welcome to Startup Portal
-                </span>
-              </div>
-              <div>
-                <button
-                  style={{ width: "250px", fontSize: "15px" }}
-                  className="btn font-weight-bold bg-white round"
-                  disabled={this.state.loading}
-                  onClick={this._to_startup}
-                >
-                  For Startups/Ideas
-                  {this.state.loading ? (
-                    <i className="fa fa-spinner fa-spin mx-2 d-inline-block"></i>
-                  ) : null}
-                </button>
-                {/* <Link className="startup_dashboard_btn" to='/iportal/startup' style={{ display: "none" }}></Link> */}
-              </div>
-
-              <div>
-                <button
-                  style={{ width: "250px", fontSize: "15px" }}
-                  className="btn font-weight-bold bg-white round"
-                  onClick={this._to_jobs}
-                >
-                  For Interns
-                </button>
-              </div>
-            </div>
+      <div className="row">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5">
+          <p className="hero-image-section"><img className="hero" src={Hero} alt="hero"></img></p>
+        </div>
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+          <div className="register">
+            <div className="head1">Welcome to Startup Portal</div>
+            <div>{this.ButtonToLinkStartup()}</div>
+            <div>{this.ButtonToLinkInterns()}</div>
           </div>
         </div>
+      </div>
     );
 
     if (this.state.inauguration_check) {
