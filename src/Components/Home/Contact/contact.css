@@ -23,10 +23,11 @@
     margin-left: 80px;
     border-radius: 360px;
   }
-  .sub-head{
+  .con-sub-head{
     font-size: 30px;
     font-weight: 300;
     padding: 20px;
+    text-align: center;
   }
   .row{
     margin: 10vh;
@@ -68,6 +69,7 @@
     text-align: center;
     padding: 10px;
     margin-bottom: 0;
+    line-height: 30px;
   }
   .mobile-number{
     padding: 10px;
@@ -103,7 +105,7 @@
       margin-left: 35px;
       height: 2.5px;
     }
-    .sub-head{
+    .con-sub-head{
       font-size: 22.5px;
       padding: 7.5px;
     }
@@ -160,7 +162,7 @@
       margin-left: 35px;
       height: 2px;
     }
-    .sub-head{
+    .con-sub-head{
       font-size: 20px;
       padding: 5px;
     }
@@ -182,7 +184,7 @@
       margin-left: 35px;
       height: 2.5px;
     }
-    .sub-head{
+    .con-sub-head{
       font-size: 17.5px;
       padding: 5px;
     }
@@ -210,6 +212,7 @@
     .summary {
       font-size: 10px;
       padding: 5px;
+      line-height: 15px;
     }
     .mobile-number {
       padding: 2px;

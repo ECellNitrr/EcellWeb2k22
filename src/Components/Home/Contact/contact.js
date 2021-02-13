@@ -119,7 +119,7 @@ export default class contact extends Component {
     contactUs(errrmsg, scsmsg) {
         return (
             <>
-            <div className="sub-head">Leave a Message</div>
+            <div className="con-sub-head">Leave a Message</div>
             {this.state.err ? errrmsg:null}
             {this.state.success ? scsmsg:null}
             <form>
@@ -135,7 +135,7 @@ export default class contact extends Component {
     footerSection() {
         return (
             <>
-                <div className="sub-head">Leaders Beyond Borders</div>
+                <div className="con-sub-head">Leaders Beyond Borders</div>
                 <p className="summary">E-Cell, NIT Raipur is established to motivate and educate people about entrepreneurship and serve as a meeting ground for corporate and young budding entrepreneurs from distinguished institutions.</p>
                 <div className="mobile-number">
                     +91 80949 66697<br/>
