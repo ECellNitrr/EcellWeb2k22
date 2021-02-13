@@ -123,13 +123,17 @@ class Timeline extends Component {
                                     In association with E-Cell, MSME – Development Institute Raipur, organized the One-Day awareness programme on “Support for entrepreneurial and managerial development of SMEs through Incubators”. An informative and interactive workshop on “Preparing Details Project Report” was organized with the aim to provide direction to the budding entrepreneurs. With the E-Cell progressing by leaps and bounds, was successful in establishing a benchmark in the legacy of it’s existence, as the E-Summit 2016 was organized as an independent Summit by the E-Cell.
                                 </TabContent>
                                 <TabContent isActive={tabStates[7]} tabId={8} year={2017} img={plant8} >
-                                    The B-Plan competition was organized by E-Cell as a part of Eclectika’14.The B-Plan competition was organized by E-Cell as a part of Eclectika’14.The B-Plan competition was organized by E-Cell as a part of Eclectika’14.
+                                    A total of 18 startups were called in for the startup camp, giving internship opportunity to students.
+                                    Mr. Harjeet Khanduja (Vice President Human Resources at Reliance Jio Infocomm), Mr. Rishabh Dev (Managing Director at Mapplinks and Mapplinks Academy), Mr. Saransh Ray (Associate at Invest India, Startup India Hub), Mr. Rahul Tyagi (Vice President- Training at Lucideus), Ms. Abi Aryan ( Chief Business Development Officer at Coinsecure), were called in for the speaker session. Also, Think Raipur was launched in the same year.
                                 </TabContent>
                                 <TabContent isActive={tabStates[8]} tabId={9} year={2018} img={plant9} >
-                                    The B-Plan competition was organized by E-Cell as a part of Eclectika’14.The B-Plan competition was organized by E-Cell as a part of Eclectika’14.The B-Plan competition was organized by E-Cell as a part of Eclectika’14.
+                                    The Startup Camp was organized for the first time. Numerous fledgling start-ups were invited, which opened up internship opportunities for students. Also, there was one on one interaction with the students, giving them an insight into the world of Entrepreneurs.
+                                    Mr. Kumar Gaurav(Founder and CEO of Cashaa), Mr. Gopichand Katragadda(Ex. CTO and director of Tata companies), Mr. Dan Ram(A 5x TEDx Speaker and co-founder of Parkpnp) and Miss Nandini Vaidyanathan(Chairman and Managing Director of CARMa) were called in for the Speaker Session.
                                 </TabContent>
                                 <TabContent isActive={tabStates[9]} tabId={10} year={2019} img={plant10} >
-                                    The B-Plan competition was organized by E-Cell as a part of Eclectika’14.The B-Plan competition was organized by E-Cell as a part of Eclectika’14.The B-Plan competition was organized by E-Cell as a part of Eclectika’14.
+                                    E-summit '19 was organized on a whole new level. It was the first time the event was held outside the institute campus, in an auditorium to accommodate a larger audience. Innovation manthan was introduced for the first time, it is designed to showcase the ideas and solutions to modern day problems given by the young and prolific minds. Also, to guide these ideas scientifically, commercially and socially.
+                                    Six investors attended the Start-up camp giving a opportunity for the startups to get funded.
+                                    Internship-portal was launched in 2019, for providing internship opportunities to students.
                                 </TabContent>
                             </div>
                         </div>

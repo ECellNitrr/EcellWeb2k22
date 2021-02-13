@@ -290,15 +290,10 @@
     z-index: 10;
     top: 35px;
     right: 120px;
-   
-  }
-
- 
+  } 
 
 
   @media(max-width:1370px){
-
-
     .login-button1{
       top: 40px;
     }

@@ -70,24 +70,26 @@ const Sidebar = (props) => {
   return (
     <div className="sidebarTop">
       <header>
-        <div className="leftBox">
+        {props.hideLogo ? <div></div> : (<div className="leftBox">
           <img src={Logo} className="img-fluid" id="logo" />
-        </div>
+        </div>)}
         {/* logged-in/logged-out part */}
-        <div className="rightBox">
-          {props.auth.loggedin ? loggedin : loggedout}
-        </div>
+        {props.hideLoginSignUpBtn ? <div></div> : (
+          <div className="rightBox">
+            {props.auth.loggedin ? loggedin : loggedout}
+          </div>
+        )}
       </header>
       <div id="dialog-target">
         <AuthModal modalOpen={modalOpen} closeModal={closeModal} />
       </div>
       <div id="nav-container">
         <div class="bg"></div>
-        <div class="button" tabindex="0">
+        {props.hideMenuBtn ? <div /> : (<div class="button" tabindex="0">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </div>
+        </div>)}
         <div id="nav-content" tabindex="0">
           <ul>
             <li>

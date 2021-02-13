@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <>
-      <Sidebar position="fixed" />
+      <Sidebar position="fixed" hideLogo={true} hideLoginSignUpBtn={true} />
 
       <ReactFullpage
         scrollingSpeed={1000}
@@ -51,6 +51,7 @@ const Home = () => {
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
+                <Sidebar position="fixed" hideMenuBtn={true} />
                 <div class="page">
                   <main>
                     <div class="content">
