@@ -1,5 +1,5 @@
 .teamcontainer {
-  background-color: #00012D !important;
+  background-color: #00012d !important;
   height: 100%;
 }
 /* .button {
@@ -176,7 +176,7 @@
   box-sizing: border-box;
   padding: 15px;
   width: 250px;
-  background-color: #000;
+  background-color: darkblue;
   display: flex;
   justify-content: center;
   align-items: center;
