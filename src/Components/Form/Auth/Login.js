@@ -3,8 +3,11 @@ import { connect } from "react-redux";
 import { updateUser } from "../../../actions/authActions";
 import faxios from "../../../axios";
 
-const Login = ({ setlogin, setForgotPassword, updateUser }) => {
+const Login = ({ setlogin, setForgotPassword, updateUser, closeModal }) => {
   //Create State for the component
+
+  const closeModalOnLogin = () => closeModal();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -75,7 +78,6 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
 
         //@TODO
         //Not verified email OTP fill
-
         //Bring back to default state
         setFormState({
           ...formState,
@@ -85,6 +87,8 @@ const Login = ({ setlogin, setForgotPassword, updateUser }) => {
           email: "",
           password: "",
         });
+        //Close Modal
+        closeModalOnLogin();
       })
       .catch((err) => {
         setFormState({

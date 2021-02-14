@@ -3,7 +3,10 @@ import { connect } from "react-redux";
 import faxios from "../../../axios";
 import { updateUser } from "../../../actions/authActions";
 
-const SignUp = ({ setlogin, updateUser }) => {
+const SignUp = ({ setlogin, updateUser, closeModal }) => {
+  
+  const closeModalOnLogin = () => closeModal();
+  
   //Create State for the component
   const [formData, setFormData] = useState({
     fname: "",
@@ -118,6 +121,7 @@ const SignUp = ({ setlogin, updateUser }) => {
             updateUser({
               ...data,
             });
+            closeModalOnLogin();
           })
           .catch((err) => {
             setFormState({
