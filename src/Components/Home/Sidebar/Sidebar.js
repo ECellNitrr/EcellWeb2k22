@@ -13,7 +13,7 @@ import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../../actions/authActions';
-import AuthModal from './AuthModal';
+import AuthModal from '../../Form/AuthModal';
 const Sidebar = (props) => {
   const [details, setDetails] = useState({
     active: false,
@@ -70,24 +70,26 @@ const Sidebar = (props) => {
   return (
     <div className="sidebarTop">
       <header>
-        <div className="leftBox">
+        {props.hideLogo ? <div></div> : (<div className="leftBox">
           <img src={Logo} className="img-fluid" id="logo" />
-        </div>
+        </div>)}
         {/* logged-in/logged-out part */}
-        <div className="rightBox">
-          {props.auth.loggedin ? loggedin : loggedout}
-        </div>
+        {props.hideLoginSignUpBtn ? <div></div> : (
+          <div className="rightBox">
+            {props.auth.loggedin ? loggedin : loggedout}
+          </div>
+        )}
       </header>
       <div id="dialog-target">
         <AuthModal modalOpen={modalOpen} closeModal={closeModal} />
       </div>
       <div id="nav-container">
         <div class="bg"></div>
-        <div class="button" tabindex="0">
+        {props.hideMenuBtn ? <div /> : (<div class="button" tabindex="0">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </div>
+        </div>)}
         <div id="nav-content" tabindex="0">
           <ul>
             <li>
@@ -119,9 +121,6 @@ const Sidebar = (props) => {
             </li>
             <li>
               <NavLink to="/caportal_info">CaPortal</NavLink>
-            </li>
-            <li>
-              <NavLink to="/register">Register</NavLink>
             </li>
             <li>
               <a href="https://medium.com/e-cell-nit-raipur">Blogs</a>

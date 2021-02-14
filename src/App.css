@@ -538,7 +538,7 @@ button:disabled {
   font-size: 35px;
   color:white;
   font-weight: 800;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
  text-align: center;
  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
