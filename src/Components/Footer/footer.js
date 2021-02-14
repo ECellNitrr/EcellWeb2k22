@@ -44,7 +44,7 @@ const footer = () => {
                   <i className="fab fa-instagram"></i>
                 </a>
                 <a
-                  href="https://twitter.com/ecellnitrr?lang=en"
+                  href="https://twitter.com/ecell_nitrr"
                   target="_blank"
                 >
                   <i className="fab fa-twitter-square"></i>

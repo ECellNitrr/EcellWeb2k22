@@ -183,13 +183,16 @@ export default class contact extends Component {
         <div className="social-icons">
           <div>Follow us Online On</div>
           <a href="https://www.facebook.com/ecellnitrr/" target="_blank">
-            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://twitter.com/ecell_nitrr" target="_blank">
+            <i className="fab fa-twitter-square"></i>
           </a>
           <a
             href="https://www.youtube.com/channel/UCrlm4gpLnIaA3pKSXbB99Yw"
             target="_blank"
           >
-            <i class="fab fa-youtube"></i>
+            <i class="fab fa-youtube-square"></i>
           </a>
           <a
             href="https://in.linkedin.com/company/entrepreneurship-cell-nit-raipur"
@@ -198,10 +201,10 @@ export default class contact extends Component {
             <i class="fab fa-linkedin"></i>
           </a>
           <a
-            href="https://www.instagram.com/ecell.nitraipur/?hl=en"
+            href="https://www.instagram.com/ecell.nitraipur/"
             target="_blank"
           >
-            <i class="fab fa-instagram"></i>
+            <i class="fab fa-instagram-square"></i>
           </a>
         </div>
       </>
