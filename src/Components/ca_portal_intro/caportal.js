@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import "./caportal.css";
-import SideBar from "../Home/Sidebar/Sidebar";
-import Footer from "../Footer/footer";
-import About from "./aboutca";
-import Faq from "./faqs";
-import Contact from "./contact";
+import './caportal.css';
+import SideBar from '../Home/Sidebar/Sidebar';
+import Footer from '../Footer/footer';
+import About from './aboutca';
+import Faq from './faqs';
+import Contact from './contact';
 
 class caportal extends Component {
   _go_caportal = (e) => {
-    this.props.history.push("/caportal");
+    this.props.history.push('/caportal');
   };
 
   render() {
@@ -22,10 +22,7 @@ class caportal extends Component {
             <div className="cap-header_border"></div>
           </div>
           <div className="click-to-button">
-            <button
-              onClick={this._go_caportal}
-              className="profile-card__button button--orange"
-            >
+            <button onClick={this._go_caportal} className="goto">
               Click me to go to CA Portal
             </button>
           </div>
