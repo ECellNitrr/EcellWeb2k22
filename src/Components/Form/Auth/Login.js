@@ -120,6 +120,7 @@ const Login = ({ setlogin, setForgotPassword, updateUser, closeModal }) => {
         type="email"
         placeholder="Email"
         name="email"
+        required
         value={email}
         onChange={(e) => onChange(e)}
       />
@@ -130,6 +131,7 @@ const Login = ({ setlogin, setForgotPassword, updateUser, closeModal }) => {
         name="password"
         minLength="8"
         value={password}
+        required
         onChange={(e) => onChange(e)}
       />
       <a
