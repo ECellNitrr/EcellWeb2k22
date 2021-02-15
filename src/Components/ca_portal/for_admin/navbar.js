@@ -5,7 +5,7 @@ import { user_type } from '../../constants'
 
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import * as actions from '../../../actions/authActions'
+import { logout } from '../../../actions/authActions'
 
 class navbar extends Component {
     base_route = '/caportal/admin/'
@@ -19,7 +19,7 @@ class navbar extends Component {
 
     _logout = e => {
         console.log(this.props.auth)
-        this.props.updateUser({ loggedin: false })
+        this.props.logout();
         this.props.history.push('/')
     }
 
@@ -47,4 +47,4 @@ class navbar extends Component {
 
 const mapStateToProps = (state) => state
 
-export default compose(connect(mapStateToProps, actions),withRouter)(navbar)
+export default compose(connect(mapStateToProps, { logout }),withRouter)(navbar)
