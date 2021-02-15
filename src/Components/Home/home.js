@@ -41,7 +41,7 @@ const Home = () => {
         navigationTooltips={[
           'Ecell NIT Raipur',
           'About Us',
-          'Our Vission',
+          'Our Vision',
           'Timeline',
           'Contact Us'
         ]}
