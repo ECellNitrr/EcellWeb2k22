@@ -231,7 +231,7 @@ export default class contact extends Component {
             <div className="heading-line"></div>
           </div>
         </div>
-        <div className="row">
+        <div className="row contact-row">
           <div
             className="col-xs-12 col-sm-12 col-md-12 col-lg-6 form-section"
             style={{ textAlign: "center" }}
