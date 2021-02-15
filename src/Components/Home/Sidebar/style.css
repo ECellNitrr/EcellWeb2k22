@@ -17,7 +17,7 @@ header .rightBox {
   position: static;
 }
 #signup {
-  padding: 8px;
+  padding: 5px;
   box-shadow: none;
   margin-top: 10px;
   border-radius: 30px;
@@ -213,14 +213,14 @@ main h2 span {
   pointer-events: none;
 }
 #nav-container:focus-within .icon-bar:nth-of-type(1) {
-  background: rgb(51, 51, 51);
+  background: #edebf5;
   transform: translate3d(0, 8px, 0) rotate(45deg);
 }
 #nav-container:focus-within .icon-bar:nth-of-type(2) {
   opacity: 0;
 }
 #nav-container:focus-within .icon-bar:nth-of-type(3) {
-  background: rgb(51, 51, 51);
+  background: #edebf5;
   transform: translate3d(0, -8px, 0) rotate(-45deg);
 }
 
@@ -318,7 +318,7 @@ ul {
 
   #signup {
     padding: 5px;
-    font-size: 14px;
+    font-size: 12px;
     box-shadow: none;
     margin-top: 6px;
     border-radius: 10px;
