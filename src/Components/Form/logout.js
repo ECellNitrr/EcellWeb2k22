@@ -5,7 +5,7 @@ import faxios from '../../axios'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
-import { logout } from '../../actions/authActions'
+import { logout as logoutPortal }  from '../../actions/authActions'
 import { user_type } from '../constants'
 
 class logout extends Component {
@@ -45,7 +45,7 @@ class logout extends Component {
     }
 
     _logout = e => {
-        this.props.logout();
+        this.props.logoutPortal();
         this.close_btn.click()
     }
 
@@ -107,4 +107,4 @@ class logout extends Component {
 
 const mapStateToProps = (state) => state
 
-export default compose(connect(mapStateToProps, { logout }),withRouter)(logout)
+export default compose(connect(mapStateToProps, { logoutPortal }),withRouter)(logout)
