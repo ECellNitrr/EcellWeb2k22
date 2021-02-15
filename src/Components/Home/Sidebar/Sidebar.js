@@ -39,7 +39,6 @@ const Sidebar = (props) => {
   useEffect(() => {
     document.onclick = (args) => {
       if (args.target.id === "dialog-target") {
-        console.log("called");
       }
     };
   }, []);
@@ -92,13 +91,13 @@ const Sidebar = (props) => {
         {props.hideMenuBtn ? (
           <div />
         ) : (
-          <div class="button" tabindex="0">
+          <div class="button" tabIndex="0">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </div>
         )}
-        <div id="nav-content" tabindex="0">
+        <div id="nav-content" tabIndex="0">
           <ul>
             <li>
               <Link to="/">Home</Link>
