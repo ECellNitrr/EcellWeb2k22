@@ -47,7 +47,6 @@ const Sidebar = (props) => {
   const loggedout = (
     <button
       id="signup"
-      className="btn btn-outline-default"
       data-toggle="modal"
       data-target="#loginRegModal"
       onClick={openModal}
@@ -70,11 +69,17 @@ const Sidebar = (props) => {
   return (
     <div className="sidebarTop">
       <header>
-        {props.hideLogo ? <div></div> : (<div className="leftBox">
-          <img src={Logo} className="img-fluid" id="logo" />
-        </div>)}
+        {props.hideLogo ? (
+          <div></div>
+        ) : (
+          <div className="leftBox">
+            <img src={Logo} className="img-fluid" id="logo" />
+          </div>
+        )}
         {/* logged-in/logged-out part */}
-        {props.hideLoginSignUpBtn ? <div></div> : (
+        {props.hideLoginSignUpBtn ? (
+          <div></div>
+        ) : (
           <div className="rightBox">
             {props.auth.loggedin ? loggedin : loggedout}
           </div>
@@ -85,11 +90,15 @@ const Sidebar = (props) => {
       </div>
       <div id="nav-container">
         <div class="bg"></div>
-        {props.hideMenuBtn ? <div /> : (<div class="button" tabindex="0">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </div>)}
+        {props.hideMenuBtn ? (
+          <div />
+        ) : (
+          <div class="button" tabindex="0">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </div>
+        )}
         <div id="nav-content" tabindex="0">
           <ul>
             <li>

@@ -1,8 +1,11 @@
 .caportal-wrapper{
+ 
+    
     .detail_link{
         font-weight: bold;
         color: blue;
         cursor: pointer !important;
+        
     }
     .progress-bar {
         -webkit-transition: none;
@@ -11,9 +14,7 @@
         -o-transition: none;
         transition: none;
     }​
-    .ecell-logo{
-        width: 200px;
-    }
+  
     .username{
         margin: 0 5px;
         padding: 5px 10px;

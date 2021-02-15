@@ -1,103 +1,109 @@
-.caportal{
-  background: #00012D !important;  /* fallback for old browsers */
+.caportal {
+  background: #00012d !important; /* fallback for old browsers */
   color: white;
 }
 .mainCtn {
   padding: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.cap-header_wrapper{
-  position: relative;
-  padding: 30px 10px;
-  font-size: 45px;
+.goto {
+  padding: 15px;
+  border: none;
+  background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: -50px;
+}
+.cap-header_wrapper {
+  padding: 0;
+  padding-bottom: 50px;
+  font-size: 44px;
   font-weight: 500;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.cap-header_border{
+.cap-header_border {
   height: 3.5px;
   width: 130px;
   background-color: white;
   margin-left: 60px;
   border-radius: 360px;
 }
-.click-to-button{
-  text-align: center;
-}
-@media(max-width:960px){
-  .caportal{
+/* .click-to-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+} */
+@media (max-width: 960px) {
+  .caportal {
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 
-.landing{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+.landing {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
+.card {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 
-  .card{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%,0);
+.mb-0 {
+  font-weight: 800;
+  color: #f9d342 !important;
+}
+
+.mb-0:hover {
+  color: white !important;
+}
+
+.hd {
+  text-align: center;
+  border-bottom: 10px solid #f9d342;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 530px) {
+  .hd {
+    font-size: 20px;
+    width: 200px;
   }
-
-  .mb-0{
-    font-weight: 800;
-    color: #F9D342 !important;
+  .profile-card__button {
+    font-size: 15px;
   }
+}
 
-  .mb-0:hover{
-    color: white !important;
-  }
+.textc {
+  text-align: center;
+}
 
-  
+.card {
+  background: #292826 !important;
+  color: white !important;
+}
 
-  .hd{
-    text-align: center;
-    border-bottom: 10px solid #F9D342;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-
-  }
-
-  @media(max-width:530px){
-    .hd{
-      font-size: 20px;
-      width: 200px;
-    }
-    .profile-card__button
-    {
-      font-size:15px;
-    }
-  }
-
-
-  .textc{
-    text-align: center;
-  }
-
-  .card{
-    background: #292826 !important;
-    color: white !important;
-  }
-
-
-
-.flex-box{
+.flex-box {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.ben-cards{
+.ben-cards {
   flex: 1 0 250px;
   margin: 10px;
-  background:rgb(0,0,0,0.7);
+  background: rgb(0, 0, 0, 0.7);
   outline: 2px solid white;
   outline-offset: -5px;
   color: white;
@@ -105,63 +111,90 @@
   padding: 10px;
 }
 
-.ben-cards:hover{
-  background:rgba(255,255,255,0.5);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+.ben-cards:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   outline: 2px solid black;
   color: black;
 }
 
-.p1{
+.p1 {
   font-size: 100px;
   text-align: center;
 }
 
-
-.p2{
+.p2 {
   text-align: center;
   font-size: 20px;
   font-weight: 800;
 }
 
-.txt5{
+.txt5 {
   font-size: 22px;
 }
 
-@media(max-width:460px){
-  .txt5{
+@media (max-width: 460px) {
+  .txt5 {
     font-size: 18px;
   }
 }
 
-.num{
+.num {
   color: white;
   background: #292826;
   padding: 9px;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
-  
 }
 
-.steps{
+.steps {
   margin-top: 20px;
 }
 
-.individual-tabs{
+.individual-tabs {
   /* flex: 1 0 30%; */
   color: white;
   margin: 0 20px;
 }
 
-.pr-mn{
+.pr-mn {
   max-width: 100%;
   max-height: 100%;
 }
 
-.pr-image{
+.pr-image {
   max-width: 300px;
   max-height: 300px;
 }
 
-
-  
+@media only screen and (max-width: 600px) {
+  .mainCtn {
+    padding: 70px 10px 10px 10px;
+  }
+  .cap-header_wrapper {
+    padding: 10px 10px 30px 10px;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .goto {
+    padding: 10px;
+    border: none;
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: -10px;
+  }
+  .ctn-2 h2 {
+    text-align: center;
+    margin-top: -60px;
+    font-weight: 500;
+  }
+  .ctn-2 .heading-2 {
+    text-align: center;
+    font-size: 25px;
+  }
+}
