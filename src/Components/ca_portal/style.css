@@ -1,0 +1,20 @@
+.logo img {
+  width: 100px !important;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  padding-top: 10px;
+}
+.ca_content {
+  margin-top: 110px;
+}
+.dashboard {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 13px;
+  background-color: rgb(245, 243, 240);
+  border-radius: 10px;
+}

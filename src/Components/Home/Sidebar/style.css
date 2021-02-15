@@ -21,9 +21,10 @@ header .rightBox {
   box-shadow: none;
   margin-top: 10px;
   border-radius: 30px;
-  width: 125px;
+  width: 150px;
   color: #edebf5 !important;
-  border-color: #edebf5 !important;
+  background-color: transparent;
+  border: 1px solid #edebf5;
   transition: 0.3s;
   font-weight: bold;
 }
@@ -212,7 +213,7 @@ main h2 span {
   pointer-events: none;
 }
 #nav-container:focus-within .icon-bar:nth-of-type(1) {
-  background: rgb(51, 51, 51);;
+  background: rgb(51, 51, 51);
   transform: translate3d(0, 8px, 0) rotate(45deg);
 }
 #nav-container:focus-within .icon-bar:nth-of-type(2) {
@@ -317,12 +318,14 @@ ul {
 
   #signup {
     padding: 5px;
+    font-size: 14px;
     box-shadow: none;
     margin-top: 6px;
     border-radius: 10px;
     width: 120px;
     color: #fff;
     border-color: #fff;
+    background-color: transparent;
     margin-left: 10px;
   }
   #login {
