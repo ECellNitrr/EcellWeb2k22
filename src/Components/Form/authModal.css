@@ -350,6 +350,7 @@ span {
     width: 375px;
     max-width: 90%;
     min-height: 620px;
+    margin: auto;
   }
   .form-container {
     transition: none;
