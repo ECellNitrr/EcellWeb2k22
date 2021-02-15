@@ -45,14 +45,14 @@ const Sidebar = (props) => {
   }, []);
 
   const loggedout = (
+    <div className="btn btn-outline-default modal-button-ls">
     <button
       id="signup"
-      data-toggle="modal"
-      data-target="#loginRegModal"
       onClick={openModal}
     >
       Login/Sign Up
     </button>
+    </div>
   );
 
   const loggedin = (
