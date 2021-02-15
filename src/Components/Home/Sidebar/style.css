@@ -121,7 +121,7 @@ header .rightBox {
 header {
   position: absolute;
   width: 100%;
-  height: 70px;
+  height: 10px;
   z-index: 1;
   background: transparent;
 }
