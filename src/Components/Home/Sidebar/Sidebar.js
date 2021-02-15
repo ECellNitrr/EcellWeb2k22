@@ -56,15 +56,11 @@ const Sidebar = (props) => {
   );
 
   const loggedin = (
-    <button
-      id="signup"
-      className="btn btn-outline-default"
-      data-toggle="modal"
-      data-target="#logoutModal"
-      onClick={openModal}
-    >
+    <div onClick={openModal} className="btn btn-outline-default modal-button-ls">
+    <button id="signup">
       {props.auth.first_name.toUpperCase()} {props.auth.last_name.toUpperCase()}
     </button>
+    </div>
   );
   return (
     <div className="sidebarTop">
