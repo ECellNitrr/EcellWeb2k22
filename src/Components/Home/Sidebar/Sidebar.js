@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import Logo from '../../../assets/logo-white.png';
-import './style.css';
+import React, { useState, useEffect } from "react";
+import Logo from "../../../assets/logo-white.png";
+import "./style.css";
 
-import Form from '../../Form/form';
-import OtpModal from '../../Form/otp';
-import LogoutModal from '../../Form/logout';
-import ForgetPass from '../../Form/forgetpass';
-import ChangePass from '../../Form/changepass';
-import CheckOtp from '../../Form/checkotp';
+import Form from "../../Form/form";
+import OtpModal from "../../Form/otp";
+import LogoutModal from "../../Form/logout";
+import ForgetPass from "../../Form/forgetpass";
+import ChangePass from "../../Form/changepass";
+import CheckOtp from "../../Form/checkotp";
 
-import { NavLink, Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import * as actions from '../../../actions/authActions';
-import AuthModal from '../../Form/AuthModal';
+import { NavLink, Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import * as actions from "../../../actions/authActions";
+import AuthModal from "../../Form/AuthModal";
 const Sidebar = (props) => {
   const [details, setDetails] = useState({
     active: false,
-    forgetmail: '',
-    forgetOTP: '',
+    forgetmail: "",
+    forgetOTP: "",
   });
 
   const { active, forgetmail, forgetOTP } = details;
@@ -38,28 +38,29 @@ const Sidebar = (props) => {
 
   useEffect(() => {
     document.onclick = (args) => {
-      if (args.target.id === 'dialog-target') {
-        console.log('called');
+      if (args.target.id === "dialog-target") {
+        console.log("called");
       }
     };
   }, []);
 
   const loggedout = (
     <div className="btn btn-outline-default modal-button-ls">
-    <button
-      id="signup"
-      onClick={openModal}
-    >
-      Login/Sign Up
-    </button>
+      <button id="signup" onClick={openModal}>
+        Login/Sign Up
+      </button>
     </div>
   );
 
   const loggedin = (
-    <div onClick={openModal} className="btn btn-outline-default modal-button-ls">
-    <button id="signup">
-      {props.auth.first_name.toUpperCase()} {props.auth.last_name.toUpperCase()}
-    </button>
+    <div
+      onClick={openModal}
+      className="btn btn-outline-default modal-button-ls"
+    >
+      <button id="signup">
+        {props.auth.first_name.toUpperCase()}{" "}
+        {props.auth.last_name.toUpperCase()}
+      </button>
     </div>
   );
   return (
@@ -68,9 +69,11 @@ const Sidebar = (props) => {
         {props.hideLogo ? (
           <div></div>
         ) : (
-          <div className="leftBox">
-            <img src={Logo} className="img-fluid" id="logo" />
-          </div>
+          <Link to="/">
+            <div className="leftBox">
+              <img src={Logo} className="img-fluid" id="logo" />
+            </div>
+          </Link>
         )}
         {/* logged-in/logged-out part */}
         {props.hideLoginSignUpBtn ? (
