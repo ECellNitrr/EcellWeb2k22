@@ -9,6 +9,11 @@ strong {
 }
 .modal-button-ls{
   border: none;
+  outline: none;
+}
+.modal-button-ls:focus{
+  border: none;
+  outline: none;
 }
 header .rightBox {
   float: right;
