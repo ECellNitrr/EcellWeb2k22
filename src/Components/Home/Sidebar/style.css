@@ -7,7 +7,14 @@
 strong {
   font-weight: 600;
 }
-
+.modal-button-ls{
+  border: none;
+  outline: none;
+}
+.modal-button-ls:focus{
+  border: none;
+  outline: none;
+}
 header .rightBox {
   float: right;
   margin-right: 105px;
@@ -49,7 +56,6 @@ header .rightBox {
   width: 95px;
   height: 95px;
 }
-
 .page {
   width: 100%;
   height: 100vh;
@@ -115,7 +121,7 @@ header .rightBox {
 header {
   position: absolute;
   width: 100%;
-  height: 70px;
+  height: 10px;
   z-index: 1;
   background: transparent;
 }

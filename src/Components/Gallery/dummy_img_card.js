@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import './img_card.css';
 
 class DummyImgCard extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (

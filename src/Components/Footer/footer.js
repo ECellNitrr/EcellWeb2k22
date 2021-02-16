@@ -34,23 +34,26 @@ const footer = () => {
             <div>
               <h5 className="pt-2">Follow Us On</h5>
               <div className="social_links">
-                <a href="https://www.facebook.com/ecellnitrr/" target="_blank">
+                <a href="https://www.facebook.com/ecellnitrr/" rel="noopener noreferrer" target="_blank">
                   <i className="fab fa-facebook-square"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/ecell.nitraipur/"
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   <i className="fab fa-instagram"></i>
                 </a>
                 <a
-                  href="https://twitter.com/ecellnitrr?lang=en"
+                  href="https://twitter.com/ecell_nitrr"
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   <i className="fab fa-twitter-square"></i>
                 </a>
                 <a
                   href="https://in.linkedin.com/company/entrepreneurship-cell-nit-raipur"
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   <i className="fab fa-linkedin"></i>

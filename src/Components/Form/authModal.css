@@ -47,8 +47,8 @@ span {
 
 .ls-button {
   border-radius: 20px;
-  border: 1px solid  #FF0000;
-  background-color:  #FF0000;
+  border: 1px solid  #051836;
+  background-color:  #051836;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -172,9 +172,11 @@ span {
 }
 
 .overlay {
-  background: #FF0000;
-  background: -webkit-linear-gradient(to right top, #57469b, #983299, #d0007e, #f50050, #ff0000);
-  background: linear-gradient(to right top, #57469b, #983299, #d0007e, #f50050, #ff0000);
+  background: rgb(5,25,55);
+  background: -moz-linear-gradient(45deg, rgba(5,25,55,1) 30%, rgba(1,1,3,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(5,25,55,1) 30%, rgba(1,1,3,1) 100%);
+  background: linear-gradient(45deg, rgba(5,25,55,1) 30%, rgba(1,1,3,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#051937",endColorstr="#010103",GradientType=1);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -348,6 +350,7 @@ span {
     width: 375px;
     max-width: 90%;
     min-height: 620px;
+    margin: auto;
   }
   .form-container {
     transition: none;

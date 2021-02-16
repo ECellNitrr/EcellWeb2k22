@@ -41,7 +41,7 @@ const Home = () => {
         navigationTooltips={[
           'Ecell NIT Raipur',
           'About Us',
-          'Our Vission',
+          'Our Vision',
           'Timeline',
           'Contact Us'
         ]}
@@ -74,28 +74,32 @@ const Home = () => {
                     <a
                       href="https://www.facebook.com/ecellnitrr"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <i class="fab fa-facebook"></i>
                     </a>
                     <a
                       href="https://www.youtube.com/channel/UCrlm4gpLnIaA3pKSXbB99Yw"
+                      rel="noopener noreferrer"
                       target="_blank"
                     >
                       <i class="fab fa-youtube"></i>
                     </a>
                     <a
                       href="https://www.linkedin.com/company/entrepreneurship-cell-nit-raipur/"
+                      rel="noopener noreferrer"
                       target="_blank"
                     >
                       <i class="fab fa-linkedin"></i>
                     </a>
                     <a
                       href="https://www.instagram.com/ecell.nitraipur/?hl=en"
+                      rel="noopener noreferrer"
                       target="_blank"
                     >
                       <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://github.com/Ecellnitrr/" target="_blank">
+                    <a href="https://github.com/Ecellnitrr/" target="_blank" rel="noopener noreferrer">
                       <i class="fab fa-github"></i>
                     </a>
                   </div>

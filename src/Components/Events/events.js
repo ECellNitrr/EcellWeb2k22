@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import faxios from '../../axios';
 import { NavLink } from 'react-router-dom'
 import './events.css';
-import Navbar from '../Navbar/navbar';
 import Footer from '../Footer/footer';
 import Loader from '../api_loader/api_loader'
 import Sidebar from '../Home/Sidebar/Sidebar';

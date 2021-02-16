@@ -5,7 +5,6 @@ const SpeakerCard = ({ speakers }) => {
   const {
     company,
     description,
-    email,
     name,
     profile_pic,
     social_media,
@@ -14,7 +13,7 @@ const SpeakerCard = ({ speakers }) => {
   return (
     <div class="cardContainer">
       <div className="follow">
-        <a href={social_media} target="_blank">
+        <a href={social_media} target="_blank" rel="noopener noreferrer">
           <i class="fas fa-plus-circle"></i>
         </a>
         <p>Follow</p>
