@@ -31,6 +31,11 @@ class Startup extends Component {
       modalOpen: false,
     });
 
+    openModal = () => this.setState({
+      ...this.state,
+      modalOpen: true,
+    })
+
   componentDidMount() {
     faxios()
       .get("/events/inauguration/")
@@ -49,14 +54,9 @@ class Startup extends Component {
 
   _to_startup = (e) => {
     e.preventDefault();
-
     if (!this.props.auth.loggedin) {
-      return (
-        <AuthModal
-          modalOpen={this.state.modalOpen}
-          closeModal={this.closeModal}
-        />
-      );
+      this.openModal();
+      return;
     }
     this.setState({ loading: true });
 
@@ -140,6 +140,7 @@ class Startup extends Component {
           <div className="startup-header_wrapper">
             <div className="startup-header">Startup Portal</div>
             <div className="startup-header_border"></div>
+            <AuthModal closeModal={this.closeModal} modalOpen={this.state.modalOpen}/>
           </div>
           {startup_landing_page}
         </div>

@@ -10,14 +10,15 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import * as actions from '../../actions/authActions'
 import Sidebar from "../Home/Sidebar/Sidebar";
-
+import AuthModal from "../Form/AuthModal";
 class event_detail extends Component {
     state = {
         event_detail: null,
         loading: true,
         register: false,
         btnloader: false,
-        people_registered: 0
+        people_registered: 0,
+        modalOpen: false,
     };
 
     static propTypes = {
@@ -25,6 +26,16 @@ class event_detail extends Component {
         updateUser: PropTypes.func.isRequired,
     }
 
+    closeModal = () =>
+    this.setState({
+      ...this.state,
+      modalOpen: false,
+    });
+
+    openModal = () => this.setState({
+      ...this.state,
+      modalOpen: true,
+    })
 
 
     componentDidMount() {
@@ -83,10 +94,10 @@ class event_detail extends Component {
                 })
             }
         } else {
-            alert("Please login to continue")
+            this.openModal();
             this.setState({
                 btnloader: false
-            })
+            });
         }
 
     }
@@ -129,6 +140,7 @@ class event_detail extends Component {
                     </div>
                     <div className="event-item2">
                         <div className="event-content">
+                        <AuthModal closeModal={this.closeModal} modalOpen={this.state.modalOpen}/>
                             <div className="event-detail-name"><h4 className="e-name shadow p-3 mb-5 bg-white rounded">{event.name}</h4></div><br></br>
                             <div className="event-venue" style={{ color: 'grey' }}><i className="fas fa-map-marker-alt"></i>&nbsp;Venue:&nbsp;<span style={{ color: 'white' }}>{event.venue}</span></div><br></br>
                             <div className="event-time" style={{ color: 'grey' }}><span><i className="far fa-clock"></i>&nbsp;Time:</span>&nbsp;<span style={{ color: "white" }}>{event.time}</span></div><br></br>
