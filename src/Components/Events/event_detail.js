@@ -40,17 +40,12 @@ class event_detail extends Component {
 
     componentDidMount() {
         this.event_id = this.props.match.params.id;
-        console.log(this.event_id)
 
         faxios().get("/events/list/2019/").then(d => {
             let data = d.data.data;
             let event_detail = data.find(event => event.id === Number(this.event_id))
             let register_status = event_detail["registered"]
             let people_registered = event_detail["no_of_ppl_registered"]
-
-
-            console.log(register_status)
-            console.log({ data, event_detail });
             this.setState({
                 event_detail,
                 loading: false,
@@ -109,7 +104,6 @@ class event_detail extends Component {
         })
 
         faxios().post(`/events/unregister/${this.props.match.params.id}/`).then(res => {
-            console.log(res);
             let total_registrations = this.state.people_registered;
             this.setState({
                 register: false,
@@ -119,7 +113,6 @@ class event_detail extends Component {
 
 
         }).catch(res => {
-            console.log(res)
             this.setState({
                 btnloader: false
             })
@@ -133,7 +126,7 @@ class event_detail extends Component {
         if (!this.state.loading) {
             const event = this.state.event_detail;
             event_detail = (
-                <div className="event_detail">
+                <div className="event_detail container-fluid">
 
                     <div className="event-item1">
                         <img className="shadow-lg p-3 mb-5 bg-white rounded event-detail-pic" width="400" height="400" alt={event.name} src={event.icon} />
