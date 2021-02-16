@@ -11,18 +11,25 @@ import Hero from "../../assets/startup.svg";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import * as actions from "../../actions/authActions";
-
+import AuthModal from "../Form/AuthModal";
 class Startup extends Component {
   state = {
     startups: [],
     loading: false,
     inauguration_check: true,
+    modalOpen: false,
   };
 
   static propTypes = {
     auth: PropTypes.object.isRequired,
     updateUser: PropTypes.func.isRequired,
   };
+
+  closeModal = () =>
+    this.setState({
+      ...this.state,
+      modalOpen: false,
+    });
 
   componentDidMount() {
     faxios()
@@ -44,8 +51,12 @@ class Startup extends Component {
     e.preventDefault();
 
     if (!this.props.auth.loggedin) {
-      document.querySelector("#login-signup-btn").click();
-      return;
+      return (
+        <AuthModal
+          modalOpen={this.state.modalOpen}
+          closeModal={this.closeModal}
+        />
+      );
     }
     this.setState({ loading: true });
 
@@ -104,7 +115,9 @@ class Startup extends Component {
     let startup_landing_page = (
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5">
-          <p className="hero-image-section"><img className="hero" src={Hero} alt="hero"></img></p>
+          <p className="hero-image-section">
+            <img className="hero" src={Hero} alt="hero"></img>
+          </p>
         </div>
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
           <div className="register">
