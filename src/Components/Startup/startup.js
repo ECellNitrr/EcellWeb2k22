@@ -83,7 +83,7 @@ class Startup extends Component {
     if (this.props.auth.loggedin) {
       this.props.history.push("/internship/jobs");
     } else {
-      document.querySelector("#login-signup-btn").click();
+      this.openModal();
     }
   };
 
