@@ -148,7 +148,7 @@ class event_detail extends Component {
             return (
                 <div className="events">
                     <Sidebar />
-                    <div>
+                    <div className="event-detail-page">
                         {event_detail}
 
                         <div className="button-div" >
