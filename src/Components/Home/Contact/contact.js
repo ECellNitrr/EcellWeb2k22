@@ -182,26 +182,32 @@ export default class contact extends Component {
         </div>
         <div className="social-icons">
           <div>Follow us Online On</div>
-          <a href="https://www.facebook.com/ecellnitrr/" target="_blank">
-            <i class="fab fa-facebook"></i>
+          <a href="https://www.facebook.com/ecellnitrr/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://twitter.com/ecell_nitrr" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-twitter-square"></i>
           </a>
           <a
             href="https://www.youtube.com/channel/UCrlm4gpLnIaA3pKSXbB99Yw"
+            rel="noopener noreferrer"
             target="_blank"
           >
-            <i class="fab fa-youtube"></i>
+            <i class="fab fa-youtube-square"></i>
           </a>
           <a
             href="https://in.linkedin.com/company/entrepreneurship-cell-nit-raipur"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <i class="fab fa-linkedin"></i>
           </a>
           <a
-            href="https://www.instagram.com/ecell.nitraipur/?hl=en"
+            href="https://www.instagram.com/ecell.nitraipur/"
+            rel="noopener noreferrer"
             target="_blank"
           >
-            <i class="fab fa-instagram"></i>
+            <i class="fab fa-instagram-square"></i>
           </a>
         </div>
       </>
@@ -228,7 +234,7 @@ export default class contact extends Component {
             <div className="heading-line"></div>
           </div>
         </div>
-        <div className="row">
+        <div className="row contact-row">
           <div
             className="col-xs-12 col-sm-12 col-md-12 col-lg-6 form-section"
             style={{ textAlign: "center" }}

@@ -55,11 +55,11 @@ class mentors extends Component {
       <div className="mentors">
         <Sidebar />
         <h1 className="text-center heading">Mentors</h1>
-        <div>
+        <div style={{paddingBottom: "100px"}}>
           {this.state.loading ? (
-            <div style={{ marginTop: '20%' }}>
+            <>
               <Loader />
-            </div>
+            </>
           ) : (
             mentors_html
           )}

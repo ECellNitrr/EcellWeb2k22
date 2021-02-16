@@ -35,6 +35,7 @@
 }
 .heading {
   color: #edebf5;
+  padding-top: 50px;
   position: absolute;
   top: 25px;
   left: 50%;
@@ -161,7 +162,7 @@
   flex-wrap: wrap;
 }
 .photo_container_ .av_box {
-  margin: 15px;
+  margin: 35px;
 }
 
 /* manager and executives */

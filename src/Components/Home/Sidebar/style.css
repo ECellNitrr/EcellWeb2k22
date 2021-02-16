@@ -7,7 +7,14 @@
 strong {
   font-weight: 600;
 }
-
+.modal-button-ls{
+  border: none;
+  outline: none;
+}
+.modal-button-ls:focus{
+  border: none;
+  outline: none;
+}
 header .rightBox {
   float: right;
   margin-right: 105px;
@@ -17,7 +24,7 @@ header .rightBox {
   position: static;
 }
 #signup {
-  padding: 8px;
+  padding: 5px;
   box-shadow: none;
   margin-top: 10px;
   border-radius: 30px;
@@ -49,7 +56,6 @@ header .rightBox {
   width: 95px;
   height: 95px;
 }
-
 .page {
   width: 100%;
   height: 100vh;
@@ -115,7 +121,7 @@ header .rightBox {
 header {
   position: absolute;
   width: 100%;
-  height: 70px;
+  height: 10px;
   z-index: 1;
   background: transparent;
 }
@@ -213,14 +219,14 @@ main h2 span {
   pointer-events: none;
 }
 #nav-container:focus-within .icon-bar:nth-of-type(1) {
-  background: rgb(51, 51, 51);
+  background: #edebf5;
   transform: translate3d(0, 8px, 0) rotate(45deg);
 }
 #nav-container:focus-within .icon-bar:nth-of-type(2) {
   opacity: 0;
 }
 #nav-container:focus-within .icon-bar:nth-of-type(3) {
-  background: rgb(51, 51, 51);
+  background: #edebf5;
   transform: translate3d(0, -8px, 0) rotate(-45deg);
 }
 
@@ -318,11 +324,11 @@ ul {
 
   #signup {
     padding: 5px;
-    font-size: 14px;
+    font-size: 12px;
     box-shadow: none;
     margin-top: 6px;
     border-radius: 10px;
-    width: 120px;
+    width: auto;
     color: #fff;
     border-color: #fff;
     background-color: transparent;

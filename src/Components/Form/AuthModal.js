@@ -56,10 +56,10 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
         {CloseButton()}
         <div class={`ls-container ${rightPanelActive}`} id="container">
           <div class="form-container sign-up-container">
-            <SignUp setlogin={setlogin} />
+            <SignUp setlogin={setlogin} closeModal={closeModal}/>
           </div>
           <div class="form-container sign-in-container">
-            <Login setlogin={setlogin} setForgotPassword={setForgotPassword} />
+            <Login setlogin={setlogin} setForgotPassword={setForgotPassword} closeModal={closeModal}/>
           </div>
           <div class="overlay-container">
             <OverLay />

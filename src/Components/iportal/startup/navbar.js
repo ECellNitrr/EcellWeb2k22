@@ -6,7 +6,7 @@ import { user_type } from '../../constants'
 import {compose} from 'redux'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import * as actions from '../../../actions/authActions'
+import { logout } from '../../../actions/authActions'
 // import { sign } from 'crypto';
 
 import './navbar.scss'
@@ -36,15 +36,9 @@ class navbar extends Component {
     }
 
     _logout = (e) => {
-
-        
         e.preventDefault()
-        this.props.updateUser({ 
-            loggedin: false,
-            token: null
-         })
-    
-         this.props.history.push('/');
+        this.props.logout();
+        this.props.history.push('/');
     }
 
     render() {
@@ -117,4 +111,4 @@ class navbar extends Component {
 }
 
 const mapStateToProps = (state) => state
-export default compose(connect(mapStateToProps, actions),withRouter)(navbar)
+export default compose(connect(mapStateToProps, { logout }),withRouter)(navbar)

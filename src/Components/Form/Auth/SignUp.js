@@ -3,7 +3,10 @@ import { connect } from "react-redux";
 import faxios from "../../../axios";
 import { updateUser } from "../../../actions/authActions";
 
-const SignUp = ({ setlogin, updateUser }) => {
+const SignUp = ({ setlogin, updateUser, closeModal }) => {
+  
+  const closeModalOnLogin = () => closeModal();
+  
   //Create State for the component
   const [formData, setFormData] = useState({
     fname: "",
@@ -118,6 +121,7 @@ const SignUp = ({ setlogin, updateUser }) => {
             updateUser({
               ...data,
             });
+            closeModalOnLogin();
           })
           .catch((err) => {
             setFormState({
@@ -170,6 +174,7 @@ const SignUp = ({ setlogin, updateUser }) => {
         type="text"
         placeholder="First Name"
         name="fname"
+        required
         value={fname}
         onChange={(e) => onChange(e)}
       />
@@ -178,6 +183,7 @@ const SignUp = ({ setlogin, updateUser }) => {
         type="text"
         placeholder="Last Name"
         name="lname"
+        required
         value={lname}
         onChange={(e) => onChange(e)}
       />
@@ -187,6 +193,7 @@ const SignUp = ({ setlogin, updateUser }) => {
         placeholder="Mobile Number"
         pattern="[0-9]{10}"
         name="contact"
+        required
         value={contact}
         onChange={(e) => onChange(e)}
       />
@@ -196,6 +203,7 @@ const SignUp = ({ setlogin, updateUser }) => {
         placeholder="Email"
         name="email"
         value={email}
+        required
         onChange={(e) => onChange(e)}
       />
       <input
@@ -205,6 +213,7 @@ const SignUp = ({ setlogin, updateUser }) => {
         name="password"
         minLength="8"
         value={password}
+        required
         onChange={(e) => onChange(e)}
       />
       <button className="ls-button">Sign Up</button>
