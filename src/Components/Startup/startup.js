@@ -78,7 +78,7 @@ class Startup extends Component {
 
   ButtonToLinkStartup = () => (
     <button
-      style={{ width: "250px", fontSize: "15px" }}
+      style={{ width: "250px", fontSize: "15px",marginBottom: "10px" }}
       className="btn font-weight-bold bg-white round"
       disabled={this.state.loading}
       onClick={this._to_startup}

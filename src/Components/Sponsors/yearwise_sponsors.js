@@ -37,7 +37,7 @@ class Sponsors extends Component {
 
         // console.log(this.state)
         let spons_year_html = this.state.spons_years.map(year => {
-            return <div key={year}><Link to={`/sponsors/${year}`}><button className="btn btn-fontSize" >Sponsors {year}</button></Link></div>
+            return <div key={year}><Link to={`/sponsors/${year}`}><button className="btn btn-white btn-fontSize" >Sponsors {year}</button></Link></div>
         })
 
         if (this.state.loading) {

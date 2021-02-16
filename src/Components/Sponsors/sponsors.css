@@ -46,6 +46,10 @@
 .btn{
     color:#7b4397 ;
     font-weight: 800;
+    /* background: white; */
+}
+
+.btn-white {
     background: white;
     margin: 10px;
 }
