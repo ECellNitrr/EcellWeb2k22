@@ -129,7 +129,7 @@ class event_detail extends Component {
                 <div className="event_detail container">
 
                     <div className="event-item1">
-                        <img className="shadow-lg p-3 mb-5 bg-white rounded event-detail-pic" width="400" height="400" alt={event.name} src={event.icon} />
+                        <img className="shadow-lg bg-white rounded event-detail-pic" width="400" height="400" alt={event.name} src={event.icon} />
                     </div>
                     <div className="event-item2">
                         <div className="event-content">
