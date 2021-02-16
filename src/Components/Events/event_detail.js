@@ -126,7 +126,7 @@ class event_detail extends Component {
         if (!this.state.loading) {
             const event = this.state.event_detail;
             event_detail = (
-                <div className="event_detail container-fluid">
+                <div className="event_detail container">
 
                     <div className="event-item1">
                         <img className="shadow-lg p-3 mb-5 bg-white rounded event-detail-pic" width="400" height="400" alt={event.name} src={event.icon} />
