@@ -322,7 +322,7 @@ ul {
     box-shadow: none;
     margin-top: 6px;
     border-radius: 10px;
-    width: 120px;
+    width: auto;
     color: #fff;
     border-color: #fff;
     background-color: transparent;
