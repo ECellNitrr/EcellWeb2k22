@@ -7,18 +7,18 @@
 strong {
   font-weight: 600;
 }
-.modal-button-ls{
+.modal-button-ls {
   border: none;
   outline: none;
 }
-.modal-button-ls:focus{
+.modal-button-ls:focus {
   border: none;
   outline: none;
 }
 header .rightBox {
   float: right;
-  margin-right: 105px;
-  margin-top: 20px;
+  padding-right: 105px;
+  padding-top: 15px;
   display: flex;
   align-items: center;
   position: static;
@@ -316,10 +316,32 @@ ul {
 @media only screen and (max-width: 600px) {
   header .rightBox {
     float: right;
-    margin-right: 50px;
-    margin-top: 20px;
+    padding-right: 40px;
+    padding-top: 15px;
     display: flex;
     align-items: center;
+    position: static;
+  }
+  main .content {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  .page {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/ecellbg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    letter-spacing: 0.03em;
+    color: #212121;
   }
 
   #signup {
@@ -354,7 +376,7 @@ ul {
   main .content {
     margin-left: 20px;
     margin-right: 20px;
-    padding-bottom: 100px;
+
     display: flex;
     flex-direction: column;
     height: 100vh;

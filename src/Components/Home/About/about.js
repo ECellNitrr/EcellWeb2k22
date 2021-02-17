@@ -1,5 +1,5 @@
-import React from "react";
-import "./about.css";
+import React from 'react';
+import './about.css';
 
 const about = () => (
   <div className="about">
@@ -13,7 +13,7 @@ const about = () => (
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5 text-center my-auto about-image">
           <img
-            src={require("../../../assets/about-us.jpg")}
+            src={require('../../../assets/about-us.jpg')}
             alt="tshirts"
             className="fb-img"
           />
@@ -28,9 +28,7 @@ const about = () => (
             ideology in mind we not only provide the foundation to the
             entrepreneurial capabilities of the promising young minds but also
             help in nurturing their skills by providing resources such as new
-            ideas, funding mentoring, other mentorship programs, workshops to
-            help them organize their strategy and frequent, highly interactive
-            speaker sessions and lecture series.
+            ideas
           </p>
         </div>
       </div>
