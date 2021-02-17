@@ -82,7 +82,6 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
               <button className="ls-button">Get OTP</button>
               <input className="auth-input" type="text" placeholder="OTP" />
               <button className="ls-button back-button">Submit</button>
-              <span className="sub-text">Success or fail message</span>
               <button
                 className="ls-button"
                 onClick={(e) => {

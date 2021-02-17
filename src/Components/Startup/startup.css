@@ -10,13 +10,17 @@
   white-space: nowrap;
   position: relative;
   padding: 30px 10px;
-  font-size: 45px;
   font-weight: 500;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.startup-header {
+  font-size: 45px;
+  color: white;
+}
+
 .startup-header_border{
   height: 3.5px;
   width: 130px;

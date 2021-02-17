@@ -16,8 +16,6 @@ export class ca_portal extends Component {
 
   componentDidMount() {
     let user = this.props.auth;
-    console.log('gaurd comp');
-
     if (!user.loggedin) {
       alert('Please login to continue');
       this.props.history.push('/caportal_info');

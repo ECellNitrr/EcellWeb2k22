@@ -96,7 +96,8 @@
 }
 
 .event-detail-page{
-  padding: 30px;
+
+  margin: auto;
 }
 
 
@@ -277,6 +278,7 @@
 }
 
 .button-div{
+  margin: 20px 0px;
   position: relative;
   max-width: 300px;
   display: flex;

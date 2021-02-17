@@ -1,14 +1,13 @@
 .mainCtn{
   padding-top: 75px; 
   padding-bottom: 80px;
-  height: 100%
+  height: 80vh;
 }
 
 .whole-gallery{
         background: #00012D !important;  /* fallback for old browsers */
         /* background: -webkit-linear-gradient(20deg, #dc2430, #7b4397) !important;  /* Chrome 10-25, Safari 5.1-6 */
-        /* background: linear-gradient(20deg, #dc2430, #7b4397) !important; W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+        /* background: linear-gradient(20deg, #dc2430, #7b4397) !important; W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
 }
 
 .lgback{
