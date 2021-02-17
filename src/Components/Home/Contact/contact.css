@@ -243,4 +243,10 @@
     .ctn-6{
       padding-top: 50px;
     }
+
+    .heading-line{
+      width: 120px;
+      margin-left: 55px;
+      height: 2.5px;
+    }
   }
