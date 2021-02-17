@@ -13,7 +13,6 @@
     "npm": "^6.14.11",
     "random-int": "^2.0.0",
     "react": "^16.8.6",
-    "react-confetti": "^4.0.1",
     "react-datetime": "^3.0.4",
     "react-dom": "^16.8.6",
     "react-draft-wysiwyg": "^1.13.2",

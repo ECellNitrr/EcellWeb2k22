@@ -11,18 +11,30 @@ import Hero from "../../assets/startup.svg";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import * as actions from "../../actions/authActions";
-
+import AuthModal from "../Form/AuthModal";
 class Startup extends Component {
   state = {
     startups: [],
     loading: false,
     inauguration_check: true,
+    modalOpen: false,
   };
 
   static propTypes = {
     auth: PropTypes.object.isRequired,
     updateUser: PropTypes.func.isRequired,
   };
+
+  closeModal = () =>
+    this.setState({
+      ...this.state,
+      modalOpen: false,
+    });
+
+    openModal = () => this.setState({
+      ...this.state,
+      modalOpen: true,
+    })
 
   componentDidMount() {
     faxios()
@@ -42,9 +54,8 @@ class Startup extends Component {
 
   _to_startup = (e) => {
     e.preventDefault();
-
     if (!this.props.auth.loggedin) {
-      document.querySelector("#login-signup-btn").click();
+      this.openModal();
       return;
     }
     this.setState({ loading: true });
@@ -67,12 +78,12 @@ class Startup extends Component {
 
   _to_jobs = (e) => {
     e.preventDefault();
-    console.log("object", this.props.auth);
+    // console.log("object", this.props.auth);
 
     if (this.props.auth.loggedin) {
       this.props.history.push("/internship/jobs");
     } else {
-      document.querySelector("#login-signup-btn").click();
+      this.openModal();
     }
   };
 
@@ -104,7 +115,9 @@ class Startup extends Component {
     let startup_landing_page = (
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5">
-          <p className="hero-image-section"><img className="hero" src={Hero} alt="hero"></img></p>
+          <p className="hero-image-section">
+            <img className="hero" src={Hero} alt="hero"></img>
+          </p>
         </div>
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
           <div className="register">
@@ -127,6 +140,7 @@ class Startup extends Component {
           <div className="startup-header_wrapper">
             <div className="startup-header">Startup Portal</div>
             <div className="startup-header_border"></div>
+            <AuthModal closeModal={this.closeModal} modalOpen={this.state.modalOpen}/>
           </div>
           {startup_landing_page}
         </div>
