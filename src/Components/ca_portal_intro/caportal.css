@@ -1,6 +1,5 @@
 .caportal {
   background: #00012d !important; /* fallback for old browsers */
-  color: white;
 }
 .mainCtn {
   padding: 100px 100px;
@@ -15,6 +14,9 @@
   border-radius: 30px;
   font-weight: bold;
   margin-bottom: -50px;
+}
+.about{
+  color: white;
 }
 .cap-header_wrapper {
   padding: 0;
@@ -73,6 +75,7 @@
   width: 500px;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
 @media (max-width: 530px) {

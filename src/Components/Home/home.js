@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <>
-      <Sidebar position="fixed" hideLogo={true} hideLoginSignUpBtn={true} />
+      <Sidebar hideLogo={true} hideLoginSignUpBtn={true} />
 
       <ReactFullpage
         scrollingSpeed={1000}
@@ -43,15 +43,15 @@ const Home = () => {
           'About Us',
           'Our Vision',
           'Timeline',
-          'Contact Us'
+          'Contact Us',
         ]}
         showActiveTooltip={false}
         loopBottom={true}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
-              <div className="section">
-                <Sidebar position="fixed" hideMenuBtn={true} />
+              <div className="section mainSection">
+                <Sidebar hideMenuBtn={true} />
                 <div class="page">
                   <main>
                     <div class="content">
@@ -99,7 +99,11 @@ const Home = () => {
                     >
                       <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://github.com/Ecellnitrr/" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://github.com/Ecellnitrr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <i class="fab fa-github"></i>
                     </a>
                   </div>
