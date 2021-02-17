@@ -1,5 +1,6 @@
 import React from 'react';
 import './about.css';
+import { Fade } from 'react-reveal';
 
 const about = () => (
   <div className="about">
@@ -12,24 +13,29 @@ const about = () => (
       </div>
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5 text-center my-auto about-image">
-          <img
-            src={require('../../../assets/about-us.jpg')}
-            alt="tshirts"
-            className="fb-img"
-          />
+          <Fade left>
+            <img
+              src={require('../../../assets/about-us.jpg')}
+              alt="tshirts"
+              className="fb-img"
+            />
+          </Fade>
         </div>
         <div className="text-section col-xs-12 col-sm-12 col-md-12 col-lg-7">
-          <div className="sub-head">WE PROMOTE STARTUPS</div>
-          <p className="text-5">
-            The Entrepreneurship cell, NIT Raipur is a non-profit organization
-            that manifests the essence of entrepreneurship in the passionate
-            youngsters who have the zeal to pursue entrepreneurship and advocate
-            this vehement enthusiasm in the generations to come.Keeping this
-            ideology in mind we not only provide the foundation to the
-            entrepreneurial capabilities of the promising young minds but also
-            help in nurturing their skills by providing resources such as new
-            ideas
-          </p>
+          <Fade right>
+            <div className="sub-head">WE PROMOTE STARTUPS</div>
+
+            <p className="text-5">
+              The Entrepreneurship cell, NIT Raipur is a non-profit organization
+              that manifests the essence of entrepreneurship in the passionate
+              youngsters who have the zeal to pursue entrepreneurship and
+              advocate this vehement enthusiasm in the generations to
+              come.Keeping this ideology in mind we not only provide the
+              foundation to the entrepreneurial capabilities of the promising
+              young minds but also help in nurturing their skills by providing
+              resources such as new ideas.
+            </p>
+          </Fade>
         </div>
       </div>
     </div>

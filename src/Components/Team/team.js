@@ -9,6 +9,8 @@ import './team.css';
 import Avatar from './Avatar.js';
 import Label from './Label.js';
 
+import { Fade } from 'react-reveal';
+
 const Team = ({ match }) => {
   const year = match.params.year;
   const axios = faxios();
@@ -121,9 +123,8 @@ const Team = ({ match }) => {
   addPeople();
 
   if (state.loading) {
-    return (<Loader />);
-  }
-  else {
+    return <Loader />;
+  } else {
     return (
       <div className="teamcontainer">
         <Sidebar />
@@ -139,15 +140,22 @@ const Team = ({ match }) => {
               <>
                 <div className="director">
                   <h2 className="text-center mt-1">Director</h2>
-                  <Avatar data={dir[0]} />
+                  <Fade bottom>
+                    <Avatar data={dir[0]} />
+                  </Fade>
                 </div>
                 <div className="hcd">
                   <h2 className="text-center mt-5">Head of CDC</h2>
-                  <Avatar data={hcd[0]} />
+                  <Fade bottom>
+                    {' '}
+                    <Avatar data={hcd[0]} />
+                  </Fade>
                 </div>
                 <div className="fct">
-                  <h2 className="text-center mt-5">Faculty In Charge</h2>
-                  <Avatar data={fct[0]} />
+                  <h2 className="text-center mt-5">Faculty In-Charge</h2>
+                  <Fade bottom>
+                    <Avatar data={fct[0]} />
+                  </Fade>
                 </div>
               </>
             )}
@@ -158,15 +166,17 @@ const Team = ({ match }) => {
                 <h2 className="text-center">Overall Coordinators</h2>
                 <div className="photo_container_">
                   {oc.map((el) => (
-                    <div key={el.id} className="av_box">
-                      <Avatar data={el} />
-                    </div>
+                    <Fade top>
+                      <div key={el.id} className="av_box">
+                        <Avatar data={el} />
+                      </div>
+                    </Fade>
                   ))}
                 </div>
               </div>
             ) : (
-                ''
-              )}
+              ''
+            )}
 
             {/* Head Coordinators */}
             <div className="add_margin">
@@ -174,7 +184,9 @@ const Team = ({ match }) => {
               <div className="photo_container_">
                 {hco.map((el) => (
                   <div key={el.id} className="av_box">
-                    <Avatar data={el} />
+                    <Fade bottom>
+                      <Avatar data={el} />
+                    </Fade>
                   </div>
                 ))}
               </div>
@@ -186,7 +198,7 @@ const Team = ({ match }) => {
                 <div className="add_margin">
                   <h2 className="text-center">
                     Public Relation and Marketing Managers
-                    </h2>
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {pr.managers.map((el) => (
                       <div>
@@ -236,7 +248,7 @@ const Team = ({ match }) => {
                 <div className="add_margin">
                   <h2 className="text-center">
                     Sponsorship and Brand Management Managers
-                    </h2>
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {spons.managers.map((el) => (
                       <div>
@@ -250,7 +262,7 @@ const Team = ({ match }) => {
                 <div className="add_margin">
                   <h2 className="text-center">
                     Public Relation and Marketing Executives
-                    </h2>
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {pr.executives.map((el) => (
                       <div>
@@ -300,7 +312,7 @@ const Team = ({ match }) => {
                 <div className="add_margin">
                   <h2 className="text-center">
                     Sponsorship and Brand Management Executives
-                    </h2>
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {spons.executives.map((el) => (
                       <div>
