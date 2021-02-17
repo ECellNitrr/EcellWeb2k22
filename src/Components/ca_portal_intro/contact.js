@@ -52,7 +52,7 @@ export default class contacts extends Component {
                   color: "white",
                 }}
               >
-                <a style={{ color: "white" }} href="tel:8435249197">
+                <a style={{ color: "white" }} href="tel:7389756762">
                   7389756762
                 </a>
               </h5>
@@ -82,7 +82,7 @@ export default class contacts extends Component {
             <h5
               style={{ textAlign: "center", fontWeight: "800", color: "white" }}
             >
-              <a style={{ color: "white" }} href="tel:7974443722">
+              <a style={{ color: "white" }} href="tel:9131832016">
                 9131832016
               </a>
             </h5>
@@ -106,14 +106,14 @@ export default class contacts extends Component {
             <h6
               style={{ textAlign: "center", fontWeight: "800", color: "white" }}
             >
-              <a href="mailto:vaishnavisharma40928@gmail.com">
+              <a href="mailto:shreyashakhil@gmail.com">
                 shreyashakhil@gmail.com
               </a>
             </h6>
             <h5
               style={{ textAlign: "center", fontWeight: "800", color: "white" }}
             >
-              <a style={{ color: "white" }} href="tel:9571542120">
+              <a style={{ color: "white" }} href="tel:7587395821">
                 7587395821
               </a>
             </h5>
