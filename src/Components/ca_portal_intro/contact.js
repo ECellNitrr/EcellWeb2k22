@@ -9,7 +9,7 @@ export default class contacts extends Component {
           <h2 className="heading-1 hd">PUBLIC RELATIONS TEAM</h2>
         </div>
         <div>
-          <p style={{ textAlign: "center" }}>In case of any queries,contact-</p>
+          <p style={{ textAlign: "center", color: "white" }}>In case of any queries,contact-</p>
         </div>
         <div className="flex-box justify-content-center">
           <div className="individual-tabs">
