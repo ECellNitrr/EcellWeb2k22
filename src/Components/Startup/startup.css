@@ -23,7 +23,7 @@
 
 .startup-header_border{
   height: 3.5px;
-  width: 130px;
+  width: 250px;
   background-color: white;
   margin-left: 60px;
   border-radius: 360px;
@@ -187,7 +187,7 @@
     font-size: 35px;
 }
   .startup-header_border{
-    width: 105px;
+    width: 250px;
     margin-left: 50px;
     height: 3px;
   }
@@ -225,7 +225,7 @@
     font-size: 27.5px;
 }
   .startup-header_border{
-    width: 85px;
+    width: 200px;
     margin-left: 40px;
     height: 2px;
   }
