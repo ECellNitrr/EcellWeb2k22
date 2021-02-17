@@ -26,7 +26,7 @@
   text-align: left;
 }
 .text-5 {
-  font-size: 22.5px;
+  font-size: 18px;
   line-height: 35px;
   margin: 0 15px 0 0;
   text-align: left;
@@ -94,7 +94,7 @@
 @media only screen and (max-width: 600px) {
   .about {
     height: 100%;
-    margin-top: 0px;
+    margin-top: 80px;
   }
   .ctn-2 {
     height: 100%;

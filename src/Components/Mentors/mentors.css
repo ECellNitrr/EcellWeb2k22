@@ -44,9 +44,9 @@
 .heading::after {
   height: 2px;
   display: block;
-  width: 130px;
+  width: 110px;
   position: absolute;
-  left: 50%;
+  left: 40%;
   background-color: #fff;
   content: '';
 }
@@ -243,7 +243,7 @@
   .teamPage .heading::after {
     height: 2px;
     display: block;
-    width: 130px;
+    width: 110px;
     position: absolute;
     left: 50%;
     background-color: #fff;
