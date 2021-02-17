@@ -23,9 +23,9 @@
 
 .startup-header_border{
   height: 3.5px;
-  width: 130px;
+  width: 300px;
   background-color: white;
-  margin-left: 60px;
+  margin-left: 120px;
   border-radius: 360px;
 }
 .list{
@@ -187,7 +187,7 @@
     font-size: 35px;
 }
   .startup-header_border{
-    width: 105px;
+    width: 250px;
     margin-left: 50px;
     height: 3px;
   }
@@ -225,7 +225,7 @@
     font-size: 27.5px;
 }
   .startup-header_border{
-    width: 85px;
+    width: 200px;
     margin-left: 40px;
     height: 2px;
   }
@@ -278,4 +278,37 @@
   font-size:18px !important;
   color:black;
   font-style:bold;
+}
+
+@media only screen and (max-width: 1000px) {
+  .startup-header{
+    font-size: 40px;
+  }
+  .startup-header_border{
+    width: 290px;
+    margin-left: 100px;
+    height: 3px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .startup-header{
+    font-size: 40px;
+  }
+  .startup-header_border{
+    width: 240px;
+    margin-left: 90px;
+    height: 2px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .startup-header{
+    font-size: 35px;
+  }
+  .startup-header_border{
+    width: 220px;
+    margin-left: 70px;
+    height: 2px;
+  }
 }
