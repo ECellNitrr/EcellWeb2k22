@@ -13,7 +13,7 @@ const about = () => (
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5 text-center my-auto about-image">
           <img
-            src={require("../../../assets/about-us.jpg")}
+            src={require("../../../assets/about-us.jpeg")}
             alt="tshirts"
             className="fb-img"
           />
