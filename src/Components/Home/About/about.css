@@ -94,7 +94,7 @@
 @media only screen and (max-width: 600px) {
   .about {
     height: 100%;
-    margin-top: 80px;
+    margin-top: 0px;
   }
   .ctn-2 {
     height: 100%;

@@ -9,6 +9,10 @@
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.oc-name{
+  margin: 2px;
+  font-size: 24px;
+}
 .box {
   display: flex;
   align-items: center;
@@ -56,6 +60,7 @@
   padding-top: 30px;
   margin-bottom: -10px;
   color: rgb(102, 102, 102);
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {

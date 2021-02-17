@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/logo-white.png';
-import './footer.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo-white.png";
+import "./footer.css";
 
 const footer = () => {
   return (
@@ -24,17 +24,30 @@ const footer = () => {
             </div>
           </div>
           <div className="box-2 box col-sm-4">
-            <img src={logo} />
+            <img src={logo} style={{ margin: "5px" }}/>
+            <div className="mobile-number">
+              <div className="oc-contact">
+                <p className="oc-name">Aditya Singh</p>
+                <a href="tel:9174452784">+91 91744 52784</a>
+              </div>
+              <div className="oc-contact">
+                <p className="oc-name">Sumit Chatterjee</p>
+                <a href="tel:7417566851">+91 91744 52784</a>
+              </div>
+            </div>
             <h2>The Entrepreneurship Cell</h2>
             <h5 className="pt-2">NIT Raipur</h5>
-            <p>&copy; 2020-21 All Rights Reserved.</p>
           </div>
           <div className="box-3 box col-sm-4">
             <h2>Leaders Beyond Borders</h2>
             <div>
               <h5 className="pt-2">Follow Us On</h5>
               <div className="social_links">
-                <a href="https://www.facebook.com/ecellnitrr/" rel="noopener noreferrer" target="_blank">
+                <a
+                  href="https://www.facebook.com/ecellnitrr/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   <i className="fab fa-facebook-square"></i>
                 </a>
                 <a
