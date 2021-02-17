@@ -16,7 +16,7 @@ const Avatar = ({ data }) => {
         <div className="image_container">
           <img src={image} className="img-fluid" />
           <div className="details">
-            <h5>{name}</h5>
+            <h5 dangerouslySetInnerHTML={{ __html:name }}></h5>
             {domain ? (
               domain === 'pr' ? (
                 <p>Public Relation and Marketing</p>

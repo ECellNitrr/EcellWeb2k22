@@ -114,9 +114,14 @@ textarea {
     margin-left: 35px;
     height: 2.5px;
   }
-  .con-sub-head {
-    font-size: 22.5px;
-    padding: 7.5px;
+  .contact-heading {
+    padding: 20px 10px;
+    font-size: 37.5px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .row {
     margin: 5vh;
