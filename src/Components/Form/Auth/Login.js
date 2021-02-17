@@ -112,8 +112,8 @@ const Login = ({ setlogin, setForgotPassword, updateUser, closeModal }) => {
           {error}
         </div>
       )}
-      <div className="ls-heading">Sign in</div>
-      <span className="sub-text">or use your account</span>
+      <div className="ls-heading">Log In</div>
+      <span className="sub-text">Sign in to continue</span>
       <div className="error-text">{formError && formError}</div>
       <input
         className="auth-input"

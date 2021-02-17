@@ -167,7 +167,7 @@ const SignUp = ({ setlogin, updateUser, closeModal }) => {
         </div>
       )}
       <div className="ls-heading">Create Account</div>
-      <span className="sub-text">or use your email for registration</span>
+      <span className="sub-text">Use your email for registration</span>
       <div className="error-text">{formError && formError}</div>
       <input
         className="auth-input"
