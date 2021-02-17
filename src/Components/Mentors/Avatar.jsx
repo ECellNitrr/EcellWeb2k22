@@ -9,8 +9,8 @@ const Avatar = ({ data }) => {
         <div className="image_container">
           <img src={profile_pic_url} className="img-fluid" />
           <div className="details">
-            <h5>{name}</h5>
-            <h6>{detail}</h6>
+          <h5 dangerouslySetInnerHTML={{ __html:name }}></h5>  
+          <h6 dangerouslySetInnerHTML={{ __html:detail }}></h6>
           </div>
         </div>
       </div>

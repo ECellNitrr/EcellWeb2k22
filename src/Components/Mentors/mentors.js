@@ -27,6 +27,11 @@ class mentors extends Component {
             },
           });
         }
+      }).catch((err)=>{
+        this.setState({
+          loading:false
+        });
+        console.log(err);
       });
     }
   }
@@ -57,9 +62,9 @@ class mentors extends Component {
         <h1 className="text-center heading">Mentors</h1>
         <div style={{paddingBottom: "100px"}}>
           {this.state.loading ? (
-            <>
+            <div>
               <Loader />
-            </>
+            </div>
           ) : (
             mentors_html
           )}

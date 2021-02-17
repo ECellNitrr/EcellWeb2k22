@@ -35,6 +35,15 @@ class caportal extends Component {
     this.props.history.push("/caportal");
   };
 
+  componentDidMount() {
+    if (window.localStorage) {
+      if (!localStorage.getItem('caLoad')) {
+        localStorage['caLoad'] = true;
+        window.location.reload();
+      } else localStorage.removeItem('caLoad');
+    }
+  }
+
   render() {
     return (
       <div className="caportal">
