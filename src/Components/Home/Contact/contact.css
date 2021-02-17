@@ -238,3 +238,9 @@
       margin: 7.5px;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    .ctn-6{
+      padding-top: 50px;
+    }
+  }
