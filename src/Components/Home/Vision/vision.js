@@ -1,6 +1,6 @@
  import React from 'react';
  import './vision.css';
- import vission from '../../../assets/vission.jpg';
+ import vission from '../../../assets/vision.jpeg';
 
  const vision = () =>{
     // document.querySelector("#adforcaModal_toggle").click();
