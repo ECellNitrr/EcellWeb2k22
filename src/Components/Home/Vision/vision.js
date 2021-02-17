@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import './vision.css';
-import vission from '../../../assets/vission.jpg';
+import vission from '../../../assets/vision.jpeg';
 import { Fade } from 'react-reveal';
-=======
- import React from 'react';
- import './vision.css';
- import vission from '../../../assets/vision.jpeg';
->>>>>>> 073d9d88e0fde3bb57c228a96c7d969925b834e3
 
 const vision = () => {
   // document.querySelector("#adforcaModal_toggle").click();

@@ -15,7 +15,7 @@ const about = () => (
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5 text-center my-auto about-image">
           <Fade left>
             <img
-              src={require('../../../assets/about-us.jpg')}
+              src={require('../../../assets/about-us.jpeg')}
               alt="tshirts"
               className="fb-img"
             />
