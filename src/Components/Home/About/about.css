@@ -1,10 +1,9 @@
-.ctn-2{
+.ctn-2 {
   max-width: 1500px;
-  padding-top: 45px;
-  padding-bottom: 80px;
-  height: 100%;
+  padding-top: 5px;
+  height: 100vh;
 }
-.about-heading{
+.about-heading {
   padding: 30px 10px;
   font-size: 37.5px;
   font-weight: 600;
@@ -13,52 +12,52 @@
   flex-direction: column;
   align-items: center;
 }
-.heading-line{
+.heading-line {
   height: 2px;
   width: 150px;
   background-color: white;
   margin-left: 80px;
   border-radius: 360px;
 }
-.sub-head{
+.sub-head {
   font-size: 27.5px;
   font-weight: 300;
   padding: 10px 20px;
   text-align: left;
 }
-.text-5{
+.text-5 {
   font-size: 22.5px;
   line-height: 35px;
   margin: 0 15px 0 0;
   text-align: left;
 }
-.about-image{
+.about-image {
   padding: 30px;
 }
-.fb-img{
+.fb-img {
   max-width: 100%;
 }
 @media only screen and (max-width: 1000px) {
-  .ctn-2{
+  .ctn-2 {
     margin-top: 0px;
   }
-  .about-heading{
+  .about-heading {
     padding: 15px 20px;
     font-size: 27.5px;
   }
-  .heading-line{
+  .heading-line {
     width: 85px;
     margin-left: 35px;
     height: 2.5px;
   }
-  .text-section{
+  .text-section {
     padding-top: 50px;
   }
-  .sub-head{
+  .sub-head {
     font-size: 27.5px;
     text-align: center;
   }
-  .text-5{
+  .text-5 {
     font-size: 20px;
     text-align: justify;
   }
@@ -68,22 +67,22 @@
   }
 }
 @media only screen and (max-width: 800px) {
-  .ctn-2{
+  .ctn-2 {
     margin-top: 0px;
   }
-  .sub-head{
+  .sub-head {
     text-align: center;
   }
-  .about-heading{
+  .about-heading {
     padding: 15px 20px;
     font-size: 25px;
   }
-  .heading-line{
+  .heading-line {
     width: 85px;
     margin-left: 35px;
     height: 2px;
   }
-  .text-5{
+  .text-5 {
     font-size: 17.5px;
     text-align: justify;
   }
@@ -93,31 +92,42 @@
   }
 }
 @media only screen and (max-width: 600px) {
-  .ctn-2{
-    margin-top: 50px;
+  .about {
+    height: 100%;
+    margin-top: 0px;
   }
-  .about-heading{
+  .ctn-2 {
+    max-width: 1500px;
+    padding-top: 5px;
+    height: 100%;
+  }
+  .ctn-2 {
+    margin-top: 0px;
+    padding-bottom: 10px;
+  }
+  .about-heading {
     padding: 10px 20px;
     font-size: 22.5px;
   }
-  .heading-line{
+  .heading-line {
     width: 85px;
     margin-left: 35px;
     height: 2.5px;
   }
-  .sub-head{
+  .sub-head {
+    margin-top: -30px;
     font-size: 20px;
     text-align: center;
   }
-  .text-section{
+  .text-section {
     padding-top: 10px;
   }
-  .text-5{
+  .text-5 {
     font-size: 15px;
     line-height: 20px;
     text-align: justify;
   }
-  .about-image{
+  .about-image {
     margin: 15px 0;
   }
   .fb-img {

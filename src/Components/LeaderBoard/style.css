@@ -1,0 +1,39 @@
+.main {
+  background-color: darkblue;
+  height: 100vh;
+}
+.cardContainer {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.c_bg {
+  background-color: rgb(51, 43, 105);
+  height: 250px;
+  width: 100%;
+  clip-path: ellipse(81% 90% at 50% 9%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.cardContent {
+  height: 300px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  border: 2px solid #fff;
+}
