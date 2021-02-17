@@ -78,7 +78,7 @@ class Startup extends Component {
 
   _to_jobs = (e) => {
     e.preventDefault();
-    console.log("object", this.props.auth);
+    // console.log("object", this.props.auth);
 
     if (this.props.auth.loggedin) {
       this.props.history.push("/internship/jobs");
