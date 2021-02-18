@@ -2,7 +2,8 @@ import axios from 'axios';
 import { store } from './index';
 
 // export const baseURL = 'http://159.65.158.103:3000/'
-export let baseURL = 'https://ecell.nitrr.ac.in';
+// export let baseURL = 'https://ecell.nitrr.ac.in';
+export let baseURL = 'https://206.189.143.11/';
 //export let baseURL ="http://localhost:8000";
 // export let baseURL ="http://8a22a572.ngrok.io";
 
