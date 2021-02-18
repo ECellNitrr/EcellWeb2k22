@@ -6,9 +6,9 @@ export let baseURL = 'https://ecell.nitrr.ac.in';
 //export let baseURL ="http://localhost:8000";
 // export let baseURL ="http://8a22a572.ngrok.io";
 
-if (process.env.NODE_ENV === 'production') {
-  baseURL = 'https://ecell.nitrr.ac.in';
-}
+// if (process.env.NODE_ENV === 'production') {
+  // baseURL = 'https://ecell.nitrr.ac.in';
+// }
 
 export default () => {
   let token = undefined;
