@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.18",
+    "@fullpage/react-fullpage": "^0.1.27",
     "axios": "^0.21.1",
     "core-js": "^3.25.1",
     "draft-js": "^0.11.0",
