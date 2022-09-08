@@ -8,7 +8,7 @@ import {education_status} from '../../constants'
 
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Wysiwyg from '../../common/wysiwyg'
+// import Wysiwyg from '../../common/wysiwyg'
 
 //idea in a nutshell less thn 30 characters
 
@@ -506,7 +506,7 @@ class submitIdea extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Describe Your Idea</label>
                             {/* {error_html['description']} */}
-                            <Wysiwyg onRef={ref => this.description = ref} />
+                            {/* <Wysiwyg onRef={ref => this.description = ref} /> */}
                             {this.state.err_num.indexOf(2)!==-1 && this.state.validate===false && !this.description.check_input()?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
@@ -515,7 +515,7 @@ class submitIdea extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Innovation in this idea?</label>
                             {/* {error_html['innovation']} */}
-                            <Wysiwyg onRef={ref => this.innovation = ref} />
+                            {/* <Wysiwyg onRef={ref => this.innovation = ref} /> */}
                             {this.state.err_num.indexOf(3)!==-1 && this.state.validate===false && !this.innovation.check_input()?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}

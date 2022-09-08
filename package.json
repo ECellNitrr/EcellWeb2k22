@@ -7,8 +7,6 @@
     "axios": "^0.21.1",
     "core-js": "^3.25.1",
     "draft-js": "^0.11.0",
-    "draftjs-to-html": "^0.8.4",
-    "html-to-draftjs": "^1.4.0",
     "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "npm": "^6.14.11",
