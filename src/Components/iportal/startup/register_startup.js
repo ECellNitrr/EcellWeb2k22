@@ -7,7 +7,6 @@ import {job_sectors} from '../../constants'
 
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Wysiwyg from '../../common/wysiwyg'
 
 
 class RegisterStartup extends Component {
@@ -388,7 +387,7 @@ class RegisterStartup extends Component {
                         <div className="form-group">
                             <label className="font-weight-bold">Description</label>
                             {/* {error_html['description']} */}
-                            <Wysiwyg onRef={ref => this.description = ref} />
+                            {/* <Wysiwyg onRef={ref => this.description = ref} /> */}
                             {this.state.err_num.indexOf(2)!==-1 && this.state.validate===false && this.description.get_value().length===8?<Fragment>
                                 <div className="font-weight-bold text-danger">This field is required</div>
                             </Fragment>:null}
