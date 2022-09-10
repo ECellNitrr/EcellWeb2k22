@@ -31,7 +31,7 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className="scrollContainer">
       <Sidebar hideLogo={true} hideLoginSignUpBtn={true} />
 
       <div className="section mainSection">
@@ -109,7 +109,7 @@ const Home = () => {
       <div className="section s4">
         <Contact />
       </div>
-    </>
+    </div>
   );
 };
 
