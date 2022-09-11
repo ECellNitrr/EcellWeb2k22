@@ -42,7 +42,15 @@ const Home = () => {
               <Fade bottom>
                 <h1>Entrepreneurship Cell</h1>
                 <h1>NIT Raipur</h1>
-                <h2>Leaders Beyond Borders</h2>
+                <h2>
+                  <i>To learn is to grow.</i>
+                </h2>
+                <h2>
+                  <i>To innovate is to Pioneer.</i>
+                </h2>
+                <h2>
+                  <i>To be an entrepreneur is to be a leader.</i>
+                </h2>
               </Fade>
 
               {/* <img
