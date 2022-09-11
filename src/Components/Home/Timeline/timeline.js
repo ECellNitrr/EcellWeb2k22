@@ -140,14 +140,12 @@ class Timeline extends Component {
                                     Internship-portal was launched in 2019, for providing internship opportunities to students.
                                 </TabContent>
                                 <TabContent isActive={tabStates[10]} tabId={11} year={2020} img={plant11} >
-                                    Ministry of MSME approved NIT Raipur as Business Incubator. It allowed students to be receive a grant of Rs. 15 Lakhs per Idea to convert their Innovative Ideas into Successful Businesses. On 15th Feb 2020, New India Entrepreneurship Conclave was organized at IIIT Naya Raipur, in which various speakers like Shashikant Chaudhary, Sibasish Mishra, Gautam Sivaranakrishnan, Shreyansh Singhal, and Anirban Chatterjee came and ignited the young minds. in April 2020, E-cell along with the support of I-cell NIT Raipur brought an internship opportunity for start-up and innovative Ideas. Amid the pandemic, various webinars were conducted on various topics so that students can make the best use of their time in lockdown.
+                                    Ministry of MSME approved NIT Raipur as Business Incubator. It allowed students to be receive a grant of Rs. 15 Lakhs per Idea to convert their Innovative Ideas into Successful Businesses. On 15th Feb 2020, New India Entrepreneurship Conclave was organized at IIIT Naya Raipur, in which various speakers like Shashikant Chaudhary, Sibasish Mishra, Gautam Sivaranakrishnan, Shreyansh Singhal, and Anirban Chatterjee came and ignited the young minds. in April 2020, E-cell along with the support of I-cell NIT Raipur brought an internship opportunity for start-up and innovative Ideas.
                                 </TabContent>
                                 <TabContent isActive={tabStates[11]} tabId={12} year={2021} img={plant12} >
                                 In January 2021 ,The Entrepreneurship Cell, NIT Raipur invited students to share their buisness ideas and assisted them on getting best opportunities and providing them a platform to lift up their zeal and start their enterpreneurial journey.
                                     Amidst pandemic Ecell conducted its first online B-model competition in Februrary 2021, Which provided a platform to get mentorship from experienced mentors and thus connect budding entrepreneurs and startups with angel investors and venture capitalists.
                                     Mr Ankit Prasad ,A tech startup founder and Angel investor with his name on Forbes30 U30 list was invited to share his key secrets, on startups, innovation and leadership during Buisness model workshop.  
-                                    These mentorships were provided by very experienced and talented entrepreneurs like Dhruv Nath, Director of 'Lead Angles Network'and co-Author of 'Funding your startup and other nightmares',Virendra Sharma co-founder of KUMPEL
-                                    and Sakshi Gupta Mentor at Atal Innovation Mission and Startup India.
                                 </TabContent>
                             </div>
                         </div>
