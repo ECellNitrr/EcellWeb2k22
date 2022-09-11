@@ -87,7 +87,7 @@
 .tl-data{
     flex-grow: 1;
     padding: 0px 5vw;
-    justify-content: end;
+    /* justify-content: end; */
     align-items: flex-start;
 }
 

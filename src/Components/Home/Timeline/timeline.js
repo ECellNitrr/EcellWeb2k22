@@ -3,16 +3,18 @@ import Loader from '../../api_loader/api_loader';
 import TabHeader from './tab_header'
 import TabContent from './tab_content'
 import "./timeline.css"
-import plant1 from "./../../../assets/plant6.png"
-import plant2 from "./../../../assets/plant7.png"
-import plant3 from "./../../../assets/plant8.png"
-import plant4 from "./../../../assets/plant9.png"
-import plant5 from "./../../../assets/plant10.png"
-import plant6 from "./../../../assets/plant11.png"
-import plant7 from "./../../../assets/plant1.png"
-import plant8 from "./../../../assets/plant2.png"
-import plant9 from "./../../../assets/plant3.png"
-import plant10 from "./../../../assets/plant4.png"
+import plant1 from "./../../../assets/2010.png"
+import plant2 from "./../../../assets/2011.png"
+import plant3 from "./../../../assets/2012.png"
+import plant4 from "./../../../assets/2013.png"
+import plant5 from "./../../../assets/2014.png"
+import plant6 from "./../../../assets/2015.png"
+import plant7 from "./../../../assets/2016.png"
+import plant8 from "./../../../assets/2017.png"
+import plant9 from "./../../../assets/2018.png"
+import plant10 from "./../../../assets/2019.png"
+import plant11 from "./../../../assets/2020.png"
+import plant12 from "./../../../assets/2021.png"
 
 class Timeline extends Component {
     constructor(props) {
@@ -22,11 +24,11 @@ class Timeline extends Component {
         this.onRightBtnPressed = this.onRightBtnPressed.bind(this);
     }
 
-    nofTabs = 10;
+    nofTabs = 12;
 
     state = {
         loading: false,
-        activeTabId: 10
+        activeTabId: 12
     };
 
     onHeaderClick(tabId) {
@@ -54,7 +56,7 @@ class Timeline extends Component {
     }
     render() {
         let tabStates = [];
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 12; i++) {
             if (i + 1 == this.state.activeTabId) {
                 tabStates[i] = true;
             }
@@ -93,6 +95,8 @@ class Timeline extends Component {
                                         <TabHeader tabId={8} title="2017" isActive={tabStates[7]} onClick={this.onHeaderClick} />
                                         <TabHeader tabId={9} title="2018" isActive={tabStates[8]} onClick={this.onHeaderClick} />
                                         <TabHeader tabId={10} title="2019" isActive={tabStates[9]} onClick={this.onHeaderClick} />
+                                        <TabHeader tabId={11} title="2020" isActive={tabStates[10]} onClick={this.onHeaderClick} />
+                                        <TabHeader tabId={12} title="2021" isActive={tabStates[11]} onClick={this.onHeaderClick} />
                                     </div>
                                     <div className="tab_header-controller" onClick={this.onRightBtnPressed}>
                                         {(this.state.activeTabId < this.nofTabs) ? (<i class="fas fa-angle-right"></i>
@@ -134,6 +138,14 @@ class Timeline extends Component {
                                     E-summit '19 was organized on a whole new level. It was the first time the event was held outside the institute campus, in an auditorium to accommodate a larger audience. Innovation manthan was introduced for the first time, it is designed to showcase the ideas and solutions to modern day problems given by the young and prolific minds. Also, to guide these ideas scientifically, commercially and socially.
                                     Six investors attended the Start-up camp giving a opportunity for the startups to get funded.
                                     Internship-portal was launched in 2019, for providing internship opportunities to students.
+                                </TabContent>
+                                <TabContent isActive={tabStates[10]} tabId={11} year={2020} img={plant11} >
+                                    Ministry of MSME approved NIT Raipur as Business Incubator. It allowed students to be receive a grant of Rs. 15 Lakhs per Idea to convert their Innovative Ideas into Successful Businesses. On 15th Feb 2020, New India Entrepreneurship Conclave was organized at IIIT Naya Raipur, in which various speakers like Shashikant Chaudhary, Sibasish Mishra, Gautam Sivaranakrishnan, Shreyansh Singhal, and Anirban Chatterjee came and ignited the young minds. in April 2020, E-cell along with the support of I-cell NIT Raipur brought an internship opportunity for start-up and innovative Ideas.
+                                </TabContent>
+                                <TabContent isActive={tabStates[11]} tabId={12} year={2021} img={plant12} >
+                                In January 2021 ,The Entrepreneurship Cell, NIT Raipur invited students to share their buisness ideas and assisted them on getting best opportunities and providing them a platform to lift up their zeal and start their enterpreneurial journey.
+                                    Amidst pandemic Ecell conducted its first online B-model competition in Februrary 2021, Which provided a platform to get mentorship from experienced mentors and thus connect budding entrepreneurs and startups with angel investors and venture capitalists.
+                                    Mr Ankit Prasad ,A tech startup founder and Angel investor with his name on Forbes30 U30 list was invited to share his key secrets, on startups, innovation and leadership during Buisness model workshop.  
                                 </TabContent>
                             </div>
                         </div>
