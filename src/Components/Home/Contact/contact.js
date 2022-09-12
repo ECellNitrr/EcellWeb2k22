@@ -159,7 +159,11 @@ export default class contact extends Component {
   footerSection() {
     return (
       <>
-        <div className="con-sub-head">Leaders Beyond Borders</div>
+        <div className="con-sub-head">
+          <div></div>To learn is to grow.
+          <div>To innovate is to Pioneer.</div>
+          <div>To be an entrepreneur is to be a leader.</div>
+        </div>
         <p className="summary">
           E-Cell, NIT Raipur is established to motivate and educate people about
           entrepreneurship and serve as a meeting ground for corporate and young
@@ -182,10 +186,18 @@ export default class contact extends Component {
         </div>
         <div className="social-icons">
           <div>Follow us Online On</div>
-          <a href="https://www.facebook.com/ecellnitrr/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.facebook.com/ecellnitrr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fab fa-facebook-square"></i>
           </a>
-          <a href="https://twitter.com/ecell_nitrr" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://twitter.com/ecell_nitrr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fab fa-twitter-square"></i>
           </a>
           <a
