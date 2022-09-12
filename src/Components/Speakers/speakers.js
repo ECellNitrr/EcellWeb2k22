@@ -17,9 +17,9 @@ const Speakers = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get('/speakers/full_list/');
+      const res = await axios.get('/speakers/full_list/');
       setState({
-        speakers: data.sort((a, b) => b.year - a.year),
+        speakers: res?.data?.data?.sort((a, b) => b.year - a.year),
         loading: false,
       });
     };
@@ -27,6 +27,7 @@ const Speakers = () => {
   }, []);
 
   const { speakers, loading } = state;
+
   if (loading) {
     return <Loader />;
   } else {
@@ -36,9 +37,8 @@ const Speakers = () => {
         <div className="s">
           <h1 className="text-center text-white">Speakers</h1>
           <div className="speakers">
-            {speakers.map((el) => (
-              <SpeakerCard key={el.id} speakers={el} />
-            ))}
+            {speakers.length > 0 &&
+              speakers.map((el) => <SpeakerCard key={el.id} speakers={el} />)}
           </div>
         </div>
         <Footer />
