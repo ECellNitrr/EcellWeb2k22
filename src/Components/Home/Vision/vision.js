@@ -1,7 +1,7 @@
-import React from 'react';
-import './vision.css';
-import vission from '../../../assets/vision.jpeg';
-import { Fade } from 'react-reveal';
+import React from "react";
+import "./vision.css";
+import vission from "../../../assets/vision.jpeg";
+import { Fade } from "react-reveal";
 
 const vision = () => {
   // document.querySelector("#adforcaModal_toggle").click();
@@ -30,13 +30,14 @@ const vision = () => {
             <Fade right>
               <p className="text-6">
                 The Entrepreneurship cell, NIT Raipur is a non-profit
-                organization that manifests the essence of entrepreneurship in
-                the passionate youngsters who have the zeal to pursue
-                entrepreneurship and advocate this vehement enthusiasm in the
-                generations to com e. Keeping this ideology in mind we not only
-                provide the foundation to the entrepreneurial capabilities of
-                the promising young minds but also help in nurturing their
-                skills by providing resources such as new ideas.
+                organization that advocates to inculcate entrepreneurial spirit
+                among the budding young minds who have the ardour to pursue
+                entrepreneurship and aggrandize the ideas that have the
+                potential to excel. Keeping this ideology in mind, we not only
+                provide a platform to young visionary entrepreneurs to share
+                their ideas freely with the fellow aspiring companions but also
+                help in nurturing their skills by providing them with resources
+                and guidance.
               </p>
             </Fade>
           </div>

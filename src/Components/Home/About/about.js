@@ -1,6 +1,6 @@
-import React from 'react';
-import './about.css';
-import { Fade } from 'react-reveal';
+import React from "react";
+import "./about.css";
+import { Fade } from "react-reveal";
 
 const about = () => (
   <div className="about">
@@ -15,7 +15,7 @@ const about = () => (
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5 text-center my-auto about-image">
           <Fade left>
             <img
-              src={require('../../../assets/about-us.jpeg')}
+              src={require("../../../assets/about-us.jpeg")}
               alt="tshirts"
               className="fb-img"
             />
@@ -26,14 +26,20 @@ const about = () => (
             <div className="sub-head">WE PROMOTE STARTUPS</div>
 
             <p className="text-5">
-              The Entrepreneurship cell, NIT Raipur is a non-profit organization
-              that manifests the essence of entrepreneurship in the passionate
-              youngsters who have the zeal to pursue entrepreneurship and
-              advocate this vehement enthusiasm in the generations to
-              come.Keeping this ideology in mind we not only provide the
-              foundation to the entrepreneurial capabilities of the promising
-              young minds but also help in nurturing their skills by providing
-              resources such as new ideas.
+              National Institute of Technology Raipur - Central India’s largest
+              Institute believes that Entrepreneurship is the key for our
+              nation’s development. The Entrepreneurship Cell is a non-profit
+              organization run by the students under the enlightenment of NIT
+              Raipur that aims at manifesting the latent entrepreneurial spirit
+              of students of NIT Raipur, and other colleges in central India.
+              The entrepreneurship cell helps the institution in the pursuit of
+              this goal. Its vision is to mature the minds of the youth of NIT
+              Raipur. We show them the possible errors and innovative solutions
+              in their ideas. This takes them closer to their vision of the
+              entrepreneurial journey. We wish to spread awareness about the
+              various types of entrepreneurships and give a platform to young
+              visionary entrepreneurs to share their ideas freely with the
+              fellow aspiring young minds.
             </p>
           </Fade>
         </div>
