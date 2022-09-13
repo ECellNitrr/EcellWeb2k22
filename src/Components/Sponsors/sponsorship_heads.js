@@ -7,6 +7,7 @@ import Sidebar from '../Home/Sidebar/Sidebar';
 import Avatar from '../Team/Avatar';
 import './../Team/team.css';
 
+import { baseURL } from './../../axios'
 
 class Sponsors extends Component {
 
@@ -30,7 +31,7 @@ class Sponsors extends Component {
                             <div className="av_box">
                                 <Avatar data={{
                                     name: "Muskan Budhia",
-                                    image: "https://ecell.nitrr.ac.in/media/static/uploads/team/Muskan_Budhia_sxPLyFk.jpg",
+                                    image: baseURL+"media/static/uploads/team/Muskan_Budhia_sxPLyFk.jpg",
                                     linkedin: "https://www.linkedin.com/in/muskan-budhia-33a75a151/"
                                 }}></Avatar>
                                 <div className="head-info">
@@ -41,7 +42,7 @@ class Sponsors extends Component {
                             <div className="av_box">
                                 <Avatar data={{
                                     name: "Shushriya Swarnkar",
-                                    image: "https://ecell.nitrr.ac.in/media/static/uploads/team/DSC_0090__01_am2yQyF.jpg",
+                                    image: baseURL+"media/static/uploads/team/DSC_0090__01_am2yQyF.jpg",
                                     facebook: "https://www.facebook.com/shushriya.swarnkar",
                                     linkedin: "https://www.linkedin.com/in/shushriya-swarnkar-aa82a4161/"
                                 }}></Avatar>
@@ -53,7 +54,7 @@ class Sponsors extends Component {
                             <div className="av_box">
                                 <Avatar data={{
                                     name: "Aditya Agrawal",
-                                    image: "https://ecell.nitrr.ac.in/media/static/uploads/team/Aditya_Agrawal_TfRiR4b.jpg",
+                                    image: baseURL+"media/static/uploads/team/Aditya_Agrawal_TfRiR4b.jpg",
                                     facebook: "https://www.facebook.com/aditya2609",
                                     linkedin: "https://www.linkedin.com/in/aditya-agrawal-655301177/"
                                 }}></Avatar>
@@ -65,7 +66,7 @@ class Sponsors extends Component {
                             <div className="av_box">
                                 <Avatar data={{
                                     name: "Vishisht Pandey",
-                                    image: "https://ecell.nitrr.ac.in/media/static/uploads/team/Vishist_Pandey_tT66n6a.jpg",
+                                    image: baseURL+"media/static/uploads/team/Vishist_Pandey_tT66n6a.jpg",
                                     facebook: "https://www.facebook.com/vishist.pandey.9",
                                     linkedin: "https://www.linkedin.com/in/vishist-pandey-67a779164/"
                                 }}></Avatar>
