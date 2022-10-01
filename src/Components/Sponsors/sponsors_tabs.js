@@ -55,9 +55,12 @@ class SponsorsTabs extends Component {
             if (intvl != null) {
                 clearInterval(intvl);
             }
+            let canScroll = true
+            contRef.current.onmouseover = ()=>{canScroll=false}
+            contRef.current.onmouseout = ()=>{canScroll=true}
 
             intvl = setInterval(() => {
-                if ((contRef.current != null) && (contRef.current != undefined)) {
+                if ((contRef.current != null) && (contRef.current != undefined) && canScroll) {
                     let oldScrollVal = contRef.current.scrollLeft;
                     contRef.current.scrollLeft += 1.25;
                     if (oldScrollVal == contRef.current.scrollLeft) {
@@ -110,7 +113,8 @@ class SponsorsTabs extends Component {
         let goldSponsHTML = [];
         if (goldSpons != undefined) {
             goldSpons.forEach(gSpon => {
-                goldSponsHTML.push(<div key={gSpon.id}>
+                goldSponsHTML.push(
+                <div key={gSpon.id}>
                     <div className="col m-1" key={gSpon.id}>
                         <div className="cont">
                             <div className="front shadow-lg p-3 mb-5 bg-white rounded">

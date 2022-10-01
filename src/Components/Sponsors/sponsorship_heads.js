@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './sponsors.css';
-import Navbar from '../Navbar/navbar';
+import HC_Contact_Data from './HC_Contact_Data.json';
+import faxios from "../../axios";
 import Footer from '../Footer/footer';
 import HeaderLinks from './header_links';
 import Sidebar from '../Home/Sidebar/Sidebar';
@@ -8,10 +9,54 @@ import Avatar from '../Team/Avatar';
 import './../Team/team.css';
 
 import { baseURL } from './../../axios'
+import contact from '../Home/Contact/contact';
 
 class Sponsors extends Component {
 
+    axios = faxios();
+    state = {
+        data: [],
+        loading: true
+    }
+
+    componentDidMount() {
+        const year = 2022;
+
+        this.axios.get(`/team/list/${year}/`).then(res => {
+
+            let data = res.data.data.filter((elem) => elem["domain"] == "spons" && elem["member_type"] == "HCO");
+            
+            data = data.map(HC => {
+                let contactData = HC_Contact_Data.find(hc => hc.name == HC.name)
+                return { ...HC, ...contactData }
+            });
+
+            console.log(JSON.stringify(data))
+            this.setState({
+                data,
+                loading: false,
+            })
+            console.log(this.state)
+        })
+    }
+
+
+
     render() {
+        let HCs = this.state.data;
+
+        let HC_list = HCs.map(HC =>
+
+
+            <div className="av_box" key={HC.id}>
+                <Avatar data={HC}></Avatar>
+                <div className="head-info">
+                    <p className="center"><a className="spons_phone" href={`tel:+91 ${HC.phone}`}>{HC.phone}</a></p>
+                    <p className="center"><a className="spons_email" href={`mailto:${HC.email}`}>{HC.email}</a></p>
+                </div>
+            </div>
+
+        )
 
         return (
             <div className="whole-spons">
@@ -28,18 +73,24 @@ class Sponsors extends Component {
 
                     <div >
                         <div className="photo_container_">
-                            <div className="av_box">
-                                <Avatar data={{
-                                    name: "Muskan Budhia",
-                                    image: baseURL+"media/static/uploads/team/Muskan_Budhia_sxPLyFk.jpg",
-                                    linkedin: "https://www.linkedin.com/in/muskan-budhia-33a75a151/"
-                                }}></Avatar>
-                                <div className="head-info">
-                                    <p className="center"><a className="spons_phone" href="tel:+91 9680824113">+91 9680824113</a></p>
-                                    <p className="center"><a className="spons_email" href="mailto:muskanbudhia1704@gmail.com">muskanbudhia1704@gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div className="av_box">
+                            {HC_list}
+
+                        </div>
+                    </div>
+
+                    <HeaderLinks />
+                </div>
+                <Footer />
+            </div>
+        )
+    }
+
+}
+
+
+export default Sponsors;
+
+{/* <div className="av_box">
                                 <Avatar data={{
                                     name: "Shushriya Swarnkar",
                                     image: baseURL+"media/static/uploads/team/DSC_0090__01_am2yQyF.jpg",
@@ -74,18 +125,4 @@ class Sponsors extends Component {
                                     <p className="center"><a className="spons_phone" href="tel:+91 7007342010">+91 7007342010</a></p>
                                     <p className="center"><a className="spons_email" href="mailto:vishistpnd@gmail.com">vishistpnd@gmail.com</a></p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <HeaderLinks />
-                </div>
-                <Footer />
-            </div>
-        )
-    }
-
-}
-
-
-export default Sponsors;
+                            </div> */}
