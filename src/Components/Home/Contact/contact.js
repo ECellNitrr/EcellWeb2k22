@@ -160,7 +160,7 @@ export default class contact extends Component {
     return (
       <>
         <div className="con-sub-head">
-          <div></div>To learn is to grow.
+          <div>To learn is to grow.</div>
           <div>To innovate is to Pioneer.</div>
           <div>To be an entrepreneur is to be a leader.</div>
         </div>
