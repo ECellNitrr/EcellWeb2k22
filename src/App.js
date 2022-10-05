@@ -81,7 +81,7 @@ class App extends Component {
               <Route path="/team/:year" component={Team} />
               <Route
                 path="/team"
-                component={() => <Redirect to="/team/2020" />}
+                component={() => <Redirect to="/team/2022" />}
               />
               {/* under work */}
 
