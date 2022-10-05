@@ -162,7 +162,7 @@ const Team = ({ match }) => {
             )}
 
             {/* Overall Coordinators */}
-            {hco.length ? (
+            {oc.length ? (
               <div className="mt-5">
                 <h2 className="text-center">Overall Coordinators</h2>
                 <div className="photo_container_">
