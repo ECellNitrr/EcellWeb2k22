@@ -191,7 +191,7 @@ export default class contact extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fab fa-facebook-square"></i>
+            <i className="fab fa-facebook-square"></i>
           </a>
           <a
             href="https://twitter.com/ecell_nitrr"
@@ -205,21 +205,21 @@ export default class contact extends Component {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <i class="fab fa-youtube-square"></i>
+            <i className="fab fa-youtube-square"></i>
           </a>
           <a
             href="https://in.linkedin.com/company/entrepreneurship-cell-nit-raipur"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <i class="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin"></i>
           </a>
           <a
             href="https://www.instagram.com/ecell.nitraipur/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <i class="fab fa-instagram-square"></i>
+            <i className="fab fa-instagram-square"></i>
           </a>
         </div>
       </>

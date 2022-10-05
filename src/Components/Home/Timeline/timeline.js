@@ -81,7 +81,7 @@ class Timeline extends Component {
                     onClick={this.onLeftBtnPressed}
                   >
                     {this.state.activeTabId > 1 ? (
-                      <i class="fas fa-angle-left"></i>
+                      <i className="fas fa-angle-left"></i>
                     ) : (
                       ""
                     )}
@@ -165,7 +165,7 @@ class Timeline extends Component {
                     onClick={this.onRightBtnPressed}
                   >
                     {this.state.activeTabId < this.nofTabs ? (
-                      <i class="fas fa-angle-right"></i>
+                      <i className="fas fa-angle-right"></i>
                     ) : (
                       ""
                     )}

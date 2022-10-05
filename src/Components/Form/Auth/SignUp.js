@@ -162,7 +162,7 @@ const SignUp = ({ setlogin, updateUser, closeModal }) => {
   return (
     <form className="ls-form" onSubmit={(e) => onSubmit(e)}>
       {!loading && error && (
-        <div class="alert alert-danger network-error" role="alert">
+        <div className="alert alert-danger network-error" role="alert">
           {error}
         </div>
       )}

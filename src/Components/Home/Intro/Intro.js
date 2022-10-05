@@ -67,8 +67,8 @@ export default class Intro extends Component {
         <div className="container-fluid ctn-1">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 banner-col">
-              <div class="blockquote-wrapper">
-                <div class="blockquote">
+              <div className="blockquote-wrapper">
+                <div className="blockquote">
                   <h1>Leaders Beyond Borders</h1>
                 </div>
               </div>

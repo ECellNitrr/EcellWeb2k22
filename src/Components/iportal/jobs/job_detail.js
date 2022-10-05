@@ -91,12 +91,12 @@ class job_detail extends Component {
             return(
                 <div className="my-4" key={job.id}>
 
-                        <div class="card">
-                        <div class="card-header green text-white d-flex" style={{justifyContent:"space-between"}}>
+                        <div className="card">
+                        <div className="card-header green text-white d-flex" style={{justifyContent:"space-between"}}>
                             <div ><h4 className=" indiv_job font-weight-bold">{job.name}</h4></div>
                             {/* <div style={{fontSize:"15px"}} className="badge badge-dark p-2">{job.job_type}</div> */}
                         </div>
-                        <div class="card-body">
+                        <div className="card-body">
                             <div>
                                 <div className="mb-2"><strong>Location : </strong>{job.location}</div>
                                 <hr className="gray"></hr>
@@ -207,9 +207,9 @@ class job_detail extends Component {
                         </div>
                         <div className="container-fluid" style={{maxWidth:"1200px"}}>
 
-                            <div class="jumbotron">
+                            <div className="jumbotron">
                                 {indiv_startup_html(startup)}            
-                                <hr class="my-4"></hr>
+                                <hr className="my-4"></hr>
 
                                 <div className="d-flex justify-content-center"><button className="bg-white" style={{border:"none"}} >{this.state.loading?<Loader/>:this.state.applied?(<button className="btn btn-success font-weight-bold"disabled >{this.state.msg}</button>):(<button onClick={this._job_apply_} className="btn btn-primary font-weight-bold" >{this.state.msg}</button>)}</button></div>
                                 <Link className="job_apply_btn" style={{display:"none"}} to={`/internship/jobs/application/${this.props.match.params.job_id}`}></Link>

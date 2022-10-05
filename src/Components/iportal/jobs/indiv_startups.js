@@ -48,12 +48,12 @@ export default class indiv_startups extends Component {
                 
                     <div className="my-4" key={job.id}>
 
-                        <div class="card" style={{border:"2px solid green"}}>
-                        <div class="card-header green text-white d-flex" style={{justifyContent:"space-between"}}>
+                        <div className="card" style={{border:"2px solid green"}}>
+                        <div className="card-header green text-white d-flex" style={{justifyContent:"space-between"}}>
                             <div ><h4 className="indiv_job font-weight-bold">{job.name}</h4></div>
                             {/* <div style={{fontSize:"15px"}} className="badge badge-dark p-2">{job.job_type}</div> */}
                         </div>
-                        <div class="card-body">
+                        <div className="card-body">
                             <div>
                                 <div className="mb-2"><strong>Brief : </strong>{job.brief}</div>
                                 <hr className="gray"></hr>
@@ -125,7 +125,7 @@ export default class indiv_startups extends Component {
                         </div>
                         
                         </div>
-                        <hr class="my-4 rgba-white-light"/>
+                        <hr className="my-4 rgba-white-light"/>
                     </div>
                 )
             }
@@ -139,7 +139,7 @@ export default class indiv_startups extends Component {
         let indiv_startup_html= (startup) => {
             return(
             <div>
-                <div class="jumbotron hoverable" style={{marginBottom:"50px"}}>
+                <div className="jumbotron hoverable" style={{marginBottom:"50px"}}>
 
                     <div className="container-fluid" style={{marginBottom:"40px"}}>
                         <div className="row">
@@ -239,11 +239,11 @@ export default class indiv_startups extends Component {
                     </div>
 
                     {/* <img src={startup.logo}></img><br></br>
-                    <h2 class="card-title h2">{startup.name}</h2> */}
+                    <h2 className="card-title h2">{startup.name}</h2> */}
                     
-                    {/* <div class="d-flex">
-                        <div class="pb-2">
-                        <p class="card-text"><span className="font-weight-bold">Brief: </span><br></br>{startup.brief}</p>
+                    {/* <div className="d-flex">
+                        <div className="pb-2">
+                        <p className="card-text"><span className="font-weight-bold">Brief: </span><br></br>{startup.brief}</p>
                         <div><span className="font-weight-bold">Description: </span></div>
                         <div className="card-text" dangerouslySetInnerHTML={{ __html:startup.description }}></div>
                         </div>
@@ -251,7 +251,7 @@ export default class indiv_startups extends Component {
 
                     {startup.can_hire_interns!==true && this.state.jobs.length===0 ?null:<Fragment>
                         
-                        <hr class="my-4 rgba-white-light"/>
+                        <hr className="my-4 rgba-white-light"/>
                     <div style={{marginBottom:"-30px",marginTop:"50px"}}>
                         
                         {this.state.jobs.length===0? null:<Fragment>

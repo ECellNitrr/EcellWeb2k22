@@ -36,9 +36,9 @@ const Home = () => {
 
       <div className="section mainSection">
         <Sidebar hideMenuBtn={true} />
-        <div class="page">
+        <div className="page">
           <main>
-            <div class="content">
+            <div className="content">
               <Fade bottom>
                 <h1>Entrepreneurship Cell</h1>
                 <h1>NIT Raipur</h1>
@@ -68,35 +68,35 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="fab fa-facebook"></i>
+              <i className="fab fa-facebook"></i>
             </a>
             <a
               href="https://www.youtube.com/channel/UCrlm4gpLnIaA3pKSXbB99Yw"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <i class="fab fa-youtube"></i>
+              <i className="fab fa-youtube"></i>
             </a>
             <a
               href="https://www.linkedin.com/company/entrepreneurship-cell-nit-raipur/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <i class="fab fa-linkedin"></i>
+              <i className="fab fa-linkedin"></i>
             </a>
             <a
               href="https://www.instagram.com/ecell.nitraipur/?hl=en"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </a>
             <a
               href="https://github.com/Ecellnitrr/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </a>
           </div>
         </div>

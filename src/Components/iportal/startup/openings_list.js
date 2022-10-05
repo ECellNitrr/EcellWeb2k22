@@ -30,7 +30,7 @@ class openings extends Component {
         let jobs = this.state.jobs.map((job,i) =>
             <tr key={job.id}>
                 <th scope="row">{i+1}</th>
-                <td><Link class='text-primary font-weight-bold' to={`/internship/startup/openings/${job.id}/`} >{job.name}</Link></td>
+                <td><Link className='text-primary font-weight-bold' to={`/internship/startup/openings/${job.id}/`} >{job.name}</Link></td>
                 <td>{job.job_type}</td>
                 <td>{job.total_applicants}</td>
                 <td>

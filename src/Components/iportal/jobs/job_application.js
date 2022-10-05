@@ -151,8 +151,8 @@ class job_application extends Component {
                     {this.state.uploading ?
                         <span>
                             {this.state.progress ? <Fragment>
-                                <div class="progress md-progress" style={{height: "20px"}}>
-                                    <div class="progress-bar" role="progressbar" style={{ width: `${this.state.progress}%`, height: "20px" }} aria-valuemin="0" aria-valuemax="100">{this.state.progress}%</div>
+                                <div className="progress md-progress" style={{height: "20px"}}>
+                                    <div className="progress-bar" role="progressbar" style={{ width: `${this.state.progress}%`, height: "20px" }} aria-valuemin="0" aria-valuemax="100">{this.state.progress}%</div>
                                 </div>
                             </Fragment> : null}
                         </span>

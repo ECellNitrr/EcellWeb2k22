@@ -79,14 +79,14 @@ const Sidebar = (props) => {
         <AuthModal modalOpen={modalOpen} closeModal={closeModal} />
       </div>
       <div id="nav-container">
-        <div class="bg"></div>
+        <div className="bg"></div>
         {props.hideMenuBtn ? (
           <div />
         ) : (
-          <div class="button" tabIndex="0">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+          <div className="button" tabIndex="0">
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
           </div>
         )}
         <div id="nav-content" tabIndex="0">
