@@ -1,123 +1,63 @@
 import React, { Component } from "react";
+import prHC_contactData from "./prHC_contactData.json";
 import "./caportal.css";
 
 export default class contacts extends Component {
   render() {
+    let prhclist = prHC_contactData.map((HC) => (
+      <div className="av_box" key={HC.id}>
+        <div className="individual-tabs">
+          <p
+            style={{
+              fontSize: "100px",
+              color: "#254C6D",
+            }}
+          >
+            <i className="fas fa-user-circle"></i>
+          </p>
+          <div>
+            <h4
+              style={{
+                fontWeight: "800",
+              }}
+            >
+              {HC.name}
+            </h4>
+            <h6
+              style={{
+                marginTop: "15px",
+                fontSize: "200",
+              }}
+            >
+              <a className="pr_email" href={`mailto:${HC.email}`}>
+                {HC.email}
+              </a>
+            </h6>
+            <h5
+              style={{
+                marginTop: "15px",
+              }}
+            >
+              <a className="pr_phone" href={`tel:+91 ${HC.phone}`}>
+                {HC.phone}
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+    ));
     return (
       <div>
         <div>
           <h2 className="heading-1 hd">PUBLIC RELATIONS TEAM</h2>
         </div>
         <div>
-          <p style={{ textAlign: "center", color: "white" }}>
+          <p style={{ textAlign: "center", color: "white", fontWeight: "600" }}>
             In case of any queries,contact-
           </p>
         </div>
-        <div className="flex-box justify-content-center">
-          <div className="individual-tabs">
-            <p
-              style={{
-                textAlign: "center",
-                fontSize: "100px",
-                color: "#254C6D",
-              }}
-            >
-              <i className="fas fa-user-circle"></i>
-            </p>
-            <div>
-              <h4
-                style={{
-                  textAlign: "center",
-                  fontWeight: "800",
-                  color: "white",
-                }}
-              >
-                Arpita Shrivastava
-              </h4>
-              <h6
-                style={{
-                  textAlign: "center",
-                  fontWeight: "800",
-                  color: "white",
-                }}
-              >
-                <a href="mailto:arpita.shrivastava72@gmail.com">
-                  arpita.shrivastava72@gmail.com
-                </a>
-              </h6>
-              <h5
-                style={{
-                  textAlign: "center",
-                  fontWeight: "800",
-                  color: "white",
-                }}
-              >
-                <a style={{ color: "white" }} href="tel:7389756762">
-                  7389756762
-                </a>
-              </h5>
-            </div>
-          </div>
-
-          <div className="individual-tabs">
-            <p
-              style={{
-                textAlign: "center",
-                fontSize: "100px",
-                color: "#254C6D",
-              }}
-            >
-              <i className="fas fa-user-circle"></i>
-            </p>
-            <h4
-              style={{ textAlign: "center", fontWeight: "800", color: "white" }}
-            >
-              Ayush Pandey
-            </h4>
-            <h6
-              style={{ textAlign: "center", fontWeight: "800", color: "white" }}
-            >
-              <a href="mailto:ayushp_1@live.com">ayushp_1@live.com</a>
-            </h6>
-            <h5
-              style={{ textAlign: "center", fontWeight: "800", color: "white" }}
-            >
-              <a style={{ color: "white" }} href="tel:9131832016">
-                9131832016
-              </a>
-            </h5>
-          </div>
-
-          <div className="individual-tabs">
-            <p
-              style={{
-                textAlign: "center",
-                fontSize: "100px",
-                color: "#254C6D",
-              }}
-            >
-              <i className="fas fa-user-circle"></i>
-            </p>
-            <h4
-              style={{ textAlign: "center", fontWeight: "800", color: "white" }}
-            >
-              Shreyash Royzada
-            </h4>
-            <h6
-              style={{ textAlign: "center", fontWeight: "800", color: "white" }}
-            >
-              <a href="mailto:shreyashakhil@gmail.com">
-                shreyashakhil@gmail.com
-              </a>
-            </h6>
-            <h5
-              style={{ textAlign: "center", fontWeight: "800", color: "white" }}
-            >
-              <a style={{ color: "white" }} href="tel:7587395821">
-                7587395821
-              </a>
-            </h5>
-          </div>
+        <div>
+          <div className="photo_container">{prhclist}</div>
         </div>
       </div>
     );
