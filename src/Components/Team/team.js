@@ -136,7 +136,8 @@ const Team = ({ match }) => {
             <i className="fa fa-arrow-left mr-1"></i>Previous Year Teams
           </Link>
           <div className="people">
-            {year === '2020' && (
+
+            {dir.length && hcd.length && fct.length && (
               <>
                 <div className="director">
                   <h2 className="text-center mt-1">Director</h2>
@@ -173,28 +174,28 @@ const Team = ({ match }) => {
                     </Fade>
                   ))}
                 </div>
-              </div>
-            ) : (
-              ''
-            )}
+              </div>) : ''}
+
 
             {/* Head Coordinators */}
-            <div className="add_margin">
-              <h2 className="text-center">Head Coordinators</h2>
-              <div className="photo_container_">
-                {hco.map((el) => (
-                  <div key={el.id} className="av_box">
-                    <Fade bottom>
-                      <Avatar data={el} />
-                    </Fade>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {hco.length ? (
+              <div className="add_margin">
+                <h2 className="text-center">Head Coordinators</h2>
+                <div className="photo_container_">
+                  {hco.map((el) => (
+                    <div key={el.id} className="av_box">
+                      <Fade bottom>
+                        <Avatar data={el} />
+                      </Fade>
+                    </div>
+                  ))}
+                </div>
+              </div>) : ''}
 
-            {year === '2020' && (
-              <>
-                {/* Public Relation and Marketing Managers */}
+
+            <>
+              {/* Public Relation and Marketing Managers */}
+              {pr.managers.length ? (
                 <div className="add_margin">
                   <h2 className="text-center">
                     Public Relation and Marketing Managers
@@ -206,11 +207,14 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>) : ''}
 
-                {/* Technical Team Managers  */}
+              {/* Technical Team Managers  */}
+              {tech.managers.length ? (
                 <div className="add_margin">
-                  <h2 className="text-center">Technical Team Managers</h2>
+                  <h2 className="text-center">
+                    Technical Team Managers
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {tech.managers.map((el) => (
                       <div>
@@ -218,11 +222,14 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>) : ''}
 
-                {/* Design Team Managers   */}
+              {/* Design Team Managers   */}
+              {design.managers.length ? (
                 <div className="add_margin">
-                  <h2 className="text-center">Design Team Managers</h2>
+                  <h2 className="text-center">
+                    Design Team Managers
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {design.managers.map((el) => (
                       <div>
@@ -230,11 +237,14 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>) : ''}
 
-                {/* Documentation Team Manager */}
+              {/* Documentation Team Manager */}
+              {doc.managers.length ? (
                 <div className="add_margin">
-                  <h2 className="text-center">Documentation Team Manager </h2>
+                  <h2 className="text-center">
+                    Documentation Team Manager
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {doc.managers.map((el) => (
                       <div>
@@ -242,9 +252,10 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>) : ''}
 
-                {/* Sponsorship and Brand Management Managers  */}
+              {/* Sponsorship and Brand Management Managers  */}
+              {spons.managers.length ? (
                 <div className="add_margin">
                   <h2 className="text-center">
                     Sponsorship and Brand Management Managers
@@ -256,9 +267,10 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>) : ''}
 
-                {/* Public Relation and Marketing Executives  */}
+              {/* Public Relation and Marketing Executives  */}
+              {pr.executives.length ? (
                 <div className="add_margin">
                   <h2 className="text-center">
                     Public Relation and Marketing Executives
@@ -270,11 +282,14 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>) : ''}
 
-                {/* Technical Team Executives  */}
+              {/* Technical Team Executives  */}
+              {tech.executives.length ? (
                 <div className="add_margin">
-                  <h2 className="text-center">Technical Team Executives</h2>
+                  <h2 className="text-center">
+                    Technical Team Executives
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {tech.executives.map((el) => (
                       <div>
@@ -282,11 +297,14 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>) : ''}
 
-                {/* Design Team Executives  */}
+              {/* Design Team Executives  */}
+              {design.executives.length ? (
                 <div className="add_margin">
-                  <h2 className="text-center">Design Team Executives</h2>
+                  <h2 className="text-center">
+                    Design Team Executives
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {design.executives.map((el) => (
                       <div>
@@ -294,11 +312,14 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>) : ''}
 
-                {/* Documentation Team Executives  */}
+              {/* Documentation Team Executives  */}
+              {doc.executives.length ? (
                 <div className="add_margin">
-                  <h2 className="text-center">Documentation Team Executives</h2>
+                  <h2 className="text-center">
+                    Documentation Team Executives
+                  </h2>
                   <div className="manager_container_ mt-3">
                     {doc.executives.map((el) => (
                       <div>
@@ -306,9 +327,10 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>) : ''}
 
-                {/* Sponsorship and Brand Management Executives  */}
+              {/* Sponsorship and Brand Management Executives  */}
+              {spons.executives.length ? (
                 <div className="add_margin">
                   <h2 className="text-center">
                     Sponsorship and Brand Management Executives
@@ -320,9 +342,8 @@ const Team = ({ match }) => {
                       </div>
                     ))}
                   </div>
-                </div>
-              </>
-            )}
+                </div>) : ''}
+            </>
           </div>
         </div>
         <Footer />
