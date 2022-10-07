@@ -15,7 +15,7 @@
   font-weight: bold;
   margin-bottom: -50px;
 }
-.about{
+.about {
   color: white;
 }
 .cap-header_wrapper {
@@ -158,6 +158,9 @@
   /* flex: 1 0 30%; */
   color: white;
   margin: 0 20px;
+  text-align: center;
+  font-weight: "800";
+  margin-top: 15px;
 }
 
 .pr-mn {
@@ -168,6 +171,12 @@
 .pr-image {
   max-width: 300px;
   max-height: 300px;
+}
+
+.photo_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 600px) {
