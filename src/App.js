@@ -62,19 +62,19 @@ class App extends Component {
               <Route path="/sponsors/:year" component={Sponsors} />
               <Route
                 path="/sponsors"
-                component={() => <Redirect to="/sponsors/2019" />}
+                component={() => <Redirect to="/sponsors/2022" />}
               />
               <Route path="/events/:id" component={EventDetail} />
               <Route path="/events" component={Events} />
               <Route path="/investors" component={Investors} />
-              <Route path="/startups/:year/:id" component={StartupDetail} />
-              <Route path="/startups" component={Startups} />
+              {/* <Route path="/startups/:year/:id" component={StartupDetail} /> */}
+              {/* <Route path="/startups" component={Startups} /> */}
               <Route path="/mentors" component={Mentors} />
               <Route path="/gallery/:name" component={GalleryImgs} />
               <Route path="/gallery" component={Gallery} />
               <Route path="/register" component={Register} />
-              <Route path="/caportal_info" component={CaPortalInfo} />
-              <Route path="/caportal" component={CaPortal} />
+              {/* <Route path="/caportal_info" component={CaPortalInfo} /> */}
+              {/* <Route path="/caportal" component={CaPortal} /> */}
               <Route path="/team/yearwise" component={Yearwise_team} />
 
               {/* under work */}
