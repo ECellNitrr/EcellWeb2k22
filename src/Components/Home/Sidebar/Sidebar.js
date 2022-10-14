@@ -112,15 +112,15 @@ const Sidebar = (props) => {
             <li>
               <NavLink to="/investors">Investors</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/startups">Startups</NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/mentors">Mentors</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/caportal_info">CaPortal</NavLink>
-            </li>
+            </li> */}
             <li>
               <a href="https://medium.com/e-cell-nit-raipur">Blogs</a>
             </li>

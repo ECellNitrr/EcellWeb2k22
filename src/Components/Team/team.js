@@ -137,7 +137,7 @@ const Team = ({ match }) => {
           </Link>
           <div className="people">
 
-            {dir.length && hcd.length && fct.length && (
+            {dir.length && hcd.length && fct.length ? (
               <>
                 <div className="director">
                   <h2 className="text-center mt-1">Director</h2>
@@ -159,7 +159,7 @@ const Team = ({ match }) => {
                   </Fade>
                 </div>
               </>
-            )}
+            ):''}
 
             {/* Overall Coordinators */}
             {oc.length ? (
