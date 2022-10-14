@@ -290,3 +290,5 @@ export const education_status= [
         ]
     }
 ]
+export const tagline =
+  "To learn is to grow.\n To innovate is to Pioneer.\n To be an entrepreneur is to be a leader.";

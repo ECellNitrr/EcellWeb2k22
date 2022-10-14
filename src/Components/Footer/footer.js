@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo-white.png";
 import "./footer.css";
+import { tagline } from "../constants";
 
 const footer = () => {
   return (
     <div className="footer">
       <div className="footercontainer">
         <div className="row">
-          <div className="box-1 box col-sm-4">
+          <div className="box-2 box col-sm-4">
             <h3>Quick Links</h3>
             <div className="q-links">
               <Link to="/">Home</Link>
@@ -24,22 +25,36 @@ const footer = () => {
             </div>
           </div>
           <div className="box-2 box col-sm-4">
-            <img src={logo} style={{ margin: "5px" }}/>
+            <img src={logo} style={{ margin: "5px" }} />
+            <br></br>
             <div className="mobile-number">
               <div className="oc-contact">
-                <p className="oc-name">Aditya Singh</p>
-                <a href="tel:9174452784">+91 91744 52784</a>
+                <p className="oc-name">Garvita K Basantani</p>
+                <a href="tel:8770454286">+91 8770454286</a>
               </div>
               <div className="oc-contact">
-                <p className="oc-name">Sumit Chatterjee</p>
-                <a href="tel:7417566851">+91 91744 52784</a>
+                <p className="oc-name">Navoday Satyam Shukla</p>
+                <a href="tel:6266231910">+91 6266231910</a>
+              </div>
+              <div className="oc-contact">
+                <p className="oc-name">Siddharth Mishra</p>
+                <a href="tel:7869968715">+91 7869968715</a>
+              </div>
+              <div className="oc-contact">
+                <p className="oc-name">Mridul Gilhare</p>
+                <a href="tel:7224076483">+91 7224076483</a>
               </div>
             </div>
+            <br></br>
             <h2>The Entrepreneurship Cell</h2>
             <h5 className="pt-2">NIT Raipur</h5>
           </div>
           <div className="box-3 box col-sm-4">
-            <h2>Leaders Beyond Borders</h2>
+            <h2>
+              <div className="display-linebreak">
+              {tagline}
+              </div>
+            </h2>
             <div>
               <h5 className="pt-2">Follow Us On</h5>
               <div className="social_links">

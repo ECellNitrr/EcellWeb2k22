@@ -1,3 +1,6 @@
+.display-linebreak{
+  white-space: pre-line;
+}
 .footercontainer {
   background-color: none !important;
   margin-left: 40px;
