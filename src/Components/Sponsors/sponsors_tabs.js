@@ -40,34 +40,46 @@ class SponsorsTabs extends Component {
     };
 
     startScroll() {
-        let contRef;
+        let scrollContainer;
         switch (this.state.activeTabId) {
-            case 0: contRef = this.ref1;
+            case 0: scrollContainer = this.ref1.current;
                 break;
-            case 1: contRef = this.ref2;
+            case 1: scrollContainer = this.ref2.current;
                 break;
-            default: contRef = this.ref3;
+            default: scrollContainer = this.ref3.current;
                 break;
         }
-        if ((contRef.current != null) && (contRef.current != undefined)) {
-            contRef.current.scrollLeft = 0;
+        if ((scrollContainer != null) && (scrollContainer != undefined)) {
+            scrollContainer.scrollLeft = 0;
             let intvl = this.intervalIds[this.state.activeTabId];
             if (intvl != null) {
                 clearInterval(intvl);
             }
-            let canScroll = true
-            contRef.current.onmouseover = ()=>{canScroll=false}
-            contRef.current.onmouseout = ()=>{canScroll=true}
+
+            let hovering = false
+            scrollContainer.onmouseout = ()=>{hovering=false}
+            scrollContainer.onmouseover = ()=>{hovering=true}
+
+            
+            let widthDifference = (scrollContainer.children[0].offsetWidth - scrollContainer.offsetWidth)
+            let OverflowRatio = widthDifference/scrollContainer.children[0].children[0].offsetWidth
+            
+            let scrollSpeed  = Math.min(Math.max(OverflowRatio,1),3)
+            console.log( OverflowRatio)
+            console.log((scrollContainer != null),(scrollContainer != undefined), !hovering, OverflowRatio > 0.30000000000)
 
             intvl = setInterval(() => {
-                if ((contRef.current != null) && (contRef.current != undefined) && canScroll) {
-                    let oldScrollVal = contRef.current.scrollLeft;
-                    contRef.current.scrollLeft += 1.25;
-                    if (oldScrollVal == contRef.current.scrollLeft) {
-                        contRef.current.scrollLeft = 0;
+                let canScroll = (scrollContainer != null) && (scrollContainer != undefined) && !hovering && OverflowRatio > 0.30000000000
+                if (canScroll) {
+                    let oldScrollVal = scrollContainer.scrollLeft;
+                    scrollContainer.scrollLeft += scrollSpeed;
+                    if (oldScrollVal == scrollContainer.scrollLeft) {
+                        scrollContainer.direction = scrollContainer.direction=='ltr'?'rtl':'ltr';
+                        scrollSpeed*=-1
+                        // scrollContainer.scrollLeft = 0;
                     }
                 }
-            }, 5);
+            }, 10);
             this.intervalIds[this.state.activeTabId] = intvl;
         }
     }
