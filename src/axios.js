@@ -6,7 +6,7 @@ import { store } from './index';
 // export let baseURL = 'https://206.189.143.11/';
 // export let baseURL ="http://localhost:8000";
 // export let baseURL ="http://8a22a572.ngrok.io";
-export let baseURL ="http://43.205.53.122/";
+export let baseURL ="https://ecellbackend.tech";
 
 // if (process.env.NODE_ENV === 'production') {
   // baseURL = 'https://ecell.nitrr.ac.in';
