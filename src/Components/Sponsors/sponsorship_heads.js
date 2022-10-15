@@ -69,7 +69,7 @@ class Sponsors extends Component {
                         <div className="spons-header_border spons-headCos_border"></div>
                     </div>
 
-                    <HeaderLinks />
+                    {/* <HeaderLinks /> */}
 
                     <div >
                         <div className="photo_container_">

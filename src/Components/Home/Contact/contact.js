@@ -175,16 +175,8 @@ export default class contact extends Component {
             <a href="tel:8770454286">+91 8770454286</a>
           </div>
           <div className="oc-contact">
-            <p className="oc-name">Navoday Satyam Shukla</p>
-            <a href="tel:6266231910">+91 6266231910</a>
-          </div>
-          <div className="oc-contact">
             <p className="oc-name">Siddharth Mishra</p>
             <a href="tel:7869968715">+91 7869968715</a>
-          </div>
-          <div className="oc-contact">
-            <p className="oc-name">Mridul Gilhare</p>
-            <a href="tel:7224076483">+91 7224076483</a>
           </div>
         </div>
         <div className="legal">
