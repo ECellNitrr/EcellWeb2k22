@@ -8,8 +8,8 @@ const Avatar = ({ data }) => {
     linkedin,
     name,
     profile_url,
+    description
   } = data;
-
   return (
     <div className="mt-3">
       <div className="avatar_container">
@@ -17,21 +17,7 @@ const Avatar = ({ data }) => {
           <img src={image} className="img-fluid" />
           <div className="details">
             <h5 dangerouslySetInnerHTML={{ __html:name }}></h5>
-            {domain ? (
-              domain === 'pr' ? (
-                <p>Public Relation and Marketing</p>
-              ) : domain === 'tech' ? (
-                <p>Technical Team</p>
-              ) : domain === 'doc' ? (
-                <p>Documentation Team</p>
-              ) : domain === 'design' ? (
-                <p>Design Team</p>
-              ) : (
-                domain === 'spons' && <p>Sponsorship Team</p>
-              )
-            ) : (
-              ''
-            )}
+            {description?<p>{description}</p>:'' }
           </div>
           <div className="social_icons">
             {profile_url && (
