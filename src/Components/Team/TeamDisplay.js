@@ -3,7 +3,6 @@ import './team.css';
 import Avatar from './Avatar.js';
 import { Fade } from 'react-reveal';
 import Label from './Label.js';
-import descriptions from './descriptions.js';
 
 let TeamNormalDisplay = ({ team = [] }) => {
   return <>

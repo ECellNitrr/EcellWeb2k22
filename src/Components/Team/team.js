@@ -33,23 +33,24 @@ const Team = ({ match }) => {
     fetchData();
   }, []);
 
-  const addPeople = () => {
-    state.data.map(el => {
+  const addTeamData = () => {
+    state.data.map(member => {
 
-      let teamCode = descriptions[el.member_type][0]+'_';
-      if(el.member_type!='HCO')teamCode+=el.domain
+      let teamCode = descriptions[member.member_type][0]+'_';
+      if(member.member_type!='HCO')teamCode+=member.domain
 
-      el.domain=descriptions[el.domain]
-      el.member_type=descriptions[el.member_type][1]
+      member.domain=descriptions[member.domain]
+      member.member_type=descriptions[member.member_type][1]
 
       if (!teamData[teamCode]) teamData[teamCode] = [];
-      teamData[teamCode].push(el);
+      
+      teamData[teamCode].push(member);
     });
   };
 
  
 
-  addPeople();
+  addTeamData();
 
   if (state.loading) {
     return <Loader />;
