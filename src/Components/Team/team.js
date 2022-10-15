@@ -68,7 +68,7 @@ const Team = ({ match }) => {
 
 
           <div className="people">
-            {Object.keys(teamData).sort().map(teamName => {
+            {Object.keys(teamData).sort().reverse().map(teamName => {
               let team = teamData[teamName];
               if (!team[0]) return '';
 
