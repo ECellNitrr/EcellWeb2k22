@@ -108,10 +108,10 @@ class ideadashboard extends Component {
 
                              <div className="text-center">
                                 {idea.idea_approved ? <button onClick={()=>{this.props.updateUser({startup_id:idea.id});this.props.history.push('/internship/startup/register/')}} className='btn  font-weight-bold btn-primary'>Startup Profile</button> : <Fragment>
-                                <span className="d-inline-block " tabIndex="0" data-toggle="tooltip" title="Allowed after verification"><button disabled className='btn  font-weight-bold btn-dark'>Startup Profile</button></span>
+                                <span class="d-inline-block " tabIndex="0" data-toggle="tooltip" title="Allowed after verification"><button disabled className='btn  font-weight-bold btn-dark'>Startup Profile</button></span>
                                     </Fragment>}
                                 {idea.can_hire_interns ? <button onClick={()=>{this.props.updateUser({startup_id:idea.id});this.props.history.push('/internship/startup/openings/')}} className='btn  font-weight-bold btn-success'>Work Profile</button> : <Fragment>
-                                <span className="d-inline-block " tabIndex="0" data-toggle="tooltip" title="Allowed after verification"><button disabled className='btn  font-weight-bold btn-dark'>Work Profile</button></span>
+                                <span class="d-inline-block " tabIndex="0" data-toggle="tooltip" title="Allowed after verification"><button disabled className='btn  font-weight-bold btn-dark'>Work Profile</button></span>
                                     </Fragment>}
                                 
 

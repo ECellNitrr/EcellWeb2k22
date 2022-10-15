@@ -11,10 +11,10 @@ const SpeakerCard = ({ speakers }) => {
     year,
   } = speakers;
   return (
-    <div className="cardContainer">
+    <div class="cardContainer">
       <div className="follow">
         <a href={social_media} target="_blank" rel="noopener noreferrer">
-          <i className="fas fa-plus-circle"></i>
+          <i class="fas fa-plus-circle"></i>
         </a>
         <p>Follow</p>
       </div>

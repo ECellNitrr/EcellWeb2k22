@@ -139,7 +139,7 @@ class event_detail extends Component {
                             <div className="event-time" style={{ color: 'grey' }}><span><i className="far fa-clock"></i>&nbsp;Time:</span>&nbsp;<span style={{ color: "white" }}>{event.time}</span></div><br></br>
                             <div className="event-details" dangerouslySetInnerHTML={{ __html: event.details_html }}></div><br></br>
                             <div className="event-email"><i className="far fa-paper-plane"></i>&nbsp;Email:&nbsp;<a className="e-email" href={`mailto:${event.email}`}>{event.email}</a></div>
-                            <div className="registered" style={{ color: 'grey', fontWeight: '800', marginTop: "15px" }}><i className="fas fa-user-friends"></i>&nbsp; Total Registered : <span style={{ color: "white", fontSize: "40px" }}>{this.state.people_registered}</span></div>
+                            <div className="registered" style={{ color: 'grey', fontWeight: '800', marginTop: "15px" }}><i class="fas fa-user-friends"></i>&nbsp; Total Registered : <span style={{ color: "white", fontSize: "40px" }}>{this.state.people_registered}</span></div>
                         </div>
                     </div>
                 </div>

@@ -16,8 +16,8 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
   //Side Overlay
   const OverLay = () => {
     return (
-      <div className="overlay">
-        <div className="overlay-panel overlay-left">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
           <div className="ls-heading">Welcome Back!</div>
           <p>To keep connected with us please login with your personal info</p>
           <button
@@ -31,7 +31,7 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
             Sign In
           </button>
         </div>
-        <div className="overlay-panel overlay-right">
+        <div class="overlay-panel overlay-right">
           <div className="ls-heading">Hello, Friend!</div>
           <p>Enter your personal details and start journey with us</p>
           <button
@@ -54,14 +54,14 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
     return (
       <div className="ls-modal-content">
         {CloseButton()}
-        <div className={`ls-container ${rightPanelActive}`} id="container">
-          <div className="form-container sign-up-container">
+        <div class={`ls-container ${rightPanelActive}`} id="container">
+          <div class="form-container sign-up-container">
             <SignUp setlogin={setlogin} closeModal={closeModal}/>
           </div>
-          <div className="form-container sign-in-container">
+          <div class="form-container sign-in-container">
             <Login setlogin={setlogin} setForgotPassword={setForgotPassword} closeModal={closeModal}/>
           </div>
-          <div className="overlay-container">
+          <div class="overlay-container">
             <OverLay />
           </div>
         </div>
@@ -73,8 +73,8 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
     return (
       <div className="fp-ls-modal-content">
         {CloseButton()}
-        <div className="forgot-container" id="container">
-          <div className="form-container forgot-pass-form-container">
+        <div class="forgot-container" id="container">
+          <div class="form-container forgot-pass-form-container">
             <form className="ls-form" action="#">
               <div className="ls-heading">Forgot Your Password</div>
               <span className="sub-text">Enter your email</span>
@@ -100,7 +100,7 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
 
   const CloseButton = () => (
     <i
-      className="far fa-times-circle close"
+      class="far fa-times-circle close"
       onClick={() => {
         closeModal();
         setlogin(false);
@@ -112,7 +112,7 @@ const AuthModal = ({ closeModal, modalOpen, auth }) => {
   const LoggedInModal = () => (
     <div className="logout-ls-modal-content">
       {CloseButton()}
-      <div className="forgot-container" id="container">
+      <div class="forgot-container" id="container">
         <div className="logout-container">
           <Logout closeModal={closeModal}/>
         </div>

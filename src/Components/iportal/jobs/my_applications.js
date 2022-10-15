@@ -36,19 +36,19 @@ class applications_list extends Component {
 
     _status_func = (application) =>{
         if(application.status ==="RJD" || application.status ==="rejected"){
-            return <span className="badge py-2 badge-danger">Rejected</span>
+            return <span class="badge py-2 badge-danger">Rejected</span>
         }
 
         if(application.status ==="HRD" || application.status ==="hired"){
-            return <span className="badge py-2 badge-success">Hired</span>
+            return <span class="badge py-2 badge-success">Hired</span>
         }
 
         if(application.status ==="PND" || application.status ==="pending"){
-            return <span className="badge py-2 badge-warning">Pending</span>
+            return <span class="badge py-2 badge-warning">Pending</span>
         }
 
         if(application.status ==="URV" || application.status ==="Under Review"){
-            return <span className="badge py-2 badge-info">Reviewing</span>
+            return <span class="badge py-2 badge-info">Reviewing</span>
         }
 
 

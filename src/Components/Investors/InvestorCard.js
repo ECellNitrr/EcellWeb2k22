@@ -12,10 +12,10 @@ const InvestorCard = ({ investors }) => {
     year,
   } = investors;
   return (
-    <div className="cardContainer">
+    <div class="cardContainer">
       <div className="follow">
         <a href={social_media} target="_blank">
-          <i className="fas fa-plus-circle"></i>
+          <i class="fas fa-plus-circle"></i>
         </a>
         <p>Follow</p>
       </div>

@@ -121,9 +121,9 @@ const startup_html = this.state.startups.map((user, i) =>
             badge-success'>Approve</button>} </td> */}
 
     <td>
-        <div className="card">
-            <h5 className="card-header font-weight-bold">{user.idea_in_a_nut_shell}</h5>
-            <div className="card-body">
+        <div class="card">
+            <h5 class="card-header font-weight-bold">{user.idea_in_a_nut_shell}</h5>
+            <div class="card-body">
                 <div className="mb-2"><i className="font-weight-bold">Description :</i></div>
                 <div dangerouslySetInnerHTML={{ __html: user.describe_idea }}></div>
                  <div className="mb-2"><i className="font-weight-bold">Beneficiaries :</i> {user.beneficiaries}</div>

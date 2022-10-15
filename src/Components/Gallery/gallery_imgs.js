@@ -179,7 +179,7 @@ class gallery_imgs extends Component {
                     {this.state.isModalActive ? (<div className="img-modal modal-active">
                         <div className="img-modal-controllers">
                             <div className="img-modal-btn" onClick={this.onCloseModal}>
-                                <i className="fas fa-times"></i>
+                                <i class="fas fa-times"></i>
                             </div>
                         </div>
                         <img src={this.state.photos[this.state.imgIndex].original}></img>
