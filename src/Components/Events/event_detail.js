@@ -156,10 +156,10 @@ class event_detail extends Component {
                     <div className="event-detail-page">
                         {event_detail}
 
-                        <div className="button-div" >
+                        {/* <div className="button-div" >
                             {this.state.register && this.props.auth.loggedin ? (<button onClick={this._event_unregister} className="btn unregister-btn">{this.state.btnloader ? <BtnLoader /> : "Unregister"}</button>) : (<button onClick={this._event_register} className="btn register-btn">{this.state.btnloader ? <BtnLoader /> : "Register"}</button>)}
 
-                        </div>
+                        </div> */}
                     </div>
 
 
