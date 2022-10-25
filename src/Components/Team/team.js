@@ -6,10 +6,10 @@ import Sidebar from '../Home/Sidebar/Sidebar';
 import Footer from '../Footer/footer';
 
 import './team.css';
-import Avatar from './Avatar.js';
-import Label from './Label.js';
+import {TeamImageDisplay, TeamNormalDisplay} from './TeamDisplay.js';
+import descriptions from './descriptions.js';
 
-import { Fade } from 'react-reveal';
+
 
 const Team = ({ match }) => {
   const year = match.params.year;
@@ -20,35 +20,7 @@ const Team = ({ match }) => {
     loading: true,
   });
 
-  const people = {
-    dir: [],
-    hcd: [],
-    fct: [],
-    oc: [],
-    hco: [],
-    pr: {
-      managers: [],
-      executives: [],
-    },
-    tech: {
-      managers: [],
-      executives: [],
-    },
-    design: {
-      managers: [],
-      executives: [],
-    },
-    doc: {
-      managers: [],
-      executives: [],
-    },
-    spons: {
-      managers: [],
-      executives: [],
-    },
-  };
-
-  const { dir, hcd, fct, oc, hco, pr, tech, doc, design, spons } = people;
+  const teamData = {};
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,66 +33,24 @@ const Team = ({ match }) => {
     fetchData();
   }, []);
 
-  const addPeople = () => {
-    state.data.map((el) => {
-      if (el.member_type === 'DIR') {
-        dir.push(el);
-      }
+  const addTeamData = () => {
+    state.data.map(member => {
 
-      if (el.member_type === 'HCD') {
-        hcd.push(el);
-      }
+      let teamCode = descriptions[member.member_type][0]+'_';
+      if(member.member_type!='HCO')teamCode+=member.domain
 
-      if (el.member_type === 'FCT') {
-        fct.push(el);
-      }
+      member.domain=descriptions[member.domain]
+      member.member_type=descriptions[member.member_type][1]
 
-      if (el.domain === 'none' && el.member_type === 'OCO') {
-        oc.push(el);
-      }
-
-      if (el.member_type === 'HCO') {
-        hco.push(el);
-      }
-
-      if (el.domain === 'pr' && el.member_type === 'EXC') {
-        pr.executives.push(el);
-      }
-      if (el.domain === 'pr' && el.member_type === 'MNG') {
-        pr.managers.push(el);
-      }
-
-      if (el.domain === 'tech' && el.member_type === 'EXC') {
-        tech.executives.push(el);
-      }
-      if (el.domain === 'tech' && el.member_type === 'MNG') {
-        tech.managers.push(el);
-      }
-
-      if (el.domain === 'doc' && el.member_type === 'EXC') {
-        doc.executives.push(el);
-      }
-      if (el.domain === 'doc' && el.member_type === 'MNG') {
-        doc.managers.push(el);
-      }
-
-      if (el.domain === 'design' && el.member_type === 'EXC') {
-        design.executives.push(el);
-      }
-      if (el.domain === 'design' && el.member_type === 'MNG') {
-        design.managers.push(el);
-      }
-
-      if (el.domain === 'spons' && el.member_type === 'EXC') {
-        spons.executives.push(el);
-      }
-      if (el.domain === 'spons' && el.member_type === 'MNG') {
-        spons.managers.push(el);
-      }
+      if (!teamData[teamCode]) teamData[teamCode] = [];
+      
+      teamData[teamCode].push(member);
     });
   };
 
-  addPeople();
+ 
+
+  addTeamData();
 
   if (state.loading) {
     return <Loader />;
@@ -135,215 +65,18 @@ const Team = ({ match }) => {
           <Link className="teamLink" to="/team/yearwise">
             <i className="fa fa-arrow-left mr-1"></i>Previous Year Teams
           </Link>
+
+
           <div className="people">
+            {Object.keys(teamData).sort().reverse().map(teamName => {
+              let team = teamData[teamName];
+              if (!team[0]) return '';
 
-            {dir.length && hcd.length && fct.length ? (
-              <>
-                <div className="director">
-                  <h2 className="text-center mt-1">Director</h2>
-                  <Fade bottom>
-                    <Avatar data={dir[0]} />
-                  </Fade>
-                </div>
-                <div className="hcd">
-                  <h2 className="text-center mt-5">Head of CDC</h2>
-                  <Fade bottom>
-                    {' '}
-                    <Avatar data={hcd[0]} />
-                  </Fade>
-                </div>
-                <div className="fct">
-                  <h2 className="text-center mt-5">Faculty In-Charge</h2>
-                  <Fade bottom>
-                    <Avatar data={fct[0]} />
-                  </Fade>
-                </div>
-              </>
-            ):''}
-
-            {/* Overall Coordinators */}
-            {oc.length ? (
-              <div className="mt-5">
-                <h2 className="text-center">Overall Coordinators</h2>
-                <div className="photo_container_">
-                  {oc.map((el) => (
-                    <Fade top>
-                      <div key={el.id} className="av_box">
-                        <Avatar data={el} />
-                      </div>
-                    </Fade>
-                  ))}
-                </div>
-              </div>) : ''}
-
-
-            {/* Head Coordinators */}
-            {hco.length ? (
-              <div className="add_margin">
-                <h2 className="text-center">Head Coordinators</h2>
-                <div className="photo_container_">
-                  {hco.map((el) => (
-                    <div key={el.id} className="av_box">
-                      <Fade bottom>
-                        <Avatar data={el} />
-                      </Fade>
-                    </div>
-                  ))}
-                </div>
-              </div>) : ''}
-
-
-            <>
-              {/* Public Relation and Marketing Managers */}
-              {pr.managers.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Public Relation and Marketing Managers
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {pr.managers.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-
-              {/* Technical Team Managers  */}
-              {tech.managers.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Technical Team Managers
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {tech.managers.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-
-              {/* Design Team Managers   */}
-              {design.managers.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Design Team Managers
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {design.managers.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-
-              {/* Documentation Team Manager */}
-              {doc.managers.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Documentation Team Manager
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {doc.managers.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-
-              {/* Sponsorship and Brand Management Managers  */}
-              {spons.managers.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Sponsorship and Brand Management Managers
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {spons.managers.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-
-              {/* Public Relation and Marketing Executives  */}
-              {pr.executives.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Public Relation and Marketing Executives
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {pr.executives.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-
-              {/* Technical Team Executives  */}
-              {tech.executives.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Technical Team Executives
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {tech.executives.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-
-              {/* Design Team Executives  */}
-              {design.executives.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Design Team Executives
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {design.executives.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-
-              {/* Documentation Team Executives  */}
-              {doc.executives.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Documentation Team Executives
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {doc.executives.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-
-              {/* Sponsorship and Brand Management Executives  */}
-              {spons.executives.length ? (
-                <div className="add_margin">
-                  <h2 className="text-center">
-                    Sponsorship and Brand Management Executives
-                  </h2>
-                  <div className="manager_container_ mt-3">
-                    {spons.executives.map((el) => (
-                      <div>
-                        <Label data={el} />
-                      </div>
-                    ))}
-                  </div>
-                </div>) : ''}
-            </>
+              
+              if (team[0].image) 
+              return <TeamImageDisplay team={team} key={teamName}/>
+              else return <TeamNormalDisplay team={team} key={teamName}/>
+            })}
           </div>
         </div>
         <Footer />
