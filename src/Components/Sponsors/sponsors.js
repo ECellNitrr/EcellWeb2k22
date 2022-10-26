@@ -130,7 +130,7 @@ class Sponsors extends Component {
                                 </div>
                                 <div className="spons-header_border header-withYear_border"></div>
                             </div>
-                            <HeaderLinks />
+                            {/* <HeaderLinks /> */}
                             {/* { sponsors_html} */}
                             {titleSponsHTML}
                             <SponsorsTabs sponsData={sponsors} />
