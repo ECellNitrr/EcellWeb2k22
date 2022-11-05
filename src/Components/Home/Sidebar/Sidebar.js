@@ -37,9 +37,9 @@ const Sidebar = (props) => {
 
   const loggedout = (
     <div className="btn btn-outline-default modal-button-ls">
-      <button id="signup" onClick={openModal}>
+      {/* <button id="signup" onClick={openModal}>
         Login/Sign Up
-      </button>
+      </button> */}
     </div>
   );
 
