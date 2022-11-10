@@ -26,6 +26,11 @@ class Sponsors extends Component {
 
             let data = res.data.data.filter((elem) => elem["domain"] == "spons" && elem["member_type"] == "HCO");
             
+            
+            data.forEach(element => {
+                element.domain = "Sponsorship Team"
+            });
+            
             data = data.map(HC => {
                 let contactData = HC_Contact_Data.find(hc => hc.name == HC.name)
                 return { ...HC, ...contactData }
