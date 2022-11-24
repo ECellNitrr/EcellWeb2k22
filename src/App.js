@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import PageLoader from './Components/api_loader/page_loader';
 
 const Home = lazy(() => import('./Components/Home/home'));
+const GovernmentSchemes = lazy(() => import('./Components/GovernmentSchemes/GovernmentSchemes.js'));
 
 const Team = lazy(() => import('./Components/Team/team.js'));
 
@@ -72,6 +73,7 @@ class App extends Component {
               <Route path="/mentors" component={Mentors} />
               <Route path="/gallery/:name" component={GalleryImgs} />
               <Route path="/gallery" component={Gallery} />
+              <Route path="/GovernmentSchemes" component={GovernmentSchemes} />
               <Route path="/register" component={Register} />
               {/* <Route path="/caportal_info" component={CaPortalInfo} /> */}
               {/* <Route path="/caportal" component={CaPortal} /> */}

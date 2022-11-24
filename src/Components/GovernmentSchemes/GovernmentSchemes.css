@@ -1,0 +1,324 @@
+/*css of this page and the sponsors-home are same, so most of the css is there in the sponsors-home section of home page*/
+.mainCtn{
+    padding-top: 25px; 
+    padding-bottom: 80px;
+    height: 100%
+}
+
+.whole-spons{
+    background: #00012D !important;
+}
+
+.sponsors{
+    background: #00012D !important;
+}
+
+.spons-year-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctn9{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+}
+
+.ctn10{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.ctn15{
+    display: flex;
+    padding-top: 180px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    color:#7b4397 ;
+    font-weight: 800;
+    /* background: white; */
+}
+
+.btn-white {
+    background: white;
+    margin: 10px;
+}
+
+.btn-fontSize{
+    font-size: 20px;
+}
+
+.btn:hover{
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.5), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header3{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -150px;
+    color: white;
+    background: black;
+    border: 1px dotted black;
+    border-radius: 20px 0;
+    padding: 10px;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 1px;
+    box-shadow: 0px 5px 50px 0px #6c44fc, 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.spons-header_wrapper{
+    position: relative;
+    padding: 0px 10px;
+    font-size: 45px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-withYear_wrapper{
+    padding: 45px 0px;
+    font-size: 35px;
+}
+.our-sponsors_wrapper{
+    padding: 45px 0px;
+    font-size: 35px;
+}
+.spons-headCos_wrapper{
+    padding: 45px 0px;
+    font-size: 35px;
+}
+
+.spons-header_border{
+    height: 3.5px;
+    background-color: white;
+    border-radius: 360px;
+}
+.header-withYear_border{
+    width: 225px;
+    margin-left: 100px;
+    height: 2px;
+}
+.our-sponsors_border{
+    width: 215px;
+    margin-left: 100px;
+    height: 2px;
+}
+.spons-headCos_border{
+    width: 525px;
+    margin-left: 110px;
+    height: 2px;
+}
+
+.sponsType-header{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.spons-card_col{
+    height: 260px;
+    margin: 0px 15px;
+}
+
+@media(max-width:420px){
+    .header3{
+        font-size: 20px;
+        width: 250px;
+    }
+}
+
+.hc_image{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.ctn12{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.individual_heads{
+    flex: 1 0 300px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.spons_hc_name{
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    margin-top: 15px;
+    border: 2px solid white;
+    background: black;
+    border-radius: 0 0 8px 8px;
+    padding: 8px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spons_phone{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.spons_phone:hover{
+    color: grey;
+}
+
+.center{
+    text-align: center;
+}
+
+.center1{
+    text-align: center;
+    font-size: 45px;
+}
+
+.social:hover{
+    color: white;
+}
+
+.spons_email{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.spons_email:hover{
+    color: grey;
+}
+
+@media(max-width:1000px){
+    .mainCtn{
+        padding-top: 25px;
+    }
+
+    .header-withYear_wrapper{
+        padding: 45px 0px;
+        font-size: 35px;
+    }
+    .our-sponsors_wrapper{
+        padding: 45px 0px;
+        font-size: 35px;
+    }
+    .spons-headCos_wrapper{
+        padding: 45px 0px;
+        font-size: 35px;
+    }
+    
+    .header-withYear_border{
+        width: 225px;
+        margin-left: 110px;
+        height: 2px;
+    }
+    .our-sponsors_border{
+        width: 215px;
+        margin-left: 110px;
+        height: 2px;
+    }
+    .spons-headCos_border{
+        width: 525px;
+        margin-left: 120px;
+        height: 2px;
+    }
+}
+   
+@media(max-width:800px){
+    .mainCtn{
+        padding-top: 60px;
+    }
+
+    .header-withYear_wrapper{
+        padding: 45px 0px;
+        font-size: 27.5px;
+    }
+    .our-sponsors_wrapper{
+        padding: 45px 0px;
+        font-size: 27.5px;
+    }
+    .spons-headCos_wrapper{
+        padding: 45px 0px;
+        font-size: 27.5px;
+    }
+    
+    .header-withYear_border{
+        width: 175px;
+        margin-left: 90px;
+        height: 1.75px
+    }
+    .our-sponsors_border{
+        width: 160px;
+        margin-left: 90px;
+        height: 1.75px
+    }
+    .spons-headCos_border{
+        width: 400px;
+        margin-left: 90px;
+        height: 1.75px;
+    }
+}
+
+.head-info{
+    padding: 15px 0px;
+    font-weight: 500;
+}
+  
+@media(max-width:600px){ 
+    .mainCtn{
+        padding-top: 80px;
+    }
+
+    .header-withYear_wrapper{
+        padding: 25px 0px;
+        font-size: 22.5px;
+    }
+    .our-sponsors_wrapper{
+        padding: 25px 0px;
+        font-size: 22.5px;
+    }
+    .spons-headCos_wrapper{
+        padding: 25px 0px;
+        font-size: 22.5px;
+    }
+
+    .header-withYear_border{
+        width: 133px;
+        margin-left: 60px;
+        height: 1.5px;
+    }
+    .our-sponsors_border{
+        width: 125px;
+        margin-left: 60px;
+        height: 1.5px;
+    }
+    .spons-headCos_border{
+        width: 340px;
+        margin-left: 75px;
+        height: 1.5px;
+    }
+
+    .sponsType-header{
+        font-size: 22.5px;
+    }
+}
