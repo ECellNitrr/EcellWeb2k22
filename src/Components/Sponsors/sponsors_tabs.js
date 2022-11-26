@@ -290,40 +290,51 @@ class SponsorsTabs extends Component {
         return (
             <div className="spons-tabs_wrapper">
                 <div className="spons-tab-header_wrapper">
+                    {platinumSponsHTML.length!==0?(
                     <div onClick={this.onClick1} className={tabHeaderClasses[0]}>
                         <div className="spons-header platinum-head">
                             Platinum
                         </div>
                         <div className="spons-header_border platinum-head_border"></div>
                     </div>
+                    ):(<div></div>)}
 
+
+                    {goldSponsHTML.length!==0?(
                     <div onClick={this.onClick2} className={tabHeaderClasses[1]}>
                         <div className="spons-header gold-head">
                             Gold
                         </div>
                         <div className="spons-header_border gold-head_border"></div>
                     </div>
+                    ):(<div></div>)}
 
+                    {silverSponsHTML.length!==0?(
                     <div onClick={this.onClick3} className={tabHeaderClasses[2]}>
                         <div className="spons-header silver-head">
                             Silver
                         </div>
                         <div className="spons-header_border partner-head_border"></div>
                     </div>
+                    ):(<div></div>)}
 
+                    {bronzeSponsHTML.length!==0?(
                     <div onClick={this.onClick4} className={tabHeaderClasses[3]}>
                         <div className="spons-header bronze-head">
                             Bronze
                         </div>
                         <div className="spons-header_border partner-head_border"></div>
                     </div>
+                    ):(<div></div>)}
 
+                    {partnerSponsHTML.length!==0?(
                     <div onClick={this.onClick5} className={tabHeaderClasses[4]}>
                         <div className="spons-header partner-head">
                             Partner
                         </div>
                         <div className="spons-header_border partner-head_border"></div>
                     </div>
+                    ):(<div></div>)}
 
                 </div>
                 <div className="spons-tab-contents-ctn">

@@ -71,7 +71,7 @@
 .spons-tab-content_wrapper{
     display: flex;
     flex-direction: row;
-    width: 270vw;
+    width: 450vw;
     position: relative;
     transition-duration: 0.25s;
 }
