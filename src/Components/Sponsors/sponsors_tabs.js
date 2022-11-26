@@ -7,13 +7,17 @@ class SponsorsTabs extends Component {
         this.onClick1 = this.onClick1.bind(this);
         this.onClick2 = this.onClick2.bind(this);
         this.onClick3 = this.onClick3.bind(this);
+        this.onClick4 = this.onClick4.bind(this);
+        this.onClick5 = this.onClick5.bind(this);
 
         this.ref1 = React.createRef();
         this.ref2 = React.createRef();
         this.ref3 = React.createRef();
+        this.ref4 = React.createRef();
+        this.ref5 = React.createRef();
 
         this.intervalIds = [
-            null, null, null
+            null, null, null, null, null
         ];
     }
 
@@ -34,6 +38,16 @@ class SponsorsTabs extends Component {
             activeTabId: 2
         });
     }
+    onClick4() {
+        this.setState({
+            activeTabId: 3
+        });
+    }
+    onClick5() {
+        this.setState({
+            activeTabId: 4
+        });
+    }
 
     state = {
         activeTabId: 0
@@ -46,7 +60,11 @@ class SponsorsTabs extends Component {
                 break;
             case 1: contRef = this.ref2;
                 break;
-            default: contRef = this.ref3;
+            case 2: contRef = this.ref3;
+                break;
+            case 3: contRef = this.ref4;
+                break;
+            default: contRef = this.ref5;
                 break;
         }
         if ((contRef.current != null) && (contRef.current != undefined)) {
@@ -144,6 +162,76 @@ class SponsorsTabs extends Component {
             });
         }
 
+        let silverSpons = this.props.sponsData["Silver"];
+        let silverSponsHTML = [];
+        if (silverSpons != undefined) {
+            silverSpons.forEach(sSpon => {
+                silverSponsHTML.push(
+                <div key={sSpon.id}>
+                    <div className="col m-1" key={sSpon.id}>
+                        <div className="cont">
+                            <div className="front shadow-lg p-3 mb-5 bg-white rounded">
+                                <img
+                                    alt={sSpon.name}
+                                    className="spons-Image"
+                                    src={sSpon.pic_url}
+                                />
+                            </div>
+                            <div className="back shadow-lg p-3 mb-5 bg-white rounded">
+                                <div className="inner">
+                                    <h6 style={{ fontWeight: "800" }}>
+                                        {sSpon.name}
+                                    </h6>
+                                    <p className="ph-no">{sSpon.contact}</p>
+                                    <p>{sSpon.details}</p>
+                                    <p>
+                                        <a className="web" href={sSpon.website}>
+                                            Website
+                                    </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>);
+            });
+        }
+
+        let bronzeSpons = this.props.sponsData["Bronze"];
+        let bronzeSponsHTML = [];
+        if (bronzeSpons != undefined) {
+            bronzeSpons.forEach(bSpon => {
+                bronzeSponsHTML.push(
+                <div key={bSpon.id}>
+                    <div className="col m-1" key={bSpon.id}>
+                        <div className="cont">
+                            <div className="front shadow-lg p-3 mb-5 bg-white rounded">
+                                <img
+                                    alt={bSpon.name}
+                                    className="spons-Image"
+                                    src={bSpon.pic_url}
+                                />
+                            </div>
+                            <div className="back shadow-lg p-3 mb-5 bg-white rounded">
+                                <div className="inner">
+                                    <h6 style={{ fontWeight: "800" }}>
+                                        {bSpon.name}
+                                    </h6>
+                                    <p className="ph-no">{bSpon.contact}</p>
+                                    <p>{bSpon.details}</p>
+                                    <p>
+                                        <a className="web" href={bSpon.website}>
+                                            Website
+                                    </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>);
+            });
+        }
+
         let partnerSpons = this.props.sponsData["Partner"];
         let partnerSponsHTML = [];
         if (partnerSpons != undefined) {
@@ -182,13 +270,17 @@ class SponsorsTabs extends Component {
         let classes = [
             "spons-tab1",
             "spons-tab2",
-            "spons-tab3"
+            "spons-tab3",
+            "spons-tab4",
+            "spons-tab5"
         ];
         let tabClass = "spons-tab-content_wrapper " + classes[this.state.activeTabId];
 
         let tabHeaderClasses = [
             "spons-header_wrapper platinum-head_wrapper spons-type-head_wrapper",
             "spons-header_wrapper gold-head_wrapper spons-type-head_wrapper",
+            "spons-header_wrapper partner-head_wrapper spons-type-head_wrapper",
+            "spons-header_wrapper platinum-head_wrapper spons-type-head_wrapper",
             "spons-header_wrapper partner-head_wrapper spons-type-head_wrapper"
         ];
 
@@ -198,26 +290,51 @@ class SponsorsTabs extends Component {
         return (
             <div className="spons-tabs_wrapper">
                 <div className="spons-tab-header_wrapper">
+                    {platinumSponsHTML.length!==0?(
                     <div onClick={this.onClick1} className={tabHeaderClasses[0]}>
                         <div className="spons-header platinum-head">
                             Platinum
                         </div>
                         <div className="spons-header_border platinum-head_border"></div>
                     </div>
+                    ):(<div></div>)}
 
+
+                    {goldSponsHTML.length!==0?(
                     <div onClick={this.onClick2} className={tabHeaderClasses[1]}>
                         <div className="spons-header gold-head">
                             Gold
                         </div>
                         <div className="spons-header_border gold-head_border"></div>
                     </div>
+                    ):(<div></div>)}
 
+                    {silverSponsHTML.length!==0?(
                     <div onClick={this.onClick3} className={tabHeaderClasses[2]}>
+                        <div className="spons-header silver-head">
+                            Silver
+                        </div>
+                        <div className="spons-header_border partner-head_border"></div>
+                    </div>
+                    ):(<div></div>)}
+
+                    {bronzeSponsHTML.length!==0?(
+                    <div onClick={this.onClick4} className={tabHeaderClasses[3]}>
+                        <div className="spons-header bronze-head">
+                            Bronze
+                        </div>
+                        <div className="spons-header_border partner-head_border"></div>
+                    </div>
+                    ):(<div></div>)}
+
+                    {partnerSponsHTML.length!==0?(
+                    <div onClick={this.onClick5} className={tabHeaderClasses[4]}>
                         <div className="spons-header partner-head">
                             Partner
                         </div>
                         <div className="spons-header_border partner-head_border"></div>
                     </div>
+                    ):(<div></div>)}
 
                 </div>
                 <div className="spons-tab-contents-ctn">
@@ -234,6 +351,16 @@ class SponsorsTabs extends Component {
                                 </div>
                             </div>
                             <div ref={this.ref3} className="spons-tab-content_cover">
+                                <div className="spons-tab-content">
+                                    {silverSponsHTML}
+                                </div>
+                            </div>
+                            <div ref={this.ref4} className="spons-tab-content_cover">
+                                <div className="spons-tab-content">
+                                    {bronzeSponsHTML}
+                                </div>
+                            </div>
+                            <div ref={this.ref5} className="spons-tab-content_cover">
                                 <div className="spons-tab-content">
                                     {partnerSponsHTML}
                                 </div>
