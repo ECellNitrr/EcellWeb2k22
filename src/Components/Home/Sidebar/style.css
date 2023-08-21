@@ -59,7 +59,8 @@ header .rightBox {
 .page {
   width: 100%;
   height: 100vh;
-  background-image: url('../../../assets/ecellbg.jpg');
+  /*background-image: linear-gradient(0deg, rgba(230, 120, 0, 0.253), rgba(230, 120, 0, 0.479) ), url('../../../assets/ecellbg2.jpg');*/
+  background-image: linear-gradient(0deg, rgba(105, 29, 74, 0.5), rgba(105, 29, 74, 0.5) ), url('../../../assets/ecellbg2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -339,7 +340,7 @@ ul {
   .page {
     width: 100%;
     height: 100%;
-    background-image: url('../../../assets/ecellbg.jpg');
+    background-image: linear-gradient(0deg, rgba(105, 29, 74, 0.5), rgba(105, 29, 74, 0.5) ), url('../../../assets/ecellbg2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

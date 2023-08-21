@@ -41,7 +41,7 @@ class event_detail extends Component {
     componentDidMount() {
         this.event_id = this.props.match.params.id;
 
-        faxios().get("/events/list/2022/").then(d => {
+        faxios().get("/events/list/2019/").then(d => {
             let data = d.data.data;
             let event_detail = data.find(event => event.id === Number(this.event_id))
             let register_status = event_detail["registered"]
