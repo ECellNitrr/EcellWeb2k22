@@ -24,11 +24,11 @@ class Timeline extends Component {
     this.onRightBtnPressed = this.onRightBtnPressed.bind(this);
   }
 
-  nofTabs = 12;
+  nofTabs = 13;
 
   state = {
     loading: false,
-    activeTabId: 12,
+    activeTabId: 13,
   };
 
   onHeaderClick(tabId) {
@@ -56,7 +56,7 @@ class Timeline extends Component {
   }
   render() {
     let tabStates = [];
-    for (var i = 0; i < 12; i++) {
+    for (var i = 0; i < 13; i++) {
       if (i + 1 == this.state.activeTabId) {
         tabStates[i] = true;
       } else {
@@ -157,6 +157,12 @@ class Timeline extends Component {
                       tabId={12}
                       title="2021"
                       isActive={tabStates[11]}
+                      onClick={this.onHeaderClick}
+                    />
+                    <TabHeader
+                      tabId={13}
+                      title="2022"
+                      isActive={tabStates[12]}
                       onClick={this.onHeaderClick}
                     />
                   </div>
@@ -369,6 +375,27 @@ class Timeline extends Component {
                   startup founder and Angel investor with his name on Forbes30
                   U30 list was invited to share his key secrets on startups,
                   innovation and leadership during Buisness model workshop.
+                </TabContent>
+                <TabContent
+                  isActive={tabStates[12]}
+                  tabId={13}
+                  year={2022}
+                  img={plant12}
+                >
+                  In 2022, The Entrepreneurship Cell, NIT Raipur conducted many workshops
+                  across various educational institutions in Chhattisgarh, educating and
+                  inculcating dexterity and inventiveness in young students. Multiple workshops
+                  were conducted for students of NIT Raipur to facilitate influx of cutting-edge
+                  ideas. E-Summit 2022, a 2-day flagship event, was conducted after two years of
+                  the pandemic, reinvigorating everyone’s spirits and entrepreneurial zeal. Events
+                  like Utkrisht and Entropy invited many successful start-up and business
+                  founders like Mr. Dhawal Sattviko, Mr. Manish Pandey, Ms. Shristi Jain, and
+                  many more to share their invaluable knowledge and experiences, passing the torch
+                  of excellence and ingenuity to the students of NIT Raipur. Many contemporary
+                  start-ups were invited to take part in Start-up Expo where they pitched their
+                  business ideas to veteran investors invited by NIT Raipur. Mini-events like
+                  Cricnometrica, B-Quiz, B-Case Study, and Innovation Manthan engaged the
+                  student crowd of NIT Raipur with new ideas and inventions.
                 </TabContent>
               </div>
             </div>

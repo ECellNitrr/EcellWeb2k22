@@ -14,7 +14,7 @@ class events extends Component {
   }
 
   componentDidMount() {
-    this.axios.get('/events/list/2022/')
+    this.axios.get('/events/list/2019/')
       .then(d => {
         const events = d.data.data
         console.log({ events })
