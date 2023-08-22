@@ -17,5 +17,5 @@ export default  {
     design: 'Design Team',
     em: 'Event Management',
     videdit: 'Video Editing',
-    startup: 'StartUp',
+    startup: 'Startup Founder',
   }
