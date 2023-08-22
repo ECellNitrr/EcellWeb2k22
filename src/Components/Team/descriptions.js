@@ -16,5 +16,6 @@ export default  {
     spons: 'Sponsorship Team',
     design: 'Design Team',
     em: 'Event Management',
-    ve: 'Video Editing'
+    videdit: 'Video Editing',
+    startup: 'Startup Founder',
   }
