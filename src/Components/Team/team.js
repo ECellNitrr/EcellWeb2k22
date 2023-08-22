@@ -70,12 +70,11 @@ const Team = ({ match }) => {
           <div className="people">
             {Object.keys(teamData).sort().reverse().map(teamName => {
               let team = teamData[teamName];
-              if (!team[0]) return '';
-
-              
-              if (team[0].image) 
-              return <TeamImageDisplay team={team} key={teamName}/>
-              else return <TeamNormalDisplay team={team} key={teamName}/>
+              console.log(team[0].member_type)
+              if ((team[0].member_type).toLowerCase().includes("coordinator") || (team[0].member_type).toLowerCase().includes("co-ordinator"))  
+              { 
+              return <TeamImageDisplay team={team} key={teamName}/>}
+              else {return <TeamNormalDisplay team={team} key={teamName}/>}
             })}
           </div>
         </div>
