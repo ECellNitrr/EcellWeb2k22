@@ -65,16 +65,12 @@ const Team = ({ match }) => {
           <Link className="teamLink" to="/team/yearwise">
             <i className="fa fa-arrow-left mr-1"></i>Previous Year Teams
           </Link>
-
-
           <div className="people">
             {Object.keys(teamData).sort().reverse().map(teamName => {
               let team = teamData[teamName];
-              console.log(team[0].member_type)
-              if ((team[0].member_type).toLowerCase().includes("coordinator") || (team[0].member_type).toLowerCase().includes("co-ordinator"))  
-              { 
-              return <TeamImageDisplay team={team} key={teamName}/>}
-              else {return <TeamNormalDisplay team={team} key={teamName}/>}
+              if (team[0].image != null)  
+              return <TeamImageDisplay team={team} key={teamName}/>
+              else return <TeamNormalDisplay team={team} key={teamName}/>
             })}
           </div>
         </div>
