@@ -171,12 +171,12 @@ export default class contact extends Component {
         </p>
         <div className="mobile-number">
           <div className="oc-contact">
-            <p className="oc-name">Garvita K Basantani</p>
-            <a href="tel:8770454286">+91 8770454286</a>
+            <p className="oc-name">Shubham Sahu</p>
+            <a href="tel:7869469119">+91 7869469119</a>
           </div>
           <div className="oc-contact">
-            <p className="oc-name">Siddharth Mishra</p>
-            <a href="tel:7869968715">+91 7869968715</a>
+            <p className="oc-name">Shubham Kumar Verma</p>
+            <a href="tel:7091972950">+91 7091972950</a>
           </div>
         </div>
         <div className="legal">
