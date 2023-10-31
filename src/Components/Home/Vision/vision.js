@@ -29,15 +29,23 @@ const vision = () => {
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
             <Fade right>
               <p className="text-6">
-                The Entrepreneurship cell, NIT Raipur is a non-profit
-                organization that advocates to inculcate entrepreneurial spirit
-                among the budding young minds who have the ardour to pursue
-                entrepreneurship and aggrandize the ideas that have the
-                potential to excel. Keeping this ideology in mind, we not only
-                provide a platform to young visionary entrepreneurs to share
-                their ideas freely with the fellow aspiring companions but also
-                help in nurturing their skills by providing them with resources
-                and guidance.
+                Striding forward, carrying the motto of 'Leaders Beyond
+                Borders, we at the Entrepreneurship Cell, NIT Raipur,
+                aim to give a milieu to nurture innovative ideas.
+                E-Summit’23 would be a perfect conglomerate- notion
+                of Entrepreneurship, Management and Quizzing to
+                bring out the innovator within oneself.
+                E-Summit provides a platform for aspiring
+                entrepreneurs to interact with some of the alpha geeks
+                in the forte and provide the required guidance and get
+                the budding entrepreneurs acquainted with the assets
+                and liabilities in this field so that their actions don't go
+                futile.
+                We would ensure that the ideas don't just thrive but
+                become the greatest revelations of the country.
+                E-Summit’23 will aim at laying a foundation stone for
+                developing a perennial start-up culture that would
+                surely inspire society to grow and progress.
               </p>
             </Fade>
           </div>

@@ -26,20 +26,27 @@ const about = () => (
             <div className="sub-head">WE PROMOTE STARTUPS</div>
 
             <p className="text-5">
-              National Institute of Technology Raipur - Central India’s largest
-              Institute believes that Entrepreneurship is the key for our
-              nation’s development. The Entrepreneurship Cell is a non-profit
-              organization run by the students under the enlightenment of NIT
-              Raipur that aims at manifesting the latent entrepreneurial spirit
-              of students of NIT Raipur, and other colleges in central India.
-              The entrepreneurship cell helps the institution in the pursuit of
-              this goal. Its vision is to mature the minds of the youth of NIT
-              Raipur. We show them the possible errors and innovative solutions
-              in their ideas. This takes them closer to their vision of the
-              entrepreneurial journey. We wish to spread awareness about the
-              various types of entrepreneurships and give a platform to young
-              visionary entrepreneurs to share their ideas freely with the
-              fellow aspiring young minds.
+              The Entrepreneurship Cell, NIT Raipur also known as
+              E-Cell, NIT Raipur is a non-profit organization run by
+              the students under the sagacious guidance of the
+              management. We are a bunch of self-driven folks who
+              strive hard to convert dreamers into doers.
+              After having a humble beginning in 2010, we haven’t
+              looked back since then. We have successfully expanded
+              our networks not only in Chhattisgarh but also in other
+              parts of India and have established links with various
+              organizations, angel investors and accomplished
+              entrepreneurs.
+              To help the youth in breaking the shackles of prejudices
+              associated with entrepreneurship, we provide them
+              with resources such as fresh ideas, mentorship
+              programs, workshops by the pioneers of the industry
+              and interactive speaker sessions.
+              Our flagship event E-Summit has been received with a
+              great enthusiasm with speakers from distinct
+              backgrounds showing us the path. We give wings to
+              ideas by helping them get quick access to seed funding
+              which helps the startup stand on its feet.
             </p>
           </Fade>
         </div>

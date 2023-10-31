@@ -160,9 +160,8 @@ export default class contact extends Component {
     return (
       <>
         <div className="con-sub-head">
-          <div>To learn is to grow.</div>
-          <div>To innovate is to Pioneer.</div>
-          <div>To be an entrepreneur is to be a leader.</div>
+          <div>Dare to Dream.</div>
+          <div>Venture to Achieve.</div>
         </div>
         <p className="summary">
           E-Cell, NIT Raipur is established to motivate and educate people about
