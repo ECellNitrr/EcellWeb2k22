@@ -1,5 +1,5 @@
 import React from 'react';
-import { baseURL } from '../../axios';
+// import { baseURL } from '../../axios';
 
 const SpeakerCard = ({ speakers }) => {
   const {
@@ -10,6 +10,7 @@ const SpeakerCard = ({ speakers }) => {
     social_media,
     year,
   } = speakers;
+  const urlForSpeaker="https://ecell.nitrr.ac.in/"
   return (
     <div class="cardContainer">
       <div className="follow">
@@ -19,7 +20,7 @@ const SpeakerCard = ({ speakers }) => {
         <p>Follow</p>
       </div>
       <div className="imageBox">
-        <img src={baseURL.slice(0,-1) + profile_pic} alt={name} />
+        <img src={urlForSpeaker.slice(0,-1) + profile_pic} alt={name} />
       </div>
       <div className="contentBox">
         <h2 className="text-center">{name}</h2>
