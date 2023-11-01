@@ -10,6 +10,7 @@ const SpeakerCard = ({ speakers }) => {
     social_media,
     year,
   } = speakers;
+  
   return (
     <div class="cardContainer">
       <div className="follow">
@@ -19,7 +20,7 @@ const SpeakerCard = ({ speakers }) => {
         <p>Follow</p>
       </div>
       <div className="imageBox">
-        <img src={baseURL.slice(0,-1) + profile_pic} alt={name} />
+        <img src={baseURL.slice(0,-4) + profile_pic} alt={name} />
       </div>
       <div className="contentBox">
         <h2 className="text-center">{name}</h2>
