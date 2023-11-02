@@ -20,7 +20,7 @@ class Sponsors extends Component {
     }
 
     componentDidMount() {
-        const year = 2022;
+        const year = 2023;
 
         this.axios.get(`/team/list/${year}/`).then(res => {
 

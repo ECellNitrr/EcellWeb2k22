@@ -160,9 +160,8 @@ export default class contact extends Component {
     return (
       <>
         <div className="con-sub-head">
-          <div>To learn is to grow.</div>
-          <div>To innovate is to Pioneer.</div>
-          <div>To be an entrepreneur is to be a leader.</div>
+          <div>Dare to Dream.</div>
+          <div>Venture to Achieve.</div>
         </div>
         <p className="summary">
           E-Cell, NIT Raipur is established to motivate and educate people about
@@ -171,12 +170,12 @@ export default class contact extends Component {
         </p>
         <div className="mobile-number">
           <div className="oc-contact">
-            <p className="oc-name">Garvita K Basantani</p>
-            <a href="tel:8770454286">+91 8770454286</a>
+            <p className="oc-name">Shubham Sahu</p>
+            <a href="tel:7869469119">+91 7869469119</a>
           </div>
           <div className="oc-contact">
-            <p className="oc-name">Siddharth Mishra</p>
-            <a href="tel:7869968715">+91 7869968715</a>
+            <p className="oc-name">Shubham Kumar Verma</p>
+            <a href="tel:7091972950">+91 7091972950</a>
           </div>
         </div>
         <div className="legal">

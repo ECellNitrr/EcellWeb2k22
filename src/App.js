@@ -63,7 +63,7 @@ class App extends Component {
               <Route path="/sponsors/:year" component={Sponsors} />
               <Route
                 path="/sponsors"
-                component={() => <Redirect to="/sponsors/2019" />}
+                component={() => <Redirect to="/sponsors/2023" />}
               />
               <Route path="/events/:id" component={EventDetail} />
               <Route path="/events" component={Events} />
@@ -83,7 +83,7 @@ class App extends Component {
               <Route path="/team/:year" component={Team} />
               <Route
                 path="/team"
-                component={() => <Redirect to="/team/2019" />}
+                component={() => <Redirect to="/team/2023" />}
               />
               {/* under work */}
 
