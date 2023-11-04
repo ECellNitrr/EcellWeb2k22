@@ -10,6 +10,7 @@ export const user_type = {
     CDC:'CDC Admin'
 }
 
+
 export const application_status = {
     'PND': 'pending',
     'RJD': 'rejected',

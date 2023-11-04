@@ -15,11 +15,16 @@ const Speakers = () => {
     loading: false,
   });
 
+  function checkYear(data){
+    return data.year=='2023';
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get('/speakers/full_list/');
       setState({
-        speakers: res?.data?.data?.sort((a, b) => b.year - a.year),
+        // speakers: res?.data?.data?.sort((a, b) => b.year - a.year),
+        speakers: res?.data?.data?.filter(checkYear),
         loading: false,
       });
     };
